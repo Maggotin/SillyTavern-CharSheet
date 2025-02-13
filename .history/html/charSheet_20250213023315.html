@@ -1,0 +1,152 @@
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Character Sheet Extension for SillyTavern</title>
+    <!-- Use Bootstrap for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <div id="character-sheet">
+        <!-- Close button for the window -->
+        <button id="character-sheet-close" class="menu_button" style="float: right;">Close</button>
+
+        <!-- Header: Basic Character Info -->
+        <div class="sheet-header mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" id="character-name" class="form-control" placeholder="Character Name" />
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" id="character-class" class="form-control" placeholder="Class" />
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" id="character-race" class="form-control" placeholder="Race" />
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" id="character-level" class="form-control" placeholder="Level" value="1"
+                            min="1" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+            <div class="toptabs">
+                <div class="tabwrapper" onclick="maintabclick();">
+                    <div class="maintab">Core</div>
+                </div>
+                <div class="tabwrapper">
+                    <div class="inventorytab" onclick="detailstabclick();">
+                        Details
+                    </div>
+                </div>
+                <div class="tabwrapper" onclick="spelltabclick();">
+                    <div class="spelltab">Spells</div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+        <!-- Tab Content -->
+        <div class="char-nav--content">
+            <!-- PC Content Pane -->
+            <div id="content-pc" class="char-nav--pane char-nav--active">
+                <div class="pc-layout container-fluid mt-3">
+                    <div class="row">
+                        <!-- Attributes Section -->
+                        <div class="col-md-4">
+                            <h5>Attributes</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Strength
+                                    <input type="number" class="form-control w-50" value="10">
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Dexterity
+                                    <input type="number" class="form-control w-50" value="10">
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Constitution
+                                    <input type="number" class="form-control w-50" value="10">
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Intelligence
+                                    <input type="number" class="form-control w-50" value="10">
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Wisdom
+                                    <input type="number" class="form-control w-50" value="10">
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Charisma
+                                    <input type="number" class="form-control w-50" value="10">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Skills/Abilities Section -->
+                        <div class="col-md-8">
+                            <h5>Abilities & Skills</h5>
+                            <div class="form-group">
+                                <label for="skill1">Skill 1</label>
+                                <input type="text" id="skill1" class="form-control" placeholder="e.g., Acrobatics">
+                            </div>
+                            <div class="form-group">
+                                <label for="skill2">Skill 2</label>
+                                <input type="text" id="skill2" class="form-control" placeholder="e.g., Perception">
+                            </div>
+                            <!-- Add more fields as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- NPC Content Pane -->
+            <div id="content-npc" class="char-nav--pane">
+                <div class="npc-layout container-fluid mt-3">
+                    <h5>NPC Details</h5>
+                    <div class="form-group">
+                        <label for="npc-name">Name</label>
+                        <input type="text" id="npc-name" class="form-control" placeholder="NPC Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="npc-description">Description</label>
+                        <textarea id="npc-description" class="form-control" placeholder="NPC Description"
+                            rows="3"></textarea>
+                    </div>
+                    <!-- Other NPC-specific info -->
+                </div>
+            </div>
+            <!-- Stats Content Pane -->
+            <div id="content-stats" class="char-nav--pane">
+                <div class="stats-layout container-fluid mt-3">
+                    <h5>Combat Stats</h5>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="armor-class">Armor Class</label>
+                                <input type="number" id="armor-class" class="form-control" value="10">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="initiative">Initiative</label>
+                                <input type="number" id="initiative" class="form-control" value="0">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="speed">Speed</label>
+                                <input type="number" id="speed" class="form-control" value="30">
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Hit Points</h5>
+                    <div class="form-group">
+                        <label for="hit-points">Current / Max</label>
+                        <input type="text" id="hit-points" class="form-control" placeholder="e.g., 25/40">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

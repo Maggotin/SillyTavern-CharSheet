@@ -6,7 +6,6 @@ import { CharacterSheetManager } from "./src/ui/charSheet.js";
 const settingsKey = 'SillyTavernCharSheet';
 const EXTENSION_NAME = 'Character Sheet D&D5e';
 
-
 /**
  * @type {CharSheetSettings}
  * @typedef {Object} CharSheetSettings

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Character Sheet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div id="char-sheet-container">
+    <!-- Close button for the window -->
+    <button id="character-sheet-close" class="menu_button" style="float: right;">Close</button>
+
+    <!-- Tab Headers -->
+    <div class="char-tabs">
+        <button class="char-tab active" data-tab="tab-core">Core</button>
+        <button class="char-tab" data-tab="tab-inventory">Inventory</button>
+        <button class="char-tab" data-tab="tab-spells">Spells</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="tab-core" class="tab-pane active">
+        <h3>Core Info</h3>
+        <p>Character stats go here...</p>
+    </div>
+    <div id="tab-inventory" class="tab-pane">
+        <h3>Inventory</h3>
+        <p>Equipment list here...</p>
+    </div>
+    <div id="tab-spells" class="tab-pane">
+        <h3>Spells</h3>
+        <p>Spell list here...</p>
+    </div>
+</div>
+
+<script src="../src/ui/charSheet.js"></script>
+</body>
+</html>

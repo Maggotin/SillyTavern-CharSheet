@@ -19,51 +19,51 @@ const defaultSettings = Object.freeze({
 let sheetManager = null;
 
 function renderExtensionSettings() {
-    const context = SillyTavern.getContext();
-    const settingsContainer = document.getElementById(`${settingsKey}-container`) ?? document.getElementById('extensions_settings2');
-    if (!settingsContainer) {
-        return;
-    }
+    const settingsContainer = document.getElementById(`${settingsKey}_settings`);
+    if (!settingsContainer) return;
 
-    const inlineDrawer = document.createElement('div');
-    inlineDrawer.classList.add('inline-drawer');
-    settingsContainer.append(inlineDrawer);
+    const html = `
+        <div class="inline-drawer">
+            <div class="inline-drawer-toggle inline-drawer-header">
+                <b>${EXTENSION_NAME}</b>
+                <div class="inline-drawer-icon fa-solid fa-circle-chevron-down"></div>
+            </div>
+            <div class="inline-drawer-content">
+                <label class="checkbox_label">
+                    <input type="checkbox" id="${settingsKey}_enabled" ${context.extensionSettings[settingsKey].enabled ? 'checked' : ''}>
+                    <span>Enabled</span>
+                </label>
+                <button id="${settingsKey}_toggle" class="menu_button" style="margin-top:10px">Toggle Character Sheet</button>
+            </div>
+        </div>
+    `;
 
-    const inlineDrawerToggle = document.createElement('div');
-    inlineDrawerToggle.classList.add('inline-drawer-toggle', 'inline-drawer-header');
+    settingsContainer.innerHTML = html;
 
-    const extensionName = document.createElement('b');
-    extensionName.textContent = context.t`${EXTENSION_NAME}`;
-
-    const inlineDrawerIcon = document.createElement('div');
-    inlineDrawerIcon.classList.add('inline-drawer-icon', 'fa-solid', 'fa-circle-chevron-down', 'down');
-
-    inlineDrawerToggle.append(extensionName, inlineDrawerIcon);
-
-    const inlineDrawerContent = document.createElement('div');
-    inlineDrawerContent.classList.add('inline-drawer-content');
-
-    inlineDrawer.append(inlineDrawerToggle, inlineDrawerContent);
-
-    /** @type {CharSheetSettings} */
-    const settings = context.extensionSettings[settingsKey];
-
-    // Enabled checkbox
-    const enabledCheckboxLabel = document.createElement('label');
-    enabledCheckboxLabel.classList.add('checkbox_label');
-    enabledCheckboxLabel.htmlFor = `${settingsKey}-enabled`;
-
-    const enabledCheckbox = document.createElement('input');
-    enabledCheckbox.id = `${settingsKey}-enabled`;
-    enabledCheckbox.type = 'checkbox';
-    enabledCheckbox.checked = settings.enabled;
-    enabledCheckbox.addEventListener('change', () => {
-        settings.enabled = enabledCheckbox.checked;
+    // Add event listeners
+    document.getElementById(`${settingsKey}_enabled`).addEventListener('change', function() {
+        context.extensionSettings[settingsKey].enabled = this.checked;
         context.saveSettingsDebounced();
-        if (settings.enabled && sheetManager) {
+        if (this.checked && sheetManager) {
             sheetManager.show();
         } else if (sheetManager) {
             sheetManager.hide();
+        }
+    });
+
+    document.getElementById(`${settingsKey}_toggle`).addEventListener('click', () => {
+        sheetManager?.toggle();
+    });
+
+    // Add drawer toggle functionality
+    const toggleButton = settingsContainer.querySelector('.inline-drawer-toggle');
+    const content = settingsContainer.querySelector('.inline-drawer-content');
+    const icon = settingsContainer.querySelector('.inline-drawer-icon');
+
+    toggleButton.addEventListener('click', function() {
+        if (content.style.display === 'none') {
+            content.style.display = 'block';
+            icon.classList.remove('fa-circle-chevron-down');
         }
     });
 
@@ -95,6 +95,13 @@ function renderExtensionSettings() {
             icon.classList.add('fa-circle-chevron-down');
         }
     });
+
+    const inlineDrawerContentElement = /** @type {HTMLElement} */ (
+        inlineDrawer.querySelector('.inline-drawer-content')
+    );
+    if (inlineDrawerContentElement) {
+        inlineDrawerContentElement.style.display = 'none';
+    }
 }
 
 (function initExtension() {

@@ -1,14 +1,11 @@
 import { eventSource, event_types } from "../../../../script.js";
-import { extension_settings, getContext, loadExtensionSettings } from "../../../extensions.js";
-import { saveSettingsDebounced } from "../../../../script.js";
+import { getContext } from "../../../extensions.js";
 import { CharacterSheetManager } from "./src/ui/charSheet.js";
 
 const settingsKey = 'SillyTavernCharSheet';
 const EXTENSION_NAME = 'Character Sheet D&D5e';
 
-
 /**
- * @type {CharSheetSettings}
  * @typedef {Object} CharSheetSettings
  * @property {boolean} enabled Whether the extension is enabled
  */
@@ -25,10 +22,11 @@ function renderExtensionSettings() {
         return;
     }
 
+
     const inlineDrawer = document.createElement('div');
     inlineDrawer.classList.add('inline-drawer');
     settingsContainer.append(inlineDrawer);
-
+    // Change drawerHeader to inlineDrawerToggle to match ST's pattern
     const inlineDrawerToggle = document.createElement('div');
     inlineDrawerToggle.classList.add('inline-drawer-toggle', 'inline-drawer-header');
 
@@ -45,43 +43,9 @@ function renderExtensionSettings() {
 
     inlineDrawer.append(inlineDrawerToggle, inlineDrawerContent);
 
-    /** @type {CharSheetSettings} */
+    /** @type {SillyTavernCharSheet} */
     const settings = context.extensionSettings[settingsKey];
-
-    // Enabled checkbox
-    const enabledCheckboxLabel = document.createElement('label');
-    enabledCheckboxLabel.classList.add('checkbox_label');
-    enabledCheckboxLabel.htmlFor = `${settingsKey}-enabled`;
-
-    const enabledCheckbox = document.createElement('input');
-    enabledCheckbox.id = `${settingsKey}-enabled`;
-    enabledCheckbox.type = 'checkbox';
-    enabledCheckbox.checked = settings.enabled;
-    enabledCheckbox.addEventListener('change', () => {
-        settings.enabled = enabledCheckbox.checked;
-        context.saveSettingsDebounced();
-        if (settings.enabled && sheetManager) {
-            sheetManager.show();
-        } else if (sheetManager) {
-            sheetManager.hide();
-        }
-    });
-
-    const enabledCheckboxText = document.createElement('span');
-    enabledCheckboxText.textContent = context.t`Enabled`;
-    enabledCheckboxLabel.append(enabledCheckbox, enabledCheckboxText);
-    inlineDrawerContent.append(enabledCheckboxLabel);
-
-    // Toggle sheet button
-    const toggleButton = document.createElement('button');
-    toggleButton.className = 'menu_button';
-    toggleButton.style.marginTop = '10px';
-    toggleButton.textContent = context.t`Toggle Character Sheet`;
-    toggleButton.addEventListener('click', () => sheetManager?.toggle());
-
-    inlineDrawerContent.append(enabledCheckboxLabel, toggleButton);
-
-    // Drawer toggle functionality
+    // Add click handler for toggle
     inlineDrawerToggle.addEventListener('click', function () {
         const content = this.nextElementSibling;
         const icon = this.querySelector('.inline-drawer-icon');
@@ -95,25 +59,48 @@ function renderExtensionSettings() {
             icon.classList.add('fa-circle-chevron-down');
         }
     });
+
+    // Rest of your drawer content setup
+    const settings = context.extensionSettings[settingsKey];
+
+    // Enabled toggle
+    const enabledLabel = document.createElement('label');
+    enabledLabel.classList.add('checkbox_label');
+    const enabledInput = document.createElement('input');
+    enabledInput.type = 'checkbox';
+    enabledInput.checked = settings.enabled;
+    enabledInput.addEventListener('change', () => {
+        settings.enabled = enabledInput.checked;
+        context.saveSettingsDebounced();
+        if (settings.enabled) {
+            sheetManager?.show();
+        } else {
+            sheetManager?.hide();
+        }
+    });
+    const enabledText = document.createElement('span');
+    enabledText.textContent = 'Enabled';
+    enabledLabel.append(enabledInput, enabledText);
+
+    // Toggle sheet button
+    const toggleButton = document.createElement('button');
+    toggleButton.className = 'menu_button';
+    toggleButton.textContent = 'Toggle Character Sheet';
+    toggleButton.addEventListener('click', () => sheetManager?.toggle());
+
+    drawerContent.append(enabledLabel, toggleButton);
+    inlineDrawer.append(inlineDrawerToggle, drawerContent);
 }
-
+// Initialize the extension
 (function initExtension() {
-    console.debug(`[${EXTENSION_NAME}]`, 'Initializing extension');
-    const context = SillyTavern.getContext();
+    const context = getContext();
 
-
+    // Initialize settings
     if (!context.extensionSettings[settingsKey]) {
         context.extensionSettings[settingsKey] = structuredClone(defaultSettings);
     }
 
-    // Fill missing settings
-    for (const key of Object.keys(defaultSettings)) {
-        if (context.extensionSettings[settingsKey][key] === undefined) {
-            context.extensionSettings[settingsKey][key] = defaultSettings[key];
-        }
-    }
-
-    // Initialize sheet manager
+    // Create sheet manager
     sheetManager = new CharacterSheetManager();
 
     // Register event handlers
@@ -122,8 +109,6 @@ function renderExtensionSettings() {
         sheetManager?.init();
     });
 
-    context.saveSettingsDebounced();
+    // Render settings UI
     renderExtensionSettings();
-
-    console.debug(`[${EXTENSION_NAME}]`, 'Extension initialized');
 })();

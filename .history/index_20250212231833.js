@@ -6,7 +6,6 @@ import { CharacterSheetManager } from "./src/ui/charSheet.js";
 const settingsKey = 'SillyTavernCharSheet';
 const EXTENSION_NAME = 'Character Sheet D&D5e';
 
-
 /**
  * @type {CharSheetSettings}
  * @typedef {Object} CharSheetSettings
@@ -86,7 +85,7 @@ function renderExtensionSettings() {
         const content = this.nextElementSibling;
         const icon = this.querySelector('.inline-drawer-icon');
         if (content.style.display === 'none') {
-            content.style.display = 'block';
+            this.dom.style.display = 'block'; = 'block';
             icon.classList.remove('fa-circle-chevron-down');
             icon.classList.add('fa-circle-chevron-up');
         } else {

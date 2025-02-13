@@ -1,0 +1,120 @@
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Character Sheet Extension for SillyTavern</title>
+    <!-- Use Bootstrap for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <div id="character-sheet">
+        <!-- Close button for the window -->
+        <button id="character-sheet-close" class="menu_button" style="float: right;">Close</button>
+
+        <!-- Tab Navigation -->
+        <div class="toptabs">
+            <div class="tabwrapper active" data-tab="core">
+                <div class="maintab">Core</div>
+            </div>
+            <div class="tabwrapper" data-tab="details">
+                <div class="inventorytab">Details</div>
+            </div>
+            <div class="tabwrapper" data-tab="spells">
+                <div class="spelltab">Spells</div>
+            </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tabcontent">
+            <!-- Core Tab -->
+            <div id="core" class="tabpane active">
+                <div class="core-grid">
+                    <!-- Character Info -->
+                    <div class="char-info">
+                        <input type="text" id="charname" placeholder="Character Name">
+                        <input type="text" id="charclass" placeholder="Class & Level">
+                        <input type="text" id="background" placeholder="Background">
+                        <input type="text" id="race" placeholder="Race">
+                    </div>
+
+                    <!-- Ability Scores -->
+                    <div class="ability-scores">
+                        <div class="ability">
+                            <label>Strength</label>
+                            <input type="number" id="str" value="10">
+                            <span class="modifier">+0</span>
+                        </div>
+                        <div class="ability">
+                            <label>Dexterity</label>
+                            <input type="number" id="dex" value="10">
+                            <span class="modifier">+0</span>
+                        </div>
+                        <!-- ... other abilities ... -->
+                    </div>
+
+                    <!-- Combat Stats -->
+                    <div class="combat-stats">
+                        <div class="stat">
+                            <label>Armor Class</label>
+                            <input type="number" id="ac" value="10">
+                        </div>
+                        <div class="stat">
+                            <label>Initiative</label>
+                            <input type="number" id="initiative" value="0">
+                        </div>
+                        <div class="stat">
+                            <label>Speed</label>
+                            <input type="number" id="speed" value="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Tab -->
+            <div id="details" class="tabpane">
+                <div class="details-grid">
+                    <!-- Character Traits -->
+                    <div class="traits">
+                        <h3>Personality Traits</h3>
+                        <textarea id="personality"></textarea>
+                        
+                        <h3>Ideals</h3>
+                        <textarea id="ideals"></textarea>
+                        
+                        <h3>Bonds</h3>
+                        <textarea id="bonds"></textarea>
+                        
+                        <h3>Flaws</h3>
+                        <textarea id="flaws"></textarea>
+                    </div>
+
+                    <!-- Equipment -->
+                    <div class="equipment">
+                        <h3>Equipment</h3>
+                        <textarea id="equipment" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spells Tab -->
+            <div id="spells" class="tabpane">
+                <div class="spells-grid">
+                    <!-- Spell Slots -->
+                    <div class="spell-slots">
+                        <h3>Spell Slots</h3>
+                        <div class="slot-level">
+                            <label>Level 1</label>
+                            <input type="number" id="slot1" value="0" min="0">
+                        </div>
+                        <!-- ... other spell slots ... -->
+                    </div>
+
+                    <!-- Spell List -->
+                    <div class="spell-list">
+                        <h3>Known Spells</h3>
+                        <textarea id="spelllist" rows="15"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

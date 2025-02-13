@@ -5,7 +5,7 @@ import { CharacterSheetManager } from "./src/ui/charSheet.js";
 
 const settingsKey = 'SillyTavernCharSheet';
 const EXTENSION_NAME = 'Character Sheet D&D5e';
-
+const extensionFolderPath = `scripts/extensions/third-party/${extensionName}`;
 
 /**
  * @type {CharSheetSettings}

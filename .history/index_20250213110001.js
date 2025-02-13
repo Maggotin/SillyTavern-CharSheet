@@ -19,11 +19,11 @@ const defaultSettings = Object.freeze({
 let sheetManager = null;
 
 function renderExtensionSettings() {
-    const context = SillyTavern.getContext();
-    const settingsContainer = document.getElementById(`${settingsKey}-container`) ?? document.getElementById('extensions_settings2');
-    if (!settingsContainer) {
-        return;
-    }
+    const settingsContainer = /** @type {HTMLElement} */ (
+        document.getElementById(`${settingsKey}-container`) ?? 
+        document.getElementById('extensions_settings2')
+    );
+    if (!settingsContainer) return;
 
     const inlineDrawer = document.createElement('div');
     inlineDrawer.classList.add('inline-drawer');
@@ -95,6 +95,13 @@ function renderExtensionSettings() {
             icon.classList.add('fa-circle-chevron-down');
         }
     });
+
+    const inlineDrawerContentElement = /** @type {HTMLElement} */ (
+        inlineDrawer.querySelector('.inline-drawer-content')
+    );
+    if (inlineDrawerContentElement) {
+        inlineDrawerContentElement.style.display = 'none';
+    }
 }
 
 (function initExtension() {

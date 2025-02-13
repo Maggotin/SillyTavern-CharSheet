@@ -1,11 +1,9 @@
 import { eventSource, event_types } from "../../../../script.js";
-import { extension_settings, getContext, loadExtensionSettings } from "../../../extensions.js";
-import { saveSettingsDebounced } from "../../../../script.js";
+import { getContext } from "../../../extensions.js";
 import { CharacterSheetManager } from "./src/ui/charSheet.js";
 
 const settingsKey = 'SillyTavernCharSheet';
 const EXTENSION_NAME = 'Character Sheet D&D5e';
-
 
 /**
  * @type {CharSheetSettings}
@@ -19,7 +17,7 @@ const defaultSettings = Object.freeze({
 let sheetManager = null;
 
 function renderExtensionSettings() {
-    const context = SillyTavern.getContext();
+    const context = getContext();
     const settingsContainer = document.getElementById(`${settingsKey}-container`) ?? document.getElementById('extensions_settings2');
     if (!settingsContainer) {
         return;
@@ -99,8 +97,7 @@ function renderExtensionSettings() {
 
 (function initExtension() {
     console.debug(`[${EXTENSION_NAME}]`, 'Initializing extension');
-    const context = SillyTavern.getContext();
-
+    const context = getContext();
 
     if (!context.extensionSettings[settingsKey]) {
         context.extensionSettings[settingsKey] = structuredClone(defaultSettings);

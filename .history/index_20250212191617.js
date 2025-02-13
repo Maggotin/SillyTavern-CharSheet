@@ -1,11 +1,9 @@
 import { eventSource, event_types } from "../../../../script.js";
-import { extension_settings, getContext, loadExtensionSettings } from "../../../extensions.js";
-import { saveSettingsDebounced } from "../../../../script.js";
+import { getContext } from "../../../extensions.js";
 import { CharacterSheetManager } from "./src/ui/charSheet.js";
 
 const settingsKey = 'SillyTavernCharSheet';
 const EXTENSION_NAME = 'Character Sheet D&D5e';
-
 
 /**
  * @type {CharSheetSettings}
@@ -19,7 +17,7 @@ const defaultSettings = Object.freeze({
 let sheetManager = null;
 
 function renderExtensionSettings() {
-    const context = SillyTavern.getContext();
+    const context = getContext();
     const settingsContainer = document.getElementById(`${settingsKey}-container`) ?? document.getElementById('extensions_settings2');
     if (!settingsContainer) {
         return;
@@ -36,12 +34,13 @@ function renderExtensionSettings() {
     extensionName.textContent = context.t`${EXTENSION_NAME}`;
 
     const inlineDrawerIcon = document.createElement('div');
-    inlineDrawerIcon.classList.add('inline-drawer-icon', 'fa-solid', 'fa-circle-chevron-down', 'down');
+    inlineDrawerIcon.classList.add('inline-drawer-icon', 'fa-solid', 'fa-circle-chevron-down');
 
     inlineDrawerToggle.append(extensionName, inlineDrawerIcon);
 
     const inlineDrawerContent = document.createElement('div');
     inlineDrawerContent.classList.add('inline-drawer-content');
+    inlineDrawerContent.style.display = 'none';
 
     inlineDrawer.append(inlineDrawerToggle, inlineDrawerContent);
 
@@ -70,7 +69,6 @@ function renderExtensionSettings() {
     const enabledCheckboxText = document.createElement('span');
     enabledCheckboxText.textContent = context.t`Enabled`;
     enabledCheckboxLabel.append(enabledCheckbox, enabledCheckboxText);
-    inlineDrawerContent.append(enabledCheckboxLabel);
 
     // Toggle sheet button
     const toggleButton = document.createElement('button');
@@ -99,8 +97,7 @@ function renderExtensionSettings() {
 
 (function initExtension() {
     console.debug(`[${EXTENSION_NAME}]`, 'Initializing extension');
-    const context = SillyTavern.getContext();
-
+    const context = getContext();
 
     if (!context.extensionSettings[settingsKey]) {
         context.extensionSettings[settingsKey] = structuredClone(defaultSettings);

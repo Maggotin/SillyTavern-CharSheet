@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Character Sheet Extension for SillyTavern</title>
+    <!-- Use Bootstrap for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="character-sheet" class="character-sheet">
+    <button id="character-sheet-close">×</button>
+        <h3>Character Sheet Extension for SillyTavern</h3>
+        <!-- Main navigation tabs -->
+        <ul class="nav nav-tabs bg-dark" id="mainTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pc-tab" data-toggle="tab" href="#pc" role="tab" aria-controls="pc"
+                    aria-selected="true">Player Character</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="npc-tab" data-toggle="tab" href="#npc" role="tab" aria-controls="npc"
+                    aria-selected="false">NPC</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="math-tab" data-toggle="tab" href="#math" role="tab" aria-controls="math"
+                    aria-selected="false">Math</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="mainTabContent">
+
+            <!-- Player Character Section -->
+            <div class="tab-pane fade show active" id="pc" role="tabpanel" aria-labelledby="pc-tab">
+                <!-- PC Subtabs -->
+                <ul class="nav nav-tabs bg-dark" id="pcSubTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pc-attack-tab" data-toggle="tab" href="#pcAttack" role="tab"
+                            aria-controls="pcAttack" aria-selected="true">Attack</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pc-init-tab" data-toggle="tab" href="#pcInit" role="tab"
+                            aria-controls="pcInit" aria-selected="false">Initiative</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pc-ac-tab" data-toggle="tab" href="#pcAC" role="tab"
+                            aria-controls="pcAC" aria-selected="false">Ability Checks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pc-st-tab" data-toggle="tab" href="#pcST" role="tab"
+                            aria-controls="pcST" aria-selected="false">Saving Throws</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pc-trait-tab" data-toggle="tab" href="#pcTrait" role="tab"
+                            aria-controls="pcTrait" aria-selected="false">Traits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pc-other-tab" data-toggle="tab" href="#pcOther" role="tab"
+                            aria-controls="pcOther" aria-selected="false">Other</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pcSubTabContent">
+                    <!-- PC Attack Tab -->
+                    <div class="tab-pane fade show active" id="pcAttack" role="tabpanel"
+                        aria-labelledby="pc-attack-tab">
+                        <div id="pc-attack-inputs" class="row inputs">
+                            <div class="form-group col-md-4">
+                                <label>ATTACK ITEM #</label>
+                                <input type="number" id="pc-item-num" class="form-control" value="1" min="1" />
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>ATTACK PREFIX <small>(OPTIONAL)</small></label>
+                                <input type="text" id="pc-atk-prefix" class="form-control" placeholder="[GWM]" />
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>ATTACK TYPE</label>
+                                <select id="pc-atk-type" class="form-control">
+                                    <option>Use Sheet Settings</option>
+                                    <option>Normal</option>
+                                    <option>Roll Twice</option>
+                                    <option>Advantage</option>
+                                    <option>Disadvantage</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- Nested tabs for attack extras -->
+                        <ul class="nav nav-tabs bg-dark" id="pcAtkNestedTabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="atk-other-tab" data-toggle="tab" href="#atkOther"
+                                    role="tab" aria-controls="atkOther" aria-selected="true">Other</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="atk-feats-tab" data-toggle="tab" href="#atkFeats" role="tab"
+                                    aria-controls="atkFeats" aria-selected="false">Feats</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="barbarian-tab" data-toggle="tab" href="#barbarian" role="tab"
+                                    aria-controls="barbarian" aria-selected="false">Barbarian</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pcAtkNestedContent">
+                            <div class="tab-pane fade show active" id="atkOther" role="tabpanel"
+                                aria-labelledby="atk-other-tab">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" id="is-spell" />
+                                        IS SPELL
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="atkFeats" role="tabpanel" aria-labelledby="atk-feats-tab">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" id="feat-elven-accuracy" />
+                                        FEAT - ELVEN ACCURACY
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" id="feat-gwm" />
+                                        FEAT - GREAT WEAPON MASTER
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" id="feat-sharpshooter" />
+                                        FEAT - SHARPSHOOTER
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="barbarian" role="tabpanel" aria-labelledby="barbarian-tab">
+                                <div class="form-group">
+                                    <label>BARBARIAN CLASS</label>
+                                    <select id="barbarian-class" class="form-control">
+                                        <option value="none">None</option>
+                                        <option value="@{base_level}">Base Class</option>
+                                        <option value="@{multiclass1_lvl}">Multiclass 1</option>
+                                        <option value="@{multiclass2_lvl}">Multiclass 2</option>
+                                        <option value="@{multiclass3_lvl}">Multiclass 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" id="barbarian-is-str" />
+                                        IS STR-BASED MELEE ATTACK?
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>RAGE RESOURCE BOX</label>
+                                    <select id="rage-resource" class="form-control">
+                                        <option value="@{class_resource}">Resource Box 1</option>
+                                        <option value="@{other_resource}">Resource Box 2</option>
+                                        <option value="@{repeating_resource_$0_resource_left}">Resource Box 3</option>
+                                        <option value="@{repeating_resource_$0_resource_right}">Resource Box 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <label class="macro-name">Attack Macro</label>
+                            <textarea id="pc-atk-macro" class="form-control output"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- PC Initiative Tab -->
+                    <div class="tab-pane fade" id="pcInit" role="tabpanel" aria-labelledby="pc-init-tab">
+                        <div class="form-group">
+                            <label class="macro-name">Initiative Macro</label>
+                            <textarea id="pc-init-macro" class="form-control output">
+@{wtype}&{template:simple} {{rname=Initiative}} {{mod=@{initiative_bonus}}} {{r1=[[@{initiative_style}+@{initiative_bonus}[INIT] &{tracker}]]}} {{normal=1}} @{charname_output}
+              </textarea>
+                        </div>
+                    </div>
+
+                    <!-- PC Ability Checks Tab -->
+                    <div class="tab-pane fade" id="pcAC" role="tabpanel" aria-labelledby="pc-ac-tab">
+                        <div class="form-group">
+                            <label class="macro-name">Ability Check Macro</label>
+                            <textarea id="pc-ac-macro" class="form-control output"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label># OF TOOLS</label>
+                                <input type="number" id="num-tools" class="form-control" value="1" min="1" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="macro-name">Tools Macro</label>
+                            <textarea id="pc-tools-macro" class="form-control output"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- PC Saving Throws Tab -->
+                    <div class="tab-pane fade" id="pcST" role="tabpanel" aria-labelledby="pc-st-tab">
+                        <div class="form-group">
+                            <label class="macro-name">Saving Throw Macro</label>
+                            <textarea id="pc-st-macro" class="form-control output"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- PC Traits Tab -->
+                    <div class="tab-pane fade" id="pcTrait" role="tabpanel" aria-labelledby="pc-trait-tab">
+                        <div id="pc-trait-inputs" class="row inputs">
+                            <div class="form-group col-md-6">
+                                <label>TRAIT #</label>
+                                <input type="number" id="trait-num" class="form-control" value="1" min="1" />
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <label class="macro-name">Trait Macro</label>
+                            <textarea id="pc-trait-macro" class="form-control output"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- PC Other Tab -->
+                    <div class="tab-pane fade" id="pcOther" role="tabpanel" aria-labelledby="pc-other-tab">
+                        <div class="form-group">
+                            <label class="macro-name">Other Macro (e.g., Potion of Healing)</label>
+                            <textarea id="pc-other-macro" class="form-control output">
+&{template:default} {{name=Potion of...}} {{?{Potion|Regular, **Healing** = [[2d4+2]]|Greater, **Greater Healing** = [[4d4+4]]|Superior, **Superior Healing** = [[8d4+8]]|Supreme, **Supreme Healing** = [[10d4+20]]} HP}}
+              </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NPC Section -->
+            <div class="tab-pane fade" id="npc" role="tabpanel" aria-labelledby="npc-tab">
+                <ul class="nav nav-tabs bg-dark" id="npcTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="npc-attacks-tab" data-toggle="tab" href="#npcAttacks" role="tab"
+                            aria-controls="npcAttacks" aria-selected="true">Group Attacks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="npc-init-tab" data-toggle="tab" href="#npcInit" role="tab"
+                            aria-controls="npcInit" aria-selected="false">Initiative</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="npc-ability-tab" data-toggle="tab" href="#npcAbility" role="tab"
+                            aria-controls="npcAbility" aria-selected="false">Ability Checks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="npc-save-tab" data-toggle="tab" href="#npcSave" role="tab"
+                            aria-controls="npcSave" aria-selected="false">Saving Throws</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="npcTabContent">
+                    <div class="tab-pane fade show active" id="npcAttacks" role="tabpanel"
+                        aria-labelledby="npc-attacks-tab">
+                        <div id="npc-attacks-inputs" class="row inputs">
+                            <div class="form-group col-md-3">
+                                <label>NUM CREATURES</label>
+                                <input type="number" id="npc-num-creatures" class="form-control" placeholder="1"
+                                    min="1" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>ATK NAME</label>
+                                <input type="text" id="npc-attack-name" class="form-control" placeholder="Bite" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>ATK BONUS</label>
+                                <input type="number" id="npc-attack-bonus" class="form-control" placeholder="6" />
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <label class="macro-name">NPC Attack Macro</label>
+                            <textarea id="npc-atk-macro" class="form-control output"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="macro-name">NPC Damage Macro</label>
+                            <textarea id="npc-dmg-macro" class="form-control output"></textarea>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="npcInit" role="tabpanel" aria-labelledby="npc-init-tab">
+                        <div class="form-group">
+                            <label class="macro-name">NPC Initiative Macro</label>
+                            <textarea id="npc-init-macro" class="form-control output">
+@{selected|wtype}%{selected|initiative}
+              </textarea>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="npcAbility" role="tabpanel" aria-labelledby="npc-ability-tab">
+                        <div class="form-group">
+                            <label class="macro-name">NPC Ability Check Macro</label>
+                            <textarea id="npc-ability-macro" class="form-control output"></textarea>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="npcSave" role="tabpanel" aria-labelledby="npc-save-tab">
+                        <div class="form-group">
+                            <label class="macro-name">NPC Saving Throw Macro</label>
+                            <textarea id="npc-save-macro" class="form-control output"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Math Section -->
+            <div class="tab-pane fade" id="math" role="tabpanel" aria-labelledby="math-tab">
+                <ul class="nav nav-tabs bg-dark" id="mathTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="class-feature-tab" data-toggle="tab" href="#classFeature"
+                            role="tab" aria-controls="classFeature" aria-selected="true">Class Feature</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="mathTabContent">
+                    <div class="tab-pane fade show active" id="classFeature" role="tabpanel"
+                        aria-labelledby="class-feature-tab">
+                        <p>This is useful for calculating extra damage dice for abilities such as Divine Strike or
+                            Barbarian Rage.</p>
+                        <div class="row inputs">
+                            <div class="form-group col-md-4">
+                                <label>CLASS</label>
+                                <select id="math-class" class="form-control">
+                                    <option value="@{base_level}">Base Class</option>
+                                    <option value="@{multiclass1_lvl}">Multiclass 1</option>
+                                    <option value="@{multiclass2_lvl}">Multiclass 2</option>
+                                    <option value="@{multiclass3_lvl}">Multiclass 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>CLASS LEVEL</label>
+                                <select id="math-class-level" class="form-control">
+                                    <!-- Options 1 to 20 -->
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                    <option>18</option>
+                                    <option>19</option>
+                                    <option>20</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Multiplier</label>
+                                <input type="number" id="math-multiplier" class="form-control" value="1" min="1" />
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <label class="result">Result</label>
+                            <textarea id="math-result" class="form-control output">
+((1-(floor((classLevel - 1 - class)/(abs(classLevel-1 - class)+0.001))+1))*multiplier)
+              </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End of mainTabContent -->
+    </div> <!-- End of container -->
+
+    <!-- Include jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

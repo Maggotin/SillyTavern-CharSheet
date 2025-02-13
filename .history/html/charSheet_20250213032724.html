@@ -1,0 +1,52 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Character Sheet Extension for SillyTavern</title>
+<!-- Use Bootstrap for styling -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
+<div id="character-sheet">
+    <!-- Close button for the window -->
+    <button id="character-sheet-close" class="menu_button" style="float: right;">Close</button>
+
+    <!-- Header: Basic Character Info -->
+    <div class="sheet-header mb-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" id="character-name" class="form-control" placeholder="Character Name" />
+                </div>
+                <div class="col-md-2">
+                    <input type="text" id="character-class" class="form-control" placeholder="Class" />
+                </div>
+                <div class="col-md-2">
+                    <input type="text" id="character-race" class="form-control" placeholder="Race" />
+                </div>
+                <div class="col-md-2">
+                    <input type="number" id="character-level" class="form-control" placeholder="Level" value="1"
+                        min="1" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="toptabs">
+        <div class="tabwrapper" data-tab="core">
+            <div class="maintab">Core</div>
+        </div>
+        <div class="tabwrapper" data-tab="inventory">
+            <div class="inventorytab">Inventory</div>
+        </div>
+        <div class="tabwrapper" data-tab="spells">
+            <div class="spelltab">Spells</div>
+        </div>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+        <div id="core" class="tabpane">Core Content</div>
+        <div id="inventory" class="tabpane">Inventory Content</div>
+        <div id="spells" class="tabpane">Spells Content</div>
+    </div>
+</div>

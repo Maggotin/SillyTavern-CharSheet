@@ -127,3 +127,6 @@ function renderExtensionSettings() {
 
     console.debug(`[${EXTENSION_NAME}]`, 'Extension initialized');
 })();
+
+// After:
+(/** @type {HTMLElement} */ (someElem)).style.display = "none";
