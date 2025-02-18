@@ -1,0 +1,22 @@
+@import "@dndbeyond/ttui/components/Button/styles/ButtonSizes.module.css";
+
+.deletePopoverHeader {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.deletePopoverContent {
+  font-size: 0.813rem;
+  font-weight: 400;
+  line-height: 1.875;
+  margin: 0.625rem 0 1.25rem;
+}
+
+.deletePopoverFooter {
+  display: flex;
+  justify-content: space-around;
+}
+
+.deletePopoverFooter button {
+  padding: 0.313rem 0.625rem;
+}

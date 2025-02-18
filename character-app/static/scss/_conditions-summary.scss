@@ -1,0 +1,9 @@
+.ct-conditions-summary {
+  &__default {
+    color: $ct--theme-de-emphasized-color;
+    font-family: $condensed;
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+}

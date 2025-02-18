@@ -1,0 +1,25 @@
+.modifier {
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-family: var(--font-family);
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 0.313rem;
+}
+
+.signedNumber {
+  vertical-align: middle;
+}
+
+.icon {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.313rem;
+}
+
+.description {
+  margin-top: 0.625rem;
+  padding-top: 0.625rem;
+  border-top: 0.063rem solid var(--theme-transparent);
+}

@@ -1,0 +1,95 @@
+.ct-container-manager {
+  &__inventory {
+    margin: 10px 0;
+  }
+
+  &__empty {
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  &__item {
+    & + & {
+      margin-top: 5px;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+
+      &-action {
+        padding-right: 5px;
+      }
+    }
+
+    > .ddbc-collapsible__header {
+      .ct-theme-button {
+        width: 47px;
+      }
+    }
+
+    > .ddbc-collapsible__content {
+      border: 1px solid #fff;
+      padding: 10px;
+      margin-top: 5px;
+      background: #f9f9f9;
+      box-shadow: 0 0 0 1px #e0e0e0;
+      margin-bottom: 15px;
+    }
+
+    .ct-item-detail-abilities__limited-uses {
+      flex-direction: column;
+    }
+  }
+
+  &__custom {
+    &-items {
+      &-list {
+        margin: 15px 0;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      & + & {
+        @include sidebarSeparator(5px, 5px);
+      }
+
+      &-name {
+        flex: 1;
+        min-width: 0;
+      }
+    }
+  }
+
+  &__links {
+    margin: 15px 0;
+
+    &-heading {
+      font-weight: bold;
+      font-size: 16px;
+      font-family: $condensed;
+    }
+
+    & &-list {
+      margin-top: 0;
+    }
+  }
+
+  .ct-equipment-shop {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ct-container-manager__item > .ddbc-collapsible__content {
+    background-color: $ct--theme-dark-mode-background-color;
+  }
+}

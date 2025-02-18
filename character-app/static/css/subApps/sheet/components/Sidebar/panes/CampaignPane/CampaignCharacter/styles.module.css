@@ -1,0 +1,45 @@
+.character {
+  display: flex;
+  align-items: center;
+}
+
+.character + .character {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 0.063rem solid var(--theme-transparent);
+}
+
+.preview {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.content {
+  flex: 1;
+  margin-left: 0.5rem;
+  line-height: 1;
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  font-family: var(--font-condensed);
+}
+
+.link.darkMode {
+  color: #fff;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.user {
+  color: var(--ttui_grey-500);
+  font-family: var(--font-condensed);
+}
+
+.current .name {
+  color: var(--theme-color);
+}

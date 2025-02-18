@@ -1,0 +1,64 @@
+:root {
+    --actions-list--font-family: var(--font-condensed);
+    --actions-list--default-color: var(--character-muted-color);
+    --actions-list--dark-color: var(--theme-contrast);
+}
+
+.actionsList {
+    margin-bottom: 1.5625rem;
+}
+
+.actionsList:last-child {
+    margin-bottom: 0;
+}
+
+.heading {
+    font-family: var(--actions-list--font-family);
+    color: var(--theme-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.625rem;
+    padding-bottom: 0;
+    border-bottom: 0.0625rem solid var(--character-light-mode-border-default);
+}
+
+.heading.darkMode {
+    border-color: var(--theme-transparent);
+}
+
+.sectionHeading {
+    font-weight: bold;
+    font-family: var(--actions-list--font-family);
+    line-height: 1.2;
+}
+
+.sectionHeading.darkMode {
+    color: white;
+}
+
+.section {
+    margin-bottom: 1.0625rem;
+}
+
+.list {
+    border-left: 0.1875rem solid var(--character-light-mode-border-default);
+    padding-left: 0.5rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-left: 0.25rem;
+    font-size: 0.75rem;
+    margin-top: 0.3125rem;
+}
+
+.list.darkMode {
+    border-left-color: var(--theme-color);
+}
+
+.activatable {
+    cursor: pointer;
+    margin-bottom: 1.0625rem;
+}
+
+.attackTable {
+    margin-bottom: 0.8125rem;
+}

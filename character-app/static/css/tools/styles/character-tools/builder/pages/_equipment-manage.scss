@@ -1,0 +1,18 @@
+.equipment-manage {
+  .ddbc-collapsible--opened > .ddbc-collapsible__header {
+    border-left: 3px solid $character-default-color;
+  }
+
+  .ddbc-collapsible__content {
+    margin: 10px;
+  }
+
+  &__callout {
+    font-family: $condensed;
+    font-size: 15px;
+  }
+
+  &__warning {
+    text-align: center;
+  }
+}

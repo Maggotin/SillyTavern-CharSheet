@@ -1,0 +1,112 @@
+.ct-decorate-pane {
+  &__current-selections {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    @include sidebarSeparatorBottom();
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 320px;
+
+    &-item {
+      width: 50%;
+      height: 50%;
+      padding: 10px;
+      position: relative;
+      cursor: pointer;
+
+      &-label {
+        position: absolute;
+        top: -7px;
+        color: $ct--theme-de-emphasized-color;
+        text-align: center;
+      }
+
+      &-inner {
+        border-radius: 4px;
+        box-shadow: 0 0 10px 2px lighten($ct--theme-dark-mode-secondary-bg, 20%)
+          inset;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--is-active {
+          border: 2px solid $ct--builder-color;
+          box-shadow: 0 0 10px 2px
+            lighten($ct--theme-dark-mode-secondary-bg, 40%) inset;
+        }
+
+        &:hover {
+          box-shadow: 0 0 10px 2px
+            lighten($ct--theme-dark-mode-secondary-bg, 40%) inset;
+        }
+      }
+    }
+  }
+
+  &__theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-color {
+      margin-top: 5px;
+      text-align: center;
+      line-height: 1;
+    }
+  }
+
+  &__portrait,
+  &__backdrop {
+    border: none;
+    border-radius: 4px;
+    width: 130px;
+    height: 130px;
+  }
+
+  &__backdrop {
+    background: center center #111 no-repeat;
+    background-size: cover;
+  }
+
+  &__preferences {
+    @include sidebarSeparatorBottom();
+
+    &-content {
+      @include sidebarSeparator();
+      padding: 10px;
+    }
+  }
+
+  &__shop {
+    .ddbc-collapsible {
+      position: relative;
+
+      &--opened {
+        .ddbc-collapsible__header {
+          position: sticky;
+          top: 362px;
+          z-index: 9;
+        }
+      }
+    }
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ct-decorate-pane {
+    &__current-selections {
+      background-color: $ct--theme-dark-mode-background-color;
+    }
+
+    &__preferences-content {
+      background-color: $ct--theme-dark-mode-secondary-bg;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+$creature-list--font-family: $condensed !default;
+$creature-row--ac-font: $condensed !default;
+
+$creature-row--hp-color: $ct--theme-de-emphasized-color !default;
+$creature-row--temp-hp-color: $ct--temp-hp-color !default;
+$creature-row--hp-font: $condensed !default;
+
+$creature-row--speed-font: $condensed !default;
+$creature-row--speed-color: $ct--theme-de-emphasized-color !default;
+
+$creature-row--notes-font: $condensed !default;
+$creature-row--notes-color: $ct--theme-de-emphasized-color !default;
+
+$creature-row--name-font: $condensed !default;
+
+$creature-row--meta-font: $condensed !default;
+$creature-row--meta-color: $ct--theme-de-emphasized-color !default;
+
+.ddbc-creature-list {
+  &__col {
+    &--action {
+      width: 40px;
+    }
+    &--preview {
+      width: 35px;
+    }
+    &--primary {
+      width: 130px;
+    }
+    &--ac {
+      width: 35px;
+    }
+    &--hp {
+      width: 85px;
+    }
+    &--speed {
+      width: 50px;
+    }
+    &--notes {
+      flex: 1;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    padding: 8px 0;
+
+    & + & {
+      border-top: 1px dotted #eaeaea;
+    }
+
+    &-header {
+      display: flex;
+    }
+
+    &-action {
+      width: 40px;
+    }
+
+    &-preview {
+      width: 35px;
+    }
+
+    &-primary {
+      width: 130px;
+    }
+
+    &-ac {
+      width: 35px;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: $creature-row--ac-font;
+    }
+
+    &-hp {
+      width: 85px;
+      display: flex;
+      padding-right: 10px;
+
+      &--has-temp &-value {
+        color: $creature-row--temp-hp-color;
+      }
+
+      &-sep {
+        margin: 0 5px;
+      }
+
+      &-value {
+        &--current {
+          font-size: 16px;
+          font-weight: bold;
+          font-family: $creature-row--hp-font;
+        }
+        &--total {
+          font-size: 16px;
+          color: $creature-row--hp-color;
+          font-weight: bold;
+          font-family: $creature-row--hp-font;
+        }
+      }
+    }
+
+    &-speed {
+      width: 50px;
+
+      &-value {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &-callout {
+        font-size: 10px;
+        color: $creature-row--speed-color;
+        font-family: $creature-row--speed-font;
+      }
+    }
+
+    &-notes {
+      flex: 1;
+      font-size: 12px;
+      color: $creature-row--notes-color;
+      font-family: $creature-row--notes-font;
+    }
+
+    &-img {
+      width: 30px;
+      height: 30px;
+      border-radius: 3px;
+    }
+
+    &-name {
+      font-size: 14px;
+      font-family: $creature-row--name-font;
+    }
+
+    &-meta {
+      font-size: 10px;
+      color: $creature-row--meta-color;
+      font-family: $creature-row--meta-font;
+
+      &-item {
+        & + &::before {
+          content: $html-entity--bull;
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+
+  &__row-header &__col {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $creature-list--font-family;
+    padding-bottom: 5px;
+  }
+}

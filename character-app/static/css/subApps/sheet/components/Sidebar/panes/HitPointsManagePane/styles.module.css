@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.border {
+  padding-bottom: 1.25rem;
+  border-bottom: 0.063rem solid var(--theme-transparent);
+}

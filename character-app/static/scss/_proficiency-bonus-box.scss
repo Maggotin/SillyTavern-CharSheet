@@ -1,0 +1,44 @@
+.ct-proficiency-bonus-box {
+  width: 94px;
+  height: 89px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+
+  &__heading {
+    color: #000;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: $condensed;
+    font-weight: bold;
+    padding-top: 9px;
+    padding-bottom: 1px;
+    position: relative;
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__label {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: $condensed;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__value {
+    color: #242528;
+    font-size: 26px;
+    font-weight: 500;
+    &--dark-mode {
+      color: white;
+    }
+  }
+}

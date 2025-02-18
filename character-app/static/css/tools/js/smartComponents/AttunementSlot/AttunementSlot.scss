@@ -1,0 +1,66 @@
+$attunement-slot--font-family: $condensed !default;
+$attunement-slot--empty-color: $ct--theme-de-emphasized-color !default;
+$attunement-slot--meta-color: $ct--theme-de-emphasized-color !default;
+
+.ddbc-attunement-slot {
+  width: 248px;
+  height: 50px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 6px;
+
+  &--filled {
+    cursor: pointer;
+  }
+
+  &--empty {
+    color: $attunement-slot--empty-color;
+    font-size: 11px;
+  }
+
+  &__preview {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    background: center center transparent no-repeat;
+    background-size: cover;
+    margin-left: 2px;
+  }
+
+  &__content {
+    padding-left: 10px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  &__name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 4px;
+  }
+
+  &__meta {
+    font-size: 10px;
+    color: $attunement-slot--meta-color;
+    font-family: $attunement-slot--font-family;
+
+    &-item {
+      & + &::before {
+        content: "\2022";
+        padding: 0 3px;
+      }
+    }
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ddbc-attunement-slot {
+    &--empty {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+}

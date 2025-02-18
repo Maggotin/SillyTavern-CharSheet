@@ -1,0 +1,25 @@
+.encumbrance-details {
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 10px;
+
+  &-heading {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: $condensed;
+    text-transform: uppercase;
+  }
+
+  &-weight {
+    margin-bottom: 5px;
+
+    &-label {
+      margin-right: 5px;
+    }
+
+    &-value {
+      font-weight: bold;
+    }
+  }
+}

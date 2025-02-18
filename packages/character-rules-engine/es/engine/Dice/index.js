@@ -1,0 +1,12 @@
+import * as DiceAccessors from './accessors';
+import * as DiceConstants from './constants';
+import * as DiceDerivers from './derivers';
+import * as DiceGenerators from './generators';
+import * as DiceRenderers from './renderers';
+import * as DiceSimulators from './simulators';
+import * as DiceTypings from './typings';
+import * as DiceUtils from './utils';
+export * from './constants';
+export * from './typings';
+export { DiceAccessors, DiceRenderers, DiceSimulators, DiceUtils, DiceDerivers, DiceGenerators };
+export default Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, DiceAccessors), DiceRenderers), DiceSimulators), DiceUtils), DiceTypings), DiceConstants), DiceDerivers), DiceGenerators);

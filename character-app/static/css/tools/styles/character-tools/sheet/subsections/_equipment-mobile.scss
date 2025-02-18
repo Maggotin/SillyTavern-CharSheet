@@ -1,0 +1,53 @@
+.ct-equipment-mobile {
+  @include mobileDividerContentBlock();
+
+  .ct-inventory-filter {
+    &__callout {
+      order: 1;
+      width: 100%;
+      padding-left: 0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    &__box {
+      order: 2;
+    }
+
+    &__advanced {
+      order: 3;
+    }
+
+    &__interactions {
+      flex-wrap: wrap;
+    }
+  }
+
+  .ct-equipment__container-weight {
+    width: 135px;
+  }
+
+  .ct-inventory-item__name {
+    flex: 1;
+  }
+
+  .ct-inventory__col--name {
+    flex: 1;
+  }
+
+  .ct-attunement {
+    flex-direction: column;
+
+    &__group {
+      &--items {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.ct-character-sheet-mobile--dark-mode {
+  .ct-equipment-mobile {
+    background-color: $ct--theme-dark-mode-bg-mobile;
+  }
+}

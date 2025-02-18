@@ -1,0 +1,124 @@
+.ct-extra-manage-pane {
+  &__manager {
+    margin: 15px 0;
+  }
+
+  &__selected-group {
+    margin-bottom: 10px;
+
+    &-chooser {
+    }
+
+    &-content {
+      margin-top: 10px;
+    }
+
+    &-rules {
+      margin-top: 10px;
+    }
+
+    &-warning {
+      margin: 10px 0;
+      font-style: italic;
+    }
+  }
+
+  &__filters {
+    margin-bottom: 15px;
+
+    &-challenge {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      &-heading {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      &-fields {
+        display: flex;
+        align-items: center;
+      }
+
+      &-sep {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  &__filter {
+    &-heading {
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+
+  &__extras {
+    @include sidebarSeparator(15px);
+
+    .ct-vehicle-block,
+    .ddbc-creature-block {
+      margin: 10px 0;
+    }
+  }
+
+  &__extra {
+    @include sidebarSeparator(5px, 5px);
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  &__pager {
+    margin-top: 15px;
+  }
+
+  &__inventory {
+    margin: 15px 0;
+
+    .ct-vehicle-block,
+    .ddbc-creature-block {
+      margin: 10px 0;
+    }
+  }
+
+  &__default {
+    color: $ct--theme-de-emphasized-color;
+    text-align: center;
+    padding: 10px;
+  }
+
+  &__quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &-action {
+      margin-left: 10px;
+    }
+
+    .ct-simple-quantity {
+      margin-bottom: 0;
+    }
+  }
+
+  &__group {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-heading {
+      font-weight: bold;
+      font-family: $condensed;
+      color: $ct--theme-color;
+      text-transform: uppercase;
+      border-bottom: 1px solid #eaeaea;
+    }
+  }
+}

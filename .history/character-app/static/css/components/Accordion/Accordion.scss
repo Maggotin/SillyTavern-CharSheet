@@ -1,0 +1,10 @@
+.ddbc-html-content {
+  a {
+    color: $builder-default-color;
+    &:hover,
+    &:visited,
+    &:active {
+      color: $builder-default-color;
+    }
+  }
+}

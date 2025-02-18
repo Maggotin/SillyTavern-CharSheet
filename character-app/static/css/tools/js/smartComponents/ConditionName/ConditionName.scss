@@ -1,0 +1,22 @@
+.ddbc-condition {
+  &::after {
+    content: ", ";
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  &__name {
+    &--dark-mode {
+      color: white;
+    }
+  }
+}

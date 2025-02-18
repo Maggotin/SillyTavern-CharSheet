@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 0.063rem solid var(--theme-transparent);
+}
+
+.launchButton {
+  font-size: 0.75rem;
+  margin-bottom: 0.625rem;
+}
+
+.launchButton:hover span {
+  color: var(--theme-contrast);
+  text-decoration: underline;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: var(--font-condensed);
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.dm {
+  margin-top: 0.625rem;
+}
+
+.dmLabel {
+  font-weight: bold;
+  font-family: var(--font-condensed);
+  margin-right: 0.3125rem;
+}
+
+.characters {
+  margin-top: 0.625rem;
+  padding-top: 0.625rem;
+  border-top: 0.063rem solid var(--theme-transparent);
+}

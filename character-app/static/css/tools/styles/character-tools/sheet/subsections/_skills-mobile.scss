@@ -1,0 +1,8 @@
+.ct-skills-mobile {
+  .ct-skills {
+    @include mobileDividerContentBlock();
+    &--dark-mode {
+      background-color: $ct--theme-dark-mode-bg-mobile;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+:root {
+  --ttui_grey-900: #12181c;
+  --ttui_grey-800: #232b2f;
+  --ttui_grey-700: #374045;
+  --ttui_grey-600: #525c63;
+  --ttui_grey-500: #75838b;
+  --ttui_grey-400: #a2acb2;
+  --ttui_grey-300: #c4cbce;
+  --ttui_grey-200: #dcdfe1;
+  --ttui_grey-100: #ecedee;
+  --ttui_grey-50: #f9fafa;
+  --ttui_red-900: #551710;
+  --ttui_red-800: #7d160f;
+  --ttui_red-700: #a7080b;
+  --ttui_red-600: #c50009;
+  --ttui_red-500: #e40712;
+  --ttui_red-400: #fe4736;
+  --ttui_red-300: #ff836f;
+  --ttui_red-200: #ffab9c;
+  --ttui_red-100: #ffcfc7;
+  --ttui_red-50: #fbedeb;
+  --ttui_yellow-900: #ef7e13;
+  --ttui_yellow-800: #f3a623;
+  --ttui_yellow-700: #f5be2c;
+  --ttui_yellow-600: #f7d635;
+  --ttui_yellow-500: #f5e637;
+  --ttui_yellow-400: #f8eb56;
+  --ttui_yellow-300: #faef76;
+  --ttui_yellow-200: #fbf49d;
+  --ttui_yellow-100: #fdf8c4;
+  --ttui_yellow-50: #fefde7;
+  --ttui_green-900: #00703f;
+  --ttui_green-800: #009158;
+  --ttui_green-700: #00a365;
+  --ttui_green-600: #00b674;
+  --ttui_green-500: #00c680;
+  --ttui_green-400: #00d093;
+  --ttui_green-300: #00daa6;
+  --ttui_green-200: #7be4c1;
+  --ttui_green-100: #b3efd9;
+  --ttui_green-50: #e0f9f0;
+  --ttui_blue-900: #002e53;
+  --ttui_blue-800: #004073;
+  --ttui_blue-700: #00529d;
+  --ttui_blue-600: #0061b3;
+  --ttui_blue-500: #1c74c6;
+  --ttui_blue-400: #4b8ed7;
+  --ttui_blue-300: #7aaae4;
+  --ttui_blue-200: #a1c3ec;
+  --ttui_blue-100: #c9dbf4;
+  --ttui_blue-50: #ebf1fa;
+  --ttui_pink-900: #96036d;
+  --ttui_pink-800: #b00480;
+  --ttui_pink-700: #c90592;
+  --ttui_pink-600: #e306a5;
+  --ttui_pink-500: #f607b3;
+  --ttui_pink-400: #f541c2;
+  --ttui_pink-300: #f56acd;
+  --ttui_pink-200: #f596da;
+  --ttui_pink-100: #f4bee5;
+  --ttui_pink-50: #f5e0ef;
+  --ttui_purple-900: #3405bf;
+  --ttui_purple-800: #6805c7;
+  --ttui_purple-700: #7e06cd;
+  --ttui_purple-600: #9605d4;
+  --ttui_purple-500: #a700da;
+  --ttui_purple-400: #b53de1;
+  --ttui_purple-300: #c364e7;
+  --ttui_purple-200: #d592ee;
+  --ttui_purple-100: #e5bef4;
+  --ttui_purple-50: #f5e5fa;
+  --ttui_orange-900: #5e3a1f;
+  --ttui_orange-800: #7c4822;
+  --ttui_orange-700: #985423;
+  --ttui_orange-600: #ae5e21;
+  --ttui_orange-500: #d56c19;
+  --ttui_orange-400: #f67807;
+  --ttui_orange-300: #ff9801;
+  --ttui_orange-200: #ffb62a;
+  --ttui_orange-100: #ffdf83;
+  --ttui_orange-50: #fbf4d1;
+  --ttui_parchment-900: #4b4130;
+  --ttui_parchment-800: #655724;
+  --ttui_parchment-700: #75673b;
+  --ttui_parchment-600: #8a793d;
+  --ttui_parchment-500: #9c8e59;
+  --ttui_parchment-400: #afa47a;
+  --ttui_parchment-300: #c3bc9e;
+  --ttui_parchment-200: #d7d2be;
+  --ttui_parchment-100: #e8e5d9;
+  --ttui_parchment-50: #f5f3ee;
+  --ttui_common-0: #fff;
+  --ttui_common-500: #242527;
+  --ttui_common-1000: #000;
+  --ttui_box-shadow-1: 0 0.063rem 0.188rem
+      color-mix(in srgb, var(--ttui_common-1000), transparent 50%),
+    inset 0 -0.063rem 0 color-mix(in srgb, var(--ttui_grey-800), transparent 90%);
+  --ttui_box-shadow-2: 0 0.25rem 0.5rem
+      color-mix(in srgb, var(--ttui_grey-800), transparent 50%),
+    inset 0 -0.063rem 0 color-mix(in srgb, var(--ttui_common-1000), transparent
+          90%);
+  --ttui_box-shadow-3: 0 0.375rem 0.75rem
+    color-mix(in srgb, var(--ttui_common-1000), transparent 50%);
+  /* TODO: --box-shadow-4 */
+  --ttui_box-shadow-5: 0 0.75rem 2.25rem 0
+    color-mix(in srgb, var(--ttui_common-1000), transparent 48%);
+  --ttui_focus-ring: 0 0 0 0.125rem
+      color-mix(in srgb, var(--ttui_common-0), transparent 52%),
+    inset 0 -0.063rem 0 color-mix(in srgb, var(--ttui_grey-800), transparent 90%);
+  --ttui_underline: 0 -0.125rem 0 0 var(--ttui_red-500) inset;
+}

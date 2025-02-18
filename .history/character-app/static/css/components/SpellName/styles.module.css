@@ -1,0 +1,38 @@
+.spellName {
+  font-style: italic;
+  color: var(--theme-contrast);
+}
+
+.icon {
+  margin-left: 0.188rem;
+}
+
+.level {
+  font-style: normal;
+  margin-left: 0.188rem;
+  color: color-mix(in srgb, var(--theme-contrast) 60%, transparent);
+}
+
+.expanded {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.875rem;
+  height: 0.875rem;
+  color: color-mix(in srgb, var(--theme-contrast) 60%, transparent);
+  font-style: normal;
+  font-weight: bold;
+  border: 0.125rem solid
+    color-mix(in srgb, var(--theme-contrast) 60%, transparent);
+  border-radius: 50%;
+  margin-right: 0.313rem;
+}
+
+.customized {
+  color: var(--ttui_red-500);
+  margin-left: 0.125rem;
+}
+
+.legacy {
+  color: var(--character-muted-color);
+}

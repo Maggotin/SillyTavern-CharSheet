@@ -1,0 +1,253 @@
+body {
+  margin: 10px auto;
+  overflow-x: hidden;
+  padding: 0 20px;
+  max-width: 1024px;
+  --background: 255, 255, 255;
+  --color: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --background: 34, 34, 34;
+    --color: 229, 229, 229;
+  }
+}
+
+/* Tab Layout Structure */
+.tab-headers {
+    display: flex;
+    border-bottom: 1px solid rgba(var(--color), 0.2);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgb(var(--background));
+}
+
+.tab-content {
+    background-color: rgb(var(--background));
+    border-radius: 0 0 .25rem .25rem;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Tab Buttons */
+.tab-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 0.75rem;
+    background: none;
+    border: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    font-size: 1rem;
+}
+
+.tab-button:hover {
+    opacity: 1;
+}
+
+.tab-button.active {
+    opacity: 1;
+    border-bottom: 2px solid rgba(var(--color));
+}
+
+/* Tab Panes and Content */
+.tab-pane {
+    display: none !important; /* Force hide inactive panes */
+}
+
+.tab-pane.active {
+    display: block !important; /* Force show active pane */
+}
+
+.tab-pane .flex-container {
+    display: none !important; /* Force hide by default */
+}
+
+.tab-pane.active .flex-container {
+    display: flex !important; /* Force show only in active pane */
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputs {
+  padding: 0 10px;
+}
+
+.form-group {
+.inputs {
+  padding: 0 10px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+textarea.output {
+  resize: none;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.macro-name::before {
+  content: "Macro Name: ";
+  font-weight: bold;
+}
+
+.result::before {
+  content: "Result: ";
+  font-weight: bold;
+}
+
+.inline-drawer {
+  display: block;
+  position: relative;
+  z-index: 9999;
+  background-color: rgba(var(--background));
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.inline-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.inline-drawer-content {
+  margin-top: 8px;
+}
+
+.char-nav-tabs {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 0;
+  border: none;
+  color: rgba(var(--color));
+}
+
+.char-nav-tabs.active {
+  background-color: rgba(var(--background));
+  border-bottom: 2px solid rgba(var(--color));
+}
+
+.char-tabs {
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--color), 0.2);
+  background-color: rgb(var(--background));
+}
+
+.char-tab {
+  text-decoration: none;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  color: rgba(var(--color));
+  opacity: 0.7;
+  transition: opacity 0.3s ease, border-bottom 0.3s ease;
+}
+
+.char-tab:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: rgba(var(--color));
+}
+
+.char-tab.active {
+  opacity: 1;
+  border-bottom: 2px solid rgba(var(--color));
+  text-decoration: none;
+  color: rgba(var(--color));
+}
+
+.char-nav {
+  display: flex;
+  border-bottom: 1px solid rgba(var(--color), 0.2);
+  padding: 5px;
+  gap: 5px;
+}
+
+.char-nav-tabswrapper {
+  margin-right: 0.5rem;
+}
+
+.char-nav-tabswrapper .menu_button {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.char-nav-tabswrapper .menu_button:hover {
+  opacity: 1;
+}
+
+.char-nav-tabswrapper .menu_button.active {
+  opacity: 1;
+  border-bottom: 2px solid rgba(var(--color));
+}
+
+.char-nav-tabs {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 0;
+  border: none;
+  color: rgba(var(--color));
+  background: none;
+}
+
+.char-nav-tabs:hover {
+  opacity: 0.8;
+}
+
+.char-nav-tabs.active {
+  background-color: rgba(var(--background));
+  border-bottom: 2px solid rgba(var(--color));
+}
+
+/* Tab Navigation */
+.charnav--tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(var(--color), 0.2);
+    background-color: rgb(var(--background));
+}
+
+.charnav--tab {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 0.75rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.charnav--tab:hover {
+    opacity: 1;
+}
+
+.charnav--tab.charnav--active {
+    opacity: 1;
+    border-bottom: 2px solid rgba(var(--color));
+}
+
+/* Tab Body: default hidden */
+.charnav--body {
+    display: none;
+    padding: 1rem;
+}
+
+/* Active tab body */
+.charnav--body.charnav--active {
+    display: block;
+}
+
+/* Additional CSS for filters and texts */
+.charnav--search { /* Your search-related styles */ }
+.charnav--text { margin-left: 4px; }
+
+

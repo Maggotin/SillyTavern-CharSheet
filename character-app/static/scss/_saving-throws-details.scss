@@ -1,0 +1,44 @@
+.ct-saving-throws-details {
+  &__empty {
+    color: $ct--theme-de-emphasized-color;
+    text-align: center;
+    font-family: $condensed;
+    font-size: 12px;
+  }
+
+  &__value {
+    margin-right: 3px;
+  }
+
+  &__modifier {
+    margin-top: 8px;
+  }
+
+  &__icon {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    margin-right: 2px;
+    margin-top: -2px;
+  }
+
+  &__summary {
+    &-ability {
+      font-weight: bold;
+    }
+
+    &-restriction {
+      margin-left: 2px;
+    }
+  }
+
+  &__data-origin {
+    margin-left: 5px;
+    color: $ct--theme-de-emphasized-color;
+  }
+
+  .ct-item-name {
+    padding-right: 0;
+  }
+}

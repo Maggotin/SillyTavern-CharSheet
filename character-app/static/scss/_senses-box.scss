@@ -1,0 +1,18 @@
+.ct-senses-box {
+  width: 281px;
+  height: 200px;
+  position: relative;
+  padding: 13px 20px;
+
+  .ct-senses {
+    position: relative;
+
+    &__summary {
+      overflow: hidden;
+      font-size: 12px;
+      margin-top: 6px;
+      line-height: 1.2;
+      height: calc(3.6em);
+    }
+  }
+}

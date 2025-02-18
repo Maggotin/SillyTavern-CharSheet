@@ -1,0 +1,9 @@
+.prereq {
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 0.0625rem solid var(--theme-transparent);
+}
+
+.choices :global(.detail-choice + .detail-choice) {
+  margin-top: 0.3125rem;
+}

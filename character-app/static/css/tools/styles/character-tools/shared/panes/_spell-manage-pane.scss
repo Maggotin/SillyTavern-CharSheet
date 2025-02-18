@@ -1,0 +1,21 @@
+.ct-spell-manage-pane {
+  &__default {
+    color: $ct--theme-de-emphasized-color;
+    font-family: $condensed;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 210px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  .ct-spell-slot-manager {
+    margin-bottom: 20px;
+  }
+
+  .ct-class-spell-manager + .ct-class-spell-manager {
+    margin-top: 30px;
+  }
+}

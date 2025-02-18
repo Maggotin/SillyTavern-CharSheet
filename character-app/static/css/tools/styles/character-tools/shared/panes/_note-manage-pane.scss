@@ -1,0 +1,44 @@
+.ct-note-manage-pane {
+  .ct-sidebar__heading {
+    min-height: 24px;
+  }
+  .ct-sidebar__header-callout {
+    align-self: center;
+  }
+
+  &__status {
+    padding: 2px 7px;
+    border-radius: 2px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+
+    &--dirty {
+      color: $ct--theme-de-emphasized-color;
+      margin-right: 5px;
+    }
+
+    &--clean {
+      color: #35b000;
+      font-weight: bold;
+    }
+
+    &-icon {
+      &::before {
+        content: $html-entity--checkmark;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__content {
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    border-radius: 3px;
+    white-space: pre-wrap;
+  }
+
+  &__text {
+    margin-top: 10px;
+  }
+}

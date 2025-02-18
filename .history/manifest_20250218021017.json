@@ -1,0 +1,18 @@
+{
+  "display_name": "Character Sheet D&D5e",
+  "version": "1.0.0",
+  "loading_order": 610,
+  "description": "A new extension",
+  "requires": [],
+  "optional": [],
+  "author": "Maggotin",
+  "license": "AGPL-3.0",
+  "js": "index.js",
+    "css": [
+    "style.css",
+    "../character-app/static/css/main.73b746cc.css",
+    "../character-app/static/css/main.css",
+    "../character-app/static/css/core-tooltip.css"
+  ],\character-app\static\css\core-tooltip.css"
+  "homepage": "https://github.com/Maggotin/SillyTavern-CharSheet"
+}

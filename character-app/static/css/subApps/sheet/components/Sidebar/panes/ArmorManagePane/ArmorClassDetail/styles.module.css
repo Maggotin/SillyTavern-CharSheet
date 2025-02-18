@@ -1,0 +1,33 @@
+.items {
+  margin-top: 0.625rem;
+  padding-top: 0.625rem;
+  border-top: 0.063rem solid var(--theme-transparent);
+}
+
+.itemsOverridden {
+  opacity: 0.4;
+}
+
+.item {
+  display: flex;
+}
+
+.items .item:not(:first-child) {
+  margin-top: 0.625rem;
+}
+
+.value {
+  width: 1.875rem;
+  font-family: var(--font-condensed);
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.label {
+  flex: 1;
+}
+
+.source {
+  margin-left: 0.3125rem;
+  color: var(--character-muted-color);
+}

@@ -1,0 +1,154 @@
+.spell {
+  &-empty {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  &-slots {
+    &-summary {
+      display: flex;
+      text-align: center;
+      padding-right: 5px;
+    }
+
+    &-slot {
+      padding: 0 2px;
+    }
+
+    &-slot {
+      &-name {
+        font-size: 8px;
+      }
+
+      &-available {
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-slot {
+    &-detail {
+      display: flex;
+      align-items: center;
+
+      & + & {
+        margin-top: 6px;
+      }
+
+      &-name {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: $condensed;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &-sources,
+  &-class {
+    &-list {
+      & + & {
+        margin-top: 50px;
+      }
+
+      &-header {
+        display: flex;
+        align-items: center;
+      }
+
+      &-heading {
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: $condensed;
+        line-height: 1;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &-class {
+    &-list {
+      border-top: 1px solid #edeae8;
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+  }
+
+  &-sources {
+    &-list {
+      &-group {
+        & + & {
+          border-top: 1px solid #edeae8;
+          margin-top: 20px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+
+  .class-spell-list-manager + &-sources-list {
+    border-top: 1px solid #edeae8;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  &-list {
+    &-heading {
+      &-icon {
+        vertical-align: middle;
+        margin-right: 0;
+        margin-left: 4px;
+      }
+    }
+
+    &-item {
+      &-damage {
+        font-size: 16px;
+
+        &-effect {
+          margin-left: 5px;
+        }
+      }
+
+      &-desc {
+        padding-top: 20px;
+        border-top: 1px solid #edeae8;
+      }
+
+      &-header {
+        &-actions {
+          .character-button-small {
+            min-width: 43px;
+          }
+        }
+      }
+
+      &-content-actions {
+        display: flex;
+        margin: 10px 0 0;
+        border-top: 1px solid #f1f1f1;
+        padding-top: 10px;
+        justify-content: center;
+
+        .character-button-small {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  &-header-icon-school {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @each $school in $spell-schools {
+      &-#{$school} {
+        background-image: url("#{$imageURL-local}/spell-schools/35/#{$school}.png");
+      }
+    }
+  }
+}

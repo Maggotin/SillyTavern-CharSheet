@@ -1,0 +1,166 @@
+.whats-next {
+  .ddbc-link {
+    text-transform: uppercase;
+  }
+
+  &-campaign,
+  &-characters {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  &-actions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-action {
+    text-align: center;
+    flex: 1;
+    line-height: 1;
+
+    & + & {
+      margin-top: 10px;
+    }
+
+    &-subtext {
+      display: block;
+      font-size: 10px;
+    }
+
+    & &-sheet-link {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    &-sheet-link {
+      width: 100%;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 26px;
+        height: 26px;
+        background-repeat: no-repeat;
+        background-size: 26px;
+        margin-right: 10px;
+      }
+
+      &::before {
+        background-image: url("#{$imageURL-local}/character-sheet/sheet-filled.svg");
+      }
+
+      &.character-button-disabled {
+        &::before {
+          background-image: url("#{$imageURL-local}/character-sheet/sheet-filled-inactive.svg");
+        }
+      }
+    }
+
+    & &-pdf {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    & &-confirmed {
+      // Copied from button double confirmation
+      background-color: $ct--button-positive-color;
+      color: #fff;
+      cursor: default;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $ct--button-positive-color;
+        color: #fff;
+        box-shadow: none;
+      }
+    }
+
+    $whats-next--icon-height: 26px;
+    &-icon {
+      width: 21px;
+      height: $whats-next--icon-height;
+      text-align: center;
+      line-height: $whats-next--icon-height;
+
+      .ddbc-svg {
+        vertical-align: middle;
+      }
+    }
+
+    &-icon + &-text {
+      margin-left: 10px;
+    }
+  }
+
+  &-pdf {
+    // This is all copied from ExportPdfPane and SidebarHeader
+    &-data {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      margin: 30px 0;
+      padding: 30px;
+      border-top: 1px solid #f1f1f1;
+      border-bottom: 1px solid #f1f1f1;
+
+      &-header {
+        margin-bottom: 10px;
+        flex: 1;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: $condensed;
+        line-height: 1.2;
+      }
+
+      &-splash-icon {
+        height: 76px;
+        width: 62px;
+        margin-bottom: 15px;
+      }
+
+      &-url {
+        margin-bottom: 5px;
+        width: 100%;
+      }
+
+      & &-input {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+      }
+
+      &-clipboard {
+        cursor: copy;
+
+        &-content {
+          font-weight: bold;
+        }
+      }
+
+      &-download {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    &-actions {
+      flex-direction: row;
+    }
+
+    &-action {
+      margin: 0 5px;
+
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+}

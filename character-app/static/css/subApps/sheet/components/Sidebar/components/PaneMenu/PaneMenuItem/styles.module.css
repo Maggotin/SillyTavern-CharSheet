@@ -1,0 +1,59 @@
+.item {
+  position: relative;
+  padding: 0.625rem 2.5rem 0.625rem 0.9375rem;
+  font-family: var(--font-condensed);
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: var(--ttui_grey-800);
+}
+
+.item + .item {
+  border-top: 0.0625rem solid var(--ttui_grey-800);
+}
+
+.label {
+  flex: 1;
+}
+
+.prefixIcon {
+  min-width: 1rem;
+  margin-right: 0.625rem;
+
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  position: relative;
+  top: 0.0625rem;
+}
+
+.prefixIcon :global(.ddbc-svg) {
+  width: 100%;
+  height: 100%;
+}
+
+.prefixIcon :global(.ddbc-long-rest-svg),
+.prefixIcon :global(.ddbc-manage-level-svg) {
+  width: 0.875rem;
+}
+
+.prefixIcon :global(.ddbc-short-rest-svg) {
+  position: relative;
+  top: -0.0625rem;
+}
+
+.suffixIcon {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  position: absolute;
+  right: 0.9375rem;
+  margin-top: 0.125rem;
+  overflow: hidden;
+}

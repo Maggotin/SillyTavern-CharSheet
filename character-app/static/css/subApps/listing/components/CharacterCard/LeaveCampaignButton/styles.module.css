@@ -1,0 +1,11 @@
+.button {
+  font-size: 0.688rem;
+  white-space: nowrap;
+  border: none;
+  background: none;
+  color: var(--ttui_red-400);
+  opacity: 0.8;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}

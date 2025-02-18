@@ -1,0 +1,12 @@
+.action {
+  padding-top: 0.625rem;
+  margin-top: 0.625rem;
+  border-top: 0.0625rem solid var(--theme-transparent);
+  cursor: pointer;
+}
+
+.label {
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  margin-bottom: 0.625rem;
+}

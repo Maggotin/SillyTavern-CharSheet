@@ -1,0 +1,13 @@
+.ddbc-dice-roll-group__rolls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ddbc-dice-roll-group__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.ddbc-dice-roll-group__actions .ddbc-button {
+  margin-top: 20px;
+  margin-left: 8px;
+}/*# sourceMappingURL=DiceRollGroup.css.map */

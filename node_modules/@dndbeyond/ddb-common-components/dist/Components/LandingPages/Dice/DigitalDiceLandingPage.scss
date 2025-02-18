@@ -1,0 +1,15 @@
+@import '../../../__stylesheet-helpers/waterdeep-utils/_waterdeep-overrides.scss';
+@import '../../../__stylesheet-helpers/responsive/breakpoint-queries';
+
+body.body-digitaldice {
+    @include remove-waterdeep-content-spacing;
+}
+
+/* Hacky Overrides */
+.dice {
+    .hero__text-wrapper {
+        @include breakpoint-above(get-breakpoint(medium)) {
+            background-color: transparent;
+        }
+    }
+}

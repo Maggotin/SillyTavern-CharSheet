@@ -1,0 +1,18 @@
+.ct-container-pane {
+  &__content {
+    margin: 5px 0;
+  }
+
+  &__item-detail {
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .ct-item-detail__actions {
+    border-top: unset;
+  }
+
+  &__links {
+    margin: 15px 0;
+  }
+}

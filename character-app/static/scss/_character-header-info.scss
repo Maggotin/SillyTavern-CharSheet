@@ -1,0 +1,7 @@
+.ct-character-header-info {
+  @media (max-width: ($bp-sheet-desktop-transition - 1)) {
+    &__content {
+      position: relative;
+    }
+  }
+}

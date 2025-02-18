@@ -1,0 +1,70 @@
+.site .ct-button.ct-theme-button {
+  cursor: default;
+
+  &--interactive {
+    @include interactiveContent();
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &--filled {
+    background-color: $ct--theme-color;
+    color: #fff;
+
+    &:focus {
+      background-color: $ct--theme-color;
+      box-shadow: 0 0 3px 1px rgba(darken($ct--theme-color, 20%), 0.2);
+    }
+
+    &:hover,
+    &:active {
+      color: #fff;
+      background-color: darken($ct--theme-color, 10%);
+      box-shadow: 0 0 10px 2px darken($ct--theme-color, 20%) inset;
+    }
+    &:disabled {
+      opacity: 1;
+      color: #777;
+      background-color: #eaeaea;
+
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active {
+        color: #777;
+        background-color: #eaeaea;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &--outline {
+    background-color: #fff;
+    border-color: $ct--theme-color;
+    color: $ct--theme-color;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $ct--theme-color;
+      background-color: #fff;
+      box-shadow: 0 0 2px darken(#fff, 10%);
+    }
+    &:disabled {
+      border-color: #eaeaea;
+      color: #aaa;
+      background-color: #f9f9f9;
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active {
+        border-color: #eaeaea;
+        color: #aaa;
+        background-color: #f9f9f9;
+        box-shadow: none;
+      }
+    }
+  }
+}

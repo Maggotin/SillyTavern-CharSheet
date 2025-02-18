@@ -1,0 +1,9 @@
+.ct-subsection-mobile {
+  padding: 10px 0 70px;
+
+  .ct-mobile-divider {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.ct-background {
+  cursor: pointer;
+  &__name {
+    font-weight: bold;
+    font-family: $condensed;
+    font-size: 15px;
+  }
+
+  &__feature {
+    margin-top: 5px;
+
+    &-name {
+      font-weight: bold;
+      font-family: $condensed;
+      font-size: 13px;
+    }
+  }
+
+  &__default {
+    color: $ct--theme-de-emphasized-color;
+    font-family: $condensed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ct-background__feature-description {
+    color: $ct--theme-dark-mode-white-opacity-text;
+  }
+}

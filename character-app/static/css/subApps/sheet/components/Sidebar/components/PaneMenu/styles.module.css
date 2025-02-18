@@ -1,0 +1,6 @@
+ul.menu {
+  margin-top: 0;
+  padding: 0;
+  border-top: 0.0625rem solid var(--ttui_grey-800);
+  border-bottom: 0.0625rem solid var(--ttui_grey-800);
+}

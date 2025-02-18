@@ -1,0 +1,16 @@
+.ddbc-loading-placeholder {
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ddbc-loading-placeholder__icon {
+  height: 40px;
+  width: 40px;
+}
+
+.ct-character-sheet--dark-mode .ddbc-loading-placeholder,
+.ct-sidebar--is-dark-mode .ddbc-loading-placeholder {
+  color-scheme: none;
+}/*# sourceMappingURL=LoadingPlaceholder.css.map */

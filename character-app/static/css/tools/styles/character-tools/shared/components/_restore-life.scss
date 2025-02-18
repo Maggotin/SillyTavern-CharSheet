@@ -1,0 +1,18 @@
+.ct-restore-life {
+  &--dark-mode {
+    background-color: $ct--theme-dark-mode-bg;
+    color: $ct--theme-dark-mode-text;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  &__action {
+    & + & {
+      margin-left: 10px;
+    }
+  }
+}

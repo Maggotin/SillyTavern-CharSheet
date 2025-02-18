@@ -1,0 +1,33 @@
+.ddbc-tooltip {
+  cursor: default;
+}
+.ddbc-tooltip--is-interactive {
+  cursor: pointer;
+}
+
+.tippy-tooltip {
+  background-color: var(--ttui_grey-800);
+  color: var(--ttui_grey-100);
+  -webkit-font-smoothing: unset !important;
+}
+
+.tippy-tooltip.custom-dark-theme {
+  background-color: var(--ttui_grey-100);
+  color: var(--ttui_grey-800);
+}
+
+.tippy-popper[x-placement^=top] .custom-dark-theme .tippy-arrow {
+  border-top-color: var(--ttui_grey-100);
+}
+
+.tippy-popper[x-placement^=left] .custom-dark-theme .tippy-arrow {
+  border-left-color: var(--ttui_grey-100);
+}
+
+.tippy-popper[x-placement^=right] .custom-dark-theme .tippy-arrow {
+  border-right-color: var(--ttui_grey-100);
+}
+
+.tippy-popper[x-placement^=bottom] .custom-dark-theme .tippy-arrow {
+  border-bottom-color: var(--ttui_grey-100);
+}/*# sourceMappingURL=Tooltip.css.map */

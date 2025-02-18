@@ -1,0 +1,5 @@
+.tabFilter [role="tooltip"] {
+  font-weight: 400;
+  text-transform: none;
+  font-family: var(--font-family);
+}

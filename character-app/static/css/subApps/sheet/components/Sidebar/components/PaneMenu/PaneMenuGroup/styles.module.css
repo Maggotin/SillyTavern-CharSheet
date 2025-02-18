@@ -1,0 +1,12 @@
+.group + .group {
+  border-top: 0.0625rem solid var(--ttui_grey-800);
+}
+
+.group .label {
+  cursor: default;
+  color: var(--character-muted-color);
+}
+
+.group .label:hover {
+  background-color: unset;
+}

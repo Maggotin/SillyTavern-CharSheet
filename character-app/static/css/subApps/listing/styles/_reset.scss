@@ -1,0 +1,80 @@
+﻿html {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+
+body {
+  background: $common-site-bg;
+
+  @media (max-width: 1023px) {
+    html &.responsive-enabled {
+      background: $common-site-bg;
+    }
+
+    html &.body-rpgmagicitem-details,
+    html &.body-rpgmonster-details,
+    html &.body-rpgspell-details,
+    html &.body-rpgigear-details {
+      background: #fff;
+    }
+  }
+
+  > img,
+  > object,
+  #analytics,
+  #cdm-zone-end {
+    display: none !important;
+  }
+
+  overflow-y: scroll;
+}
+
+.hide {
+  display: none !important;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+label {
+  cursor: default;
+}
+
+*::selection {
+  background: #222 !important;
+}
+
+body.responsive-enabled #site #site-main .atf {
+  max-width: 1200px;
+}
+
+input,
+select {
+  font-family: $font-family !important;
+}
+
+.site #content {
+  background: none;
+}
+
+.flash-messages,
+.body-rpgcharacter-sheet #debug-bar,
+.body-rpgcharacterbuilder #debug-bar {
+  z-index: 999;
+}
+
+@media print {
+  body {
+    background: none !important;
+  }
+}

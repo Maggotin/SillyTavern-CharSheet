@@ -1,0 +1,39 @@
+.textarea {
+  display: grid;
+  max-width: 100%;
+}
+
+.textarea > textarea {
+  border: 1px solid #eaeaea;
+  padding: 11px 10px;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  display: block;
+  max-width: 100%;
+  background: none;
+  resize: none;
+  line-height: 1.125rem;
+  height: 100%;
+  overflow: hidden;
+  color: var(--theme-contrast);
+}
+
+.textarea > textarea:focus {
+  border-color: #eaeaea;
+  box-shadow: none;
+  background: none;
+}
+
+.textarea:after {
+  content: attr(data-value) " ";
+  display: block;
+  white-space: pre-wrap;
+  visibility: hidden;
+  line-height: 1.125rem;
+  padding: 11px 10px;
+}
+
+.textarea > textarea,
+.textarea:after {
+  grid-area: 1 / 1 / 2 / 2;
+}

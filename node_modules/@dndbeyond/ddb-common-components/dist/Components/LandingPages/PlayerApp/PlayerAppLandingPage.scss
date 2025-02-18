@@ -1,0 +1,49 @@
+@import '../../../__stylesheet-helpers/waterdeep-utils/_waterdeep-overrides.scss';
+@import '../../../__stylesheet-helpers/_utils.scss';
+@import '../../../__stylesheet-helpers/responsive/breakpoint-queries';
+
+body.body-landingpages-playerapp {
+    @include remove-waterdeep-content-spacing;
+}
+
+.palp-page-wrapper {
+    .callout__button-wrapper,
+    .hero__button-wrapper {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hero {
+        &__content {
+            // Don't keep moving to the right once it starts to overlap the phone images too much
+            @include breakpoint-above(2300px) {
+                margin-left: auto;
+                margin-right: auto;
+                width: auto;
+            }
+        }
+
+        &__text-wrapper {
+            // Hero image is much brighter than others, use a darker text background for better legibility
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+.palp-app-store-link {
+    // Mostly styled in JS w/ styled components
+
+    &__text {
+        @include screen-reader-text;
+    }
+
+    &--apple {
+    }
+
+    &--google {
+        width: 134px !important; // Wider than apple so they have the same visual height
+    }
+}

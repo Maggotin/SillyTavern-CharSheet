@@ -1,0 +1,78 @@
+.ct-proficiencies-pane {
+  &__customs {
+    & + & {
+      margin-top: 25px;
+    }
+
+    &-label {
+      font-weight: bold;
+      font-family: $condensed;
+    }
+  }
+
+  &__proficiencies {
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__proficiency {
+    & + & {
+      @include sidebarSeparator();
+    }
+
+    &-primary {
+      display: flex;
+    }
+
+    &-name {
+      font-weight: bold;
+      font-family: $condensed;
+      flex: 1;
+    }
+
+    &-notes {
+      margin-top: 3px;
+    }
+
+    &-actions {
+      margin-left: 5px;
+      align-self: center;
+    }
+
+    &-editor-input[type="text"] {
+      width: 100%;
+    }
+  }
+
+  &__add {
+    display: flex;
+
+    &-field {
+      width: 50%;
+
+      &--subtype {
+        padding-left: 5px;
+      }
+    }
+
+    .ddbc-select {
+      width: 100%;
+    }
+  }
+
+  &__groups {
+    @include sidebarSeparator();
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ct-proficiencies-pane {
+    &__proficiency {
+      &-editor-input[type="text"],
+      &-editor-input[type="text"]:hover {
+        @include darkModeInput();
+      }
+    }
+  }
+}

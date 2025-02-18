@@ -1,0 +1,64 @@
+@import "../../ttui/components/Button/styles/ButtonVariants.module.css";
+
+.controls {
+  position: absolute;
+  inset: 0.325rem 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.label {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button:first-child,
+.button:first-child:hover,
+.button:last-child,
+.button:last-child:hover {
+  color: var(--theme-contrast);
+  font-size: 0.625rem;
+  letter-spacing: 0.025rem;
+  gap: 0.063rem;
+  background: none;
+}
+
+.button:first-child:disabled,
+.button:last-child:disabled {
+  color: var(--theme-contrast);
+  opacity: 0.5;
+}
+
+.button:disabled:hover {
+  background: none;
+  color: var(--theme-contrast);
+}
+
+.button:first-child svg,
+.button:last-child svg {
+  fill: var(--theme-color);
+  opacity: 1;
+}
+
+.button:disabled svg {
+  fill: var(--theme-contrast);
+}
+
+.dark:first-child,
+.dark:first-child:hover,
+.dark:last-child,
+.dark:last-child:hover {
+  color: var(--theme-background);
+  background: none;
+}
+
+.dark:first-child:disabled,
+.dark:last-child:disabled {
+  color: var(--theme-background);
+}
+
+.dark:disabled svg {
+  fill: var(--theme-background);
+}

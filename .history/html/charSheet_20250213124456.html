@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Character Sheet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="character-sheet">
+        <!-- Close button for the window -->
+        <button id="character-sheet-close" class="menu_button" style="float: right;">Close</button>
+
+        <!-- Tab Headers -->
+        <div class="tab-headers">
+            <button class="tab-button active" data-tab="tab-core" title="Core Character Info">
+                <i class="fa-solid fa-fw fa-user"></i>
+                <span>Core</span>
+            </button>
+            <button class="tab-button" data-tab="tab-inventory" title="Inventory Management">
+                <i class="fa-solid fa-fw fa-briefcase"></i>
+                <span>Inventory</span>
+            </button>
+            <button class="tab-button" data-tab="tab-spells" title="Spells & Abilities">
+                <i class="fa-solid fa-fw fa-wand-sparkles"></i>
+                <span>Spells</span>
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <div id="tab-core" class="tab-pane active">
+                <div class="flex-container">
+                    <div class="pc-layout container-fluid mt-3">
+                        <div class="row">
+                            <!-- Attributes Section -->
+                            <div class="col-md-4">
+                                <h5>Attributes</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Strength
+                                        <input type="number" class="form-control w-50" value="10">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Dexterity
+                                        <input type="number" class="form-control w-50" value="10">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Constitution
+                                        <input type="number" class="form-control w-50" value="10">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Intelligence
+                                        <input type="number" class="form-control w-50" value="10">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Wisdom
+                                        <input type="number" class="form-control w-50" value="10">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <input type="number" class="form-control w-50" value="10">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Skills Section -->
+                        <div class="col-md-8">
+                            <h5>Skills</h5>
+                            <div class="skills-list">
+                                <div class="form-group">
+                                    <label>Acrobatics (Dex)</label>
+                                    <input type="number" class="form-control" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label>Animal Handling (Wis)</label>
+                                    <input type="number" class="form-control" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label>Arcana (Int)</label>
+                                    <input type="number" class="form-control" value="0">
+                                </div>
+                                <!-- Add more skills as needed -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Core character details and statistics.</p>
+            </div>
+            <div id="tab-inventory" class="tab-pane">
+                <div class="flex-container">
+                    <div class="npc-layout container-fluid mt-3">
+                        <h5>Inventory</h5>
+                        <div class="form-group">
+                            <label>Equipment</label>
+                            <textarea class="form-control" rows="4" placeholder="List your equipment here..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Weapons</label>
+                            <textarea class="form-control" rows="4" placeholder="List your weapons here..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Currency</label>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="number" class="form-control" placeholder="GP">
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" placeholder="SP">
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" placeholder="CP">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Inventory list and details.</p>
+            </div>
+            <div id="tab-spells" class="tab-pane">
+                <div class="flex-container">
+                    <div class="stats-layout container-fluid mt-3">
+                        <h5>Spellcasting</h5>
+                        <div class="form-group">
+                            <label>Spellcasting Class</label>
+                            <input type="text" class="form-control" placeholder="e.g., Wizard">
+                        </div>
+                        <div class="spell-slots">
+                            <h6>Spell Slots</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <label>Level 1</label>
+                                    <input type="number" class="form-control" value="0">
+                                </div>
+                                <div class="col">
+                                    <label>Level 2</label>
+                                    <input type="number" class="form-control" value="0">
+                                </div>
+                                <div class="col">
+                                    <label>Level 3</label>
+                                    <input type="number" class="form-control" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Known Spells</label>
+                            <textarea class="form-control" rows="6" placeholder="List your spells here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <p>Spell list and abilities.</p>
+            </div>
+        </div>
+    </div>

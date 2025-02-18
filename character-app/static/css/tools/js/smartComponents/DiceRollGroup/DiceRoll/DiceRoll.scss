@@ -1,0 +1,59 @@
+.ddbc-dice-roll {
+  height: 118px;
+  margin-top: 10px;
+  padding: 0 5px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__total {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-label {
+      flex: 1;
+      margin: 10px 0;
+      line-height: normal;
+    }
+
+    &--empty {
+      color: $ct--theme-de-emphasized-color;
+    }
+  }
+
+  .ddbc-select {
+    text-transform: uppercase;
+  }
+
+  &__dice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 500;
+    max-width: 100px;
+    margin: 0 auto 6px;
+
+    &-value {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      margin: 0 2px 2px;
+      border-radius: 4px;
+      background: $ct--builder-color;
+      color: #fff;
+
+      &--discarded {
+        background: $ct--theme-de-emphasized-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.ct-senses {
+  cursor: pointer;
+
+  &__callout {
+    width: 241px;
+    height: 34px;
+    margin: 0 auto 5px;
+    position: relative;
+
+    &-value {
+      font-weight: bold;
+      font-size: 14px;
+      position: absolute;
+      top: 8px;
+      left: 3px;
+      width: 35px;
+      text-align: center;
+      &--dark-mode {
+        color: white;
+      }
+    }
+
+    &-label {
+      font-weight: bold;
+      font-size: 10px;
+      font-family: $condensed;
+      text-transform: uppercase;
+      position: absolute;
+      top: 11px;
+      left: 51px;
+      &--dark-mode {
+        color: white;
+      }
+    }
+  }
+
+  &__summary {
+    flex-wrap: wrap;
+    font-family: $condensed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    &--dark-mode {
+      color: white;
+    }
+
+    &--empty {
+      color: $ct--theme-de-emphasized-color;
+      justify-content: center;
+      text-align: center;
+      &.ct-senses__summary--dark-mode {
+        color: $ct--theme-dark-mode-text;
+      }
+    }
+  }
+}

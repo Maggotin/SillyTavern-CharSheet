@@ -1,0 +1,85 @@
+.ct-main-tablet {
+  &__abilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__ability {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  &__large-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__large-box {
+    position: relative;
+
+    & + & {
+      margin-top: 14px;
+    }
+
+    &-footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 5px;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-family: $condensed;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__campaign {
+    display: flex;
+    justify-content: center;
+    .ddbc-campaign-summary,
+    .ct-character-header__group--game-log {
+      background-color: #fff;
+    }
+    .ct-character-header-desktop__button-icon {
+      color: $ct--theme-text-color;
+    }
+    &--dark-mode {
+      .ddbc-campaign-summary,
+      .ct-character-header__group--game-log {
+        background-color: $ct--theme-dark-mode-bg;
+      }
+    }
+  }
+
+  .game-log-notification {
+    width: 70px;
+  }
+
+  .ddbc-campaign-summary {
+    flex-grow: 1;
+    justify-content: center;
+    max-width: 400px;
+    border-radius: 3px 0 0 3px;
+
+    &__name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    &.ct-main-tablet__campaign-button--dark-mode {
+      background-color: $ct--theme-dark-mode-bg;
+      color: white;
+    }
+  }
+
+  .ct-skills-box {
+    width: 361px;
+    margin-right: -5px;
+  }
+}

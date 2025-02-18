@@ -1,0 +1,15 @@
+@import "@dndbeyond/ttui/components/Tooltip/Tooltip.module.css";
+
+.reference {
+  margin: 0;
+  display: inline-block;
+}
+
+.name {
+  font-style: italic;
+  display: inline-block;
+}
+
+.reference + [class*="Tooltip_"] {
+  font-size: 1rem;
+}

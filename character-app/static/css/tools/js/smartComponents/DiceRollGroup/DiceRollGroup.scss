@@ -1,0 +1,17 @@
+.ddbc-dice-roll-group {
+  &__rolls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+
+    .ddbc-button {
+      margin-top: 20px;
+      margin-left: 8px;
+    }
+  }
+}

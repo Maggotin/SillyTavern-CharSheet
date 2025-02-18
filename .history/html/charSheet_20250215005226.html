@@ -1,0 +1,579 @@
+<!-- Add this at the top of your file -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" />
+
+<div id="character-sheet">
+    <div class="stcs-character-sheet__inner">
+        <div class="stcs-character-sheet-desktop">
+            <div class="stcs-character-header-desktop">
+                <div class="stcs-quick-info">
+                    <div class="stcs-quick-info__groups">
+                        <div class="stcs-quick-info__group stcs-quick-info__group--basic">
+                            <div class="stcs-quick-info__group-content">
+                                <div class="stcs-quick-info__group-items">
+                                    <div class="stcs-quick-info__group-item">
+                                        <div class="stcs-quick-info__label">Character Name</div>
+                                        <div class="stcs-quick-info__value">
+                                            <div class="stcs-quick-info__value-wrap">
+                                                <input type="text" class="stcs-quick-info__input" placeholder="Character Name" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stcs-quick-info__group-item">
+                                        <div class="stcs-quick-info__label">Race</div>
+                                        <div class="stcs-quick-info__value">
+                                            <div class="stcs-quick-info__value-wrap">
+                                                <input type="text" class="stcs-quick-info__input" placeholder="Select Race" value="Human">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stcs-quick-info__group-item">
+                                        <div class="stcs-quick-info__label">Class & Level</div>
+                                        <div class="stcs-quick-info__value">
+                                            <div class="stcs-quick-info__value-wrap">
+                                                <input type="text" class="stcs-quick-info__input" placeholder="Select Class" value="Fighter">
+                                                <input type="number" class="stcs-quick-info__input stcs-quick-info__input--level" value="1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- XP Progress Bar -->
+                    <div class="stcs-character-progression-summary">
+                        <div class="stcs-character-progression-summary__xp-bar">
+                            <div class="stcs-xp-bar">
+                                <span class="stcs-xp-bar__item stcs-xp-bar__item--cur">
+                                    <span class="stcs-xp-bar__label">LVL 1</span>
+                                </span>
+                                <span class="stcs-xp-bar__item stcs-xp-bar__item--progress">
+                                    <span class="stcs-xp-bar__progress">
+                                        <span class="stcs-xp-bar__progress-inner" style="width: 0%;"></span>
+                                    </span>
+                                </span>
+                                <span class="stcs-xp-bar__item stcs-xp-bar__item--next">
+                                    <span class="stcs-xp-bar__label">LVL 2</span>
+                                </span>
+                            </div>
+                            <div class="stcs-character-progression-summary__xp-data">
+                                0 / 300 XP
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="stcs-quick-info__abilities">
+    <h2 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+        Ability Scores</h2>
+    <div class="stcs-quick-info__ability">
+        <div class="stcs-box-background">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 95" class="stcs-ability-score-box-svg">
+                <path fill="#10161ADB" d="M77.56,53.81a4.55..."></path>
+                <path fill="#10161ADB" d="M40.5,66C50.7,66..."></path>
+                <path fill="#972e2e" d="M4.52,13.62A34.66..."></path>
+            </svg>
+        </div>
+        <div class="stcs-ability-summary__heading">
+            <span class="stcs-ability-summary__label">Strength</span>
+            <span class="stcs-ability-summary__abbr">str</span>
+        </div>
+        <div class="stcs-ability-summary__primary">
+            <input type="number" value="10" class="stcs-ability-score-input">
+        </div>
+        <div class="stcs-ability-summary__secondary">
+            <span class="stcs-number-display">+0</span>
+        </div>
+    </div>
+
+    <div class="stcs-quick-info__ability">
+        <div class="stcs-box-background">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 95" class="stcs-ability-score-box-svg">
+                <path fill="#10161ADB" d="M77.56,53.81a4.55..."></path>
+                <path fill="#10161ADB" d="M40.5,66C50.7,66..."></path>
+                <path fill="#972e2e" d="M4.52,13.62A34.66..."></path>
+            </svg>
+        </div>
+        <div class="stcs-ability-summary__heading">
+            <span class="stcs-ability-summary__label">Dexterity</span>
+            <span class="stcs-ability-summary__abbr">dex</span>
+        </div>
+        <div class="stcs-ability-summary__primary">
+            <input type="number" value="10" class="stcs-ability-score-input">
+        </div>
+        <div class="stcs-ability-summary__secondary">
+            <span class="stcs-number-display">+0</span>
+        </div>
+    </div>
+
+    <div class="stcs-quick-info__ability">
+        <div class="stcs-box-background">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 95" class="stcs-ability-score-box-svg">
+                <path fill="#10161ADB" d="M77.56,53.81a4.55..."></path>
+                <path fill="#10161ADB" d="M40.5,66C50.7,66..."></path>
+                <path fill="#972e2e" d="M4.52,13.62A34.66..."></path>
+            </svg>
+        </div>
+        <div class="stcs-ability-summary__heading">
+            <span class="stcs-ability-summary__label">Constitution</span>
+            <span class="stcs-ability-summary__abbr">con</span>
+        </div>
+        <div class="stcs-ability-summary__primary">
+            <input type="number" value="10" class="stcs-ability-score-input">
+        </div>
+        <div class="stcs-ability-summary__secondary">
+            <span class="stcs-number-display">+0</span>
+        </div>
+    </div>
+
+    <div class="stcs-quick-info__ability">
+        <div class="stcs-box-background">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 95" class="stcs-ability-score-box-svg">
+                <path fill="#10161ADB" d="M77.56,53.81a4.55..."></path>
+                <path fill="#10161ADB" d="M40.5,66C50.7,66..."></path>
+                <path fill="#972e2e" d="M4.52,13.62A34.66..."></path>
+            </svg>
+        </div>
+        <div class="stcs-ability-summary__heading">
+            <span class="stcs-ability-summary__label">Intelligence</span>
+            <span class="stcs-ability-summary__abbr">int</span>
+        </div>
+        <div class="stcs-ability-summary__primary">
+            <input type="number" value="10" class="stcs-ability-score-input">
+        </div>
+        <div class="stcs-ability-summary__secondary">
+            <span class="stcs-number-display">+0</span>
+        </div>
+    </div>
+
+    <div class="stcs-quick-info__ability">
+        <div class="stcs-box-background">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 95" class="stcs-ability-score-box-svg">
+                <path fill="#10161ADB" d="M77.56,53.81a4.55..."></path>
+                <path fill="#10161ADB" d="M40.5,66C50.7,66..."></path>
+                <path fill="#972e2e" d="M4.52,13.62A34.66..."></path>
+            </svg>
+        </div>
+        <div class="stcs-ability-summary__heading">
+            <span class="stcs-ability-summary__label">Wisdom</span>
+            <span class="stcs-ability-summary__abbr">wis</span>
+        </div>
+        <div class="stcs-ability-summary__primary">
+            <input type="number" value="10" class="stcs-ability-score-input">
+        </div>
+        <div class="stcs-ability-summary__secondary">
+            <span class="stcs-number-display">+0</span>
+        </div>
+    </div>
+
+    <div class="stcs-quick-info__ability">
+        <div class="stcs-box-background">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 95" class="stcs-ability-score-box-svg">
+                <path fill="#10161ADB" d="M77.56,53.81a4.55..."></path>
+                <path fill="#10161ADB" d="M40.5,66C50.7,66..."></path>
+                <path fill="#972e2e" d="M4.52,13.62A34.66..."></path>
+            </svg>
+        </div>
+        <div class="stcs-ability-summary__heading">
+            <span class="stcs-ability-summary__label">Charisma</span>
+            <span class="stcs-ability-summary__abbr">cha</span>
+        </div>
+        <div class="stcs-ability-summary__primary">
+            <input type="number" value="10" class="stcs-ability-score-input">
+        </div>
+        <div class="stcs-ability-summary__secondary">
+            <span class="stcs-number-display">+0</span>
+        </div>
+    </div>
+</section>
+
+<div class="stcs-quick-info__box stcs-quick-info__box--proficiency">
+    <section class="stcs-proficiency-bonus-box">
+        <div class="stcs-box-background">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 89" class="stcs-svg">
+                <path fill="#10161ADB" d="M87.54,9.45a42.28,42.28,0,0,1-3-3A42.91,42.91,0,0,0,74.21,1H18.36a11,11,0,0,0-1.53.59A4.9,4.9,0,0,1,15.36,2.7,21.09,21.09,0,0,0,6,12.28a5.14,5.14,0,0,1,.12,1.59,5.15,5.15,0,0,1,.24,1.18c1,12.72.57,25.84.4,38.59-.09,6.5,0,13-.05,19.48,0,2-.11,4.08-.22,6.12a17.93,17.93,0,0,0,2.78,2.94A73.22,73.22,0,0,0,16.51,87H78l.07-.06a32.31,32.31,0,0,0,9.31-8.5c.13-6,.65-12,.36-18s.2-11.89.36-17.9c.16-6.53,0-13.11-.17-19.64C87.84,18.57,88.07,13.86,87.54,9.45Z"></path>
+                <path fill="#972e2e" d="M85,0H9L0,9.05V80l9,9H85l9-9V9.05Zm6.55,10.08v7a29.26,29.26,0,0,0-3.24-6.78v-.13h-.08a20.45,20.45,0,0,0-9.13-7.69H84ZM75.6,86.52H18.36a19,19,0,0,1-11.3-7.73V10.25A19.27,19.27,0,0,1,18.4,2.48H75.64a18.94,18.94,0,0,1,11.3,7.73V78.75A19.27,19.27,0,0,1,75.6,86.52ZM2.47,21.18a31.7,31.7,0,0,1,3.24-8.8V76.64c-.3-.53-.62-1-.89-1.62a32.92,32.92,0,0,1-2.35-7.11Zm85.82-8.82c.3.53.62,1,.89,1.62a32.92,32.92,0,0,1,2.35,7.11V67.81a31.64,31.64,0,0,1-3.24,8.81ZM10.05,2.48h4.87a20.45,20.45,0,0,0-9.13,7.69H5.71v.13a29.26,29.26,0,0,0-3.24,6.78v-7ZM2.47,78.92v-7A29.45,29.45,0,0,0,5.71,78.7v.13h.08a20.45,20.45,0,0,0,9.13,7.69H10.05ZM84,86.52H79.08a20.45,20.45,0,0,0,9.13-7.69h.08V78.7a29.45,29.45,0,0,0,3.24-6.78v7Z"></path>
+            </svg>
+        </div>
+        <h2
+            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+            Proficiency Bonus</h2>
+        <div class="stcs-proficiency-bonus-box__heading">Proficiency</div>
+        <div class="stcs-proficiency-bonus-box__value">
+            <span class="styles_numberDisplay styles_signed styles_large">
+                <span class="styles_sign styles_largeSign styles_labelSignColor" aria-label="plus">+</span>
+                <span>2</span>
+            </span>
+        </div>
+        <div class="stcs-proficiency-bonus-box__label">Bonus</div>
+    </section>
+</div>
+
+<div class="stcs-quick-info__box stcs-quick-info__box--speed">
+    <section class="stcs-speed-box">
+        <h2 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Speed</h2>
+        <div class="stcs-box-background">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 89" class="stcs-svg">
+                <path fill="#10161ADB" d="M87.54,9.45a42.28,42.28,0,0,1-3-3A42.91,42.91,0,0,0,74.21,1H18.36a11,11,0,0,0-1.53.59A4.9,4.9,0,0,1,15.36,2.7,21.09,21.09,0,0,0,6,12.28a5.14,5.14,0,0,1,.12,1.59,5.15,5.15,0,0,1,.24,1.18c1,12.72.57,25.84.4,38.59-.09,6.5,0,13-.05,19.48,0,2-.11,4.08-.22,6.12a17.93,17.93,0,0,0,2.78,2.94A73.22,73.22,0,0,0,16.51,87H78l.07-.06a32.31,32.31,0,0,0,9.31-8.5c.13-6,.65-12,.36-18s.2-11.89.36-17.9c.16-6.53,0-13.11-.17-19.64C87.84,18.57,88.07,13.86,87.54,9.45Z"></path>
+                <path fill="#972e2e" d="M85,0H9L0,9.05V80l9,9H85l9-9V9.05Zm6.55,10.08v7a29.26,29.26,0,0,0-3.24-6.78v-.13h-.08a20.45,20.45,0,0,0-9.13-7.69H84ZM75.6,86.52H18.36a19,19,0,0,1-11.3-7.73V10.25A19.27,19.27,0,0,1,18.4,2.48H75.64a18.94,18.94,0,0,1,11.3,7.73V78.75A19.27,19.27,0,0,1,75.6,86.52ZM2.47,21.18a31.7,31.7,0,0,1,3.24-8.8V76.64c-.3-.53-.62-1-.89-1.62a32.92,32.92,0,0,1-2.35-7.11Zm85.82-8.82c.3.53.62,1,.89,1.62a32.92,32.92,0,0,1,2.35,7.11V67.81a31.64,31.64,0,0,1-3.24,8.81ZM10.05,2.48h4.87a20.45,20.45,0,0,0-9.13,7.69H5.71v.13a29.26,29.26,0,0,0-3.24,6.78v-7ZM2.47,78.92v-7A29.45,29.45,0,0,0,5.71,78.7v.13h.08a20.45,20.45,0,0,0,9.13,7.69H10.05ZM84,86.52H79.08a20.45,20.45,0,0,0,9.13-7.69h.08V78.7a29.45,29.45,0,0,0,3.24-6.78v7Z"></path>
+            </svg>
+        </div>
+        <div class="stcs-speed-box__heading">Walking</div>
+        <div class="stcs-speed-box__box-value">
+            <span class="styles_numberDisplay styles_large styles_largeDistance">
+                <span>30</span>
+                <span class="styles_label styles_largeLabel styles_labelSignColor">ft.</span>
+            </span>
+        </div>
+        <div class="stcs-speed-box__label">Speed</div>
+    </section>
+</div>
+
+
+</div>
+<section class="stcs-quick-info__inspiration">
+    <h2 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Inspiration</h2>
+    <div>
+        <div class="styles_box__6xvSR styles_interactive__0wY9H" role="checkbox" aria-checked="false" data-testid="inspiration">
+            <div class="stcs-box-background">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 54" class="stcs-svg stcs-inspiration-box-svg">
+                    <defs>
+                        <polygon id="InspirationBoxSvg-path-1" points="71.7300755 53.9993077 71.7300755 0.798923077 0.000275471698 0.798923077 0.000275471698 53.9993077"></polygon>
+                    </defs>
+                    <g id="InspirationBoxSvg-Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="InspirationBoxSvg-Sheet_Desktop_Static" transform="translate(-1484.000000, -280.000000)">
+                            <g id="InspirationBoxSvg-Page-1" transform="translate(1484.000000, 280.000000)">
+                                <polygon id="InspirationBoxSvg-Fill-1" fill="#10161ADB" points="70 2 70 51 50.05556 51 42.7471616 47.5987134 29.2706337 47.5987134 21.9430711 51 2 51 2 2 21.3270795 2 27.9441984 6.34142368 44.0749658 6.34142368 50.6729205 2"></polygon>
+                                <g id="InspirationBoxSvg-Group-4">
+                                    <g id="InspirationBoxSvg-Clip-3"></g>
+                                    <path id="InspirationBoxSvg-Fill-2" fill="#972e2e" d="M71.7303509,6.16223077 L71.7303509,0.798230769 L49.3978604,0.798230769 L48.9033887,1.42269231 C48.0728415,2.47223077 47.0508415,3.29746154 45.9186528,3.88592308 C43.1198604,2.67438462 40.1668038,1.99176923 37.1848226,1.83392308 C36.9492943,1.33407692 36.4534453,0.979615385 35.8639358,0.979615385 C35.2771811,0.979615385 34.7785774,1.33407692 34.5458038,1.83392308 C31.5624453,1.99176923 28.6121434,2.67438462 25.8133509,3.88592308 C24.6797849,3.29746154 23.6577849,2.47223077 22.8286151,1.42269231 L22.3341434,0.798230769 L0.000275471698,0.798230769 L0.000275471698,53.9993077 L22.3341434,53.9993077 L22.8286151,53.3762308 C23.6577849,52.3280769 24.6770302,51.5000769 25.8092189,50.9143846 C28.6025019,52.1300769 31.530766,52.8223846 34.5526906,52.9774615 C34.7909736,53.4703846 35.2826906,53.8179231 35.8639358,53.8179231 C36.4451811,53.8179231 36.9396528,53.4703846 37.1751811,52.9774615 C40.1998604,52.8223846 43.1295019,52.1300769 45.9227849,50.9143846 C47.0522189,51.5000769 48.0742189,52.3280769 48.9033887,53.3762308 L49.3978604,53.9993077 L71.7303509,53.9993077 L71.7303509,48.6366923 L71.7303509,6.16223077 Z M71.7303509,11.4348462 L71.7303509,8.76253846 L71.7303509,11.4348462 Z M34.6546151,3.23238462 C34.9121811,3.63946154 35.3474264,3.92330769 35.8639358,3.92330769 C36.3832,3.92330769 36.8156906,3.63946154 37.0773887,3.23238462 C39.4230302,3.35146154 41.7452566,3.81253846 43.9793321,4.61976923 C43.2934075,4.79007692 42.5854453,4.88284615 41.8692189,4.88284615 L29.8627849,4.88284615 C29.1424264,4.88284615 28.4372189,4.79007692 27.7540491,4.61976923 C29.9853698,3.81253846 32.3089736,3.35146154 34.6546151,3.23238462 L34.6546151,3.23238462 Z M37.0760113,51.5651538 C36.8143132,51.1594615 36.3818226,50.8728462 35.8639358,50.8728462 C35.3474264,50.8728462 34.9149358,51.1594615 34.6573698,51.5651538 C32.3089736,51.4474615 29.9853698,50.9863846 27.7540491,50.1763846 C28.4372189,50.0074615 29.1424264,49.9146923 29.8627849,49.9146923 L41.8692189,49.9146923 C42.5854453,49.9146923 43.2934075,50.0074615 43.9793321,50.1763846 C41.7452566,50.9863846 39.4202755,51.4474615 37.0760113,51.5651538 L37.0760113,51.5651538 Z M50.9515208,50.6914615 C48.6058792,48.0856154 45.3374075,46.6054615 41.8692189,46.6054615 L29.8627849,46.6054615 C26.3932189,46.6054615 23.1261245,48.0856154 20.780483,50.6914615 L18.5918604,50.6914615 C18.5918604,50.6914615 3.29078491,50.6291538 3.29078491,42.6537692 L3.29078491,12.1437692 C3.29078491,4.167 18.5918604,4.10746154 18.5918604,4.10746154 L20.780483,4.10746154 C23.1261245,6.71192308 26.3932189,8.19069231 29.8627849,8.19069231 L41.8692189,8.19069231 C45.3374075,8.19069231 48.6058792,6.71192308 50.9515208,4.10746154 L53.138766,4.10746154 C53.138766,4.10746154 68.4384642,4.167 68.4384642,12.1437692 L68.4384642,42.6537692 C68.4384642,50.6291538 53.138766,50.6914615 53.138766,50.6914615 L50.9515208,50.6914615 Z M71.7303509,46.0363846 L71.7303509,43.3626923 L71.7303509,46.0363846 Z"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="styles_status__wfjbc"></div>
+        </div>
+        <div class="styles_label__Bj6YW styles_dark__+NBMD" data-testid="inspiration-label">Heroic Inspiration</div>
+    </div>
+</section>
+
+
+<section class="stcs-quick-info__health">
+    <div class="styles_hitPointsBox__iqcr7">
+        <div class="stcs-box-background ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317 88.98" class="stcs-svg ">
+                <path fill="#10161ADB"
+                      d="M9.35,8,7,10.29a38.78,38.78,0,0,1,.35,6.19l.85,57c0,4.29.29,6.67,3.67,9.37l3.76,2.46c2.56,2,19.53,1.87,9.58,1.87l271.48-.68c3.29,0,5.19-2.23,7.75-4.28l3-2.64c3.38-2.7,1.7-2.4,1.7-6.69L310,17.06c0-4.28-.76-8-4.13-10.71h0a18.9,18.9,0,0,0-10.39-3.64L19.59,2.48A36.38,36.38,0,0,0,9.35,8Z">
+                </path>
+                <path fill="#972e2e"
+                      d="M305.89,0H11.1L0,9V79.93l11.1,9H305.89l11.11-9V9ZM294.34,86.5H22.6A24.06,24.06,0,0,1,8.69,78.78V10.24a24.36,24.36,0,0,1,14-7.76H294.4a24.09,24.09,0,0,1,13.91,7.72V78.73a24.36,24.36,0,0,1-14,7.77ZM3.05,21.16a27.77,27.77,0,0,1,4-8.79V76.63c-.37-.53-.76-1-1.09-1.62a27.78,27.78,0,0,1-2.89-7.1ZM310,12.34c.37.54.76,1.05,1.09,1.62A28,28,0,0,1,314,21.07V67.81a27.91,27.91,0,0,1-4,8.8Zm4-2.27v7a26.94,26.94,0,0,0-4-6.77v-.13h-.1a24.53,24.53,0,0,0-11.24-7.68h6ZM12.37,2.48h6A24.53,24.53,0,0,0,7.13,10.16H7v.13a26.94,26.94,0,0,0-4,6.77v-7ZM3.05,78.91v-7a26.81,26.81,0,0,0,4,6.78v.13h.1A24.61,24.61,0,0,0,18.37,86.5h-6ZM304.63,86.5h-6a24.61,24.61,0,0,0,11.24-7.68h.1v-.13a26.81,26.81,0,0,0,4-6.78v7Z">
+                </path>
+            </svg>
+        </div>
+        <div class="styles_content__nPt0e">
+            <h1 class="styles_label__Ivf2i">Hit Points</h1>
+            <div class="styles_container__1cATf">
+                <button
+                    class="Button_button__B9Kr5 ButtonVariants_primary__TMQ5y ButtonVariants_outline__v36Mn ButtonSizes_medium__uHe8x styles_xx-small__Q1OkG styles_themed__AiJUu styles_outline__lyFTR styles_dark__O1vGK styles_button__ZEn+Q styles_heal__4AW3J"
+                    aria-disabled="false">Heal
+                </button>
+                <input class="styles_input__coHiS" data-testid="hp-adjust-input" type="number" aria-label="Hit Points Adjustment" min="0" max="1000000000" value="">
+                <button
+                    class="Button_button__B9Kr5 ButtonVariants_primary__TMQ5y ButtonVariants_outline__v36Mn ButtonSizes_medium__uHe8x styles_xx-small__Q1OkG styles_themed__AiJUu styles_outline__lyFTR styles_dark__O1vGK styles_button__ZEn+Q styles_damage__cxeXD"
+                    aria-disabled="false">Damage
+                </button>
+            </div>
+            <div class="styles_container__nsTN6">
+                <div class="styles_innerContainer__Xn2+o">
+                    <div class="styles_item__UVpsr">
+                        <label for="f1ee0d16-d6d8-495f-97cf-182294f13e56"
+                               class="styles_label__ysVMP"
+                               aria-label="Current hit points 55, change current hit points">Current
+                        </label>
+                        <button id="f1ee0d16-d6d8-495f-97cf-182294f13e56"
+                                class="styles_valueButton__0rK5Z styles_number__j1d93">55
+                        </button>
+                    </div>
+                    <div class="styles_item__UVpsr">
+                        <div class="styles_spacer__fglT0"></div>
+                        <span class="styles_number__j1d93 styles_slash__UmBPf">/</span>
+                    </div>
+                    <div class="styles_item__UVpsr">
+                        <span class="styles_label__ysVMP" aria-hidden="true">Max</span>
+                        <span class="accessibility_screenreaderOnly__OEzRB">Max hit points</span>
+                        <div class="styles_number__j1d93 styles_maxContainer__mt+Ff">
+                            <span data-testid="max-hp" class="">55</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="styles_item__UVpsr styles_temp__pxAha">
+                    <label for="4cd8bdfc-a650-456e-a775-73a2c5c40141"
+                           aria-label="Temporary hit points 0, set temporary hit points"
+                           class="styles_label__ysVMP">Temp
+                    </label>
+                    <button id="4cd8bdfc-a650-456e-a775-73a2c5c40141"
+                            class="styles_valueButton__0rK5Z styles_tempEmpty__fI4gV styles_number__j1d93">--
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="stcs-subsections">
+    <div class="stcs-subsection stcs-subsection--abilities">
+        <section class="stcs-saving-throws-box">
+    <h2 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+        Saving Throws
+    </h2>
+    <div class="stcs-saving-throws-box__abilities">
+        <div class="stcs-saving-throws-summary">
+            <!-- Strength -->
+            <div class="stcs-saving-throws-summary__ability stcs-saving-throws-summary__ability--str">
+                <div class="stcs-box-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.1 34" class="stcs-svg stcs-saving-throw-row-box-svg stcs-svg--themed">
+                        ...svg content...
+                    </svg>
+                </div>
+                <h3 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Strength Saving Throw</h3>
+                <div class="stcs-saving-throws-summary__ability-proficiency">
+                    <span aria-label="Not Proficient">
+                        <span class="stcs-tooltip" data-tippy="" data-original-title="Not Proficient">
+                            <span class="stcs-no-proficiency-icon stcs-proficiency-level-icon"></span>
+                        </span>
+                    </span>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-name">
+                    <abbr title="Strength" aria-hidden="true">str</abbr>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-modifier">
+                    <button aria-haspopup="menu" class="integrated-dice__container">
+                        <span class="styles_numberDisplay styles_signed">
+                            <span class="styles_sign styles_labelSignColor" aria-label="plus">+</span>
+                            <span>2</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dexterity -->
+            <div class="stcs-saving-throws-summary__ability stcs-saving-throws-summary__ability--dex">
+                <div class="stcs-box-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.1 34" class="stcs-svg stcs-saving-throw-row-box-svg stcs-svg--themed">
+                        ...svg content...
+                    </svg>
+                </div>
+                <h3 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Dexterity Saving Throw</h3>
+                <div class="stcs-saving-throws-summary__ability-proficiency">
+                    <span aria-label="Not Proficient">
+                        <span class="stcs-tooltip" data-tippy="" data-original-title="Not Proficient">
+                            <span class="stcs-no-proficiency-icon stcs-proficiency-level-icon"></span>
+                        </span>
+                    </span>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-name">
+                    <abbr title="Dexterity" aria-hidden="true">dex</abbr>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-modifier">
+                    <button aria-haspopup="menu" class="integrated-dice__container">
+                        <span class="styles_numberDisplay styles_signed">
+                            <span class="styles_sign styles_labelSignColor" aria-label="plus">+</span>
+                            <span>2</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Constitution -->
+            <div class="stcs-saving-throws-summary__ability stcs-saving-throws-summary__ability--con">
+                <div class="stcs-box-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.1 34" class="stcs-svg stcs-saving-throw-row-box-svg stcs-svg--themed">
+                        ...svg content...
+                    </svg>
+                </div>
+                <h3 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Constitution Saving Throw</h3>
+                <div class="stcs-saving-throws-summary__ability-proficiency">
+                    <span aria-label="Not Proficient">
+                        <span class="stcs-tooltip" data-tippy="" data-original-title="Not Proficient">
+                            <span class="stcs-no-proficiency-icon stcs-proficiency-level-icon"></span>
+                        </span>
+                    </span>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-name">
+                    <abbr title="Constitution" aria-hidden="true">con</abbr>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-modifier">
+                    <button aria-haspopup="menu" class="integrated-dice__container">
+                        <span class="styles_numberDisplay styles_signed">
+                            <span class="styles_sign styles_labelSignColor" aria-label="plus">+</span>
+                            <span>2</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Intelligence -->
+            <div class="stcs-saving-throws-summary__ability stcs-saving-throws-summary__ability--int">
+                <div class="stcs-box-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.1 34" class="stcs-svg stcs-saving-throw-row-box-svg stcs-svg--themed">
+                        ...svg content...
+                    </svg>
+                </div>
+                <h3 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Intelligence Saving Throw</h3>
+                <div class="stcs-saving-throws-summary__ability-proficiency">
+                    <span aria-label="Not Proficient">
+                        <span class="stcs-tooltip" data-tippy="" data-original-title="Not Proficient">
+                            <span class="stcs-no-proficiency-icon stcs-proficiency-level-icon"></span>
+                        </span>
+                    </span>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-name">
+                    <abbr title="Intelligence" aria-hidden="true">int</abbr>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-modifier">
+                    <button aria-haspopup="menu" class="integrated-dice__container">
+                        <span class="styles_numberDisplay styles_signed">
+                            <span class="styles_sign styles_labelSignColor" aria-label="plus">+</span>
+                            <span>2</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Wisdom -->
+            <div class="stcs-saving-throws-summary__ability stcs-saving-throws-summary__ability--wis">
+                <div class="stcs-box-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.1 34" class="stcs-svg stcs-saving-throw-row-box-svg stcs-svg--themed">
+                        ...svg content...
+                    </svg>
+                </div>
+                <h3 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Wisdom Saving Throw</h3>
+                <div class="stcs-saving-throws-summary__ability-proficiency">
+                    <span aria-label="Not Proficient">
+                        <span class="stcs-tooltip" data-tippy="" data-original-title="Not Proficient">
+                            <span class="stcs-no-proficiency-icon stcs-proficiency-level-icon"></span>
+                        </span>
+                    </span>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-name">
+                    <abbr title="Wisdom" aria-hidden="true">wis</abbr>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-modifier">
+                    <button aria-haspopup="menu" class="integrated-dice__container">
+                        <span class="styles_numberDisplay styles_signed">
+                            <span class="styles_sign styles_labelSignColor" aria-label="plus">+</span>
+                            <span>2</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Charisma -->
+            <div class="stcs-saving-throws-summary__ability stcs-saving-throws-summary__ability--cha">
+                <div class="stcs-box-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.1 34" class="stcs-svg stcs-saving-throw-row-box-svg stcs-svg--themed">
+                        ...svg content...
+                    </svg>
+                </div>
+                <h3 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Charisma Saving Throw</h3>
+                <div class="stcs-saving-throws-summary__ability-proficiency">
+                    <span aria-label="Not Proficient">
+                        <span class="stcs-tooltip" data-tippy="" data-original-title="Not Proficient">
+                            <span class="stcs-no-proficiency-icon stcs-proficiency-level-icon"></span>
+                        </span>
+                    </span>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-name">
+                    <abbr title="Charisma" aria-hidden="true">cha</abbr>
+                </div>
+                <div class="stcs-saving-throws-summary__ability-modifier">
+                    <button aria-haspopup="menu" class="integrated-dice__container">
+                        <span class="styles_numberDisplay styles_signed">
+                            <span class="styles_sign styles_labelSignColor" aria-label="plus">+</span>
+                            <span>2</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stcs-saving-throws-box__info">
+        <div class="stcs-saving-throws-box__modifiers stcs-saving-throws-box__modifiers--multi">
+            <span class="stcs-tooltip stcs-saving-throws-box__modifier" data-tippy="" data-original-title="+2 Bonus on saves">
+                <div class="stcs-dice-adjustment-summary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stcs-svg stcs-bonus-positive-svg stcs-dice-adjustment-summary__icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.241 1.13253C12.0909 1.05 11.9091 1.05 11.759 1.13252L2.25904 6.35753C2.09927 6.4454 2 6.61329 2 6.79563V17.2044C2 17.3867 2.09927 17.5546 2.25904 17.6425L11.759 22.8675C11.9091 22.95 12.0909 22.95 12.241 22.8675L21.741 17.6425C21.9007 17.5546 22 17.3867 22 17.2044V6.79563C22 6.61329 21.9007 6.4454 21.741 6.35753L12.241 1.13253ZM10.5 6H13.5V10.5H18V13.5H13.5V18H10.5V13.5H6V10.5H10.5V6Z" fill="#00c680"></path>
+                    </svg>
+                    <span class="stcs-dice-adjustment-summary__value">2</span>
+                    <span class="stcs-dice-adjustment-summary__description">on saves</span>
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <div class="stcs-subsection__footer">
+        <span class="stcs-tooltip stcs-manage-icon stcs-manage-icon--edge-icon stcs-manage-icon--interactive" data-tippy="" data-original-title="Manage">
+            <span class="stcs-manage-icon__content">Saving Throws</span>
+            <span class="stcs-manage-icon__icon"></span>
+        </span>
+    </div>
+</section>
+
+<section class="stcs-senses-box">
+    <div class="stcs-box-background">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 281 200" class="stcs-svg">
+            [svg content...]
+        </svg>
+    </div>
+    <h2 style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">Senses</h2>
+    
+    <div class="stcs-senses">
+        <div class="stcs-senses__callouts">
+            <div class="stcs-senses__callout">
+                <div class="stcs-box-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241 34" class="stcs-svg stcs-sense-row-box-svg stcs-svg--themed">
+                        [svg content...]
+                    </svg>
+                </div>
+                <div class="stcs-senses__callout-value">16</div>
+                <div class="stcs-senses__callout-label">Passive Perception</div>
+            </div>
+            
+            <div class="stcs-senses__callout">
+                <div class="stcs-box-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241 34" class="stcs-svg stcs-sense-row-box-svg stcs-svg--themed">
+                        [svg content...]
+                    </svg>
+                </div>
+                <div class="stcs-senses__callout-value">18</div>
+                <div class="stcs-senses__callout-label">Passive Investigation</div>
+            </div>
+            
+            <div class="stcs-senses__callout">
+                <div class="stcs-box-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241 34" class="stcs-svg stcs-sense-row-box-svg stcs-svg--themed">
+                        [svg content...]
+                    </svg>
+                </div>
+                <div class="stcs-senses__callout-value">16</div>
+                <div class="stcs-senses__callout-label">Passive Insight</div>
+            </div>
+        </div>
+        
+        <div class="stcs-senses__summary">Darkvision 60 ft.</div>
+    </div>
+</section>
+    <div class="stcs-subsection__footer"><span
+            class="stcs-tooltip  stcs-manage-icon stcs-manage-icon--edge-icon stcs-manage-icon--interactive stcs-tooltip--is-interactive"
+            data-tippy="" data-original-title="Manage"><span class="stcs-manage-icon__content">Senses</span><span
+                class="stcs-manage-icon__icon"></span></span></div>
+

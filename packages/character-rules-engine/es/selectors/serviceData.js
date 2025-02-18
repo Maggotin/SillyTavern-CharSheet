@@ -1,0 +1,10 @@
+export const getClassAlwaysKnownSpells = (state) => state.serviceData.classAlwaysKnownSpells;
+export const getClassAlwaysPreparedSpells = (state) => state.serviceData.classAlwaysPreparedSpells;
+export const getDefinitionPool = (state) => state.serviceData.definitionPool;
+export const getKnownInfusionsMappings = (state) => state.serviceData.knownInfusionsMappings;
+export const getInfusionsMappings = (state) => state.serviceData.infusionsMappings;
+export const getRuleDataPool = (state) => state.serviceData.ruleDataPool;
+export const getVehicleComponentMappings = (state) => state.serviceData.vehicleComponentMappings;
+export const getVehicleMappings = (state) => state.serviceData.vehicleMappings;
+export const getPartyInfo = (state) => state.serviceData.partyInfo;
+export const getCampaignSettings = (state) => state.serviceData.campaignSettings;

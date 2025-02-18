@@ -1,0 +1,36 @@
+.ct-editor-box {
+  background: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+
+  .ct-value-editor {
+    &__property--text {
+      align-items: center;
+
+      .ct-value-editor__property-label {
+        width: auto;
+        margin-left: 5px;
+        margin-bottom: 0;
+        margin-right: 5px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .ct-customize-data-editor + .ct-value-editor {
+    padding-top: 3px;
+  }
+
+  .ct-remove-button {
+    display: block;
+    margin: 10px auto 5px;
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ct-editor-box {
+    background-color: $ct--theme-dark-mode-secondary-bg;
+    border-color: $ct--theme-dark-mode-secondary-bg;
+  }
+}

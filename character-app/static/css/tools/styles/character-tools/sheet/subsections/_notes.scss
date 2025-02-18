@@ -1,0 +1,17 @@
+.ct-notes {
+  &__note {
+    cursor: pointer;
+    font-size: 12px;
+    white-space: pre-wrap;
+
+    &--no-content {
+      color: $ct--theme-de-emphasized-color;
+    }
+  }
+}
+
+.ct-primary-box--dark-mode {
+  .ct-notes__note {
+    color: white;
+  }
+}

@@ -1,0 +1,16 @@
+.filterButton {
+  padding: 0 0.125rem 0.25rem;
+  flex-basis: 20%;
+  margin: 0;
+  width: 3.75rem;
+}
+
+.filterButton button {
+  width: 100%;
+  text-wrap: nowrap;
+  font-size: 0.6875rem;
+}
+
+.filterButtonSmall button {
+  font-size: 0.5rem;
+}

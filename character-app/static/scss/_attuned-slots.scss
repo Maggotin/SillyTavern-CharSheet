@@ -1,0 +1,57 @@
+.attuned-slots {
+  margin: 15px 0;
+
+  &-heading {
+    font-family: $condensed;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  &-items {
+    display: flex;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  &-item {
+    width: 33%;
+    position: relative;
+
+    & + & {
+      margin-left: 5px;
+    }
+
+    &-preview {
+      border-radius: 3px;
+      border: 1px solid $character-default-color;
+      height: 50px;
+      background-size: cover;
+      background-position: center center;
+      background-color: #f2f2f2;
+      position: relative;
+      z-index: 2;
+    }
+
+    &-name {
+      font-size: 10px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: $character-default-color;
+      color: #fff;
+      padding: 4px 5px 2px;
+      text-align: center;
+      margin-top: -4px;
+      border-radius: 0 0 3px 3px;
+    }
+
+    &-missing {
+      border-radius: 3px;
+      border: 1px dashed $character-default-color;
+      height: 50px;
+    }
+  }
+}

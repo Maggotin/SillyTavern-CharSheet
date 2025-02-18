@@ -1,0 +1,51 @@
+@mixin ellipsis() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.page-header__extras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.body-mycontent .page-heading {
+  border-bottom: 3px solid #1b9af0;
+  padding-bottom: 8px;
+  padding-top: 16px;
+}
+.page-heading__content {
+  display: inline-block;
+  vertical-align: middle;
+}
+.page-title {
+  font-size: 36px;
+  font-family: "Roboto Condensed", Roboto, Helvetica, sans-serif;
+  color: #242527;
+  padding: 0 !important;
+  line-height: 1.3;
+  font-weight: bold;
+  margin: 0;
+}
+
+.page-header {
+  padding: 0 10px;
+  width: auto !important;
+  max-width: 1200px !important;
+}
+
+.page-header__primary {
+  position: relative;
+}
+
+body input[type="search"] {
+  box-shadow: unset;
+  &:focus,
+  &:hover {
+    border-color: unset;
+    box-shadow: unset;
+    background-color: unset;
+  }
+}

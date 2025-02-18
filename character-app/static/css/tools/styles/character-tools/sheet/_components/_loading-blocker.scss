@@ -1,0 +1,54 @@
+.ct-loading-blocker {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 60100;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background-color: #232323;
+  transition: right 700ms 900ms;
+  transform: translate3d(0, 0, 0);
+
+  &--finished {
+    right: 100%;
+  }
+
+  &__logo {
+    background: transparent center center
+      url("#{$imageURL-local}/dnd-beyond-logo.svg") no-repeat;
+    background-size: auto 70px;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__anim {
+    height: 100px;
+    width: 100px;
+  }
+
+  @media (min-width: $bp-sheet-tablet-transition) {
+    width: 310px;
+    height: 240px;
+    right: 50%;
+    top: 140px;
+    transform: translate3d(50%, 0, 0);
+    background: #232323;
+    opacity: 1;
+    transition: opacity 700ms;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    z-index: 10;
+
+    &--finished {
+      opacity: 0;
+      right: 50%;
+      pointer-events: none;
+    }
+  }
+}

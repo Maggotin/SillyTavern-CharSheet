@@ -1,0 +1,61 @@
+.itemName {
+  --color-common: #242528;
+  --color-uncommon: #1fc219;
+  --color-rare: #4990e2;
+  --color-veryrare: #9810e0;
+  --color-legendary: #fea227;
+  --color-artifact: #be8972;
+
+  font-style: italic;
+  padding-right: 0.1875rem;
+}
+
+[data-theme="dark"] .itemName {
+  --color-common: #ffffff;
+  --color-uncommon: #5cbe3e;
+  --color-rare: #5991dc;
+  --color-veryrare: #b55dff;
+  --color-legendary: #f2a546;
+  --color-artifact: #b78b76;
+}
+
+.itemName.common {
+  color: var(--color-common);
+  font-style: normal;
+  padding-right: 0;
+}
+
+.itemName.uncommon {
+  color: var(--color-uncommon);
+}
+
+.itemName.rare {
+  color: var(--color-rare);
+}
+
+.itemName.veryrare {
+  color: var(--color-veryrare);
+}
+
+.itemName.legendary {
+  color: var(--color-legendary);
+}
+
+.itemName.artifact {
+  color: var(--color-artifact);
+}
+
+.asterisk {
+  padding: 0 0.063rem;
+}
+
+.icon {
+  top: 0.0625rem;
+  margin-left: 0.1875rem;
+  margin-right: 0;
+}
+
+.legacy {
+  color: var(--character-muted-color);
+  margin-left: 0.1875rem;
+}

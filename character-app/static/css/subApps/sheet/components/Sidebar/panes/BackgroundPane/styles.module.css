@@ -1,0 +1,19 @@
+.data {
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 0.0625rem solid var(--theme-transparent);
+}
+
+.choices {
+  border-left: 0.1875rem solid var(--theme-transparent);
+  padding-left: 0.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-left: 0.25rem;
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+
+.customDescription {
+  white-space: pre-wrap;
+}

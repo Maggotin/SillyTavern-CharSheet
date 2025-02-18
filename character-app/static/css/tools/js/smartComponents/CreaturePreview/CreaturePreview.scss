@@ -1,0 +1,36 @@
+.ddbc-creature-preview {
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    align-self: flex-start;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    display: inline-flex;
+    vertical-align: top;
+    background: transparent center center no-repeat;
+    background-size: cover;
+    margin-right: 5px;
+    border: 1px solid #d8d8d8;
+    border-radius: 3px;
+  }
+
+  &__name {
+    font-size: 14px;
+    font-family: $condensed;
+  }
+
+  &__meta {
+    font-size: 10px;
+    color: $ct--theme-de-emphasized-color;
+    font-family: $condensed;
+
+    &-item {
+      & + &::before {
+        content: "\2022";
+        padding: 0 3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.help-text-manager {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 11;
+  background: linear-gradient(to right, #222 50%, rgba(0, 0, 0, 0));
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+
+  &-icon {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-image: url("#{$imageURL-local}/character-sheet/help-active.svg");
+    background-size: 30px;
+  }
+
+  &-disabled &-icon {
+    background-image: url("#{$imageURL-local}/character-sheet/help-inactive.svg");
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    background: none;
+    right: 100%;
+    left: auto;
+    padding: 0;
+  }
+}

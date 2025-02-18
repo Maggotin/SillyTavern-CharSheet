@@ -1,0 +1,26 @@
+.ct-trait-content {
+  cursor: pointer;
+  margin-bottom: 13px;
+
+  &__heading {
+    font-weight: bold;
+    font-family: $condensed;
+    line-height: 1.2;
+  }
+
+  &__content {
+    font-size: 12px;
+    white-space: pre-wrap;
+  }
+
+  &--no-content &__content {
+    color: $ct--theme-de-emphasized-color;
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ct-trait-content--no-content .ct-trait-content__content {
+    color: $ct--theme-dark-mode-text;
+  }
+}

@@ -1,0 +1,37 @@
+.ddbc-manage-icon {
+  display: inline-flex;
+  position: relative;
+  vertical-align: middle;
+
+  &--dark-mode {
+    color: white;
+  }
+
+  &--interactive {
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background: center center transparent
+      url("#{$imageURL-local}/icons/gear-grey.svg");
+    background-size: 16px 16px;
+    display: inline-flex;
+    vertical-align: top;
+    margin-left: 3px;
+  }
+
+  &:hover &__icon {
+    background-image: url("#{$imageURL-local}/icons/gear.svg");
+  }
+
+  &:hover &__icon--dark-mode {
+    background-image: url("#{$imageURL-local}/icons/gear-grey.svg");
+  }
+
+  &--edge-icon &__icon {
+    position: absolute;
+    left: 100%;
+  }
+}

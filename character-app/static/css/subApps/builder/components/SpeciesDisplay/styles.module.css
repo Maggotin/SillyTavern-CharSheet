@@ -1,0 +1,37 @@
+.speciesDisplay {
+  margin: 1.5rem 0;
+}
+
+.heading {
+  font-family: var(--font-condensed);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.375rem 0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portrait {
+  border-radius: 0.1875rem;
+}
+
+.species {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.subspecies {
+  font-size: 0.75rem;
+  color: var(--ttui_grey-600);
+  display: block;
+  margin-bottom: -0.375rem;
+}
+
+.button {
+  margin-left: auto;
+}

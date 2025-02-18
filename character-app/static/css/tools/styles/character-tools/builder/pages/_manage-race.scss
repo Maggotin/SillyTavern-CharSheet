@@ -1,0 +1,129 @@
+.race-detail {
+  &-aside {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  &-preview {
+    &-img {
+      width: 100px;
+      height: 100px;
+      border-radius: $builder-image-border-radius;
+    }
+  }
+
+  .builder-page-header {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  &-more {
+    padding: 15px 0;
+    & &-link {
+      color: $builder-default-color;
+      display: flex;
+
+      &:hover,
+      &:visited,
+      &:active {
+        color: $builder-default-color;
+      }
+    }
+    border-bottom: 1px solid #edeae8;
+  }
+
+  .detail-choice {
+    margin-top: 10px;
+  }
+
+  &-description {
+    .characters-statblock {
+      border-bottom: 1px solid #f1f1f1;
+      padding-bottom: 15px;
+
+      strong {
+        font-size: 18px;
+      }
+    }
+
+    &--hide-traits {
+      .characters-statblock {
+        display: none;
+      }
+    }
+  }
+
+  .ddbc-racial-traits-short-description {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  &-secondary {
+    clear: both;
+  }
+
+  &-racial-traits {
+    padding-top: 20px;
+  }
+}
+
+.manage-race {
+  &-chosen-action {
+    text-align: center;
+    margin-top: 10px;
+    color: $builder-default-color;
+    cursor: pointer;
+  }
+
+  &-tabs {
+    padding-top: 20px;
+    margin-top: 10px;
+
+    .ct-optional-origin-manager,
+    .race-detail-racial-traits {
+      margin-top: 15px;
+      border: none;
+      padding-top: 0;
+    }
+  }
+}
+
+.race-confirm-modal {
+  .builder-message {
+    margin-bottom: 10px;
+  }
+
+  .race-detail-secondary-traits-title {
+    font-size: 18px;
+    font-family: $condensed;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .race-detail-description .characters-statblock strong {
+    font-size: 14px;
+    &::after {
+      content: ":";
+    }
+  }
+
+  .builder-page-header {
+    margin-bottom: unset;
+  }
+
+  .race-detail-sources {
+    color: $ct--theme-de-emphasized-color;
+    margin-bottom: 16px;
+  }
+
+  .race-detail-more {
+    text-align: center;
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,276 @@
+.spell-manager {
+  &-header {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: $condensed;
+    line-height: 1;
+  }
+
+  &-info {
+    margin: 10px 0;
+    font-family: $condensed;
+    font-size: 14px;
+
+    &-primary {
+      margin-bottom: 5px;
+    }
+
+    &-extra {
+      text-transform: none;
+      font-size: 11px;
+      color: #777;
+      font-weight: normal;
+      margin-left: 8px;
+    }
+
+    &-exceeded {
+      color: #f31800;
+      display: flex;
+
+      &::after {
+        content: "!";
+        background: #f31800;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        z-index: 3;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &-class {
+    &-add {
+      margin: 10px 0;
+    }
+  }
+
+  &-spell {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 3px;
+
+    & + & {
+      border-top: 1px solid #f6f6f4;
+    }
+
+    &-name {
+      flex-grow: 1;
+      font-size: 14px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &-status {
+      margin-right: 7px;
+      font-size: 8px;
+      width: 46px;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.2;
+      font-weight: bold;
+      color: $character-default-color;
+
+      .character-button-small {
+        width: 46px;
+      }
+    }
+
+    &-remove {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      cursor: pointer;
+
+      &-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -6px;
+          margin-top: -6px;
+          width: 12px;
+          height: 12px;
+          background: -26px 0
+            url("#{$imageURL-local}/sprites/charsheet-atlas-red.svg") no-repeat;
+          background-size: 38px 12px;
+        }
+      }
+    }
+  }
+
+  &-add {
+    &-header {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: center;
+
+      &-heading {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: $condensed;
+        flex-grow: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &-actions {
+        white-space: nowrap;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &-known-max {
+    background: #fffae1;
+    padding: 10px 50px;
+    border: 1px solid #fbdf6d;
+    text-align: center;
+    color: #ccab00;
+    font-weight: bold;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-add &-info {
+    display: flex;
+  }
+
+  &-add &-info-cantrips {
+    margin-right: 10px;
+  }
+
+  &-item {
+    &-always-prepared {
+      font-size: 9px;
+      color: $character-default-color;
+      text-transform: uppercase;
+      max-width: 43px;
+      text-align: center;
+    }
+  }
+}
+
+.class-spell-list {
+  margin-top: 5px;
+
+  &-manager {
+    margin-top: 20px;
+
+    & + & {
+      margin-top: 40px;
+    }
+
+    &-preview {
+      margin-right: 5px;
+
+      &-img {
+        width: 30px;
+        height: 30px;
+        border-radius: $builder-image-border-radius;
+      }
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    &-heading {
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-family: $condensed;
+      line-height: 1;
+      flex-grow: 1;
+    }
+  }
+
+  &-header {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+
+    .class-spell-list-opened > & {
+      border-left: 3px solid $character-default-color;
+    }
+  }
+
+  &-heading {
+    font-size: 15px;
+    font-weight: bold;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    &-notification {
+      content: "!";
+      background: #f31800;
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      border-radius: 50%;
+      z-index: 3;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    &-extra {
+      font-weight: normal;
+      margin-left: 5px;
+      font-size: 12px;
+    }
+  }
+
+  &-trigger {
+    min-width: 16px;
+    height: 16px;
+    width: 16px;
+    background: transparent 0 0
+      url("#{$imageURL-local}/sprites/charsheet-atlas.svg") no-repeat;
+    background-size: cover;
+    margin-left: 9px;
+    cursor: pointer;
+
+    .class-spell-list-opened > .class-spell-list-header & {
+      background-position: -17px 0;
+    }
+
+    .class-spell-list-collapsed > .class-spell-list-header & {
+      background-position: 0 0;
+    }
+  }
+
+  &-empty {
+    padding: 10px;
+    text-align: center;
+  }
+
+  &-actives,
+  .spell-list {
+    margin: 10px 0;
+  }
+}

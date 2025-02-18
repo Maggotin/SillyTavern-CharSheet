@@ -1,0 +1,293 @@
+.description-manage {
+  &-information {
+    margin-bottom: 10px;
+  }
+
+  &-background {
+    @include sidebarSeparatorBottom(20px, 20px);
+    &-heading {
+      font-family: $condensed;
+      font-weight: bold;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .builder-page-subheader {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 0.625rem;
+    }
+
+    &-chooser {
+      &-con {
+        display: flex;
+        max-width: 50%;
+        align-items: center;
+      }
+
+      &-field {
+        flex: 1;
+        padding-right: 10px;
+      }
+
+      .ddbc-select {
+        max-width: none;
+      }
+    }
+
+    &-description {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    &-feature {
+      margin-top: 10px;
+    }
+
+    &-proficiency {
+      margin: 10px 0;
+
+      &-label {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+      &-desc {
+        display: inline;
+      }
+    }
+
+    &-languages {
+      margin: 10px 0;
+
+      &-label {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+    }
+
+    // Hides the 2024 PHB background styles that are coming from Waterdeep
+    .revised-phb-backgrounds {
+      display: none;
+    }
+
+    .line.character.height1.marginTop20.marginBottom20 {
+      display: none;
+    }
+  }
+
+  .detail-choice {
+    margin-top: 10px;
+  }
+
+  &-faith {
+    .builder-field {
+      margin: 0;
+    }
+  }
+
+  &-lifestyle,
+  &-alignment {
+    &-desc {
+      margin-top: 10px;
+    }
+
+    &-label {
+      font-weight: bold;
+      margin-bottom: 9px;
+    }
+  }
+
+  &-faith,
+  &-alignment {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .detail-choice {
+    margin-top: 10px;
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    .detail-choice {
+      .ddbc-select {
+        max-width: 50%;
+      }
+    }
+
+    .portrait-name {
+      max-width: 100%;
+    }
+  }
+
+  &-background {
+    &-granted-feat {
+      .detail-choice {
+        .ddbc-select {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.description-suggestion {
+  &-heading {
+    font-family: $condensed;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0 10px;
+  }
+
+  &-info {
+    margin-top: 20px;
+  }
+}
+
+.custom-background {
+  &-description {
+    white-space: pre-wrap;
+  }
+
+  &-actions {
+    margin-top: 5px;
+    text-align: right;
+  }
+
+  &-customize {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    &-heading {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 11px;
+
+      &-active::before {
+        content: "*";
+        color: red;
+        top: -1px;
+        position: relative;
+        margin-left: 3px;
+        font-size: 14px;
+      }
+    }
+
+    &-trigger {
+      min-width: 16px;
+      height: 16px;
+      width: 16px;
+      background: transparent 0 0
+        url("#{$imageURL-local}/sprites/charsheet-atlas.svg") no-repeat;
+      background-size: cover;
+      margin-left: 9px;
+      cursor: pointer;
+
+      .custom-background-customize-header-opened & {
+        background-position: -17px 0;
+      }
+
+      .custom-background-customize-header-collapsed & {
+        background-position: 0 0;
+      }
+    }
+  }
+
+  &-editor {
+    margin-top: 5px;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+  }
+
+  &-properties {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &-property {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    input {
+      width: 40px;
+    }
+
+    &-full {
+      width: 100% !important;
+      max-width: none !important;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    &-full &-value {
+      flex: 1;
+    }
+
+    &-textarea {
+      width: 100% !important;
+      max-width: none !important;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    &-textarea &-value {
+      width: 100%;
+      margin-top: 3px;
+      margin-left: 0 !important;
+    }
+
+    &-label {
+      line-height: normal;
+    }
+
+    &-label + &-value,
+    &-value + &-label {
+      margin-left: 5px;
+    }
+
+    .character-checkbox {
+      vertical-align: top;
+    }
+
+    .character-checkbox-label {
+      line-height: normal;
+    }
+
+    .ddbc-select {
+      height: auto;
+    }
+
+    textarea {
+      height: 60px;
+      padding: 5px;
+      width: 100%;
+    }
+
+    &-choice {
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 0;
+
+      .ddbc-select {
+        max-width: 160px;
+      }
+    }
+  }
+}

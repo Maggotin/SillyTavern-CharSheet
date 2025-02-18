@@ -1,0 +1,29 @@
+.messageTitle {
+  text-align: center;
+  font-family: "Roboto Condensed";
+  letter-spacing: normal;
+  font-size: 2.25rem;
+}
+
+.messageSubtext {
+  text-align: center;
+  font-size: 1.25rem;
+  word-wrap: break-word;
+  color: var(--ttui_color-text--secondary);
+}
+
+.link {
+  color: var(--ttui_color-info--dark);
+  text-decoration-color: var(--ttui_color-info--dark);
+  border: 0.063rem solid transparent;
+  box-sizing: border-box;
+}
+
+.link:hover {
+  color: var(--ttui_color-info--dark);
+  border: 0.063rem dotted var(--ttui_color-text--primary);
+}
+
+.link:visited {
+  color: var(--ttui_color-info--dark);
+}

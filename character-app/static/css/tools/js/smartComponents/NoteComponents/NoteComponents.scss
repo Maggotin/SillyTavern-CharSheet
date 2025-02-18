@@ -1,0 +1,31 @@
+$note-components--scaled-color: $builder-default-color !default;
+$note-components--positive-color: $ct--positive-color !default;
+$note-components--negative-color: $ct--negative-color !default;
+
+.ddbc-note-components {
+  &__component {
+    &--scaled {
+      color: $note-components--scaled-color;
+    }
+
+    &--positive {
+      color: $note-components--positive-color;
+    }
+
+    &--negative {
+      color: $note-components--negative-color;
+    }
+
+    &--disadvantage-icon {
+      width: 14px;
+      height: 14px;
+      display: inline-flex;
+      margin-top: -2px;
+      vertical-align: middle;
+    }
+
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+}

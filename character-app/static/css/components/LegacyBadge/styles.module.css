@@ -1,0 +1,20 @@
+@import "@dndbeyond/ttui/components/LabelChip/LabelChip.module.css";
+
+.chip.margin-left {
+  margin: 0;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+
+.chip:hover {
+  cursor: help;
+}
+
+/* This is temporary until TTUI supports
+JSX as a tooltip prop */
+.chip > span {
+  background: var(--ttui_color-primary--main);
+  color: var(--ttui_color-primary--contrast);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
