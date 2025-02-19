@@ -1,6 +1,7 @@
 {
   "display_name": "Character Sheet D&D5e",
   "version": "1.0.0",
+  "exclude": ".history/**/*",
   "loading_order": 610,
   "description": "A new extension",
   "requires": [],
