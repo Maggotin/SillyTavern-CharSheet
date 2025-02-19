@@ -97,7 +97,7 @@ export default class SpellsLevelCasting extends React.PureComponent<Props> {
     return (
       <div className="ct-spells-level-casting__slot-groups">
         {pactMagicLevel && (
-          <div className="ct-spells-level-casting__slot-group ct-spells-level-casting__slot-group--pact">
+          <div className="ct-spells-level-casting__slot-groupstcs-spells-level-casting__slot-group--pact">
             <div className="ct-spells-level-casting__slot-group-manager">
               <SlotManager
                 onSet={this.handlePactSlotSet}
@@ -113,7 +113,7 @@ export default class SpellsLevelCasting extends React.PureComponent<Props> {
           </div>
         )}
         {spellSlotLevel && (
-          <div className="ct-spells-level-casting__slot-group ct-spells-level-casting__slot-group--spells">
+          <div className="ct-spells-level-casting__slot-groupstcs-spells-level-casting__slot-group--spells">
             <div className="ct-spells-level-casting__slot-group-manager">
               <SlotManager
                 onSet={this.handleSpellSlotSet}

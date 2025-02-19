@@ -308,7 +308,7 @@ class CustomActionPane extends React.PureComponent<Props, State> {
         {!isReadonly && (
           <div className="ct-custom-action-pane__actions">
             <div
-              className="ct-custom-action-pane__action ct-custom-action-pane__action--remove"
+              className="ct-custom-action-pane__actionstcs-custom-action-pane__action--remove"
               onClick={this.handleRemove}
             >
               <RemoveButton onClick={this.handleRemove}>

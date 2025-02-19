@@ -18,7 +18,7 @@ export default class PreferencesPaneToggleField extends React.PureComponent<Prop
     const { heading, description, initiallyEnabled, onChange } = this.props;
 
     return (
-      <div className="ct-preferences-pane__field ct-preferences-pane__field--toggle">
+      <div className="ct-preferences-pane__fieldstcs-preferences-pane__field--toggle">
         <div className="ct-preferences-pane__field-heading-input">
           <Heading className="ct-preferences-pane__field-heading">
             {heading}

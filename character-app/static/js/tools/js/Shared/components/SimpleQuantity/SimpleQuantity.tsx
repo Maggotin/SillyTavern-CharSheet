@@ -156,7 +156,7 @@ export default class SimpleQuantity extends React.PureComponent<Props, State> {
             <input
               type="number"
               value={newQuantity === null ? "" : newQuantity}
-              className="character-input ct-simple-quantity__input"
+              className="character-inputstcs-simple-quantity__input"
               onChange={this.handleAmountChange}
               onBlur={this.handleAmountBlur}
               onKeyUp={this.handleAmountKeyUp}

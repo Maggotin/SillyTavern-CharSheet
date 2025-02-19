@@ -270,7 +270,7 @@ class Equipment extends PureComponent<Props, State> {
 
     const headerNode: ReactNode = (
       <div
-        className="ct-equipment__container ct-inventory-item"
+        className="ct-equipment__containerstcs-inventory-item"
         onClick={(evt) => {
           evt.nativeEvent.stopImmediatePropagation();
           this.handleContainerShow(container);
@@ -280,7 +280,7 @@ class Equipment extends PureComponent<Props, State> {
           .toLowerCase()
           .replace(/\s/g, "-")}
       >
-        <div className="ct-equipment__container-action ct-inventory-item__action">
+        <div className="ct-equipment__container-actionstcs-inventory-item__action">
           {containerItem && (
             <ItemSlotManager
               isUsed={!!containerItem.isEquipped()}
@@ -305,10 +305,10 @@ class Equipment extends PureComponent<Props, State> {
             />
           )}
         </div>
-        <div className="ct-equipment__container-name ct-inventory-item__name">
+        <div className="ct-equipment__container-namestcs-inventory-item__name">
           {nameNode}
         </div>
-        <div className="ct-equipment__container-weight ct-inventory-item__weight">
+        <div className="ct-equipment__container-weightstcs-inventory-item__weight">
           <NumberDisplay type="weightInLb" number={weightInfo.applied} />
           {weightInfo.capacity > 0 && (
             <span className="ct-equipment__container-weight-capacity">

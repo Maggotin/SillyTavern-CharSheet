@@ -885,14 +885,14 @@ export class ItemDetail extends React.PureComponent<Props> {
 
     if (ItemUtils.isCustom(item)) {
       return (
-        <div className="ct-item-detail__description ct-item-detail__description--plain">
+        <div className="ct-item-detail__descriptionstcs-item-detail__description--plain">
           {description}
         </div>
       );
     } else {
       return (
         <HtmlContent
-          className="ct-item-detail__description ct-item-detail__description--rich"
+          className="ct-item-detail__descriptionstcs-item-detail__description--rich"
           html={description}
           withoutTooltips
         />
@@ -950,7 +950,7 @@ export class ItemDetail extends React.PureComponent<Props> {
     const masteryAction = ItemUtils.getMasteryAction(item, actions);
 
     return (
-      <div className={`${className} ct-item-detail`}>
+      <div className={`${className}stcs-item-detail`}>
         {showIntro && this.renderIntro()}
         {showAbilities && this.renderAbilities()}
         {showCustomize && (

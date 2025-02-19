@@ -116,7 +116,7 @@ export const SecondaryHeader: FC<SecondaryHeaderProps> = ({
 
   if (characterCount === 0) {
     return (
-      <div className="ddb-characters-listing-count-active">
+      <div className="stcs-characters-listing-count-active">
         Character slots allow players to create characters. Once created, all of
         your characters will appear in the list below.
       </div>

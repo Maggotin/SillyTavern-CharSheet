@@ -89,7 +89,7 @@ class CombatMobile extends React.PureComponent<Props> {
 
     return (
       <div
-        className="ct-combat-mobile__extra ct-combat-mobile__extra--proficiency"
+        className="ct-combat-mobile__extrastcs-combat-mobile__extra--proficiency"
         onClick={this.handleProficiencyBonusClick}
       >
         <div className="ct-combat-mobile__extra-heading">
@@ -126,7 +126,7 @@ class CombatMobile extends React.PureComponent<Props> {
 
     return (
       <div
-        className="ct-combat-mobile__extra  ct-combat-mobile__extra--speed"
+        className="ct-combat-mobile__extra stcs-combat-mobile__extra--speed"
         onClick={this.handleSpeedsClick}
       >
         <div className="ct-combat-mobile__extra-heading">
@@ -156,7 +156,7 @@ class CombatMobile extends React.PureComponent<Props> {
 
     return (
       <div
-        className="ct-combat-mobile__extra  ct-combat-mobile__extra--ac"
+        className="ct-combat-mobile__extra stcs-combat-mobile__extra--ac"
         onClick={this.handleArmorClassClick}
       >
         <div className="ct-combat-mobile__extra-heading">
@@ -188,7 +188,7 @@ class CombatMobile extends React.PureComponent<Props> {
           {this.renderSpeed()}
           <InitiativeBox isMobile={true} />
           {this.renderArmorClass()}
-          <div className="ct-combat-mobile__extra ct-combat-mobile__extra--statuses">
+          <div className="ct-combat-mobile__extrastcs-combat-mobile__extra--statuses">
             <div className="ct-combat-mobile__ctas">
               <div className="ct-combat-mobile__cta">
                 <div

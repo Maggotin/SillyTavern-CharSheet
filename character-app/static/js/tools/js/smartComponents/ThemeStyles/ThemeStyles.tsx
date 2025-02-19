@@ -28,85 +28,85 @@ export default class ThemeStyles extends React.PureComponent<Props> {
 
   sheet: StyleSheet | null = null;
 
-  borderClassNames: string = `& .ct-spells-level-casting,
-                                & .ct-features__management-link,
-                                & .ct-spells-spell + .ct-spells-spell,
-                                & .ct-inventory-item + .ct-inventory-item,
-                                & .ct-attunement__item + .ct-attunement__item,
-                                & .ct-feats-manage-pane__feat,
-                                & .ct-equipment__overview,
-                                & .ct-saving-throws-pane__details,
-                                & .ct-saving-throws-pane__description,
-                                & .ct-sense-manage-pane__customize,
-                                & .ct-sense-manage-pane__description,
-                                & .ct-proficiencies-pane__proficiency + .ct-proficiencies-pane__proficiency,
-                                & .ct-proficiency-groups__group + .ct-proficiency-groups__group,
-                                & .ct-proficiencies-pane__groups,
-                                & .ct-skill-pane__customize,
-                                & .ct-skill-pane__description,
-                                & .ct-skills__col--skill,
-                                & .ct-skills__col--modifier,
-                                & .ct-ability-pane__description,
-                                & .ct-speed-manage-pane__customize,
-                                & .ct-speed-manage-pane__description,
-                                & .ct-armor-manage-pane__items,
-                                & .ct-armor-manage-pane__customize,
-                                & .ct-armor-manage-pane__description,
-                                & .ct-health-manager__deathsaves,
-                                & .ct-health-manager__restore-life,
-                                & .ct-health-manager__health,
-                                & .ct-health-manager__overrides,
-                                & .ct-defense-manage-pane__custom,
-                                & .ct-condition-manage-pane__condition--special,
-                                & .ct-currency-pane__currency + .ct-currency-pane__currency,
-                                & .ct-currency-pane__adjuster,
-                                & .ct-currency-pane__lifestyle,
-                                & .ct-currency-pane__total,
-                                & .ct-extra-manage-pane__group-heading,
-                                & .ct-extra-manage-pane__extra,
-                                & .ct-extra-manage-pane__extras,
-                                & .ct-item-detail__customize,
-                                & .ct-item-detail__customize,
-                                & .ct-item-detail__description,
-                                & .ct-item-detail__actions,
-                                & .ct-spell-caster,
-                                & .ct-spell-detail__customize,
-                                & .ct-spell-detail__properties,
-                                & .ct-spell-detail__description,
-                                & .ct-action-detail__customize,
-                                & .ct-action-detail__properties,
-                                & .ct-action-detail__description,
-                                & .ct-action-detail__limited-uses,
-                                & .ct-background-pane__data,
+  borderClassNames: string = `& stcs-spells-level-casting,
+                                & stcs-features__management-link,
+                                & stcs-spells-spell + stcs-spells-spell,
+                                & stcs-inventory-item + stcs-inventory-item,
+                                & stcs-attunement__item + stcs-attunement__item,
+                                & stcs-feats-manage-pane__feat,
+                                & stcs-equipment__overview,
+                                & stcs-saving-throws-pane__details,
+                                & stcs-saving-throws-pane__description,
+                                & stcs-sense-manage-pane__customize,
+                                & stcs-sense-manage-pane__description,
+                                & stcs-proficiencies-pane__proficiency + stcs-proficiencies-pane__proficiency,
+                                & stcs-proficiency-groups__group + stcs-proficiency-groups__group,
+                                & stcs-proficiencies-pane__groups,
+                                & stcs-skill-pane__customize,
+                                & stcs-skill-pane__description,
+                                & stcs-skills__col--skill,
+                                & stcs-skills__col--modifier,
+                                & stcs-ability-pane__description,
+                                & stcs-speed-manage-pane__customize,
+                                & stcs-speed-manage-pane__description,
+                                & stcs-armor-manage-pane__items,
+                                & stcs-armor-manage-pane__customize,
+                                & stcs-armor-manage-pane__description,
+                                & stcs-health-manager__deathsaves,
+                                & stcs-health-manager__restore-life,
+                                & stcs-health-manager__health,
+                                & stcs-health-manager__overrides,
+                                & stcs-defense-manage-pane__custom,
+                                & stcs-condition-manage-pane__condition--special,
+                                & stcs-currency-pane__currency + stcs-currency-pane__currency,
+                                & stcs-currency-pane__adjuster,
+                                & stcs-currency-pane__lifestyle,
+                                & stcs-currency-pane__total,
+                                & stcs-extra-manage-pane__group-heading,
+                                & stcs-extra-manage-pane__extra,
+                                & stcs-extra-manage-pane__extras,
+                                & stcs-item-detail__customize,
+                                & stcs-item-detail__customize,
+                                & stcs-item-detail__description,
+                                & stcs-item-detail__actions,
+                                & stcs-spell-caster,
+                                & stcs-spell-detail__customize,
+                                & stcs-spell-detail__properties,
+                                & stcs-spell-detail__description,
+                                & stcs-action-detail__customize,
+                                & stcs-action-detail__properties,
+                                & stcs-action-detail__description,
+                                & stcs-action-detail__limited-uses,
+                                & stcs-background-pane__data,
                                 & .line,
-                                & .ct-feat-pane__prerequisite,
-                                & .ct-feat-pane__footer,
-                                & .ct-infusions__infusion + .ct-infusions__infusion,
-                                & .ct-infusions__infusion-item + .ct-infusions__infusion-item,
-                                & .ct-infusion-choice-pane__step,
-                                & .ct-infusion-choice-pane__actions,
-                                & .ct-infusion-choice-pane__description,
-                                & .ct-infusion-choice-pane__ui-group,
-                                & .ct-campaign-pane__header,
-                                & .ct-campaign-pane__characters,
-                                & .ct-campaign-pane__character,
-                                & .ct-campaign-pane__character + .ct-campaign-pane__character,
-                                & .ct-inventory__actions--collapsed,
-                                & .ct-equipment-manage-pane__custom,
-                                & .ct-item-detail-abilities__limited-uses,
-                                & .ct-item-detail-abilities__spells,
-                                & .ct-decorate-pane__preferences,
-                                & .ct-decorate-pane__current-selections,
-                                & .ct-decorate-pane__preferences-content,
-                                & .ct-item-detail__class-customize,
-                                & .ct-main-mobile__campaign,
-                                & .ct-item-detail__infusion,
-                                & .ct-currency-pane__lifestyle-detail,
-                                & .ct-currency-pane__subheader,
-                                & .ct-preferences-pane__field-heading,
-                                & .ct-vehicle-pane__customize,
-                                & .ct-custom-action-pane__customize,
-                                & .ct-custom-action-pane__actions`;
+                                & stcs-feat-pane__prerequisite,
+                                & stcs-feat-pane__footer,
+                                & stcs-infusions__infusion + stcs-infusions__infusion,
+                                & stcs-infusions__infusion-item + stcs-infusions__infusion-item,
+                                & stcs-infusion-choice-pane__step,
+                                & stcs-infusion-choice-pane__actions,
+                                & stcs-infusion-choice-pane__description,
+                                & stcs-infusion-choice-pane__ui-group,
+                                & stcs-campaign-pane__header,
+                                & stcs-campaign-pane__characters,
+                                & stcs-campaign-pane__character,
+                                & stcs-campaign-pane__character + stcs-campaign-pane__character,
+                                & stcs-inventory__actions--collapsed,
+                                & stcs-equipment-manage-pane__custom,
+                                & stcs-item-detail-abilities__limited-uses,
+                                & stcs-item-detail-abilities__spells,
+                                & stcs-decorate-pane__preferences,
+                                & stcs-decorate-pane__current-selections,
+                                & stcs-decorate-pane__preferences-content,
+                                & stcs-item-detail__class-customize,
+                                & stcs-main-mobile__campaign,
+                                & stcs-item-detail__infusion,
+                                & stcs-currency-pane__lifestyle-detail,
+                                & stcs-currency-pane__subheader,
+                                & stcs-preferences-pane__field-heading,
+                                & stcs-vehicle-pane__customize,
+                                & stcs-custom-action-pane__customize,
+                                & stcs-custom-action-pane__actions`;
 
   componentDidMount() {
     const { insertionPointElId } = this.props;
@@ -230,16 +230,16 @@ export default class ThemeStyles extends React.PureComponent<Props> {
           ".ct": {
             "&-character-sheet--dark-mode, &-sidebar--is-dark-mode": {
               colorScheme: "dark",
-              "& .ct-section-placeholder__icon": {
+              "& stcs-section-placeholder__icon": {
                 borderColor: themeColor,
               },
-              "& .ct-campaign-pane__character-preview": {
+              "& stcs-campaign-pane__character-preview": {
                 borderColor: themeColor,
               },
-              "& .ct-content-group__header": {
+              "& stcs-content-group__header": {
                 borderColor: Color(themeColor).alpha(0.4).rgb().string(),
               },
-              "& .ct-skills__col--stat-modified": {
+              "& stcs-skills__col--stat-modified": {
                 color: themeColor,
               },
               "& .starting-equipment-rule-slots": {
@@ -259,7 +259,7 @@ export default class ThemeStyles extends React.PureComponent<Props> {
                   },
                 },
               },
-              "& .ct-equipment__builder-link-text, & .ct-extra-manage-pane__group-heading":
+              "& stcs-equipment__builder-link-text, & stcs-extra-manage-pane__group-heading":
                 {
                   color: themeColor,
                 },
@@ -273,13 +273,13 @@ export default class ThemeStyles extends React.PureComponent<Props> {
                     .string()}`,
                 },
               },
-              "& .ddbc-combat-attack__damage, & .ct-spells-spell__damage, & .ddbc-spell-damage-effect":
+              "& .ddbc-combat-attack__damage, & stcs-spells-spell__damage, & .ddbc-spell-damage-effect":
                 {
                   "& .integrated-dice__container:hover": {
                     borderWidth: "2px",
                   },
                 },
-              "& .ct-slot-manager": {
+              "& stcs-slot-manager": {
                 "&__slot": {
                   boxShadow: "unset",
                   backgroundColor: SvgConstantDarkModeBackgroundColor,
@@ -291,7 +291,7 @@ export default class ThemeStyles extends React.PureComponent<Props> {
                   },
                 },
               },
-              "& .ddbc-combat-attack__damage, & .ct-spells-spell__damage, & .ddbc-spell-damage-effect, .ct-reset-pane__hitdie-manager":
+              "& .ddbc-combat-attack__damage, & stcs-spells-spell__damage, & .ddbc-spell-damage-effect, stcs-reset-pane__hitdie-manager":
                 {
                   "& .integrated-dice__container:hover": {
                     borderWidth: "2px",
@@ -315,7 +315,7 @@ export default class ThemeStyles extends React.PureComponent<Props> {
               "& .line": {
                 backgroundColor: Color(themeColor).alpha(0.4).rgb().string(),
               },
-              "& .ct-spells-filter, & .ct-inventory-filter, & .ct-extras-filter":
+              "& stcs-spells-filter, & stcs-inventory-filter, & stcs-extras-filter":
                 {
                   "&__clear": {
                     color: themeColor,
@@ -605,7 +605,7 @@ export default class ThemeStyles extends React.PureComponent<Props> {
             },
           },
           ".site .ct": {
-            "&-theme-button--filled.ct-button": {
+            "&-theme-button--filledstcs-button": {
               backgroundColor: themeColor,
 
               "&:focus": {
@@ -626,7 +626,7 @@ export default class ThemeStyles extends React.PureComponent<Props> {
                   .string()} inset`,
               },
             },
-            "&-theme-button--outline.ct-button": {
+            "&-theme-button--outlinestcs-button": {
               backgroundColor: "#fff",
               color: themeColor,
               borderColor: themeColor,
@@ -650,9 +650,9 @@ export default class ThemeStyles extends React.PureComponent<Props> {
               },
             },
           },
-          ".site .ct-character-sheet--dark-mode .ct, .site .ct-sidebar--is-dark-mode .ct":
+          ".site stcs-character-sheet--dark-mode .ct, .site stcs-sidebar--is-dark-mode .ct":
             {
-              "&-theme-button--filled.ct-button": {
+              "&-theme-button--filledstcs-button": {
                 backgroundColor: themeColor,
                 color: themeButtonTextColor,
                 "&:focus": {
@@ -683,7 +683,7 @@ export default class ThemeStyles extends React.PureComponent<Props> {
                     .string()} inset`,
                 },
               },
-              "&-theme-button--outline.ct-button": {
+              "&-theme-button--outlinestcs-button": {
                 backgroundColor: "#10161adb",
                 color: "white",
                 borderColor: themeColor,
@@ -736,7 +736,7 @@ export default class ThemeStyles extends React.PureComponent<Props> {
                 },
               },
             },
-          ".site .ct-character-sheet--dark-mode": {
+          ".site stcs-character-sheet--dark-mode": {
             "& .ddbc": {
               "&-saving-throws-summary": {
                 "& .integrated-dice__container": {
@@ -760,7 +760,7 @@ export default class ThemeStyles extends React.PureComponent<Props> {
               },
             },
           },
-          ".ct-inventory__action": {
+          "stcs-inventory__action": {
             color: Color(themeColor).rgb().string(),
           },
         },

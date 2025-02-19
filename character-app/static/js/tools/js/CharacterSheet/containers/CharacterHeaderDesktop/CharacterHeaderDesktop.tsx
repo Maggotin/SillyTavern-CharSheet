@@ -123,7 +123,7 @@ class CharacterHeaderDesktop extends React.PureComponent<Props> {
         {preferences !== null &&
           preferences.privacyType ===
             Constants.PreferencePrivacyTypeEnum.PUBLIC && (
-            <div className="ct-character-header-desktop__group ct-character-header-desktop__group--share">
+            <div className="ct-character-header-desktop__groupstcs-character-header-desktop__group--share">
               <div
                 className="ct-character-header-desktop__button"
                 onClick={this.handleShareClick}
@@ -139,7 +139,7 @@ class CharacterHeaderDesktop extends React.PureComponent<Props> {
               </div>
             </div>
           )}
-        <div className="ct-character-header-desktop__group ct-character-header-desktop__group--short-rest">
+        <div className="ct-character-header-desktop__groupstcs-character-header-desktop__group--short-rest">
           <div
             className="ct-character-header-desktop__button"
             onClick={this.handleShortResetClick}
@@ -154,7 +154,7 @@ class CharacterHeaderDesktop extends React.PureComponent<Props> {
             </span>
           </div>
         </div>
-        <div className="ct-character-header-desktop__group ct-character-header-desktop__group--long-rest">
+        <div className="ct-character-header-desktop__groupstcs-character-header-desktop__group--long-rest">
           <div
             className="ct-character-header-desktop__button"
             onClick={this.handleLongResetClick}
@@ -185,7 +185,7 @@ class CharacterHeaderDesktop extends React.PureComponent<Props> {
             theme={theme}
           />
         )}
-        <div className="ct-character-header-desktop__group ct-character-header-desktop__group--builder">
+        <div className="ct-character-header-desktop__groupstcs-character-header-desktop__group--builder">
           <Tooltip
             isDarkMode={theme.isDarkMode}
             title="Go to builder"
@@ -207,10 +207,10 @@ class CharacterHeaderDesktop extends React.PureComponent<Props> {
   render() {
     return (
       <div className="ct-character-header-desktop">
-        <div className="ct-character-header-desktop__group ct-character-header-desktop__group-tidbits">
+        <div className="ct-character-header-desktop__groupstcs-character-header-desktop__group-tidbits">
           <CharacterHeaderInfo />
         </div>
-        <div className="ct-character-header-desktop__group ct-character-header-desktop__group--gap" />
+        <div className="ct-character-header-desktop__groupstcs-character-header-desktop__group--gap" />
         {this.renderSideContent()}
       </div>
     );

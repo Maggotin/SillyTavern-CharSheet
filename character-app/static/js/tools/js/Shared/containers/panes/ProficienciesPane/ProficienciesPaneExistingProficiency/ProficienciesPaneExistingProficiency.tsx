@@ -86,7 +86,7 @@ export default class ProficienciesPaneExistingProficiency extends React.PureComp
             {valueId === null ? "" : nameLookup[valueId]}
           </div>
           <div className="ct-proficiencies-pane__proficiency-actions">
-            <div className="ct-proficiencies-pane__proficiency-action ct-proficiencies-pane__proficiency-action--remove">
+            <div className="ct-proficiencies-pane__proficiency-actionstcs-proficiencies-pane__proficiency-action--remove">
               <RemoveButton onClick={this.handleRemove}>
                 Remove Proficiency
               </RemoveButton>

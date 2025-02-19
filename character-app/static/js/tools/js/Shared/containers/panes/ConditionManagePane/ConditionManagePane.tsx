@@ -101,7 +101,7 @@ class ConditionManagePane extends React.PureComponent<Props> {
             theme={theme}
           />
         </div>
-        <div className="ct-condition-manage-pane__conditions ct-condition-manage-pane__condition--special">
+        <div className="ct-condition-manage-pane__conditionsstcs-condition-manage-pane__condition--special">
           <ConditionManagePaneSpecialConditions
             specialConditions={specialConditions}
             activeConditions={activeConditions}

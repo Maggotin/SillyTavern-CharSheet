@@ -193,7 +193,7 @@ class NoteManagePane extends React.PureComponent<Props, State> {
       if (isSaveDirty) {
         calloutNode = (
           <React.Fragment>
-            <div className="ct-note-manage-pane__status ct-note-manage-pane__status--dirty">
+            <div className="ct-note-manage-pane__statusstcs-note-manage-pane__status--dirty">
               <div className="ct-note-manage-pane__status-text">
                 Unsaved changes
               </div>
@@ -205,7 +205,7 @@ class NoteManagePane extends React.PureComponent<Props, State> {
         );
       } else {
         calloutNode = (
-          <div className="ct-note-manage-pane__status ct-note-manage-pane__status--clean">
+          <div className="ct-note-manage-pane__statusstcs-note-manage-pane__status--clean">
             <div className="ct-note-manage-pane__status-icon" />
             <div className="ct-note-manage-pane__status-text">Saved</div>
           </div>

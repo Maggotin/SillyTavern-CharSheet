@@ -77,14 +77,14 @@ class CombatTablet extends React.PureComponent<Props> {
     return (
       <div className="ct-combat-tablet">
         <div className="ct-combat-tablet__extras">
-          <div className="ct-combat-tablet__extra ct-combat-tablet__extra--proficiency">
+          <div className="ct-combat-tablet__extrastcs-combat-tablet__extra--proficiency">
             <ProficiencyBonusBox
               theme={theme}
               proficiencyBonus={proficiencyBonus}
               onClick={this.handleProficiencyBonusClick}
             />
           </div>
-          <div className="ct-combat-tablet__extra ct-combat-tablet__extra--speed">
+          <div className="ct-combat-tablet__extrastcs-combat-tablet__extra--speed">
             <SpeedBox
               speeds={speeds}
               preferences={preferences}
@@ -93,17 +93,17 @@ class CombatTablet extends React.PureComponent<Props> {
               onClick={this.handleSpeedsClick}
             />
           </div>
-          <div className="ct-combat-tablet__extra ct-combat-tablet__extra--initiative">
+          <div className="ct-combat-tablet__extrastcs-combat-tablet__extra--initiative">
             <InitiativeBox isTablet />
           </div>
-          <div className="ct-combat-tablet__extra ct-combat-tablet__extra--ac">
+          <div className="ct-combat-tablet__extrastcs-combat-tablet__extra--ac">
             <ArmorClassBox
               theme={theme}
               armorClass={armorClass}
               onClick={this.handleArmorClassClick}
             />
           </div>
-          <div className="ct-combat-tablet__extra ct-combat-tablet__extra--statuses">
+          <div className="ct-combat-tablet__extrastcs-combat-tablet__extra--statuses">
             <div className="ct-combat-tablet__ctas">
               <div className="ct-combat-tablet__cta">
                 <div

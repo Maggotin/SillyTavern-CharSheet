@@ -122,18 +122,18 @@ export const ExtraRow: FC<Props> = ({
 
       contentNode = (
         <React.Fragment>
-          <span className="ct-extra-row__hp-value ct-extra-row__hp-value--current">
+          <span className="ct-extra-row__hp-valuestcs-extra-row__hp-value--current">
             {current}
           </span>
           <span className="ct-extra-row__hp-sep">/</span>
-          <span className="ct-extra-row__hp-value ct-extra-row__hp-value--total">
+          <span className="ct-extra-row__hp-valuestcs-extra-row__hp-value--total">
             {total}
           </span>
         </React.Fragment>
       );
     } else {
       contentNode = (
-        <span className="ct-extra-row__hp-value ct-extra-row__hp-value--current">
+        <span className="ct-extra-row__hp-valuestcs-extra-row__hp-value--current">
           --
         </span>
       );

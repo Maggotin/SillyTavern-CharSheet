@@ -8,18 +8,18 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.ddbcl-my-characters-listing .ddb-characters-listing-actions__search-clear,
-.ddbcl-my-characters-listing .ddb-campaigns-character-card-footer-links-item {
+.ddbcl-my-characters-listing stcs-characters-listing-actions__search-clear,
+.ddbcl-my-characters-listing stcs-campaigns-character-card-footer-links-item {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background: transparent;
   border: none;
 }
-.ddbcl-my-characters-listing .ddb-campaigns-character-card-footer-links-item {
+.ddbcl-my-characters-listing stcs-campaigns-character-card-footer-links-item {
   padding: 0;
 }
-.ddbcl-my-characters-listing .ddb-characters-listing__loading-indicator-wrapper {
+.ddbcl-my-characters-listing stcs-characters-listing__loading-indicator-wrapper {
   display: flex;
   justify-content: center;
 }
@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: flex-end;
 }
-.ddbcl-my-characters-listing .ddb-characters-listing-count-unlock-message__subscribe-link {
+.ddbcl-my-characters-listing stcs-characters-listing-count-unlock-message__subscribe-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,24 +55,24 @@
   line-height: 1;
   height: auto !important;
 }
-.ddbcl-my-characters-listing .ddb-characters-listing-count-unlock-message__subscribe-link:hover {
+.ddbcl-my-characters-listing stcs-characters-listing-count-unlock-message__subscribe-link:hover {
   background: #4baff3;
 }
-.ddbcl-my-characters-listing .ddb-characters-listing-count-unlock-message__subscribe-link, .ddbcl-my-characters-listing .ddb-characters-listing-count-unlock-message__subscribe-link:hover, .ddbcl-my-characters-listing .ddb-characters-listing-count-unlock-message__subscribe-link:focus, .ddbcl-my-characters-listing .ddb-characters-listing-count-unlock-message__subscribe-link:active, .ddbcl-my-characters-listing .ddb-characters-listing-count-unlock-message__subscribe-link:visited {
+.ddbcl-my-characters-listing stcs-characters-listing-count-unlock-message__subscribe-link, .ddbcl-my-characters-listing stcs-characters-listing-count-unlock-message__subscribe-link:hover, .ddbcl-my-characters-listing stcs-characters-listing-count-unlock-message__subscribe-link:focus, .ddbcl-my-characters-listing stcs-characters-listing-count-unlock-message__subscribe-link:active, .ddbcl-my-characters-listing stcs-characters-listing-count-unlock-message__subscribe-link:visited {
   color: #fff;
 }
 @media (min-width: 1024px) {
-  .ddbcl-my-characters-listing .ddb-characters-listing-count-unlock-message__subscribe-link {
+  .ddbcl-my-characters-listing stcs-characters-listing-count-unlock-message__subscribe-link {
     height: 35px;
     font-size: 12px;
     min-width: 180px;
   }
 }
-.ddbcl-my-characters-listing .ddb-characters-listing-count-unlock-message__subscribe-link:hover {
+.ddbcl-my-characters-listing stcs-characters-listing-count-unlock-message__subscribe-link:hover {
   transition: 100ms linear all;
   background: #4baff3;
 }
-.ddbcl-my-characters-listing .ddb-characters-listing-count-unlock__count {
+.ddbcl-my-characters-listing stcs-characters-listing-count-unlock__count {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,10 +80,10 @@
   font-size: 16px;
   font-weight: bold;
 }
-.ddbcl-my-characters-listing .ddb-characters-listing-count-unlock__finalize-button {
+.ddbcl-my-characters-listing stcs-characters-listing-count-unlock__finalize-button {
   margin: 12px auto;
 }
-.ddbcl-my-characters-listing .ddb-characters-listing-count-unlock__api-message {
+.ddbcl-my-characters-listing stcs-characters-listing-count-unlock__api-message {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +99,7 @@
   margin-bottom: 19.5px;
 }
 
-.ddb-characters-listing-header-secondary {
+stcs-characters-listing-header-secondary {
   justify-content: center;
 }
 

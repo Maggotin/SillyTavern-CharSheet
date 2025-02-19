@@ -181,7 +181,7 @@ class CurrencyPaneAdjuster extends React.PureComponent<
           />
         </div>
         <div className="ct-currency-pane__adjuster-actions">
-          <div className="ct-currency-pane__adjuster-action ct-currency-pane__adjuster-action--positive">
+          <div className="ct-currency-pane__adjuster-actionstcs-currency-pane__adjuster-action--positive">
             <Button size="medium" onClick={this.handleAdd}>
               <span className="ct-currency-pane__adjuster-actions-button-content">
                 <AddIcon sx={{ width: "13px", height: "13px" }} />
@@ -189,7 +189,7 @@ class CurrencyPaneAdjuster extends React.PureComponent<
               </span>
             </Button>
           </div>
-          <div className="ct-currency-pane__adjuster-action ct-currency-pane__adjuster-action--negative">
+          <div className="ct-currency-pane__adjuster-actionstcs-currency-pane__adjuster-action--negative">
             <Button size="medium" onClick={this.handleRemove}>
               <span className="ct-currency-pane__adjuster-actions-button-content">
                 <RemoveIcon sx={{ width: "13px", height: "13px" }} />

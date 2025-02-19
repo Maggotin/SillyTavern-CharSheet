@@ -610,7 +610,7 @@ export default class InventoryFilter extends React.PureComponent<Props, State> {
           <div className="ct-inventory-filter__box">
             {this.renderFilterBarActives()}
             <div className="ct-inventory-filter__primary">
-              <div className="ct-inventory-filter__primary-group ct-inventory-filter__primary-group--first">
+              <div className="ct-inventory-filter__primary-groupstcs-inventory-filter__primary-group--first">
                 <div className="ct-inventory-filter__icon" />
               </div>
               <div className="ct-inventory-filter__field">

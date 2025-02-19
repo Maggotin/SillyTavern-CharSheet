@@ -671,7 +671,7 @@ class InfusionChoicePane extends React.PureComponent<Props, State> {
         >
           Choose an item to infuse
         </Header>
-        <div className="ct-infusion-choice-pane__ui ct-infusion-choice-pane__ui--choose-item">
+        <div className="ct-infusion-choice-pane__uistcs-infusion-choice-pane__ui--choose-item">
           {itemRuleData && (
             <div className="ct-infusion-choice-pane__ui-group">
               <div className="ct-infusion-choice-pane__ui-header">
@@ -763,7 +763,7 @@ class InfusionChoicePane extends React.PureComponent<Props, State> {
         >
           Choose a variant for the infusion
         </Header>
-        <div className="ct-infusion-choice-pane__ui ct-infusion-choice-pane__ui--choose-modifier-group">
+        <div className="ct-infusion-choice-pane__uistcs-infusion-choice-pane__ui--choose-modifier-group">
           <div className="ct-infusion-choice-pane__ui-group">
             <div className="ct-infusion-choice-pane__ui-header">
               {headerContentNode}

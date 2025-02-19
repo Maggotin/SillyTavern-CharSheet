@@ -189,7 +189,7 @@ export default class VehicleFuelTracker extends React.PureComponent<
           <ThemeButton
             size="small"
             style="outline"
-            className="ct-vehicle-fuel-tracker__adjuster-button ct-vehicle-fuel-tracker__adjuster-button--use"
+            className="ct-vehicle-fuel-tracker__adjuster-buttonstcs-vehicle-fuel-tracker__adjuster-button--use"
             onClick={this.handleAdjusterUse}
             isInteractive={isInteractive}
           >
@@ -197,7 +197,7 @@ export default class VehicleFuelTracker extends React.PureComponent<
           </ThemeButton>
           <ThemeButton
             size="small"
-            className="ct-vehicle-fuel-tracker__adjuster-button ct-vehicle-fuel-tracker__adjuster-button--add"
+            className="ct-vehicle-fuel-tracker__adjuster-buttonstcs-vehicle-fuel-tracker__adjuster-button--add"
             onClick={this.handleAdjusterAdd}
             isInteractive={isInteractive}
           >

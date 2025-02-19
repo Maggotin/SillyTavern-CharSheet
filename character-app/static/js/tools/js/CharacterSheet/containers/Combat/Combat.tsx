@@ -104,17 +104,17 @@ class Combat extends React.PureComponent<Props> {
       <Subsection name="Combat">
         <div className="ct-combat">
           <div className="ct-combat__summary">
-            <div className="ct-combat__summary-group ct-combat__summary-group--initiative">
+            <div className="ct-combat__summary-groupstcs-combat__summary-group--initiative">
               <InitiativeBox />
             </div>
-            <div className="ct-combat__summary-group ct-combat__summary-group--ac">
+            <div className="ct-combat__summary-groupstcs-combat__summary-group--ac">
               <ArmorClassBox
                 theme={theme}
                 armorClass={armorClass}
                 onClick={this.handleArmorClassClick}
               />
             </div>
-            <section className="ct-combat__summary-group ct-combat__summary-group--statuses">
+            <section className="ct-combat__summary-groupstcs-combat__summary-group--statuses">
               <div className="ct-combat__statuses">
                 <BoxBackground
                   StyleComponent={BoxBackgroundComponent}
@@ -122,7 +122,7 @@ class Combat extends React.PureComponent<Props> {
                 />
                 <h2 style={visuallyHidden}>Defenses and Conditions</h2>
                 <div
-                  className="ct-combat__statuses-group ct-combat__statuses-group--defenses"
+                  className="ct-combat__statuses-groupstcs-combat__statuses-group--defenses"
                   onClick={this.handleDefensesSummaryClick}
                 >
                   <div
@@ -143,7 +143,7 @@ class Combat extends React.PureComponent<Props> {
                   />
                 </div>
                 <div
-                  className="ct-combat__statuses-group ct-combat__statuses-group--conditions"
+                  className="ct-combat__statuses-groupstcs-combat__statuses-group--conditions"
                   style={
                     theme?.isDarkMode
                       ? {

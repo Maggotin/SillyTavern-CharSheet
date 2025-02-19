@@ -64,7 +64,7 @@ export const CustomItemCreator: React.FC<Props> = ({ containers }) => {
           }}
         />
         <div className="ct-custom-item-creator__actions">
-          <div className="ct-custom-item-creator__action ct-custom-item-creator__action--amount">
+          <div className="ct-custom-item-creator__actionstcs-custom-item-creator__action--amount">
             <SimpleQuantity
               quantity={customItem.quantity ?? 1}
               onUpdate={(quantity) => {

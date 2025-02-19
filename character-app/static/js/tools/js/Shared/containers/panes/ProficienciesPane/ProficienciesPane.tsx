@@ -375,7 +375,7 @@ class ProficienciesPane extends React.PureComponent<Props, State> {
       <React.Fragment>
         <Heading>Add New Proficiencies</Heading>
         <div className="ct-proficiencies-pane__add">
-          <div className="ct-proficiencies-pane__add-field ct-proficiencies-pane__add-field--type">
+          <div className="ct-proficiencies-pane__add-fieldstcs-proficiencies-pane__add-field--type">
             <Select
               options={typeOptions}
               onChange={this.handleTypeChange}
@@ -383,7 +383,7 @@ class ProficienciesPane extends React.PureComponent<Props, State> {
             />
           </div>
           {subtypeOptions.length > 0 && (
-            <div className="ct-proficiencies-pane__add-field ct-proficiencies-pane__add-field--subtype">
+            <div className="ct-proficiencies-pane__add-fieldstcs-proficiencies-pane__add-field--subtype">
               <Select
                 options={subtypeOptions}
                 onChange={this.handleSubtypeChange}

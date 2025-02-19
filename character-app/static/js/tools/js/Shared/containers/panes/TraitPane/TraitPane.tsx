@@ -256,7 +256,7 @@ class TraitPane extends React.PureComponent<Props, State> {
       if (isSaveDirty) {
         calloutNode = (
           <React.Fragment>
-            <div className="ct-trait-pane__status ct-trait-pane__status--dirty">
+            <div className="ct-trait-pane__statusstcs-trait-pane__status--dirty">
               <div className="ct-trait-pane__status-text">Unsaved changes</div>
             </div>
             <ThemeButton size="small" onClick={this.handleSave}>
@@ -266,7 +266,7 @@ class TraitPane extends React.PureComponent<Props, State> {
         );
       } else {
         calloutNode = (
-          <div className="ct-trait-pane__status ct-trait-pane__status--clean">
+          <div className="ct-trait-pane__statusstcs-trait-pane__status--clean">
             <div className="ct-trait-pane__status-icon" />
             <div className="ct-trait-pane__status-text">Saved</div>
           </div>

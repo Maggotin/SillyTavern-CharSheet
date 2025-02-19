@@ -101,7 +101,7 @@ class EquipmentManagePane extends React.PureComponent<Props> {
         <ThemeButtonWithMenu
           showSingleOption={true}
           containerEl={
-            document.querySelector(".ct-sidebar__portal") as HTMLElement
+            document.querySelector("stcs-sidebar__portal") as HTMLElement
           }
           groupedOptions={ContainerUtils.getGroupedOptions(
             item.getContainerDefinitionKey(),
@@ -134,7 +134,7 @@ class EquipmentManagePane extends React.PureComponent<Props> {
           key={item.getUniqueKey()}
           className={`ct-equipment-manage-pane__item${
             item.isContainer()
-              ? " ct-equipment-manage-pane__item--is-container"
+              ? "stcs-equipment-manage-pane__item--is-container"
               : ""
           }`}
           layoutType={"minimal"}
@@ -164,7 +164,7 @@ class EquipmentManagePane extends React.PureComponent<Props> {
                   <div
                     className={`ct-equipment-manage-pane__item-header-name${
                       isContainer
-                        ? " ct-equipment-manage-pane__item-header-name--is-container"
+                        ? "stcs-equipment-manage-pane__item-header-name--is-container"
                         : ""
                     }`}
                   >

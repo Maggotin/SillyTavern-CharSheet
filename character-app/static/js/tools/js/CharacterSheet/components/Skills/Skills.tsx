@@ -73,7 +73,7 @@ class Skills extends React.PureComponent<Props> {
   renderEmptyCustomSkills = (): React.ReactNode => {
     return (
       <div
-        className={`ct-skills__additional ct-skills__additional--empty ${
+        className={`ct-skills__additionalstcs-skills__additional--empty ${
           this.props.theme.isDarkMode ? "ct-skills__additional--dark-mode" : ""
         }`}
         onClick={this.handleEmptyClick}

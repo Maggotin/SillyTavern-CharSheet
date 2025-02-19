@@ -203,7 +203,7 @@ export default class EquipmentShopItem extends React.PureComponent<
                   <input
                     type="number"
                     value={amount === null ? "" : amount}
-                    className="character-input ct-equipment-shop__item-amount-input"
+                    className="character-inputstcs-equipment-shop__item-amount-input"
                     onChange={this.handleAmountChange}
                     onBlur={this.handleAmountBlur}
                     onKeyUp={this.handleAmountKeyUp}
@@ -226,7 +226,7 @@ export default class EquipmentShopItem extends React.PureComponent<
             <ThemeButtonWithMenu
               onSelect={(definitionKey) => this.handleAdd(definitionKey)}
               containerEl={
-                document.querySelector(".ct-sidebar__portal") as HTMLElement
+                document.querySelector("stcs-sidebar__portal") as HTMLElement
               }
               groupedOptions={ContainerUtils.getGroupedOptions(
                 null,

@@ -183,7 +183,7 @@ export const ContainerActionsComponent: React.FC<Props> = ({
                           showSingleOption={true}
                           containerEl={
                             document.querySelector(
-                              ".ct-sidebar__portal"
+                              "stcs-sidebar__portal"
                             ) as HTMLElement
                           }
                           groupedOptions={ContainerUtils.getGroupedOptions(

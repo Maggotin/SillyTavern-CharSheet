@@ -265,13 +265,13 @@ export default class HealthAdjuster extends React.PureComponent<Props, State> {
             </div>
           </div>
           <div className="ct-health-adjuster__buttons">
-            <div className="ct-health-adjuster__button ct-health-adjuster__button--increase">
+            <div className="ct-health-adjuster__buttonstcs-health-adjuster__button--increase">
               <ThemeButton
                 className="action-increase"
                 onClick={this.handleIncrease}
               />
             </div>
-            <div className="ct-health-adjuster__button ct-health-adjuster__button--decrease">
+            <div className="ct-health-adjuster__buttonstcs-health-adjuster__button--decrease">
               <ThemeButton
                 className="action-decrease"
                 onClick={this.handleDecrease}

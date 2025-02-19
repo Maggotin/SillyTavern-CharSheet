@@ -215,7 +215,7 @@ export default function SavingThrowsBox({
   ): React.ReactNode => {
     return (
       <div
-        className={`ct-saving-throws-box__modifiers ct-saving-throws-box__modifiers--single ${
+        className={`ct-saving-throws-box__modifiersstcs-saving-throws-box__modifiers--single ${
           theme.isDarkMode ? "ct-saving-throws-box__modifiers--dark-mode" : ""
         }`}
       >
@@ -229,7 +229,7 @@ export default function SavingThrowsBox({
   ): React.ReactNode => {
     return (
       <div
-        className={`ct-saving-throws-box__modifiers ct-saving-throws-box__modifiers--multi ${
+        className={`ct-saving-throws-box__modifiersstcs-saving-throws-box__modifiers--multi ${
           theme.isDarkMode ? "ct-saving-throws-box__modifiers--dark-mode" : ""
         }`}
       >
@@ -241,7 +241,7 @@ export default function SavingThrowsBox({
   const renderEmpty = (): React.ReactNode => {
     return (
       <div
-        className={`ct-saving-throws-box__modifiers ct-saving-throws-box__modifiers--empty ${
+        className={`ct-saving-throws-box__modifiersstcs-saving-throws-box__modifiers--empty ${
           theme.isDarkMode ? "ct-saving-throws-box__modifiers--dark-mode" : ""
         }`}
       >

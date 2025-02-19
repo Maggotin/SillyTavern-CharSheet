@@ -229,7 +229,7 @@ class CombatItemAttack extends React.PureComponent<Props, State> {
     }
     let classNames: Array<string> = ["ddbc-combat-item-attack__damage"];
     if (versatileDamage) {
-      classNames.push("ddb-combat-item-attack__damage--is-versatile");
+      classNames.push("stcs-combat-item-attack__damage--is-versatile");
     }
 
     let damageNode: React.ReactNode;

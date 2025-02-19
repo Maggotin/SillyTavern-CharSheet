@@ -201,24 +201,24 @@ export default class SpellsLevel extends React.PureComponent<Props> {
               : ""
           }`}
         >
-          <div className="ct-spells-level__spells-col ct-spells-level__spells-col--action" />
-          <div className="ct-spells-level__spells-col ct-spells-level__spells-col--name">
+          <div className="ct-spells-level__spells-colstcs-spells-level__spells-col--action" />
+          <div className="ct-spells-level__spells-colstcs-spells-level__spells-col--name">
             Name
           </div>
-          <div className="ct-spells-level__spells-col ct-spells-level__spells-col--activation">
+          <div className="ct-spells-level__spells-colstcs-spells-level__spells-col--activation">
             Time
           </div>
-          <div className="ct-spells-level__spells-col ct-spells-level__spells-col--range">
+          <div className="ct-spells-level__spells-colstcs-spells-level__spells-col--range">
             Range
           </div>
-          <div className="ct-spells-level__spells-col ct-spells-level__spells-col--tohit">
+          <div className="ct-spells-level__spells-colstcs-spells-level__spells-col--tohit">
             Hit / DC
           </div>
-          <div className="ct-spells-level__spells-col ct-spells-level__spells-col--damage">
+          <div className="ct-spells-level__spells-colstcs-spells-level__spells-col--damage">
             Effect
           </div>
           {showNotes && (
-            <div className="ct-spells-level__spells-col ct-spells-level__spells-col--notes">
+            <div className="ct-spells-level__spells-colstcs-spells-level__spells-col--notes">
               Notes
             </div>
           )}

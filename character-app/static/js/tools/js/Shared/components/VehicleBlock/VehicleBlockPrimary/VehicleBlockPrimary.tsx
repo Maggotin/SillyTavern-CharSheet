@@ -71,7 +71,7 @@ export default class VehicleBlockPrimary extends React.PureComponent<Props> {
 
             return (
               <div
-                className={`ct-vehicle-block__ability-stat ct-vehicle-block__ability-stat--${statKey.toLowerCase()}`}
+                className={`ct-vehicle-block__ability-statstcs-vehicle-block__ability-stat--${statKey.toLowerCase()}`}
                 key={statKey}
               >
                 <div className="ct-vehicle-block__ability-heading">

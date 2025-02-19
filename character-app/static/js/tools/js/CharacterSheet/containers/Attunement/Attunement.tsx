@@ -72,7 +72,7 @@ class Attunement extends React.PureComponent<Props> {
     );
 
     return (
-      <div className="ct-attunement__group ct-attunement__group--items">
+      <div className="ct-attunement__groupstcs-attunement__group--items">
         <div className="ct-attunement__group-header">
           Items Requiring Attunement
         </div>
@@ -128,7 +128,7 @@ class Attunement extends React.PureComponent<Props> {
     const { attunedSlots, isMobile, theme } = this.props;
 
     return (
-      <div className="ct-attunement__group ct-attunement__group--attuned">
+      <div className="ct-attunement__groupstcs-attunement__group--attuned">
         <div className="ct-attunement__group-header">Attuned Items</div>
         <div className="ct-attunement__group-items">
           {attunedSlots.map((slot, idx) => (

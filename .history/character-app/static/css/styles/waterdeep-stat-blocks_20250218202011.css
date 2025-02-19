@@ -1,0 +1,280 @@
+/*  This file contains the styling for inline monster stat blocks within descriptions coming from waterdeep formatted html. */
+
+/* The selectors are specific to the classes designated by waterdeep homebrew forms and in-design files. */
+
+/* These stat blocks can be seen in spells and feature details in builder and character sheet sidebar - examples: Summon Beast spell (legacy and 2024 versions), Druid WildFire Spirit description, Ranger 2024 Beast Companion */
+
+/****************** 2014/Legacy Version ******************/
+.ddbc-html-content .Basic-Text-Frame {
+  --monster-block-red: #bc0f0f;
+
+  border: 0.0625rem solid #d4d0ce;
+  background: var(--ttui_common-0);
+  padding: 0.9375rem;
+  position: relative;
+  box-shadow: 0 0 0.3125rem #979aa4;
+  font-size: 0.875rem;
+  color: var(--ttui_common-1000);
+}
+
+.ddbc-html-content .Basic-Text-Frame::before,
+.ddbc-html-content .Basic-Text-Frame::after {
+  content: "";
+  background-image: url("https://www.dndbeyond.com/content/skins/waterdeep/images/MMStatBar_lrg.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  height: 0.25rem;
+  position: absolute;
+  left: -0.1875rem;
+  right: -0.1875rem;
+  line-height: 1.4;
+}
+
+.ddbc-html-content .Basic-Text-Frame::before {
+  top: -0.1875rem;
+}
+
+.ddbc-html-content .Basic-Text-Frame::after {
+  bottom: -0.1875rem;
+}
+
+.ddbc-html-content .Basic-Text-Frame .stat-block-ability-scores-modifier {
+  padding-left: 0.125rem;
+}
+
+.ddbc-html-content .Basic-Text-Frame .stat-block-ability-scores {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 0.125rem solid var(--monster-block-red);
+  border-bottom: 0.125rem solid var(--monster-block-red);
+  margin: 0.625rem 0;
+}
+
+.ddbc-html-content .Basic-Text-Frame .stat-block-ability-scores-stat {
+  width: 33.33333%;
+  padding: 0.625rem 0.3125rem;
+  text-align: center;
+}
+
+.ddbc-html-content .Basic-Text-Frame .stat-block-ability-scores-heading {
+  font-weight: bold;
+}
+
+stcs-sidebar
+  .ddbc-html-content
+  .Basic-Text-Frame
+  .stat-block-ability-scores-modifier {
+  display: block;
+  padding: 0;
+}
+
+.Stat-Block-Styles_Stat-Block-Title {
+  font-size: 1.125rem;
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+  display: inline;
+  margin-right: 0.3125rem;
+}
+
+.Stat-Block-Styles_Stat-Block-Metadata {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.Stat-Block-Styles_Stat-Block-Metadata::after {
+  content: "";
+  display: block;
+  border-bottom: 0.125rem solid var(--monster-block-red);
+  padding-top: 0.3125rem;
+}
+
+.Stat-Block-Styles_Stat-Block-Heading {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: var(--font-condensed);
+}
+
+.Stat-Block-Styles_Stat-Block-Heading::after {
+  content: "";
+  display: block;
+  border-bottom: 0.0625rem solid var(--monster-block-red);
+  padding-top: 0.125rem;
+}
+
+.Stat-Block-Styles_Stat-Block-Data-Last {
+  border-bottom: 0.125rem solid var(--monster-block-red);
+  padding-bottom: 0.625rem;
+}
+
+.Stat-Block-Styles_Stat-Block-Data-Last strong + strong {
+  margin-left: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .ddbc-html-content .Basic-Text-Frame .stat-block-ability-scores-stat {
+    width: 16.66667%;
+  }
+}
+
+/****************** 2024 Version ******************/
+.ddbc-html-content .stat-block {
+  --character-creature-block-red: #5b160c;
+
+  background: var(--ttui_parchment-50);
+  border: 0.0625rem solid var(--ttui_parchment-400);
+  outline: 0.0625rem solid var(--ttui_parchment-400);
+  outline-offset: -0.25rem;
+  border-radius: 0.5rem;
+  padding: 0.938rem 0.625rem;
+  position: relative;
+  box-shadow: 0 0 0.313rem var(--ttui_grey-400);
+  font-size: 0.938rem;
+  font-family: var(--font-family);
+  max-width: 25rem;
+  margin-inline: auto;
+  color: var(--ttui_common-1000);
+  color: var(--character-creature-block-red);
+}
+
+.ddbc-html-content .stat-block :is(h2, h3, h4, h5) {
+  line-height: 0.9;
+  color: var(--character-creature-block-red);
+  margin: 0;
+  border-bottom: 0.063rem solid var(--character-creature-block-red);
+  font-family: var(--font-condensed);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.ddbc-html-content .stat-block p {
+  break-inside: avoid;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  margin: 0.313rem 0;
+  font-family: var(--font-scala-sans-offc);
+}
+
+.ddbc-html-content .stat-block p:first-of-type {
+  margin-bottom: 0.938rem;
+  margin-top: 0.188rem;
+  font-style: italic;
+  color: var(--ttui_grey-500);
+  line-height: 1.1;
+}
+
+.ddbc-html-content .stat-block p:nth-of-type(2) strong + strong {
+  margin-left: 1.875rem;
+}
+
+.ddbc-html-content .stat-block .monster-header ~ p:not(.monster-header) {
+  color: var(--ttui_common-1000);
+}
+
+.ddbc-html-content .stat-block :is(ol, ul, dl) {
+  margin-bottom: 0;
+  padding-top: 0;
+}
+.ddbc-html-content .stat-block .monster-header {
+  border-bottom: 0.063rem solid var(--character-creature-block-red);
+  color: var(--character-creature-block-red);
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: var(--font-scala-sans-offc);
+  line-height: 1.4;
+  margin-top: 1.25rem;
+  margin-bottom: 0.938rem;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+.ddbc-html-content .stat-block .stats {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.ddbc-html-content .stat-block .stats table.abilities-saves {
+  margin: 0 0 0.5rem;
+}
+
+.ddbc-html-content .stat-block .stats table.abilities-saves,
+.ddbc-html-content .stat-block .stats table.abilities-saves thead,
+.ddbc-html-content .stat-block .stats table.abilities-saves tr,
+.ddbc-html-content .stat-block .stats table.abilities-saves th,
+.ddbc-html-content .stat-block .stats table.abilities-saves tbody,
+.ddbc-html-content .stat-block .stats table.abilities-saves td {
+  border: 0;
+}
+
+.ddbc-html-content .stat-block .stats table.abilities-saves td,
+.ddbc-html-content .stat-block .stats table.abilities-saves th {
+  padding: 0.125rem 0.5rem;
+  text-align: center;
+  color: var(--character-creature-block-red);
+  font-family: var(--font-scala-sans-offc);
+  font-size: 0.875rem;
+}
+
+.ddbc-html-content .stat-block .stats table.abilities-saves thead tr th {
+  background: inherit;
+  color: var(--ttui_grey-500);
+  font-weight: 400;
+  padding: 0.3125rem 0.125rem 0;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-size: 0.6875rem;
+}
+
+.ddbc-html-content .stat-block .stats table.abilities-saves tbody tr {
+  border-top: 0.0625rem solid var(--ttui_common-0);
+  border-bottom: 0.0625rem solid var(--ttui_common-0);
+}
+.ddbc-html-content
+  .stat-block
+  .stats
+  table.abilities-saves.physical
+  tbody
+  tr
+  th,
+.ddbc-html-content
+  .stat-block
+  .stats
+  table.abilities-saves.physical
+  tbody
+  tr
+  td {
+  background: #ede6d9;
+}
+.ddbc-html-content .stat-block .stats table.abilities-saves.mental tbody tr th,
+.ddbc-html-content .stat-block .stats table.abilities-saves.mental tbody tr td {
+  background: #d8dad1;
+}
+
+.ddbc-html-content
+  .stat-block
+  .stats
+  table.abilities-saves.physical
+  td:nth-of-type(2),
+.ddbc-html-content
+  .stat-block
+  .stats
+  table.abilities-saves.physical
+  td:nth-of-type(3) {
+  background: #ded4cc;
+}
+
+.ddbc-html-content
+  .stat-block
+  .stats
+  table.abilities-saves.mental
+  td:nth-of-type(2),
+.ddbc-html-content
+  .stat-block
+  .stats
+  table.abilities-saves.mental
+  td:nth-of-type(3) {
+  background: #d0caca;
+}

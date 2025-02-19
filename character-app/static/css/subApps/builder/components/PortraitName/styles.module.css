@@ -37,7 +37,7 @@
   max-width: 38rem;
 }
 
-.portraitManagerModal :global(.ct-decoration-manager__item) {
+.portraitManagerModal :global(stcs-decoration-manager__item) {
   width: unset;
 }
 

@@ -200,11 +200,11 @@ export const CharacterGrid: React.FC<CharacterGridProps> = ({
   return (
     <UserPreferenceProvider>
       <div
-        className={[className, "ddb-characters-listing"]
+        className={[className, "stcs-characters-listing"]
           .filter(Boolean)
           .join(" ")}
       >
-        <div className="ddb-characters-listing-header">
+        <div className="stcs-characters-listing-header">
           {/*
                     The CTA component will be shown depending on some conditions:
                     - If the user doesn't have a subscription, and has 6 characters, show the Hero CTA
@@ -270,7 +270,7 @@ export const CharacterGrid: React.FC<CharacterGridProps> = ({
             </div>
           </div>
 
-          <div className="ddb-characters-listing-header-secondary">
+          <div className="stcs-characters-listing-header-secondary">
             <SecondaryHeader
               hasLockedCharacters={hasLockedCharacters}
               maxCharacterSlotsAllowed={maxCharacterSlotsAllowed}
@@ -289,7 +289,7 @@ export const CharacterGrid: React.FC<CharacterGridProps> = ({
           sortPreference={sortPreference}
           onSortPreference={setSortPreference}
         />
-        <div className="ddb-characters-listing-body j-characters-listing__content">
+        <div className="stcs-characters-listing-body j-characters-listing__content">
           <div className="listing-container listing-container-ul RPGCharacter-listing">
             <div className="listing-body">
               <ul className="listing listing-rpgcharacter rpgcharacter-listing">
@@ -386,7 +386,7 @@ export const CharacterGrid: React.FC<CharacterGridProps> = ({
             )}
           </div>
         </div>
-        <div className="ddb-characters-listing__loading-indicator-wrapper">
+        <div className="stcs-characters-listing__loading-indicator-wrapper">
           <ApiStatusIndicator
             isLoading={isLoading}
             error={loadingError || undefined}

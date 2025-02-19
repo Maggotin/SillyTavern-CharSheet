@@ -138,7 +138,7 @@ class CharacterHeaderTablet extends React.PureComponent<Props> {
       }
       return (
         <React.Fragment>
-          <div className="ct-character-header-tablet__group ct-character-header-tablet__group--summary">
+          <div className="ct-character-header-tablet__groupstcs-character-header-tablet__group--summary">
             <StatusSummaryMobile
               hitPointInfo={hitPointInfo}
               fails={fails}
@@ -160,7 +160,7 @@ class CharacterHeaderTablet extends React.PureComponent<Props> {
         {preferences !== null &&
           preferences.privacyType ===
             Constants.PreferencePrivacyTypeEnum.PUBLIC && (
-            <div className="ct-character-header-tablet__group ct-character-header-tablet__group--share">
+            <div className="ct-character-header-tablet__groupstcs-character-header-tablet__group--share">
               <div
                 className="ct-character-header-tablet__button"
                 onClick={this.handleShareClick}
@@ -176,7 +176,7 @@ class CharacterHeaderTablet extends React.PureComponent<Props> {
               </div>
             </div>
           )}
-        <div className="ct-character-header-tablet__group ct-character-header-tablet__group--short-rest">
+        <div className="ct-character-header-tablet__groupstcs-character-header-tablet__group--short-rest">
           <div
             className="ct-character-header-tablet__button"
             onClick={this.handleShortResetClick}
@@ -191,7 +191,7 @@ class CharacterHeaderTablet extends React.PureComponent<Props> {
             </span>
           </div>
         </div>
-        <div className="ct-character-header-tablet__group ct-character-header-tablet__group--long-rest">
+        <div className="ct-character-header-tablet__groupstcs-character-header-tablet__group--long-rest">
           <div
             className="ct-character-header-tablet__button"
             onClick={this.handleLongResetClick}
@@ -206,7 +206,7 @@ class CharacterHeaderTablet extends React.PureComponent<Props> {
             </span>
           </div>
         </div>
-        <div className="ct-character-header-tablet__group ct-character-header-tablet__group--builder">
+        <div className="ct-character-header-tablet__groupstcs-character-header-tablet__group--builder">
           <Tooltip
             isDarkMode={theme.isDarkMode}
             title="Go to builder"
@@ -221,7 +221,7 @@ class CharacterHeaderTablet extends React.PureComponent<Props> {
             </Link>
           </Tooltip>
         </div>
-        <div className="ct-character-header-tablet__group ct-character-header-tablet__group--summary">
+        <div className="ct-character-header-tablet__groupstcs-character-header-tablet__group--summary">
           <StatusSummaryMobile
             hitPointInfo={hitPointInfo}
             fails={fails}
@@ -241,10 +241,10 @@ class CharacterHeaderTablet extends React.PureComponent<Props> {
   render() {
     return (
       <div className="ct-character-header-tablet">
-        <div className="ct-character-header-tablet__group ct-character-header-tablet__group-tidbits">
+        <div className="ct-character-header-tablet__groupstcs-character-header-tablet__group-tidbits">
           <CharacterHeaderInfo />
         </div>
-        <div className="ct-character-header-tablet__group ct-character-header-tablet__group--gap" />
+        <div className="ct-character-header-tablet__groupstcs-character-header-tablet__group--gap" />
         {this.renderSideContent()}
       </div>
     );

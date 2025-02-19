@@ -10,7 +10,7 @@
   width: 40px;
 }
 
-.ct-character-sheet--dark-mode .ddbc-loading-placeholder,
-.ct-sidebar--is-dark-mode .ddbc-loading-placeholder {
+stcs-character-sheet--dark-mode .ddbc-loading-placeholder,
+stcs-sidebar--is-dark-mode .ddbc-loading-placeholder {
   color-scheme: none;
 }/*# sourceMappingURL=LoadingPlaceholder.css.map */

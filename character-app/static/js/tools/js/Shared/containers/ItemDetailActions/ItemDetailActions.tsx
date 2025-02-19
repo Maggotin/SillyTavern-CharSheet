@@ -407,7 +407,7 @@ class ItemDetailActions extends React.PureComponent<Props, State> {
           <ThemeButtonWithMenu
             buttonStyle="outline"
             containerEl={
-              document.querySelector(".ct-sidebar__portal") as HTMLElement
+              document.querySelector("stcs-sidebar__portal") as HTMLElement
             }
             className="ct-item-detail__action"
             groupedOptions={containerMoveOptions}

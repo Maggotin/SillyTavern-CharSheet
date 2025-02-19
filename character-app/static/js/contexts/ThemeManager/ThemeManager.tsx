@@ -63,7 +63,7 @@ export const ThemeManagerProvider = ({
   const hack__cache = useMemo(
     () =>
       createCache({
-        key: "ddb-character-app",
+        key: "stcs-character-app",
         container: document.body,
         prepend: true,
         stylisPlugins: [

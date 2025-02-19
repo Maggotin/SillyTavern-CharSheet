@@ -64,9 +64,9 @@ export const getCharacterSheetSteps = (
     },
     {
       selector: getSelector(
-        ".ct-character-header-mobile__group-tidbits",
-        ".ct-character-header-tablet__group-tidbits",
-        ".ct-character-header-desktop__group-tidbits"
+        "stcs-character-header-mobile__group-tidbits",
+        "stcs-character-header-tablet__group-tidbits",
+        "stcs-character-header-desktop__group-tidbits"
       ),
       content: (
         <GuidedTourStep
@@ -83,7 +83,7 @@ export const getCharacterSheetSteps = (
       ),
     },
     {
-      selector: ".ct-character-header-desktop__group--builder",
+      selector: "stcs-character-header-desktop__group--builder",
       content: (
         <GuidedTourStep
           title="Character Builder"
@@ -98,9 +98,9 @@ export const getCharacterSheetSteps = (
     },
     {
       selector: getSelector(
-        ".ct-main-mobile__abilities",
-        ".ct-main-tablet__abilities",
-        ".ct-quick-info__abilities"
+        "stcs-main-mobile__abilities",
+        "stcs-main-tablet__abilities",
+        "stcs-quick-info__abilities"
       ),
       content: (
         <GuidedTourStep
@@ -118,9 +118,9 @@ export const getCharacterSheetSteps = (
     },
     {
       selector: getSelector(
-        ".ct-combat-mobile__extra--proficiency",
-        ".ct-combat-tablet__extra--proficiency",
-        ".ct-quick-info__box--proficiency"
+        "stcs-combat-mobile__extra--proficiency",
+        "stcs-combat-tablet__extra--proficiency",
+        "stcs-quick-info__box--proficiency"
       ),
       content: (
         <GuidedTourStep
@@ -138,9 +138,9 @@ export const getCharacterSheetSteps = (
     },
     {
       selector: getSelector(
-        ".ct-combat-mobile__extra--speed",
-        ".ct-combat-tablet__extra--speed",
-        ".ct-quick-info__box--speed"
+        "stcs-combat-mobile__extra--speed",
+        "stcs-combat-tablet__extra--speed",
+        "stcs-quick-info__box--speed"
       ),
       content: (
         <GuidedTourStep
@@ -157,9 +157,9 @@ export const getCharacterSheetSteps = (
     },
     {
       selector: getSelector(
-        ".ct-status-summary-mobile__health",
-        ".ct-status-summary-mobile__health",
-        ".ct-health-summary"
+        "stcs-status-summary-mobile__health",
+        "stcs-status-summary-mobile__health",
+        "stcs-health-summary"
       ),
       content: (
         <GuidedTourStep
@@ -176,9 +176,9 @@ export const getCharacterSheetSteps = (
     },
     {
       selector: getSelector(
-        ".ct-combat-mobile__extra--initiative",
-        ".ct-combat-tablet__extra--initiative",
-        ".ct-combat__summary-group--initiative"
+        "stcs-combat-mobile__extra--initiative",
+        "stcs-combat-tablet__extra--initiative",
+        "stcs-combat__summary-group--initiative"
       ),
       content: (
         <GuidedTourStep
@@ -195,9 +195,9 @@ export const getCharacterSheetSteps = (
     },
     {
       selector: getSelector(
-        ".ct-combat-mobile__extra--ac",
-        ".ct-combat-tablet__extra--ac",
-        ".ct-combat__summary-group--ac"
+        "stcs-combat-mobile__extra--ac",
+        "stcs-combat-tablet__extra--ac",
+        "stcs-combat__summary-group--ac"
       ),
       content: (
         <GuidedTourStep
@@ -213,9 +213,9 @@ export const getCharacterSheetSteps = (
     },
     {
       selector: getSelector(
-        ".ct-main-mobile__saving-throws",
-        ".ct-saving-throws-box",
-        ".ct-saving-throws-box"
+        "stcs-main-mobile__saving-throws",
+        "stcs-saving-throws-box",
+        "stcs-saving-throws-box"
       ),
       content: (
         <GuidedTourStep
@@ -232,7 +232,7 @@ export const getCharacterSheetSteps = (
     ...(isDesktop || isTablet
       ? [
           {
-            selector: ".ct-proficiency-groups-box",
+            selector: "stcs-proficiency-groups-box",
             content: (
               <GuidedTourStep
                 title="Proficiencies"
@@ -246,7 +246,7 @@ export const getCharacterSheetSteps = (
             ),
           },
           {
-            selector: ".ct-skills-box",
+            selector: "stcs-skills-box",
             content: (
               <GuidedTourStep
                 title="Skills"
@@ -263,7 +263,7 @@ export const getCharacterSheetSteps = (
         ]
       : [
           {
-            selector: ".ct-quick-nav__menu-item--skills",
+            selector: "stcs-quick-nav__menu-item--skills",
             content: (
               <GuidedTourStep
                 title="Skills"
@@ -281,7 +281,7 @@ export const getCharacterSheetSteps = (
     ...(!isDesktop
       ? [
           {
-            selector: ".ct-quick-nav__menu-item--actions",
+            selector: "stcs-quick-nav__menu-item--actions",
             content: (
               <GuidedTourStep
                 title="Actions"
@@ -296,7 +296,7 @@ export const getCharacterSheetSteps = (
             ),
           },
           {
-            selector: ".ct-quick-nav__menu-item--equipment",
+            selector: "stcs-quick-nav__menu-item--equipment",
             content: (
               <GuidedTourStep
                 title="Inventory"
@@ -310,7 +310,7 @@ export const getCharacterSheetSteps = (
             ),
           },
           {
-            selector: ".ct-quick-nav__menu-item--spells",
+            selector: "stcs-quick-nav__menu-item--spells",
             content: (
               <GuidedTourStep
                 title="Spells"
@@ -324,7 +324,7 @@ export const getCharacterSheetSteps = (
             ),
           },
           {
-            selector: ".ct-quick-nav__menu-item--features",
+            selector: "stcs-quick-nav__menu-item--features",
             content: (
               <GuidedTourStep
                 title="Features & Traits"
@@ -341,7 +341,7 @@ export const getCharacterSheetSteps = (
           ...(!isTablet
             ? [
                 {
-                  selector: ".ct-quick-nav__menu-item--proficiencies",
+                  selector: "stcs-quick-nav__menu-item--proficiencies",
                   content: (
                     <GuidedTourStep
                       title="Proficiencies"
@@ -357,7 +357,7 @@ export const getCharacterSheetSteps = (
               ]
             : []),
           {
-            selector: ".ct-quick-nav__menu-item--description",
+            selector: "stcs-quick-nav__menu-item--description",
             content: (
               <GuidedTourStep
                 title="Description"
@@ -374,7 +374,7 @@ export const getCharacterSheetSteps = (
         ]
       : [
           {
-            selector: ".ct-primary-box__tab--actions",
+            selector: "stcs-primary-box__tab--actions",
             content: (
               <GuidedTourStep
                 title="Actions"
@@ -391,7 +391,7 @@ export const getCharacterSheetSteps = (
           ...(hasSpells
             ? [
                 {
-                  selector: ".ct-primary-box__tab--spells",
+                  selector: "stcs-primary-box__tab--spells",
                   content: (
                     <GuidedTourStep
                       title="Spells"
@@ -408,7 +408,7 @@ export const getCharacterSheetSteps = (
               ]
             : []),
           {
-            selector: ".ct-primary-box__tab--equipment",
+            selector: "stcs-primary-box__tab--equipment",
             content: (
               <GuidedTourStep
                 title="Inventory"
@@ -422,7 +422,7 @@ export const getCharacterSheetSteps = (
             ),
           },
           {
-            selector: ".ct-primary-box__tab--features",
+            selector: "stcs-primary-box__tab--features",
             content: (
               <GuidedTourStep
                 title="Features & Traits"
@@ -437,7 +437,7 @@ export const getCharacterSheetSteps = (
             ),
           },
           {
-            selector: ".ct-primary-box__tab--description",
+            selector: "stcs-primary-box__tab--description",
             content: (
               <GuidedTourStep
                 title="Description"

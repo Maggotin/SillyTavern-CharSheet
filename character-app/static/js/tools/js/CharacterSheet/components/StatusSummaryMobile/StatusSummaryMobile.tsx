@@ -87,7 +87,7 @@ export default class StatusSummaryMobile extends React.PureComponent<Props> {
 
     return (
       <div
-        className={`ct-status-summary-mobile__deathsaves-group ct-status-summary-mobile__deathsaves--${key}`}
+        className={`ct-status-summary-mobile__deathsaves-groupstcs-status-summary-mobile__deathsaves--${key}`}
       >
         <span className="ct-status-summary-mobile__deathsaves-label">
           {label}
@@ -103,7 +103,7 @@ export default class StatusSummaryMobile extends React.PureComponent<Props> {
     const { fails, successes, ruleData } = this.props;
 
     return (
-      <div className="ct-status-summary-mobile__data ct-status-summary-mobile__deathsaves">
+      <div className="ct-status-summary-mobile__datastcs-status-summary-mobile__deathsaves">
         <div className="ct-status-summary-mobile__deathsaves-icon" />
         <div className="ct-status-summary-mobile__deathsaves-content">
           {this.renderDeathSavesSummaryMarkGroup(
@@ -125,7 +125,7 @@ export default class StatusSummaryMobile extends React.PureComponent<Props> {
 
   renderDeathExhaustionSummary = (): React.ReactNode => {
     return (
-      <div className="ct-status-summary-mobile__data ct-status-summary-mobile__exhaustion">
+      <div className="ct-status-summary-mobile__datastcs-status-summary-mobile__exhaustion">
         <div className="ct-status-summary-mobile__exhaustion-icon" />
         <div className="ct-status-summary-mobile__exhaustion-content">
           <div className="ct-status-summary-mobile__exhaustion-label">

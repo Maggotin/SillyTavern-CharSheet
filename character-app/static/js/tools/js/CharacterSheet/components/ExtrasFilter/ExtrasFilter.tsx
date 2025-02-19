@@ -558,7 +558,7 @@ export default class ExtrasFilter extends React.PureComponent<Props, State> {
           <div className="ct-extras-filter__box">
             {this.renderFilterBarActives()}
             <div className="ct-extras-filter__primary">
-              <div className="ct-extras-filter__primary-group ct-extras-filter__primary-group--first">
+              <div className="ct-extras-filter__primary-groupstcs-extras-filter__primary-group--first">
                 <div className="ct-extras-filter__icon" />
               </div>
               <div className="ct-extras-filter__field">

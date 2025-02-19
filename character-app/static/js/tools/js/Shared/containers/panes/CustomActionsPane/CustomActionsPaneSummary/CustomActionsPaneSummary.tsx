@@ -73,7 +73,7 @@ export default class CustomActionsPaneSummary extends React.PureComponent<Props>
           )}
         </div>
         <div className="ct-custom-actions-pane__summary-actions">
-          <div className="ct-custom-actions-pane__summary-action ct-custom-actions-pane__summary-action--remove">
+          <div className="ct-custom-actions-pane__summary-actionstcs-custom-actions-pane__summary-action--remove">
             <RemoveButton onClick={this.handleRemove}>
               Remove Action
             </RemoveButton>

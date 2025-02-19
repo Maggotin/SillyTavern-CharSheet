@@ -90,14 +90,14 @@ export default function QuickInfo() {
           </div>
         ))}
       </section>
-      <div className="ct-quick-info__box ct-quick-info__box--proficiency">
+      <div className="ct-quick-info__boxstcs-quick-info__box--proficiency">
         <ProficiencyBonusBox
           theme={theme}
           proficiencyBonus={proficiencyBonus}
           onClick={handleProficiencyBonusClick}
         />
       </div>
-      <div className="ct-quick-info__box ct-quick-info__box--speed">
+      <div className="ct-quick-info__boxstcs-quick-info__box--speed">
         <SpeedBox
           speeds={speeds}
           preferences={preferences}

@@ -1,0 +1,122 @@
+.nameContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.avatar:global(.ddbc-character-avatar__portrait) {
+  width: 5.5rem;
+  height: 5.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.avatar.empty {
+  position: relative;
+  border: 0.125rem dashed var(--ttui_grey-300);
+  box-shadow: 0 0 0 0.0625rem var(--ttui_common-0) inset;
+}
+
+.avatar.empty:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  background: url("https://www.dndbeyond.com/content/skins/waterdeep/images/sprites/charsheet-atlas-builder.svg")
+    no-repeat 0 0;
+  background-size: cover;
+}
+
+.portraitManagerModal {
+  max-width: 38rem;
+}
+
+.portraitManagerModal :global(stcs-decoration-manager__item) {
+  width: unset;
+}
+
+.inputContainer {
+  position: relative;
+  flex: 1;
+}
+
+.nameContainer :global(.builder-field) {
+  margin: 0;
+}
+
+.namecontainer:global(.builder-field-heading) {
+  margin-top: 0;
+}
+
+.suggestionButton {
+  font-size: 0.75rem;
+  letter-spacing: normal;
+  margin-top: 0.25rem;
+}
+
+.suggestion {
+  border: 0.0625rem solid var(--character-builder-blue);
+  cursor: pointer;
+  background: transparent;
+}
+
+.suggestion:hover {
+  background: var(--ttui_grey-200);
+}
+
+.suggestionsContainer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.suggestionsLabel {
+  font-size: 0.875rem;
+}
+
+.shuffleButton:has(svg:only-child) {
+  padding: 0.25rem;
+}
+
+.shuffleButton svg.shuffleIcon {
+  fill: var(--character-builder-blue);
+}
+
+.suggestions {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.credit {
+  font-size: 0.625rem;
+  color: var(--character-muted-color);
+}
+
+.creditLink {
+  background: transparent center center
+    url("https://www.dndbeyond.com/content/skins/waterdeep/images/logos/fng-small.png")
+    no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10.3125rem;
+  height: 1.5625rem;
+  cursor: pointer;
+}
+
+.creditText {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nameContainer:not(.fullwidth) {
+    width: 60%;
+  }
+}

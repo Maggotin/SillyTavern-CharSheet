@@ -51,7 +51,7 @@
   border-radius: 0;
 }
 
-.adjuster :global(.ct-health-adjuster) {
+.adjuster :global(stcs-health-adjuster) {
   margin: 0.9375rem 0;
 }
 

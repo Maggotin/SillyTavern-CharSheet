@@ -63,7 +63,7 @@ export default class SlotManager extends React.PureComponent<Props> {
     }
 
     return (
-      <div className={`ct-slot-manager ct-slot-manager--size-${size}`}>
+      <div className={`ct-slot-managerstcs-slot-manager--size-${size}`}>
         {slotElements}
       </div>
     );

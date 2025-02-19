@@ -136,44 +136,44 @@ body input[type=search]:focus, body input[type=search]:hover {
   margin: 0 auto;
 }
 
-.ddb-campaigns-character-card {
+stcs-campaigns-character-card {
   border: 1px solid #d1cdca;
   background: #fff;
   position: relative;
 }
-.ddb-campaigns-character-card-wrapper {
+stcs-campaigns-character-card-wrapper {
   padding: 10px;
   width: 100%;
   max-width: 600px;
 }
 @media (min-width: 760px) {
-  .ddb-campaigns-character-card-wrapper {
+  stcs-campaigns-character-card-wrapper {
     width: 50%;
     max-width: 50%;
   }
 }
 @media (min-width: 1100px) {
-  .ddb-campaigns-character-card-wrapper {
+  stcs-campaigns-character-card-wrapper {
     width: 33.3333333333%;
   }
 }
-.ddb-campaigns-character-card-header {
+stcs-campaigns-character-card-header {
   position: relative;
   padding: 30px 20px;
 }
-.ddb-campaigns-character-card-header-cover-image {
+stcs-campaigns-character-card-header-cover-image {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
 }
-.ddb-campaigns-character-card-header-cover-image-user-backdrop {
+stcs-campaigns-character-card-header-cover-image-user-backdrop {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.ddb-campaigns-character-card-header-cover-image::after {
+stcs-campaigns-character-card-header-cover-image::after {
   content: "";
   position: absolute;
   top: 0;
@@ -184,15 +184,15 @@ body input[type=search]:focus, body input[type=search]:hover {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
 }
-.ddb-campaigns-character-card-header-upper, .ddb-campaigns-character-card-header-lower {
+stcs-campaigns-character-card-header-upper, stcs-campaigns-character-card-header-lower {
   position: relative;
   z-index: 1;
 }
-.ddb-campaigns-character-card-header-upper {
+stcs-campaigns-character-card-header-upper {
   display: flex;
   align-items: center;
 }
-.ddb-campaigns-character-card-header-upper-details-link {
+stcs-campaigns-character-card-header-upper-details-link {
   position: absolute;
   top: 0;
   right: 0;
@@ -200,66 +200,66 @@ body input[type=search]:focus, body input[type=search]:hover {
   bottom: 0;
   width: 100%;
 }
-.ddb-campaigns-character-card-header-upper-portrait {
+stcs-campaigns-character-card-header-upper-portrait {
   flex: 0 0 auto;
 }
-.ddb-campaigns-character-card-header-upper-portrait .image {
+stcs-campaigns-character-card-header-upper-portrait .image {
   border-radius: 3px;
   height: 60px;
   width: 60px;
   margin-right: 10px;
 }
-.ddb-campaigns-character-card-header-upper-portrait .image.user-selected-avatar {
+stcs-campaigns-character-card-header-upper-portrait .image.user-selected-avatar {
   background-position: center center;
   background-size: cover;
 }
-.ddb-campaigns-character-card-header-upper-character-info {
+stcs-campaigns-character-card-header-upper-character-info {
   flex: 1 1 100%;
   min-width: 0;
   padding-right: 10px;
 }
-.ddb-campaigns-character-card-header-upper-character-info-secondary {
+stcs-campaigns-character-card-header-upper-character-info-secondary {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   display: block;
   font-family: "Roboto Condensed", Roboto, Helvetica, sans-serif;
 }
-.ddb-campaigns-character-card-header-upper-character-info-secondary {
+stcs-campaigns-character-card-header-upper-character-info-secondary {
   color: #bdbdbd;
 }
-.ddb-campaigns-character-card-header-upper-hit-points {
+stcs-campaigns-character-card-header-upper-hit-points {
   margin-left: auto;
   flex: 0 0 auto;
 }
-.ddb-campaigns-character-card-header-upper-hit-points .hit-points-label {
+stcs-campaigns-character-card-header-upper-hit-points .hit-points-label {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 9px;
   text-align: center;
 }
-.ddb-campaigns-character-card-header-upper-hit-points .hit-points-wrapper {
+stcs-campaigns-character-card-header-upper-hit-points .hit-points-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.ddb-campaigns-character-card-header-upper-hit-points .hit-points-wrapper > div {
+stcs-campaigns-character-card-header-upper-hit-points .hit-points-wrapper > div {
   color: #fff;
   font-size: 18px;
   text-align: center;
 }
-.ddb-campaigns-character-card-header-lower {
+stcs-campaigns-character-card-header-lower {
   padding-top: 20px;
 }
-.ddb-campaigns-character-card-header-lower-statblock {
+stcs-campaigns-character-card-header-lower-statblock {
   display: flex;
   justify-content: space-around;
 }
-.ddb-campaigns-character-card-header-lower-statblock-item {
+stcs-campaigns-character-card-header-lower-statblock-item {
   flex: 20%;
 }
-.ddb-campaigns-character-card-header-lower-statblock-item-label {
+stcs-campaigns-character-card-header-lower-statblock-item-label {
   color: #fff;
   font-size: 9px;
   font-weight: bold;
@@ -268,12 +268,12 @@ body input[type=search]:focus, body input[type=search]:hover {
   max-width: 50px;
   margin: 0 auto;
 }
-.ddb-campaigns-character-card-header-lower-statblock-item-value {
+stcs-campaigns-character-card-header-lower-statblock-item-value {
   color: #fff;
   font-size: 20px;
   text-align: center;
 }
-.ddb-campaigns-character-card-header-lower-statblock-item-value .small {
+stcs-campaigns-character-card-header-lower-statblock-item-value .small {
   color: #979aa4;
   font-size: 11px;
   font-weight: bold;
@@ -281,33 +281,33 @@ body input[type=search]:focus, body input[type=search]:hover {
   margin: 0 2px;
   text-transform: uppercase;
 }
-.ddb-campaigns-character-card-body {
+stcs-campaigns-character-card-body {
   padding: 20px;
 }
-.ddb-campaigns-character-card-body-statblock {
+stcs-campaigns-character-card-body-statblock {
   display: flex;
   flex-wrap: wrap;
   margin: -10px 0;
 }
-.ddb-campaigns-character-card-body-statblock-item {
+stcs-campaigns-character-card-body-statblock-item {
   flex: 33.3333333333%;
   padding: 10px 0;
 }
-.ddb-campaigns-character-card-body-statblock-item-label {
+stcs-campaigns-character-card-body-statblock-item-label {
   font-size: 9px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
-.ddb-campaigns-character-card-body-statblock-item-value {
+stcs-campaigns-character-card-body-statblock-item-value {
   font-size: 20px;
   text-align: center;
 }
-.ddb-campaigns-character-card-body-statblock-item-value .score,
-.ddb-campaigns-character-card-body-statblock-item-value .modifier {
+stcs-campaigns-character-card-body-statblock-item-value .score,
+stcs-campaigns-character-card-body-statblock-item-value .modifier {
   display: inline;
 }
-.ddb-campaigns-character-card-body-statblock-item-strength-label::before {
+stcs-campaigns-character-card-body-statblock-item-strength-label::before {
   content: "";
   background-image: url(../../../images/icons/abilities/strength.svg);
   background-size: cover;
@@ -317,10 +317,10 @@ body input[type=search]:focus, body input[type=search]:hover {
   height: 11px;
   width: 11px;
 }
-.ddb-campaigns-character-card-body-statblock-item-strength .score {
+stcs-campaigns-character-card-body-statblock-item-strength .score {
   color: #bf2225;
 }
-.ddb-campaigns-character-card-body-statblock-item-dexterity-label::before {
+stcs-campaigns-character-card-body-statblock-item-dexterity-label::before {
   content: "";
   background-image: url(../../../images/icons/abilities/dexterity.svg);
   background-size: cover;
@@ -330,10 +330,10 @@ body input[type=search]:focus, body input[type=search]:hover {
   height: 11px;
   width: 11px;
 }
-.ddb-campaigns-character-card-body-statblock-item-dexterity .score {
+stcs-campaigns-character-card-body-statblock-item-dexterity .score {
   color: #41474d;
 }
-.ddb-campaigns-character-card-body-statblock-item-constitution-label::before {
+stcs-campaigns-character-card-body-statblock-item-constitution-label::before {
   content: "";
   background-image: url(../../../images/icons/abilities/constitution.svg);
   background-size: cover;
@@ -343,10 +343,10 @@ body input[type=search]:focus, body input[type=search]:hover {
   height: 11px;
   width: 11px;
 }
-.ddb-campaigns-character-card-body-statblock-item-constitution .score {
+stcs-campaigns-character-card-body-statblock-item-constitution .score {
   color: #79614c;
 }
-.ddb-campaigns-character-card-body-statblock-item-intelligence-label::before {
+stcs-campaigns-character-card-body-statblock-item-intelligence-label::before {
   content: "";
   background-image: url(../../../images/icons/abilities/intelligence.svg);
   background-size: cover;
@@ -356,10 +356,10 @@ body input[type=search]:focus, body input[type=search]:hover {
   height: 11px;
   width: 11px;
 }
-.ddb-campaigns-character-card-body-statblock-item-intelligence .score {
+stcs-campaigns-character-card-body-statblock-item-intelligence .score {
   color: #f96a3b;
 }
-.ddb-campaigns-character-card-body-statblock-item-wisdom-label::before {
+stcs-campaigns-character-card-body-statblock-item-wisdom-label::before {
   content: "";
   background-image: url(../../../images/icons/abilities/wisdom.svg);
   background-size: cover;
@@ -369,10 +369,10 @@ body input[type=search]:focus, body input[type=search]:hover {
   height: 11px;
   width: 11px;
 }
-.ddb-campaigns-character-card-body-statblock-item-wisdom .score {
+stcs-campaigns-character-card-body-statblock-item-wisdom .score {
   color: #879399;
 }
-.ddb-campaigns-character-card-body-statblock-item-charisma-label::before {
+stcs-campaigns-character-card-body-statblock-item-charisma-label::before {
   content: "";
   background-image: url(../../../images/icons/abilities/charisma.svg);
   background-size: cover;
@@ -382,10 +382,10 @@ body input[type=search]:focus, body input[type=search]:hover {
   height: 11px;
   width: 11px;
 }
-.ddb-campaigns-character-card-body-statblock-item-charisma .score {
+stcs-campaigns-character-card-body-statblock-item-charisma .score {
   color: #edb451;
 }
-.ddb-campaigns-character-card-campaign-links {
+stcs-campaigns-character-card-campaign-links {
   z-index: 1;
   position: absolute;
   top: 86px;
@@ -398,17 +398,17 @@ body input[type=search]:focus, body input[type=search]:hover {
   background: #1c1d1e;
   border: 1px solid rgba(151, 154, 164, 0.4);
 }
-.ddb-campaigns-character-card-campaign-links-campaign {
+stcs-campaigns-character-card-campaign-links-campaign {
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #979aa4;
 }
-#site .ddb-campaigns-character-card-campaign-links-campaign-link, #site .ddb-campaigns-character-card-campaign-links-campaign-link:hover, #site .ddb-campaigns-character-card-campaign-links-campaign-link:focus, #site .ddb-campaigns-character-card-campaign-links-campaign-link:active, #site .ddb-campaigns-character-card-campaign-links-campaign-link:visited {
+#site stcs-campaigns-character-card-campaign-links-campaign-link, #site stcs-campaigns-character-card-campaign-links-campaign-link:hover, #site stcs-campaigns-character-card-campaign-links-campaign-link:focus, #site stcs-campaigns-character-card-campaign-links-campaign-link:active, #site stcs-campaigns-character-card-campaign-links-campaign-link:visited {
   color: #1b9af0;
 }
-.ddb-campaigns-character-card-campaign-links-actions {
+stcs-campaigns-character-card-campaign-links-actions {
   width: 30%;
   margin-left: 3px;
   display: flex;
@@ -416,21 +416,21 @@ body input[type=search]:focus, body input[type=search]:hover {
   align-items: center;
 }
 @media (max-width: 400px) {
-  .ddb-campaigns-character-card-campaign-links-actions {
+  stcs-campaigns-character-card-campaign-links-actions {
     flex: 1;
   }
 }
-.ddb-campaigns-character-card-footer {
+stcs-campaigns-character-card-footer {
   border-top: 1px solid #dedede;
   padding: 0 20px;
 }
-.ddb-campaigns-character-card-footer-links {
+stcs-campaigns-character-card-footer-links {
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.ddb-campaigns-character-card-footer-links-unlocking {
+stcs-campaigns-character-card-footer-links-unlocking {
   color: #fff;
   font-size: 15px;
   background: #308e52;
@@ -438,13 +438,13 @@ body input[type=search]:focus, body input[type=search]:hover {
   padding: 3px 15px;
   border-radius: 4px;
 }
-.ddb-campaigns-character-card-footer-links-more {
+stcs-campaigns-character-card-footer-links-more {
   z-index: 10;
 }
-.ddb-campaigns-character-card-footer-links-more::before {
+stcs-campaigns-character-card-footer-links-more::before {
   background-image: url("../../../images/icons/sheet-icon-dark.svg");
 }
-.ddb-campaigns-character-card-footer-links-more .links {
+stcs-campaigns-character-card-footer-links-more .links {
   visibility: visible !important;
   display: flex !important;
   align-items: flex-start;
@@ -457,20 +457,20 @@ body input[type=search]:focus, body input[type=search]:hover {
   margin-left: auto;
   position: static;
 }
-.ddb-campaigns-character-card-footer-links-more .links a {
+stcs-campaigns-character-card-footer-links-more .links a {
   margin: 0;
   width: auto !important;
   padding: 0 15px;
   display: table !important;
 }
-.ddb-campaigns-character-card-footer-links-more .links a span {
+stcs-campaigns-character-card-footer-links-more .links a span {
   width: 100%;
   padding: 0;
 }
-.ddb-campaigns-character-card-footer-links-more .links a:not(:first-of-type) {
+stcs-campaigns-character-card-footer-links-more .links a:not(:first-of-type) {
   margin: 0 0 0 10px !important;
 }
-.ddb-campaigns-character-card-footer-links-more .links .button-alt-group-item {
+stcs-campaigns-character-card-footer-links-more .links .button-alt-group-item {
   display: block !important;
   margin: 0 auto !important;
   padding: 0 15px !important;
@@ -485,27 +485,27 @@ body input[type=search]:focus, body input[type=search]:hover {
   text-transform: uppercase;
   white-space: nowrap;
 }
-.ddb-campaigns-character-card-footer-links-more .links .button-alt-group-item:hover {
+stcs-campaigns-character-card-footer-links-more .links .button-alt-group-item:hover {
   color: #fff;
 }
-.ddb-campaigns-character-card-footer-links-more .links .button-alt-group-item:not(:first-of-type) {
+stcs-campaigns-character-card-footer-links-more .links .button-alt-group-item:not(:first-of-type) {
   margin: 0 !important;
 }
-#site .ddb-campaigns-character-card-footer-links-item {
+#site stcs-campaigns-character-card-footer-links-item {
   text-transform: uppercase;
   font-family: "Roboto Condensed", Roboto, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: bold;
   cursor: pointer;
 }
-#site .ddb-campaigns-character-card-footer-links-item, #site .ddb-campaigns-character-card-footer-links-item:hover, #site .ddb-campaigns-character-card-footer-links-item:focus, #site .ddb-campaigns-character-card-footer-links-item:active, #site .ddb-campaigns-character-card-footer-links-item:visited {
+#site stcs-campaigns-character-card-footer-links-item, #site stcs-campaigns-character-card-footer-links-item:hover, #site stcs-campaigns-character-card-footer-links-item:focus, #site stcs-campaigns-character-card-footer-links-item:active, #site stcs-campaigns-character-card-footer-links-item:visited {
   color: #1b9af0;
 }
-#site .ddb-campaigns-character-card-footer-links-item-edit, #site .ddb-campaigns-character-card-footer-links-item-view, #site .ddb-campaigns-character-card-footer-links-item-claim, #site .ddb-campaigns-character-card-footer-links-item-more {
+#site stcs-campaigns-character-card-footer-links-item-edit, #site stcs-campaigns-character-card-footer-links-item-view, #site stcs-campaigns-character-card-footer-links-item-claim, #site stcs-campaigns-character-card-footer-links-item-more {
   display: flex;
   align-items: flex-start;
 }
-#site .ddb-campaigns-character-card-footer-links-item-edit::before, #site .ddb-campaigns-character-card-footer-links-item-view::before, #site .ddb-campaigns-character-card-footer-links-item-claim::before, #site .ddb-campaigns-character-card-footer-links-item-more::before {
+#site stcs-campaigns-character-card-footer-links-item-edit::before, #site stcs-campaigns-character-card-footer-links-item-view::before, #site stcs-campaigns-character-card-footer-links-item-claim::before, #site stcs-campaigns-character-card-footer-links-item-more::before {
   content: "";
   height: 14px;
   width: 14px;
@@ -513,25 +513,25 @@ body input[type=search]:focus, body input[type=search]:hover {
   background-size: cover;
   margin-right: 3px;
 }
-#site .ddb-campaigns-character-card-footer-links-item-edit::before {
+#site stcs-campaigns-character-card-footer-links-item-edit::before {
   background-image: url("../../../images/icons/menu_items/dark/builders.svg");
 }
-#site .ddb-campaigns-character-card-footer-links-item-view::before {
+#site stcs-campaigns-character-card-footer-links-item-view::before {
   background-image: url("../../../images/icons/sheet-icon-dark.svg");
 }
-#site .ddb-campaigns-character-card-footer-links-item-claim::before {
+#site stcs-campaigns-character-card-footer-links-item-claim::before {
   background-image: url("../../../images/icons/flag-grey.svg");
 }
-#site .ddb-campaigns-character-card-footer-links-item-remove, #site .ddb-campaigns-character-card-footer-links-item-remove:hover, #site .ddb-campaigns-character-card-footer-links-item-remove:focus, #site .ddb-campaigns-character-card-footer-links-item-remove:active, #site .ddb-campaigns-character-card-footer-links-item-remove:visited, #site .ddb-campaigns-character-card-footer-links-item-delete, #site .ddb-campaigns-character-card-footer-links-item-delete:hover, #site .ddb-campaigns-character-card-footer-links-item-delete:focus, #site .ddb-campaigns-character-card-footer-links-item-delete:active, #site .ddb-campaigns-character-card-footer-links-item-delete:visited, #site .ddb-campaigns-character-card-footer-links-item-unclaim, #site .ddb-campaigns-character-card-footer-links-item-unclaim:hover, #site .ddb-campaigns-character-card-footer-links-item-unclaim:focus, #site .ddb-campaigns-character-card-footer-links-item-unclaim:active, #site .ddb-campaigns-character-card-footer-links-item-unclaim:visited {
+#site stcs-campaigns-character-card-footer-links-item-remove, #site stcs-campaigns-character-card-footer-links-item-remove:hover, #site stcs-campaigns-character-card-footer-links-item-remove:focus, #site stcs-campaigns-character-card-footer-links-item-remove:active, #site stcs-campaigns-character-card-footer-links-item-remove:visited, #site stcs-campaigns-character-card-footer-links-item-delete, #site stcs-campaigns-character-card-footer-links-item-delete:hover, #site stcs-campaigns-character-card-footer-links-item-delete:focus, #site stcs-campaigns-character-card-footer-links-item-delete:active, #site stcs-campaigns-character-card-footer-links-item-delete:visited, #site stcs-campaigns-character-card-footer-links-item-unclaim, #site stcs-campaigns-character-card-footer-links-item-unclaim:hover, #site stcs-campaigns-character-card-footer-links-item-unclaim:focus, #site stcs-campaigns-character-card-footer-links-item-unclaim:active, #site stcs-campaigns-character-card-footer-links-item-unclaim:visited {
   color: #c65854;
 }
-#site .ddb-campaigns-character-card-footer-links-item-more::before {
+#site stcs-campaigns-character-card-footer-links-item-more::before {
   background-image: url("../../../images/icons/chevron-down-grey.svg");
 }
-.ddb-campaigns-detail-body-listing-inactive .ddb-campaigns-character-card-header, .ddb-campaigns-detail-body-listing-inactive .ddb-campaigns-character-card-body {
+stcs-campaigns-detail-body-listing-inactive stcs-campaigns-character-card-header, stcs-campaigns-detail-body-listing-inactive stcs-campaigns-character-card-body {
   filter: saturate(0);
 }
-.ddb-campaigns-character-card::after {
+stcs-campaigns-character-card::after {
   content: "";
   position: absolute;
   top: 0;
@@ -542,12 +542,12 @@ body input[type=search]:focus, body input[type=search]:hover {
   z-index: -1;
 }
 
-.hide-ads .ddb-campaigns-character-card-header-upper-details-link[aria-hidden=true] {
+.hide-ads stcs-campaigns-character-card-header-upper-details-link[aria-hidden=true] {
   display: block !important;
   visibility: visible !important;
 }
 
-.ddb-campaigns-character-card-footer-links.is-unlocking {
+stcs-campaigns-character-card-footer-links.is-unlocking {
   justify-content: flex-start;
   height: auto;
   padding-top: 8px;
@@ -555,6 +555,6 @@ body input[type=search]:focus, body input[type=search]:hover {
   gap: 0.5rem;
 }
 
-.ddb-campaigns-character-card {
+stcs-campaigns-character-card {
   position: relative;
 }/*# sourceMappingURL=CharacterCard.css.map */

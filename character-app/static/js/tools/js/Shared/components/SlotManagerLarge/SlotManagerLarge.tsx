@@ -108,7 +108,7 @@ export default class SlotManagerLarge extends React.PureComponent<
       <div className="ct-slot-manager-large">
         <div className={classNames.join(" ")}>
           {label && <div className="ct-slot-manager-large__label">{label}</div>}
-          <div className="ct-slot-manager-large__value-control ct-slot-manager-large__value-control--use">
+          <div className="ct-slot-manager-large__value-controlstcs-slot-manager-large__value-control--use">
             <ThemeButton
               size="small"
               className={"button-action-decrease button-action-decrease--small"}
@@ -117,10 +117,10 @@ export default class SlotManagerLarge extends React.PureComponent<
               isInteractive={isInteractive}
             />
           </div>
-          <div className="ct-slot-manager-large__value ct-slot-manager-large__value--cur">
+          <div className="ct-slot-manager-large__valuestcs-slot-manager-large__value--cur">
             {available - newUsed}
           </div>
-          <div className="ct-slot-manager-large__value-control ct-slot-manager-large__value-control--gain">
+          <div className="ct-slot-manager-large__value-controlstcs-slot-manager-large__value-control--gain">
             <ThemeButton
               size="small"
               className={"button-action-increase button-action-increase--small"}

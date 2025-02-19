@@ -91,39 +91,39 @@ export const CharacterCard: FC<CharacterCardProps> = ({
   };
 
   return (
-    <li className="ddb-campaigns-character-card-wrapper j-characters-listing__item">
+    <li className="stcs-campaigns-character-card-wrapper j-characters-listing__item">
       <div
         className={clsx([`status-${getStatusSlug(character)}`, styles.card])}
       >
-        <div className="ddb-campaigns-character-card-header">
+        <div className="stcs-campaigns-character-card-header">
           {getBackdropUrl(character) ? (
             <div
-              className="ddb-campaigns-character-card-header-cover-image ddb-campaigns-character-card-header-cover-image-user-backdrop"
+              className="stcs-campaigns-character-card-header-cover-image stcs-campaigns-character-card-header-cover-image-user-backdrop"
               style={{
                 backgroundImage: `url(${getBackdropUrl(character)})`,
               }}
             />
           ) : (
             <div
-              className="ddb-campaigns-character-card-header-cover-image"
+              className="stcs-campaigns-character-card-header-cover-image"
               style={{
                 backgroundImage: `url(${getCoverImageUrl(character)})`,
               }}
             />
           )}
-          <div className="ddb-campaigns-character-card-header-upper">
+          <div className="stcs-campaigns-character-card-header-upper">
             {!hasLockedCharacters &&
               getStatus(character) === CharacterStatusEnum.Active && (
                 // eslint-disable-next-line jsx-a11y/anchor-has-content
                 <a
                   href={getDetailsLink(character)}
-                  className="ddb-campaigns-character-card-header-upper-details-link"
+                  className="stcs-campaigns-character-card-header-upper-details-link"
                   // There already is a view link - this is just making the top area clickable so it shouldn't be tabbed to or announced
                   tabIndex={-1}
                   aria-hidden={true}
                 />
               )}
-            <div className="ddb-campaigns-character-card-header-upper-portrait">
+            <div className="stcs-campaigns-character-card-header-upper-portrait">
               {getAvatarUrl(character) ? (
                 <div
                   className="image user-selected-avatar"
@@ -135,9 +135,9 @@ export const CharacterCard: FC<CharacterCardProps> = ({
                 <div className="image default-character-avatar" />
               )}
             </div>
-            <div className="ddb-campaigns-character-card-header-upper-character-info">
+            <div className="stcs-campaigns-character-card-header-upper-character-info">
               <h2 className={styles.name}>{getName(character)}</h2>
-              <div className="ddb-campaigns-character-card-header-upper-character-info-secondary">
+              <div className="stcs-campaigns-character-card-header-upper-character-info-secondary">
                 {getSecondaryInfo(character)}
               </div>
             </div>
@@ -159,12 +159,12 @@ export const CharacterCard: FC<CharacterCardProps> = ({
           </Button>
         )}
         {isInCampaign(character) && (
-          <div className="ddb-campaigns-character-card-campaign-links">
-            <div className="ddb-campaigns-character-card-campaign-links-campaign">
+          <div className="stcs-campaigns-character-card-campaign-links">
+            <div className="stcs-campaigns-character-card-campaign-links-campaign">
               <strong>Campaign:</strong>{" "}
               {!hasLockedCharacters ? (
                 <a
-                  className="ddb-campaigns-character-card-campaign-links-campaign-link"
+                  className="stcs-campaigns-character-card-campaign-links-campaign-link"
                   href={getCampaignDetailsLink(character)}
                   onClick={() => logCharacterCampaignClicked()}
                 >
@@ -175,7 +175,7 @@ export const CharacterCard: FC<CharacterCardProps> = ({
               )}
               {!getIsAssigned(character) && " (Unassigned)"}
             </div>
-            <div className="ddb-campaigns-character-card-campaign-links-actions">
+            <div className="stcs-campaigns-character-card-campaign-links-actions">
               {!hasLockedCharacters && (
                 <LeaveCampaignButton
                   character={character}
@@ -185,10 +185,10 @@ export const CharacterCard: FC<CharacterCardProps> = ({
             </div>
           </div>
         )}
-        <div className="ddb-campaigns-character-card-footer">
+        <div className="stcs-campaigns-character-card-footer">
           <div
             className={[
-              "ddb-campaigns-character-card-footer-links",
+              "stcs-campaigns-character-card-footer-links",
               hasLockedCharacters && "is-unlocking",
             ]
               .filter(Boolean)

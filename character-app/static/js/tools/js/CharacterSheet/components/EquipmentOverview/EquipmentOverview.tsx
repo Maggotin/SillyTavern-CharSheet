@@ -126,7 +126,7 @@ export default class EquipmentOverview extends React.PureComponent<Props> {
               </span>
             </div>
             <div
-              className={`ct-equipment-overview__weight-speed ct-equipment-overview__weight-speed--${FormatUtils.slugify(
+              className={`ct-equipment-overview__weight-speedstcs-equipment-overview__weight-speed--${FormatUtils.slugify(
                 weightSpeedLabel
               )}`}
             >

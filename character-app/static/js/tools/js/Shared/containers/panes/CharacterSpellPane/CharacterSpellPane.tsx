@@ -270,7 +270,7 @@ class CharacterSpellPane extends React.PureComponent<Props, State> {
           preview={
             <Preview>
               <div
-                className={`ct-spell-pane__heading-preview ct-spell-pane__heading-preview--school-${schoolSlug}`}
+                className={`ct-spell-pane__heading-previewstcs-spell-pane__heading-preview--school-${schoolSlug}`}
               />
             </Preview>
           }

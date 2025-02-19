@@ -61,16 +61,16 @@ class CharacterHeaderMobile extends React.PureComponent<Props> {
 
     return (
       <div className="ct-character-header-mobile">
-        <div className="ct-character-header-mobile__group ct-character-header-mobile__group-tidbits">
+        <div className="ct-character-header-mobile__groupstcs-character-header-mobile__group-tidbits">
           <CharacterHeaderInfo />
         </div>
-        <div className="ct-character-header-mobile__group ct-character-header-mobile__group--gap" />
+        <div className="ct-character-header-mobile__groupstcs-character-header-mobile__group--gap" />
         {isReadonly && status === CharacterStatusSlug.PREMADE ? (
           <div>
             <WatchTourDialog />
           </div>
         ) : (
-          <div className="ct-character-header-mobile__group ct-character-header-mobile__group--summary">
+          <div className="ct-character-header-mobile__groupstcs-character-header-mobile__group--summary">
             <StatusSummaryMobile
               hitPointInfo={hitPointInfo}
               fails={fails}

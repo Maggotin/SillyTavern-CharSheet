@@ -793,7 +793,7 @@ export default class SpellsFilter extends React.PureComponent<Props, State> {
           <div className="ct-spells-filter__box">
             {this.renderFilterBarActives()}
             <div className="ct-spells-filter__primary">
-              <div className="ct-spells-filter__primary-group ct-spells-filter__primary-group--first">
+              <div className="ct-spells-filter__primary-groupstcs-spells-filter__primary-group--first">
                 <div className="ct-spells-filter__icon" />
               </div>
               <div className="ct-spells-filter__field">

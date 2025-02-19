@@ -27,7 +27,7 @@ export default class PreferencesPaneTogglesField extends React.PureComponent<Pro
     const sortedToggles = orderBy(toggles, "sortOrder");
 
     return (
-      <div className="ct-preferences-pane__field ct-preferences-pane__field--toggle">
+      <div className="ct-preferences-pane__fieldstcs-preferences-pane__field--toggle">
         <div className="ct-preferences-pane__field-summary">
           <Heading className="ct-preferences-pane__field-heading">
             {heading}

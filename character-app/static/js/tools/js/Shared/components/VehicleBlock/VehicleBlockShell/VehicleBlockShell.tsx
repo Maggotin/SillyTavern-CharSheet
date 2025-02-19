@@ -27,7 +27,7 @@ export default class VehicleBlockShell extends React.PureComponent<Props> {
       <div className="ct-vehicle-block">
         <VehicleBlockShellCap displayType={displayType} />
         <div
-          className={`ct-vehicle-block__block ct-vehicle-block__block--${type}`}
+          className={`ct-vehicle-block__blockstcs-vehicle-block__block--${type}`}
         >
           {children}
         </div>

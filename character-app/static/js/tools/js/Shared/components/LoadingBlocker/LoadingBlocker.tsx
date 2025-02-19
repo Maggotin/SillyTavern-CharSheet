@@ -48,7 +48,7 @@ export default class LoadingBlocker extends React.PureComponent<Props, State> {
     return (
       <div
         className={`ct-loading-blocker ${
-          isFinished ? " ct-loading-blocker--finished" : ""
+          isFinished ? "stcs-loading-blocker--finished" : ""
         }`}
       >
         <div className="ct-loading-blocker__logo" />

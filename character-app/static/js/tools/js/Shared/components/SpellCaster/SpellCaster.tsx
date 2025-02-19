@@ -463,12 +463,12 @@ export class SpellCaster extends React.PureComponent<Props, State> {
                 {usesSpellSlots ? `${spellSlotName}, ` : ""}
                 {limitedUseButtonText}
                 {usesSpellSlots && (
-                  <span className="ct-spell-caster__casting-action-count ct-spell-caster__casting-action-count--spellcasting">
+                  <span className="ct-spell-caster__casting-action-countstcs-spell-caster__casting-action-count--spellcasting">
                     {spellSlotsAvailable}
                   </span>
                 )}
                 {showRemainingCount && (
-                  <span className="ct-spell-caster__casting-action-count ct-spell-caster__casting-action-count--limited-use">
+                  <span className="ct-spell-caster__casting-action-countstcs-spell-caster__casting-action-count--limited-use">
                     {numberRemaining}
                   </span>
                 )}
@@ -508,7 +508,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
                   onClick={this.handleCastSpellSlot}
                 >
                   Spell Slot
-                  <span className="ct-spell-caster__casting-action-count ct-spell-caster__casting-action-count--spellcasting">
+                  <span className="ct-spell-caster__casting-action-countstcs-spell-caster__casting-action-count--spellcasting">
                     {spellCastLevelAvailableCount}
                   </span>
                 </ThemeButton>
@@ -521,7 +521,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
                   onClick={this.handleCastPactMagicSlot}
                 >
                   Pact Slot
-                  <span className="ct-spell-caster__casting-action-count ct-spell-caster__casting-action-count--spellcasting">
+                  <span className="ct-spell-caster__casting-action-countstcs-spell-caster__casting-action-count--spellcasting">
                     {pactMagicCastLevelAvailableCount}
                   </span>
                 </ThemeButton>
@@ -546,7 +546,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
             </span>
           )}
           <span
-            className={`ct-spell-caster__casting-level-current ct-spell-caster__casting-level-current--${
+            className={`ct-spell-caster__casting-level-currentstcs-spell-caster__casting-level-current--${
               minLevel === maxLevel ? "nocontrols" : "controls"
             }`}
           >
@@ -616,7 +616,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
             : additionalAttackInfo.totalCount;
         const additionalAttackLabel = level === 0 ? "Total" : "Additional";
         additionalAttacksDisplay = (
-          <div className="ct-spell-caster__higher ct-spell-caster__higher--attacks">
+          <div className="ct-spell-caster__higherstcs-spell-caster__higher--attacks">
             {additionalAttackLabel} {additionalAttackInfo.description}:{" "}
             {additionalAttackCount}
           </div>
@@ -635,7 +635,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
       );
       if (additionalTargetInfo) {
         additionalTargetsDisplay = (
-          <div className="ct-spell-caster__higher ct-spell-caster__higher--targets">
+          <div className="ct-spell-caster__higherstcs-spell-caster__higher--targets">
             <div className="ct-spell-caster__higher-targets-info">
               {additionalTargetInfo.targets} Additional Target
               {additionalTargetInfo.targets === 1 ? "" : "s"}
@@ -659,7 +659,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
       );
       if (aoeInfo && aoeInfo.extendedAoe !== null) {
         aoeDisplay = (
-          <div className="ct-spell-caster__higher ct-spell-caster__higher--aoe">
+          <div className="ct-spell-caster__higherstcs-spell-caster__higher--aoe">
             Extended Area: {FormatUtils.renderDistance(aoeInfo.extendedAoe)}{" "}
             {aoeInfo.description}
           </div>
@@ -678,7 +678,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
       );
       if (rangeInfo && rangeInfo.range) {
         rangeDisplay = (
-          <div className="ct-spell-caster__higher ct-spell-caster__higher--range">
+          <div className="ct-spell-caster__higherstcs-spell-caster__higher--range">
             Extended Range: {FormatUtils.renderDistance(rangeInfo.range)}{" "}
             {rangeInfo.description}
           </div>
@@ -697,7 +697,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
       );
       if (durationInfo) {
         durationDisplay = (
-          <div className="ct-spell-caster__higher ct-spell-caster__higher--duration">
+          <div className="ct-spell-caster__higherstcs-spell-caster__higher--duration">
             Extended Duration: {durationInfo.description}
           </div>
         );
@@ -715,7 +715,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
       );
       if (creatureInfo) {
         creaturesDisplay = (
-          <div className="ct-spell-caster__higher ct-spell-caster__higher--creatures">
+          <div className="ct-spell-caster__higherstcs-spell-caster__higher--creatures">
             Creatures: {creatureInfo.description}
           </div>
         );
@@ -733,7 +733,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
       );
       if (specialInfo) {
         specialDisplay = (
-          <div className="ct-spell-caster__higher ct-spell-caster__higher--special">
+          <div className="ct-spell-caster__higherstcs-spell-caster__higher--special">
             Special: {specialInfo.description}
           </div>
         );
@@ -777,7 +777,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
     let damageNode: React.ReactNode;
     if (damageModifiers.length) {
       damageNode = (
-        <div className="ct-spell-caster__modifiers ct-spell-caster__modifiers--damages">
+        <div className="ct-spell-caster__modifiersstcs-spell-caster__modifiers--damages">
           {damageModifiers.map((modifier) => {
             const atHigherLevels = ModifierUtils.getAtHigherLevels(modifier);
             const id = ModifierUtils.getId(modifier);
@@ -801,7 +801,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
 
             return (
               <div
-                className="ct-spell-caster__modifier ct-spell-caster__modifier--damage"
+                className="ct-spell-caster__modifierstcs-spell-caster__modifier--damage"
                 key={id ? id : ""}
               >
                 {scaledDamageDie && (
@@ -846,7 +846,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
       tempHitPointHealingModifiers.length
     ) {
       healingNode = (
-        <div className="ct-spell-caster__modifiers ct-spell-caster__modifiers--healing">
+        <div className="ct-spell-caster__modifiersstcs-spell-caster__modifiers--healing">
           {hitPointHealingModifiers.map((modifier) => {
             const atHigherLevels = ModifierUtils.getAtHigherLevels(modifier);
             const id = ModifierUtils.getId(modifier);
@@ -874,7 +874,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
               );
             return (
               <div
-                className="ct-spell-caster__modifier ct-spell-caster__modifier--hp"
+                className="ct-spell-caster__modifierstcs-spell-caster__modifier--hp"
                 key={id ? id : ""}
               >
                 <span className="ct-spell-caster__modifier-amount">
@@ -911,7 +911,7 @@ export class SpellCaster extends React.PureComponent<Props, State> {
             );
             return (
               <div
-                className="ct-spell-caster__modifier ct-spell-caster__modifier--temp"
+                className="ct-spell-caster__modifierstcs-spell-caster__modifier--temp"
                 key={id ? id : ""}
               >
                 <span className="ct-spell-caster__modifier-amount">

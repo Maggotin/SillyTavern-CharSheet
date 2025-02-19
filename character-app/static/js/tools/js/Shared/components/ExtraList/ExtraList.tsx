@@ -33,19 +33,19 @@ export default class ExtraList extends React.PureComponent<Props, {}> {
     return (
       <div className="ct-extra-list">
         <div className="ct-extra-list__row-header">
-          <div className="ct-extra-list__col ct-extra-list__col--preview" />
-          <div className="ct-extra-list__col ct-extra-list__col--primary">
+          <div className="ct-extra-list__colstcs-extra-list__col--preview" />
+          <div className="ct-extra-list__colstcs-extra-list__col--primary">
             Name
           </div>
-          <div className="ct-extra-list__col ct-extra-list__col--ac">AC</div>
-          <div className="ct-extra-list__col ct-extra-list__col--hp">
+          <div className="ct-extra-list__colstcs-extra-list__col--ac">AC</div>
+          <div className="ct-extra-list__colstcs-extra-list__col--hp">
             Hit Points
           </div>
-          <div className="ct-extra-list__col ct-extra-list__col--speed">
+          <div className="ct-extra-list__colstcs-extra-list__col--speed">
             Speed
           </div>
           {showNotes && (
-            <div className="ct-extra-list__col ct-extra-list__col--notes">
+            <div className="ct-extra-list__colstcs-extra-list__col--notes">
               Notes
             </div>
           )}
