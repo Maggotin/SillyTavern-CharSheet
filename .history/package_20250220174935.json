@@ -1,0 +1,28 @@
+{
+  "name": "sillytavern-charsheet",
+  "version": "1.0.0",
+  "description": "*Provide a brief description of how your extension works, what problem it aims to solve.*",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maggotin/SillyTavern-CharSheet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maggotin/SillyTavern-CharSheet/issues"
+  },
+  "homepage": "https://github.com/Maggotin/SillyTavern-CharSheet#readme"
+}

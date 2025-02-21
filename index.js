@@ -1,4 +1,5 @@
 import { CharacterSheetManager } from "./src/ui/charSheet.js";
+import "@babel/polyfill/noConflict";
 
 const settingsKey = 'SillyTavernCharSheet';
 const EXTENSION_NAME = 'Character Sheet D&D5e';
