@@ -1,0 +1,31 @@
+.ct-prop-list {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 50%;
+    margin-bottom: 10px;
+
+    &-label {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 11px;
+    }
+
+    @for $i from 1 through 5 {
+      &--#{$i}col {
+        width: percentage(calc(1 / $i));
+      }
+    }
+
+    $i: 5;
+    @while $i < 100 {
+      &--#{$i}percent {
+        width: percentage(calc($i / 100));
+      }
+
+      $i: $i + 5;
+    }
+  }
+}

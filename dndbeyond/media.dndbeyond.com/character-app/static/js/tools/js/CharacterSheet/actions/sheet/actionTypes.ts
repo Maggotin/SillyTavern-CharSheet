@@ -1,0 +1,2 @@
+export const CHARACTER_INIT = "sheet.CHARACTER_INIT";
+export const CHARACTER_RECEIVE_FAIL = "sheet.CHARACTER_RECEIVE_FAIL";

@@ -1,0 +1,11 @@
+.callout {
+  align-self: center;
+}
+
+.heading {
+  margin: 0;
+}
+
+.interactive {
+  cursor: pointer;
+}

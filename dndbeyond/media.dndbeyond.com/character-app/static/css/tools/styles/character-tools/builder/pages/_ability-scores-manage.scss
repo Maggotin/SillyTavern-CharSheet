@@ -1,0 +1,146 @@
+.ability-score {
+  .detail-choice {
+    margin-top: 10px;
+  }
+
+  &-type-chooser {
+    margin-bottom: 16px;
+  }
+
+  &-manager {
+    &-standard,
+    &-point {
+      @include sidebarSeparatorBottom(20px, 25px);
+    }
+
+    &-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &-stat {
+      margin-top: 10px;
+      padding: 0 5px;
+      width: percentage(1/3);
+
+      &-total {
+        font-size: 15px;
+        font-weight: 700;
+        font-family: $condensed;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 10px 0;
+      }
+
+      .builder-field {
+        margin: 0;
+
+        &-label {
+          text-transform: uppercase;
+          text-align: center;
+        }
+      }
+    }
+
+    &-points {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0 0;
+
+      &-heading {
+        font-weight: bold;
+        font-family: $condensed;
+        margin-right: 5px;
+        text-transform: uppercase;
+      }
+
+      &-value {
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+        font-size: 24px;
+
+        &-sep {
+          margin: 0 3px;
+          font-size: 20px;
+          color: #aaa;
+        }
+      }
+    }
+  }
+
+  &-dice {
+    margin-top: 15px;
+
+    &-control {
+      margin-top: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      background-color: #8383833b;
+      padding: 10px 15px;
+      border-radius: 4px;
+
+      &-text {
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .ct-button {
+        margin-top: 10px;
+        font-size: 13px;
+
+        .ddbc-dice-svg {
+          width: 16px;
+          vertical-align: bottom;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  &-dice.ddbc-collapsible--opened > .ddbc-collapsible__header {
+    border-left: 3px solid $character-default-color;
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    &-type-chooser {
+      .ddbc-select {
+        max-width: 50%;
+      }
+    }
+
+    &-manager {
+      &-stat {
+        width: percentage(1/6);
+      }
+    }
+
+    &-calcs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    &-dice {
+      &-control {
+        flex-direction: row;
+
+        &-text {
+          padding: 0;
+        }
+
+        .ct-button {
+          margin-top: 0;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

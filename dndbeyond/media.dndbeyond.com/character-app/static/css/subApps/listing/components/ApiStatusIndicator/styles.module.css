@@ -1,0 +1,28 @@
+.indicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.spinner {
+  width: 1.5rem;
+  fill: var(--ttui_color-text--secondary);
+  animation: rotate 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+.error {
+  width: 1.25rem;
+  fill: var(--ttui_color-error--main);
+  margin-right: 0.5rem;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

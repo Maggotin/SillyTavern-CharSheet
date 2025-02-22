@@ -1,0 +1,14 @@
+$todo-icon-background: $ct--builder-color;
+
+.ddbc-todo-icon {
+  background: $todo-icon-background;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  z-index: 3;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

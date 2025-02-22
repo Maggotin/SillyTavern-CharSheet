@@ -1,0 +1,22 @@
+.class-feature-detail {
+  &-options {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  &-option {
+    & + & {
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px solid #f1f1f1;
+    }
+
+    &-heading {
+      font-weight: bold;
+    }
+
+    .ability-pool-spell-name {
+      font-weight: normal;
+    }
+  }
+}

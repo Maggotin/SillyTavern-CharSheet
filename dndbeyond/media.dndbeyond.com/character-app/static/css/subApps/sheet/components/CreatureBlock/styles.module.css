@@ -1,0 +1,218 @@
+.creatureBlock {
+  background: url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/mon-summary/stat-block-top-texture.png"),
+    url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/mon-summary/paper-texture.png");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat, repeat;
+  position: relative;
+  box-shadow: 0 0 0.313rem var(--ttui_grey-400);
+  border: 0.063rem solid var(--ttui_grey-300);
+  padding: 0.938rem 0.625rem;
+  font-family: var(--font-scala-sans-offc);
+  font-size: 0.938rem;
+  color: var(--ttui_common-1000);
+}
+
+.creatureBlock::after,
+.creatureBlock::before {
+  content: "";
+  display: block;
+  background: url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/mon-summary/stat-bar-book.png")
+    center;
+  background-size: 100% 100%;
+  height: 0.375rem;
+  position: absolute;
+  left: -0.188rem;
+  right: -0.188rem;
+}
+
+.creatureBlock::before {
+  top: -0.188rem;
+}
+
+.creatureBlock::after {
+  bottom: -0.188rem;
+}
+
+.v2024.creatureBlock {
+  --character-creature-block-red: #5b160c;
+
+  background: var(--ttui_parchment-50);
+  border: 0.0625rem solid var(--ttui_parchment-400);
+  outline: 0.0625rem solid var(--ttui_parchment-400);
+  outline-offset: -0.25rem;
+  border-radius: 0.5rem;
+}
+
+.v2024.creatureBlock::after,
+.v2024.creatureBlock::before {
+  display: none;
+}
+
+.separator {
+  max-width: 100%;
+  min-height: 0.625rem;
+}
+
+.header,
+.meta {
+  line-height: 1.1;
+}
+
+h1.header {
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 0.9;
+  font-family: var(--font-mrs-eaves-small-caps);
+  color: var(--character-creature-block-red);
+  margin: 0;
+}
+
+.v2024 h1.header {
+  border-bottom: 0.063rem solid var(--character-creature-block-red);
+  font-family: var(--font-scala-sans-sc-offc);
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.meta {
+  font-style: italic;
+  margin-bottom: 0.938rem;
+  margin-top: 0.188rem;
+}
+
+.v2024 .meta {
+  color: var(--ttui_grey-500);
+}
+
+.attribute {
+  margin: 0.313rem 0;
+  color: var(--character-creature-block-red);
+  line-height: 1.2;
+}
+
+.attribute > p {
+  display: inline;
+}
+
+h2.attributeLabel {
+  font-weight: bold;
+  font-size: 0.938rem;
+  font-family: var(--font-scala-sans-offc);
+  margin-right: 0.313rem;
+  display: inline;
+}
+
+.attributeValue {
+  margin-left: 0.313rem;
+}
+
+.stats {
+  color: var(--character-creature-block-red);
+  font-family: var(--font-scala-sans-offc);
+  font-size: 0.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.v2024 .stats {
+  flex-wrap: nowrap;
+  gap: 0.625rem;
+}
+
+table.statTable {
+  margin: 0 0 0.5rem;
+}
+
+table.statTable,
+table.statTable thead,
+table.statTable tr,
+table.statTable th,
+table.statTable tbody,
+table.statTable td {
+  border: 0;
+}
+
+table.statTable td {
+  padding: 0.125rem 0.5rem;
+}
+
+table.statTable thead tr th {
+  background: inherit;
+  color: var(--ttui_grey-500);
+  font-weight: 400;
+  padding: 0.3125rem 0.125rem 0;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-size: 0.6875rem;
+}
+
+table.statTable tbody tr {
+  border-top: 0.0625rem solid var(--ttui_common-0);
+  border-bottom: 0.0625rem solid var(--ttui_common-0);
+}
+table.statTable.physical tbody tr th,
+table.statTable.physical tbody tr td {
+  background: #ede6d9;
+}
+table.statTable.mental tbody tr th,
+table.statTable.mental tbody tr td {
+  background: #d8dad1;
+}
+
+table.statTable.physical td.modifier {
+  background: #ded4cc;
+}
+
+table.statTable.mental td.modifier {
+  background: #d0caca;
+}
+
+.stat {
+  width: calc(100% / 3);
+  padding: 0.313rem 0;
+  text-align: center;
+}
+
+h2.statHeading {
+  font-weight: bold;
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: var(--font-scala-sans-offc);
+}
+
+.statScore {
+  margin: 0;
+  display: inline;
+}
+
+.statModifier {
+  margin: 0 0 0 0.125rem;
+  display: inline;
+}
+
+.descriptions {
+  margin-top: 1.25rem;
+}
+
+h2.descriptionHeading {
+  border-bottom: 0.063rem solid var(--character-creature-block-red);
+  color: var(--character-creature-block-red);
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: var(--font-scala-sans-offc);
+  line-height: 1.4;
+  margin-top: 1.25rem;
+  margin-bottom: 0.938rem;
+}
+
+.v2024 h2.descriptionHeading {
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-family: var(--font-scala-sans-sc-offc);
+}
+
+.description p {
+  margin-bottom: 0.625rem;
+}

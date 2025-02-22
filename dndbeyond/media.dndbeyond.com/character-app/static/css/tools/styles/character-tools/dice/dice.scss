@@ -1,0 +1,354 @@
+@import "../shared/components/dice-preference-manager.scss";
+
+.dice-rolling-panel {
+  top: 0;
+  position: fixed;
+  z-index: 57000;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  &__container {
+    width: 100%;
+    height: 100%;
+  }
+  .dice-toolbar {
+    position: fixed;
+    z-index: 1;
+    bottom: 10px;
+    left: 10px;
+    pointer-events: all;
+  }
+}
+
+@media (min-width: $bp-sheet-tablet-transition) {
+  .dice-notification__content {
+    padding-left: 40px;
+    max-width: 400px;
+  }
+}
+
+.dice-notification {
+  width: 100%;
+  height: 100%;
+  background-color: #09090979;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+
+  &__container {
+    position: absolute;
+    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    max-width: 600px;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 10px 10px 10px #00000055;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+      url(https://www.dndbeyond.com/content/images/landing-pages/dice/digital-dice-hero-background-desktop.jpg);
+    background-position-x: right;
+    background-size: 1200px;
+  }
+  &__button {
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    padding: 0 16px;
+    height: 40px;
+    font-size: 12px;
+    cursor: pointer;
+
+    width: 150px;
+    &-primary {
+      border: none;
+      color: white;
+      background: $ct--dice-callout-color;
+      &:hover {
+        background: #0f8de3;
+      }
+    }
+    &-secondary {
+      color: #909090;
+      border: 1px #909090 solid;
+      background: transparent;
+      margin-right: 10px;
+      &:hover {
+        color: #ffffff;
+        border: 1px #ffffff solid;
+      }
+    }
+  }
+  &__actions {
+    flex: 0 0 100%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+  }
+  &__new {
+    width: 57px;
+    height: 22px;
+    background: $ct--dice-callout-color;
+    border-radius: 4px;
+    padding-top: 2px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: gray;
+    font-size: 23px;
+    cursor: pointer;
+    fill: #808080;
+    width: 30px;
+    height: 30px;
+    &:hover {
+      fill: #ffffff;
+    }
+  }
+  &__image {
+    width: 120px;
+    height: 150px;
+    background-color: transparent;
+  }
+  &__content {
+    color: white;
+    &-header {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.1px;
+      margin-bottom: 20px;
+      &-callout {
+        color: $ct--dice-callout-color;
+      }
+    }
+    &-callout {
+      border: 1px solid $ct--dice-callout-color;
+      padding: 10px;
+    }
+  }
+
+  &__additional-information {
+    background-color: #10161a;
+    border: 1px $ct--dice-callout-color solid;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 11px;
+  }
+  &__information-icon {
+    border-radius: 25px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 13px;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    margin-right: 10px;
+    padding-left: 1px;
+  }
+}
+
+.ddbc-saving-throws-summary__ability-modifier-background {
+  pointer-events: none;
+  display: none;
+}
+
+.ct-character-sheet--dice-enabled {
+  .ct-combat-mobile .integrated-dice__container {
+    color: #fff;
+    &:hover {
+      color: $ct--dice-text-color;
+    }
+  }
+
+  .integrated-dice__container {
+    border: 1px solid $ct--dice-border-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    color: $ct--dice-text-color;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:hover {
+      border: 2px solid $ct--dice-border-color;
+      background: $ct--dice-background-color;
+      ~ .ddbc-saving-throw-selection-small-box-svg,
+      ~ .ddbc-saving-throw-selection-box-svg {
+        fill: $ct--dice-background-color;
+      }
+    }
+
+    .ct-spells-spell {
+      &--crit .ct-spells-spell__damage .integrated-dice__container {
+        border: 2px solid $ct--dice-callout-color;
+      }
+      &--crit .ct-spells-spell__damage .integrated-dice__container:hover {
+        background-color: lighten($ct--dice-callout-color, 30%);
+        border: 2px solid $ct--dice-callout-color;
+      }
+    }
+  }
+
+  .ddbc-saving-throws-summary__ability-modifier .integrated-dice__container {
+    border: 0;
+    background: transparent;
+  }
+
+  .ct-skills__item {
+    .ct-skills__col--skill {
+      padding: 15px 0;
+    }
+
+    .ct-skills__col--modifier {
+      padding: 5px;
+    }
+
+    .integrated-dice__container {
+      font-size: 20px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .ddbc-ability-summary .integrated-dice__container {
+    position: relative;
+    width: 60px;
+    height: 34px;
+  }
+
+  @media (min-width: $bp-sheet-desktop-transition) {
+    .ct-skills__item {
+      .ct-skills__col--skill {
+        padding: 5px 0;
+      }
+
+      .ct-skills__col--modifier {
+        padding: 2px;
+      }
+
+      .integrated-dice__container {
+        height: 24px;
+      }
+    }
+  }
+
+  .ddbc-saving-throws-summary__ability-modifier-background {
+    display: block;
+  }
+
+  .ddbc-saving-throw-selection-small-box-svg {
+    width: 40px;
+    height: 28px;
+    position: absolute;
+    left: 53px;
+    top: 0;
+    fill: transparent;
+    z-index: -1;
+  }
+
+  .ddbc-saving-throw-selection-box-svg {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 70px;
+    top: 0;
+    fill: transparent;
+    z-index: -1;
+  }
+
+  @media (min-width: $bp-sheet-desktop-transition) and (max-width: ($bp-sheet-desktop-large-transition - 1px)) {
+    .ddbc-ability-summary .integrated-dice__container {
+      width: 48px;
+      height: 26px;
+    }
+  }
+
+  // .ct-initiative-box__value .integrated-dice__container,
+  .ct-combat-mobile__extra--initiative .integrated-dice__container {
+    position: relative;
+    width: 52px;
+    height: 34px;
+  }
+
+  .ct-spells-spell__tohit,
+  .ddbc-combat-attack__tohit {
+    .integrated-dice__container {
+      height: 36px;
+      width: 42px;
+      font-size: 20px;
+    }
+  }
+
+  .ddbc-saving-throws-summary__ability-modifier {
+    z-index: 1;
+
+    .integrated-dice__container {
+      height: 36px;
+      width: 42px;
+    }
+  }
+
+  @media (min-width: $bp-sheet-desktop-transition) and (max-width: ($bp-sheet-desktop-large-transition - 1px)) {
+    .ddbc-saving-throws-summary__ability-modifier .integrated-dice__container {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  .ddbc-combat-item-attack__damage,
+  .ddbc-spell-damage-effect__damages,
+  .ddbc-spell-damage-effect__healing,
+  .ddbc-combat-attack__damage {
+    .integrated-dice__container {
+      * {
+        cursor: pointer;
+      }
+
+      max-width: 76px;
+      padding: 3px;
+      min-height: 36px;
+      &:hover {
+        padding: 2px;
+      }
+
+      .ddbc-damage-type-icon__img {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .ddb-combat-item-attack__damage--is-versatile .integrated-dice__container {
+    padding: 7px;
+    margin-bottom: 3px;
+    height: 22px;
+    &:hover {
+      padding: 6px;
+    }
+  }
+}
+
+.babylonUnmuteIcon {
+  z-index: 60000;
+}

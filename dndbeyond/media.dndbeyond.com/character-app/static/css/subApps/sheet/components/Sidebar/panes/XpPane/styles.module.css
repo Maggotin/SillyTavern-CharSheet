@@ -1,0 +1,8 @@
+.buttonGroup {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 0.0625rem solid var(--theme-transparent);
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}

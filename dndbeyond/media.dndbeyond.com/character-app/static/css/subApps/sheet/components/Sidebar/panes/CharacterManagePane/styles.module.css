@@ -1,0 +1,29 @@
+.characterManagePane {
+  color: #fff;
+}
+.readonlyBackground {
+  background-image: url(https://www.dndbeyond.com/attachments/5/106/sources1k.jpg);
+  background-repeat: no-repeat;
+  background-position: -0.625rem bottom;
+  background-size: cover;
+  height: 29.6875rem;
+}
+
+.readonlyContent {
+  backdrop-filter: grayscale(0.7);
+  padding: 0 1.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.createCTA {
+  background-color: var(--theme-color);
+}
+
+[class*="Button"].createCTA:hover {
+  background-color: color-mix(in srgb, var(--theme-color), #000 30%);
+}

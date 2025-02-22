@@ -1,0 +1,21 @@
+.ct-description {
+  &__physical {
+    margin-bottom: 5px;
+
+    .ct-prop-list__item-value {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__traits {
+    @include contentGroupSeparatorTop();
+  }
+}
+
+.ct-primary-box--dark-mode {
+  .ct-description {
+    color: white;
+  }
+}

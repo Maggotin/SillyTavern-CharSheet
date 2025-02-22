@@ -1,0 +1,40 @@
+.popoverContainer {
+  position: relative;
+}
+
+.popover {
+  position: absolute;
+  background: var(--theme-background-solid);
+  max-height: none;
+  border-radius: 0.25rem;
+  border: 0.063rem solid var(--theme-color);
+  margin: 0;
+  z-index: 1000;
+  min-width: 0;
+  cursor: default;
+  width: 100vw;
+}
+
+.popover.dark {
+  background: var(--ttui_grey-900);
+}
+
+.menu {
+  padding: 0.25rem 0;
+}
+
+.bottomLeft {
+  top: 100%;
+  right: auto;
+  left: 0;
+}
+
+.bottomRight {
+  top: 100%;
+  right: 0;
+  left: auto;
+}
+
+.bottom {
+  transform: translate(-50%, 0);
+}

@@ -1,0 +1,111 @@
+.ct-class-spell-manager {
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__heading {
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: $condensed;
+    line-height: 1;
+    flex: 1;
+
+    &-extra {
+      font-weight: normal;
+      margin-left: 5px;
+      font-size: 12px;
+    }
+  }
+
+  &__notification {
+    content: "!";
+    background: #f31800;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    z-index: 3;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  &__portrait {
+    margin-right: 5px;
+
+    &-img {
+      width: 24px;
+      height: 24px;
+      border-radius: 3px;
+    }
+  }
+
+  &__group {
+    & + & {
+      margin-top: 5px;
+    }
+
+    .ddbc-collapsible__content {
+      padding: 10px 0;
+    }
+  }
+
+  &__info {
+    margin-bottom: 10px;
+    font-family: $condensed;
+    font-size: 14px;
+
+    &-entry {
+      &--exceeded {
+        color: #f31800;
+        display: flex;
+
+        &::after {
+          content: "!";
+          background: #f31800;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          z-index: 3;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          margin-left: 5px;
+        }
+      }
+
+      &-extra {
+        text-transform: none;
+        font-size: 11px;
+        color: #777;
+        font-weight: normal;
+        margin-left: 8px;
+      }
+    }
+
+    &-features {
+      color: $ct--theme-de-emphasized-color;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  }
+
+  &__empty {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  &__active {
+    .ct-spell-manager__spell .ct-theme-button {
+      width: 52px;
+    }
+  }
+}

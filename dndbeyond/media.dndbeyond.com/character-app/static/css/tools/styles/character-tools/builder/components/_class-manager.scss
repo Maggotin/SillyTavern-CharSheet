@@ -1,0 +1,201 @@
+.class-manager {
+  margin: 20px 0 20px;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 4px;
+  position: relative;
+
+  &-starting-class {
+    color: $ct--theme-de-emphasized-color;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    left: 50%;
+    top: -12px;
+    transform: translate(-50%);
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+
+    &-aside {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-preview {
+    float: left;
+    margin-right: 10px;
+
+    &-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 3px;
+    }
+  }
+
+  &-summary {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &-level {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+    .ddbc-select {
+      height: auto;
+      width: 50px;
+    }
+
+    &-label {
+      font-weight: bold;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .todo-indicator-icon {
+      margin-right: 4px;
+    }
+  }
+
+  &-remove {
+    &-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -8px;
+        width: 16px;
+        height: 16px;
+        background: -34px 0
+          url("#{$imageURL-local}/sprites/charsheet-atlas-red.svg") no-repeat;
+        background-size: 50px 16px;
+      }
+    }
+  }
+
+  &-heading {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: $condensed;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+  }
+
+  &-subclass {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+
+  .detail-choice {
+    margin-top: 10px;
+  }
+
+  &-features {
+    &-header {
+      display: flex;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    &-heading {
+      font-size: 16px;
+      font-family: $condensed;
+      cursor: pointer;
+    }
+
+    &-trigger {
+      min-width: 16px;
+      height: 16px;
+      width: 16px;
+      background: transparent 0 0
+        url("#{$imageURL-local}/sprites/charsheet-atlas.svg") no-repeat;
+      background-size: cover;
+      margin-left: 9px;
+      cursor: pointer;
+    }
+
+    &-opened &-trigger {
+      background-position: -17px 0;
+    }
+
+    &-collapsed &-trigger {
+      background-position: 0 0;
+    }
+  }
+
+  &-feature {
+    &-spellcasting {
+      margin-bottom: 10px;
+    }
+
+    &-multiclass-description {
+      margin: 10px 0;
+    }
+  }
+
+  &-features-group {
+    margin-top: 15px;
+
+    &-header {
+      display: flex;
+      margin: 5px 0;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    &-heading {
+      font-size: 16px;
+      font-family: $condensed;
+    }
+
+    &-trigger {
+      min-width: 16px;
+      height: 16px;
+      width: 16px;
+      background: transparent 0 0
+        url("#{$imageURL-local}/sprites/charsheet-atlas.svg") no-repeat;
+      background-size: cover;
+      margin-left: 9px;
+      cursor: pointer;
+    }
+
+    &-opened &-trigger {
+      background-position: -17px 0;
+    }
+
+    &-collapsed &-trigger {
+      background-position: 0 0;
+    }
+  }
+
+  &-feature-infusion {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+
+    &-header {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  &-tabs {
+    padding-top: 0;
+    margin-top: 10px;
+  }
+}

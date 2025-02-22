@@ -1,0 +1,135 @@
+.container {
+  container-type: size;
+}
+
+.mark {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  border: 0.063rem solid transparent;
+  margin-left: 0.188rem;
+}
+
+.marks {
+  display: flex;
+}
+
+.inactiveMark {
+  border-color: #555;
+  background-color: #222;
+}
+
+.activeMark-fail {
+  background-color: #d24040;
+}
+
+.activeMarkDarkMode-fail {
+  background-color: #c53131;
+}
+
+.activeMark-success {
+  background-color: #40d250;
+}
+
+.activeMarkDarkMode-success {
+  background-color: #00c797;
+}
+
+.label {
+  width: 0.938rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+}
+
+.deathSaves,
+.exhaustion {
+  display: flex;
+  position: relative;
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+.icon::before {
+  content: "";
+  display: block;
+  margin: 0.125rem auto 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: 0 0 transparent
+    url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/icons/conditions/white/unconscious.svg")
+    no-repeat;
+}
+
+.deathLabel {
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", Roboto, Helvetica, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.375rem;
+  padding: 0;
+  margin: 0;
+  font-size: 0.813rem;
+  color: var(--theme-contrast);
+}
+
+@container (min-width: 100px) {
+  .mark {
+    width: 0.938rem;
+    height: 0.938rem;
+    margin: 0.125rem;
+  }
+
+  .label {
+    font-size: 0.938rem;
+    font-weight: bold;
+    margin-top: 0.125rem;
+    width: 4.688rem;
+    text-align: left;
+  }
+
+  .exhaustionLabel {
+    width: initial;
+  }
+
+  .deathSaves,
+  .exhaustion {
+    justify-content: center;
+    align-items: center;
+    height: 4.375rem;
+  }
+
+  .icon {
+    width: auto;
+  }
+
+  .icon::before {
+    width: 1.875rem;
+    height: 1.875rem;
+    background-image: url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/icons/conditions/unconscious.svg");
+    margin-top: 0;
+    margin-right: 0.625rem;
+  }
+
+  .iconDarkMode::before {
+    background-image: url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/icons/conditions/white/unconscious.svg");
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .deathSaves,
+  .exhaustion {
+    height: 3.75rem;
+  }
+}

@@ -1,0 +1,67 @@
+$ability-summary--font-family: $condensed !default;
+$ability-summary--label-color: $ct--theme-de-emphasized-color !default;
+
+.ddbc-ability-summary {
+  position: relative;
+  width: 81px;
+  height: 95px;
+  text-align: center;
+
+  &__heading {
+    padding-top: 8px;
+    position: relative;
+  }
+
+  &__label,
+  &__abbr {
+    color: $ability-summary--label-color;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: $ability-summary--font-family;
+    font-weight: bold;
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__abbr {
+    display: none;
+  }
+
+  &__primary {
+    color: #242528;
+    font-size: 26px;
+    font-weight: 500;
+    position: relative;
+    top: -0.125rem;
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__secondary {
+    position: absolute;
+    font-weight: bold;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    font-size: 16px;
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  .ddbc-ability-score-box-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ddbc-signed-number {
+    position: relative;
+
+    &__sign {
+      position: absolute;
+      right: 100%;
+    }
+  }
+}

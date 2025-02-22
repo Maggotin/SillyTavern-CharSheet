@@ -1,0 +1,17 @@
+$character-summary--color: $ct--theme-de-emphasized-color !default;
+
+.ddbc-character-summary {
+  color: $character-summary--color;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &__gender {
+    margin-right: 5px;
+  }
+
+  &__race {
+    margin-right: 5px;
+  }
+}

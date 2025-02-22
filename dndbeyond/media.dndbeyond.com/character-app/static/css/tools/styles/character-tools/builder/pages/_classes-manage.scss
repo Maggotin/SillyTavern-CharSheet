@@ -1,0 +1,135 @@
+.classes-manage {
+  &-primary {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .progression-manager {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  &-hitpoints {
+    display: flex;
+
+    &-summary {
+      flex: 1;
+      margin-right: 15px;
+    }
+
+    &-label {
+      font-weight: bold;
+      margin-right: 7px;
+      font-family: $condensed;
+    }
+
+    .builder-field {
+      display: flex;
+
+      &-label {
+        flex: 1;
+      }
+
+      &-value {
+        width: 70px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-actions {
+    &-action {
+      color: $builder-default-color;
+      cursor: pointer;
+      display: inline;
+
+      &-disabled {
+        color: #ccc;
+        cursor: default;
+      }
+    }
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    .progression-manager {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-primary {
+      display: flex;
+      align-items: center;
+
+      &-section {
+        &-progression {
+          flex: 1;
+          padding-right: 30px;
+        }
+
+        &-hp {
+          max-width: 60%;
+        }
+      }
+    }
+
+    &-hitpoints {
+      margin: 0;
+      background: #fff;
+      border: 1px solid #e1e1e1;
+      padding: 10px;
+      border-radius: 3px;
+      align-items: center;
+    }
+  }
+}
+
+.remove-class-content {
+}
+
+.confirm-class-simple {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &-name {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: $condensed;
+    line-height: 1.1;
+    flex: 1;
+  }
+
+  &-preview {
+    margin-right: 10px;
+
+    &-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 3px;
+    }
+  }
+
+  &-level {
+    font-weight: bold;
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    &-levels {
+      display: flex;
+    }
+
+    &-level {
+      &-next {
+        margin-left: 10px;
+        padding-left: 10px;
+        border-left: 2px solid #f1f1f1;
+      }
+    }
+  }
+}

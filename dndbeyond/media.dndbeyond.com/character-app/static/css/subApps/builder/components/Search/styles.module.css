@@ -1,0 +1,10 @@
+.search[type="search"] {
+  padding: 0.625rem 0.625rem 0.625rem 2.188rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: 0.625rem center #fff
+    url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/icons/search-grey.svg")
+    no-repeat;
+  background-size: 0.938rem;
+  position: relative;
+}

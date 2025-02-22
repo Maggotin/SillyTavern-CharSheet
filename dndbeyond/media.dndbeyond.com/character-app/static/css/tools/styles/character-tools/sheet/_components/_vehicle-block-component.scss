@@ -1,0 +1,26 @@
+.ct-vehicle-block-component {
+  $color--stat-block-red: #822000;
+
+  &--interactive {
+    cursor: pointer;
+
+    &:hover .ddbc-manage-icon__icon {
+      background-image: url("#{$imageURL-local}/icons/gear.svg");
+    }
+  }
+
+  &__hp {
+    &-value {
+      &--is-damaged {
+        color: $color--stat-block-red;
+      }
+    }
+  }
+
+  &__actions {
+    margin: 8px 0;
+  }
+
+  &__description {
+  }
+}

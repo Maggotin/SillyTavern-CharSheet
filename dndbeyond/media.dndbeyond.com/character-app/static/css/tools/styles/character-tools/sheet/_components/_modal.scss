@@ -1,0 +1,218 @@
+.fullscreen-modal {
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000, 0.9);
+    z-index: 999;
+  }
+
+  &-header {
+    background-color: #262e37;
+    color: #fff;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 15px;
+
+    .manage-spells-modal & {
+      background-color: $color-spells;
+    }
+    .manage-equipment-modal & {
+      background-color: $color-items;
+    }
+    .action-error-modal &,
+    .confirm-modal-remove & {
+      background-color: #c42e2d;
+    }
+  }
+
+  &-heading {
+    font-family: $condensed;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-close-btn {
+    display: block;
+    width: 17px;
+    height: 16px;
+    background-image: url("#{$imageURL-local}/sprites/charsheet-atlas-white.svg");
+    background-position: -35px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  &-content {
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 60px;
+    bottom: 45px;
+    padding: 20px;
+  }
+
+  &-noactions &-content {
+    bottom: 0;
+  }
+
+  &-footer {
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    border-top: 1px solid $character-default-color;
+
+    .confirm-modal-infusion-item-change &,
+    .confirm-modal-infusion-item-destroy &,
+    .confirm-modal-infusion-change &,
+    .confirm-modal-infusion-destroy &,
+    .confirm-modal-level-down &,
+    .confirm-modal-remove & {
+      border-top-color: #c42e2d;
+    }
+  }
+
+  &-action {
+    width: 50%;
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    left: 50%;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    width: calc(100% - 40px);
+    max-width: 500px;
+    height: 70%;
+    transform: translate(-50%, -50%);
+
+    &.manage-status-modal {
+      max-width: 400px;
+    }
+    &.manage-xp-modal {
+      max-width: 400px;
+      height: 500px;
+    }
+
+    &.confirm-modal-remove {
+      height: 320px;
+    }
+    &.confirm-modal-container-remove {
+      height: 220px;
+    }
+    &.confirm-modal-level-up,
+    &.confirm-modal-level-down {
+      height: 320px;
+    }
+
+    &.confirm-modal-infusion-change {
+      height: 320px;
+    }
+    &.confirm-modal-infusion-destroy {
+      height: 250px;
+    }
+    &.confirm-modal-infusion-item-change {
+      height: 250px;
+    }
+    &.confirm-modal-infusion-item-destroy {
+      height: 250px;
+    }
+
+    &.confirm-modal-preference {
+      height: 250px;
+    }
+
+    &.confirm-modal-background {
+      height: 250px;
+    }
+
+    &.action-error-modal {
+      max-width: 680px;
+      height: 350px;
+    }
+    &.action-error-modal--forbidden {
+      height: 290px;
+    }
+  }
+
+  &--hurricane {
+    color: #12181c;
+    border-radius: 4px;
+
+    .fullscreen-modal-header {
+      background-color: #fff;
+      color: #12181c;
+      height: 50px;
+      padding: 20px;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .fullscreen-modal-heading {
+      font-size: 14px;
+    }
+
+    .fullscreen-modal-close-btn {
+      filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(0%)
+        hue-rotate(210deg) brightness(95%) contrast(98%);
+
+      &:focus,
+      &:hover,
+      &:active {
+        filter: brightness(0) saturate(100%) invert(5%) sepia(6%)
+          saturate(3700%) hue-rotate(161deg) brightness(100%) contrast(90%);
+      }
+    }
+
+    .fullscreen-modal-content {
+      top: 50px;
+      font-size: 16px;
+      color: #12181c;
+    }
+
+    .fullscreen-modal-footer {
+      padding: 0 9px;
+      border-top: none;
+    }
+
+    .fullscreen-modal-action {
+      width: initial;
+    }
+
+    .fullscreen-modal-cancel {
+      margin-left: auto;
+    }
+
+    @media (min-width: $bp-builder-mobile-transition) {
+      &.confirm-modal-preference {
+        height: 240px;
+      }
+    }
+  }
+}
+
+.ReactModal {
+  &__Body {
+    &--open {
+      overflow-y: hidden;
+    }
+  }
+}

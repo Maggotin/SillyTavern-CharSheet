@@ -1,0 +1,14 @@
+.ct-custom-item-creator {
+  &__actions {
+    @include sidebarSeparator();
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__action {
+    &--amount {
+      width: 100%;
+    }
+  }
+}

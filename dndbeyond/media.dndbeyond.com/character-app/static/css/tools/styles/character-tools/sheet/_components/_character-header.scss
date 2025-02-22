@@ -1,0 +1,25 @@
+.ct-character-header__group--game-log {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  border-radius: 0;
+  border: 1px solid $ct--theme-color;
+  border-left: 0;
+  padding: 5px 13px 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: $condensed;
+  white-space: nowrap;
+  &-last {
+    border-radius: 0 3px 3px 0;
+  }
+  &:hover {
+    background-color: darken($ct--theme-color, 20%);
+  }
+  &-label {
+    margin-left: 6px;
+  }
+}

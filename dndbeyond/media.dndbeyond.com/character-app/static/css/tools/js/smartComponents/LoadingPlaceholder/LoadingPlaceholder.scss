@@ -1,0 +1,19 @@
+.ddbc-loading-placeholder {
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__icon {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ddbc-loading-placeholder {
+    color-scheme: none;
+  }
+}

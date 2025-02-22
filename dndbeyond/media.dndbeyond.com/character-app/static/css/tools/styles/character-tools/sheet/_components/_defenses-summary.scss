@@ -1,0 +1,43 @@
+.ct-defenses-summary {
+  &__group {
+    line-height: 1.2;
+
+    & + & {
+      margin-top: 3px;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+    background: center center transparent no-repeat;
+    background-size: contain;
+  }
+
+  &__defense {
+    &::after {
+      content: ", ";
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &--dark-mode {
+      color: white;
+    }
+  }
+
+  &__default {
+    color: $ct--theme-de-emphasized-color;
+    font-family: $condensed;
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+}

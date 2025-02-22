@@ -1,0 +1,64 @@
+.progression-manager {
+  display: flex;
+
+  &-info {
+    flex: 1;
+  }
+
+  &-heading {
+    font-family: $condensed;
+    font-weight: bold;
+    font-size: 20px;
+
+    &-diff {
+      margin-left: 3px;
+      font-size: 14px;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: -5px;
+
+      &-icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 2px;
+      }
+
+      &-negative {
+        color: #d24040;
+      }
+
+      &-negative &-icon {
+        background-image: url("#{$imageURL-local}/icons/menu_items/leveldown.svg");
+      }
+
+      &-positive {
+        color: #40d250;
+      }
+
+      &-positive &-icon {
+        background-image: url("#{$imageURL-local}/icons/menu_items/levelup.svg");
+      }
+    }
+  }
+
+  &-meta {
+    font-family: $condensed;
+  }
+
+  &-action button {
+    padding: 0;
+    text-transform: none;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .ddbc-select {
+    width: 70px;
+  }
+}

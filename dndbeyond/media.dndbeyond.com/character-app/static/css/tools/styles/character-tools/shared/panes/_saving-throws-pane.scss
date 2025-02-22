@@ -1,0 +1,22 @@
+.ct-saving-throws-pane {
+  .ddbc-saving-throws-summary {
+    margin: 0 auto;
+    max-width: 245px;
+  }
+
+  &__details {
+    @include sidebarSeparator();
+  }
+
+  &__customize {
+    @include sidebarSeparator();
+
+    .ct-editor-box {
+      margin: 5px 0 10px;
+    }
+  }
+
+  &__description {
+    @include sidebarSeparator();
+  }
+}

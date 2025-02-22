@@ -1,0 +1,247 @@
+$body-top-offset: -10px;
+$body-footer-graphic-height: 28px;
+$body-border-size: 1px;
+
+// can we just remove the pngs pls?
+
+.collapsible {
+  & + & {
+    margin-top: 2px;
+  }
+
+  &-heading {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: $font-family;
+    line-height: 1.1;
+  }
+
+  &-header {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    padding: 0 16px;
+    align-items: center;
+    height: 65px;
+    background: url("#{$imageURL-local}/character-sheet/collapsible-480.png")
+      no-repeat;
+    background-size: 100% 65px;
+    transition: background-image 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+
+    .collapsible-opened > & {
+      background-image: url("#{$imageURL-local}/character-sheet/collapsible-480-hover.png");
+      transition: background-image 0.1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    }
+
+    &-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 5px;
+      background: center center transparent no-repeat;
+      background-size: 28px 28px;
+
+      &-spell-ranged {
+        background-image: url("#{$imageURL-local}/icons/attack_types/ranged_spell.svg");
+      }
+      &-spell-melee {
+        background-image: url("#{$imageURL-local}/icons/attack_types/melee_spell.svg");
+      }
+      &-spell-generic {
+        background-image: url("#{$imageURL-local}/icons/attack_types/general_spell.svg");
+      }
+
+      &-weapon-ranged {
+        background-image: url("#{$imageURL-local}/icons/attack_types/ranged_weapon.svg");
+      }
+      &-weapon-melee {
+        background-image: url("#{$imageURL-local}/icons/attack_types/melee_weapon.svg");
+      }
+
+      &-natural-attack-ranged {
+        background-image: url("#{$imageURL-local}/icons/attack_types/unarmedstrike-dark.svg");
+      }
+      &-natural-attack-melee {
+        background-image: url("#{$imageURL-local}/icons/attack_types/unarmedstrike-dark.svg");
+      }
+    }
+
+    &-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .ddbc-svg {
+      height: 16px;
+      width: 16px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    &-trigger {
+      height: 16px;
+      width: 16px;
+      background: transparent 0 0
+        url("#{$imageURL-local}/sprites/charsheet-atlas.svg") no-repeat;
+      background-size: cover;
+
+      .collapsible-opened & {
+        background-position: -17px 0;
+      }
+
+      .collapsible-collapsed & {
+        background-position: 0 0;
+      }
+    }
+
+    //This is the generated header element that has icon, heading, meta items, and callout
+    &-el {
+      display: flex;
+      align-items: center;
+    }
+
+    &-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    &-meta {
+      color: #12181ca3;
+      font-size: 11px;
+      font-family: $font-family;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 1;
+      margin-top: 3px;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item {
+        & + &::before {
+          content: "\2022";
+          padding: 0 5px;
+        }
+      }
+    }
+
+    &-callout {
+      &-extra {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 10px;
+        padding-right: 4px;
+        text-transform: uppercase;
+      }
+
+      &-value {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &-body {
+    background-color: white;
+    border-left: $body-border-size solid #ece9e9;
+    border-right: $body-border-size solid #ece9e9;
+    margin: 0 2px;
+    position: relative;
+    top: $body-top-offset;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 20px 15px 32px;
+
+    &::after {
+      content: "";
+      display: block;
+      background: center 0 transparent
+        url("#{$imageURL-local}/character-sheet/collapsible-480-bottom.png")
+        no-repeat;
+      background-size: 105% $body-footer-graphic-height;
+      height: $body-footer-graphic-height;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+    }
+
+    .collapsible-opened > & {
+      display: block;
+    }
+
+    .collapsible-collapsed > & {
+      display: none;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-todo {
+    position: relative;
+
+    &::before {
+      content: "!";
+      position: absolute;
+      background: $builder-default-color;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      z-index: 3;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      top: 0;
+      left: -4px;
+    }
+
+    &-header {
+    }
+  }
+
+  &-todo &-header {
+    background-image: url("#{$imageURL-local}/character-sheet/collapsible-480-highlight.png");
+  }
+
+  .collapsible-opened.collapsible-todo > &-header {
+    background-image: url("#{$imageURL-local}/character-sheet/collapsible-480-hover-highlight.png");
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    &-header {
+      background-image: url("#{$imageURL-local}/listing-bars/1a-700.png");
+
+      &:hover,
+      .collapsible-opened > & {
+        background-image: url("#{$imageURL-local}/listing-bars/1a-700-hover.png");
+      }
+    }
+
+    &-body {
+      &::after {
+        background-image: url("#{$imageURL-local}/character-sheet/expanded-listing-item-bottom-border-700.png");
+      }
+
+      .character-button-block {
+        max-width: 50%;
+        margin: 0 auto;
+      }
+    }
+
+    &-todo &-header {
+      background-image: url("#{$imageURL-local}/character-sheet/collapsible-700-highlight.png");
+    }
+
+    .collapsible-todo:hover > &-header,
+    .collapsible-opened.collapsible-todo > &-header {
+      background-image: url("#{$imageURL-local}/character-sheet/collapsible-700-hover-highlight.png");
+    }
+  }
+}

@@ -1,0 +1,71 @@
+﻿.body-rpgcharacter-sheet {
+  overscroll-behavior-y: contain; // used to prevent pull down to refresh
+  .ct-character-sheet--dark-mode,
+  .ct-sidebar--is-dark-mode {
+    *::selection {
+      // sorry, have to override reset.css that contains !important
+      background-color: $ct--modified-color !important;
+      color: white;
+    }
+
+    .ct-character-sheet__failed-content {
+      color: $ct--theme-text-color;
+    }
+  }
+
+  .ddb-footer {
+    display: none !important;
+  }
+
+  .page-header {
+    display: none !important;
+  }
+
+  .site-bar {
+    border-color: $ct--theme-color;
+  }
+
+  @media (max-width: ($bp-sheet-tablet-transition - 1)) {
+    background: #fff !important;
+
+    #content {
+      padding: 0 !important;
+      position: static !important;
+
+      .primary-content {
+        position: static !important;
+      }
+    }
+
+    .ddb-footer {
+      display: none !important;
+    }
+
+    .container {
+      position: static !important;
+      -webkit-perspective: none !important;
+      perspective: none !important;
+      -webkit-transform: none !important;
+      transform: none !important;
+    }
+
+    .ad-container {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: $bp-sheet-tablet-transition) and (max-width: ($bp-sheet-desktop-transition - 1px)) {
+    background-size: 100% auto !important;
+  }
+
+  @media (min-width: $bp-sheet-tablet-transition) {
+    #site #site-main .container {
+      max-width: none !important;
+      z-index: auto;
+
+      #content {
+        padding: 0 !important;
+      }
+    }
+  }
+}

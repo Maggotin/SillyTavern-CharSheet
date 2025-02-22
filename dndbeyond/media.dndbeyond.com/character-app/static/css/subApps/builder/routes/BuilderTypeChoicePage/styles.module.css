@@ -1,0 +1,160 @@
+.page {
+  margin-top: 0.9375rem;
+}
+
+.header {
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  margin: 0rem;
+  color: var(--ttui_common-1000);
+}
+
+h1.header {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+h2.header {
+  font-size: 1rem;
+  letter-spacing: 0.0094rem;
+  line-height: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9375rem;
+  margin: 0.9375rem;
+}
+
+.card {
+  border-radius: 0.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 0.125rem solid var(--ttui_grey-400);
+  padding: 0;
+  overflow: hidden;
+  gap: 0;
+  cursor: pointer;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: var(--character-builder-blue);
+}
+
+.img {
+  height: 12.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  border-bottom: 0.125rem solid var(--ttui_grey-400);
+}
+
+.img.standardBuild {
+  background-image: url(https://media.dndbeyond.com/character-app/static/media/standard-creation.jpg);
+}
+
+.img.premades {
+  background-image: url(https://media.dndbeyond.com/character-app/static/media/premade-characters.jpg);
+}
+
+.cardContent {
+  padding: 1rem;
+  background-color: var(--ttui_grey-800);
+  flex: 1 1 0%;
+}
+
+.font {
+  font-family: var(--font-family);
+  color: var(--ttui_grey-100);
+  text-transform: capitalize;
+  letter-spacing: 0.0094rem;
+  text-align: left;
+}
+
+.cardTitle {
+  margin: 0rem 0rem 0.35em;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.cardDescription {
+  margin: 0rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2512rem;
+  color: var(--ttui_grey-200);
+  text-transform: none;
+}
+.helpCheckbox {
+  border: 0.0625rem solid var(--character-builder-blue);
+  margin-top: 0.9375rem;
+  padding: 0 0.5rem;
+  text-align: left;
+  color: var(--ttui_grey-100);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+  font-family: var(--font-family);
+  font-weight: 400;
+  letter-spacing: 0.0094rem;
+  border-radius: 0.25rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+.helpText {
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: normal;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--ttui_common-0);
+  line-height: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--ttui_common-1000);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.cardFooter p {
+  margin: 0;
+}
+
+.cardFooter svg.icon {
+  margin-left: 0.5rem;
+  fill: var(--ttui_grey-600);
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    text-align: left;
+  }
+
+  .grid {
+    margin: 0.9375rem 0;
+  }
+}
+
+@media (min-width: 600px) {
+  h1.header {
+    font-size: 2.25rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

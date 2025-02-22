@@ -1,0 +1,15 @@
+.ct-optional-origin-manager,
+.ct-optional-feature-manager {
+  .ct-optional-feature + .ct-optional-feature {
+    margin-top: 10px;
+  }
+
+  &__content {
+    &--empty {
+      text-align: center;
+      border-top: 1px solid #f1f1f1;
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+  }
+}

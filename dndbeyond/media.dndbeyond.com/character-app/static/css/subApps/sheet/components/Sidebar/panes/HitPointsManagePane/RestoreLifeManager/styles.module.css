@@ -1,0 +1,15 @@
+.heading {
+  margin-top: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  gap: 0.5rem;
+}
+
+.actions > button {
+  font-size: 0.625rem !important;
+  padding: 0.5625rem 0.9375rem !important;
+}

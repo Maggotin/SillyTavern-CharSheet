@@ -1,0 +1,57 @@
+$select-height: 50px;
+
+.ddbc-select {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 0 4px 0 rgba(139, 178, 199, 0.48);
+  border: 1px solid #d8dde3;
+  border-radius: 0;
+}
+
+.character-select {
+  height: $select-height;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 0 4px 0 rgba(139, 178, 199, 0.48);
+  border: 1px solid #d8dde3;
+  border-radius: 0;
+
+  .Select {
+    &-control {
+      height: $select-height;
+      background-color: rgba(255, 255, 255, 0.75);
+      box-shadow: inset 0 0 4px 0 rgba(139, 178, 199, 0.48);
+      border: 1px solid #d8dde3;
+      border-radius: 0;
+    }
+
+    &-placeholder,
+    &--single > &-control &-value {
+      line-height: $select-height;
+    }
+
+    &-input {
+      height: $select-height;
+
+      > input {
+        line-height: $select-height - 20px;
+      }
+    }
+
+    // TODO this is for positioning the menu on top of the select for direction change
+    //&-menu {
+    //    &-outer {
+    //        bottom: 100%;
+    //        top: auto;
+    //    }
+    //}
+  }
+
+  &.is-focused:not(.is-open) {
+    > .Select {
+      &-control {
+        border-color: #d8dde3;
+      }
+    }
+  }
+}

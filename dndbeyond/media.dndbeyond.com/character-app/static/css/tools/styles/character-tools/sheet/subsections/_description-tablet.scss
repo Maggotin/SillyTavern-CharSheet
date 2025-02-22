@@ -1,0 +1,10 @@
+.ct-description-tablet {
+  &__physical {
+    @include tabletContentSeparatorBottom(0);
+  }
+
+  .ct-background__default {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}

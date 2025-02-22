@@ -1,0 +1,14 @@
+.ddbc-snippet {
+  &__tag {
+    font-weight: bold;
+
+    &--error {
+      background-color: darkred;
+      color: #fff;
+      padding: 0 5px;
+    }
+  }
+  &--dark-mode {
+    color: $ct--theme-dark-mode-white-opacity-text;
+  }
+}

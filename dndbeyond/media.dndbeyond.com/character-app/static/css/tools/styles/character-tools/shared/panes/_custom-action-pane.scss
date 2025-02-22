@@ -1,0 +1,13 @@
+.ct-custom-action-pane {
+  &__customize {
+    @include sidebarSeparator();
+  }
+
+  &__actions {
+    @include sidebarSeparator();
+  }
+
+  .ct-action-detail__description {
+    white-space: pre-wrap;
+  }
+}

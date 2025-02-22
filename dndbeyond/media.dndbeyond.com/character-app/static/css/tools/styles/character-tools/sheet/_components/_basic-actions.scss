@@ -1,0 +1,16 @@
+.ct-basic-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--dark-mode {
+    color: white;
+  }
+
+  &__action {
+    cursor: pointer;
+
+    &-sep {
+      margin-right: 5px;
+    }
+  }
+}

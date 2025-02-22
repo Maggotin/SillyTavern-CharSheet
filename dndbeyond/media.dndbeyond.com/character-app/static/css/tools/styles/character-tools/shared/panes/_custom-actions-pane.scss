@@ -1,0 +1,33 @@
+.ct-custom-actions-pane {
+  &__summary {
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+
+    & + & {
+      @include sidebarSeparator(5px, 5px);
+    }
+
+    &-content {
+      flex: 1;
+      padding-right: 10px;
+      cursor: pointer;
+    }
+
+    &-name {
+      font-family: $condensed;
+    }
+
+    &-meta {
+      font-size: 10px;
+      color: $ct--theme-de-emphasized-color;
+      font-family: $condensed;
+    }
+  }
+
+  &__add {
+    .ddbc-select {
+      width: 50%;
+    }
+  }
+}

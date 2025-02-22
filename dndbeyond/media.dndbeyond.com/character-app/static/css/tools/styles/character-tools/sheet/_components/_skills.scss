@@ -1,0 +1,141 @@
+.ct-skills {
+  &__header {
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  &__heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $ct--theme-de-emphasized-color;
+    font-family: $condensed;
+    font-size: 10px;
+
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__no-proficiency {
+    color: $ct--theme-de-emphasized-color;
+    text-align: center;
+    display: block;
+    width: 15px;
+  }
+
+  &__col {
+    &--proficiency {
+      width: 30px;
+    }
+
+    &--skill {
+      flex: 1;
+    }
+
+    &--stat {
+      width: 40px;
+      padding: 0 5px;
+    }
+  }
+
+  &__list {
+    overflow-y: auto;
+    max-height: 700px;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__item &__col--proficiency {
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+  }
+
+  &__item &__col--stat {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $ct--theme-de-emphasized-color;
+
+    &-modified {
+      color: $ct--modified-color;
+    }
+
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__item &__col--skill {
+    font-family: $condensed;
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #d8d8d8;
+
+    &--dark-mode {
+      color: white;
+    }
+  }
+
+  &__item &__col--adjustments {
+    padding: 5px 0;
+    border-bottom: 1px solid #d8d8d8;
+    align-self: flex-end;
+  }
+
+  &__item &__col--modifier {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 5px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    align-self: flex-end;
+
+    &-modified {
+      color: $ct--modified-color;
+    }
+
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__additional {
+    cursor: pointer;
+
+    margin-top: 6px;
+    font-size: 12px;
+    font-family: $condensed;
+
+    &--empty {
+      color: $ct--theme-de-emphasized-color;
+      justify-content: center;
+      text-align: center;
+      margin-top: 33px;
+    }
+
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__adjustment {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: top;
+
+    & + & {
+      margin-left: 2px;
+    }
+
+    &--dual {
+      width: 26px;
+    }
+  }
+}

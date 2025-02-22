@@ -1,0 +1,63 @@
+.ct-skills-pane {
+  &__icon {
+    &--none {
+      width: 10px;
+      height: 10px;
+      border: 1px dotted $ct--theme-de-emphasized-color;
+      display: inline-flex;
+      border-radius: 50%;
+    }
+  }
+
+  &__skills {
+    margin: 10px 0;
+  }
+
+  &__custom {
+    margin: 10px 0;
+
+    &-skills {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__proficiency {
+    display: flex;
+
+    & + & {
+      @include sidebarSeparator();
+    }
+
+    &-icon {
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 27px;
+    }
+
+    &-stat {
+      .ddbc-select {
+        width: 60px;
+      }
+    }
+
+    &-fields {
+      padding-left: 5px;
+      flex: 1;
+
+      input[type="text"] {
+        width: 100%;
+      }
+    }
+
+    &-notes {
+      margin-top: 3px;
+    }
+
+    &-actions {
+      padding-left: 5px;
+      align-self: center;
+    }
+  }
+}

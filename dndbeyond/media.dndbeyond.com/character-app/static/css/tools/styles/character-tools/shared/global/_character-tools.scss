@@ -1,0 +1,30 @@
+.ct-character-tools {
+  &__marketplace-callout {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  select,
+  select:hover {
+    @include darkModeInput();
+  }
+  // Paper block quote override
+  .ddbc-html-content:not(.body-forum):not(.section-posts):not(
+      .section-changelog
+    ):not(.body-privatemessage-details) {
+    blockquote {
+      border: unset;
+      border-top: 4px solid $ct--theme-dark-mode-text;
+      border-bottom: 4px solid $ct--theme-dark-mode-text;
+      color: white;
+      background-color: $ct--theme-dark-mode-secondary-bg;
+      &::before,
+      &::after {
+        background-image: unset;
+      }
+    }
+  }
+}

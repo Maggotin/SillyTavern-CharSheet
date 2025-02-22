@@ -1,0 +1,12 @@
+$infusion-preview-font: $condensed;
+
+.ddbc-infusion-preview {
+  &__name {
+    font-weight: bold;
+    font-family: $infusion-preview-font;
+  }
+
+  &__snippet {
+    margin-top: 10px;
+  }
+}

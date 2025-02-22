@@ -1,0 +1,198 @@
+$combat-attack--save-label-color: $ct--theme-de-emphasized-color !default;
+$combat-attack--versatile-damage-color: $ct--theme-de-emphasized-color !default;
+$combat-attack--font-family: $condensed !default;
+$combat-attack--meta-color: $ct--theme-de-emphasized-color !default;
+$combat-attack--range-label-color: $ct--theme-de-emphasized-color !default;
+$combat-attack--notes-color: $ct--theme-de-emphasized-color !default;
+
+.ddbc-combat-attack {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+
+  * {
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 27px;
+
+    &-img {
+      width: 20px;
+      height: 20px;
+      background: center center transparent no-repeat;
+      background-size: 20px 20px;
+
+      //TODO confirm these are not used
+      //&--spell-ranged {
+      //    background-image: url('#{$imageURL-local}/icons/attack_types/ranged_spell.svg');
+      //}
+      //&--spell-melee {
+      //    background-image: url('#{$imageURL-local}/icons/attack_types/melee_spell.svg');
+      //}
+      //&--spell-generic {
+      //    background-image: url('#{$imageURL-local}/icons/attack_types/general_spell.svg');
+      //}
+
+      &--dark-mode {
+      }
+    }
+  }
+
+  &__name {
+    width: 140px;
+  }
+
+  &__action {
+    width: 55px;
+  }
+
+  &__tohit {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__save {
+    font-weight: bold;
+
+    &-value {
+      font-size: 14px;
+      &--dark-mode {
+        color: white;
+      }
+    }
+
+    &-label {
+      color: $combat-attack--save-label-color;
+      font-size: 10px;
+      display: block;
+      text-transform: uppercase;
+      &--dark-mode {
+        color: $ct--theme-dark-mode-text;
+      }
+    }
+  }
+
+  &__range {
+    width: 55px;
+  }
+
+  &__damage {
+    width: 80px;
+
+    .ddbc-damage {
+      width: 100%;
+      font-size: 14px;
+      word-break: break-word;
+      white-space: normal;
+
+      .ddbc-combat-attack--item & {
+        display: flex;
+      }
+
+      & + .ddbc-damage {
+        margin-top: 2px;
+      }
+
+      &__icon {
+        margin-right: 3px;
+      }
+
+      &--versatile {
+        color: $combat-attack--versatile-damage-color;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-family: $combat-attack--font-family;
+    &--dark-mode {
+      color: white;
+    }
+  }
+
+  &__meta {
+    font-size: 10px;
+    color: $combat-attack--meta-color;
+    font-family: $combat-attack--font-family;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+
+    &-item {
+      & + &::before {
+        content: $html-entity--bull;
+        padding: 0 3px;
+      }
+    }
+  }
+
+  &__range {
+    &-label {
+      font-size: 10px;
+      color: $combat-attack--range-label-color;
+      font-family: $combat-attack--font-family;
+      &--dark-mode {
+        color: $ct--theme-dark-mode-text;
+      }
+    }
+
+    &-value {
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      &-long {
+        color: $combat-attack--range-label-color;
+        font-size: 10px;
+        margin-left: 3px;
+        font-family: $combat-attack--font-family;
+      }
+
+      &--dark-mode {
+        color: white;
+      }
+    }
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__notes {
+    font-size: 12px;
+    color: $combat-attack--notes-color;
+    font-family: $combat-attack--font-family;
+    flex: 1;
+
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+
+    .ddbc-damage-type-icon__img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__empty {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.ct-character-sheet--dice-enabled
+  .ddbc-combat-attack--crit
+  .ddbc-combat-attack__damage
+  .integrated-dice__container {
+  border: 2px solid $ct--dice-callout-color;
+  &:hover {
+    background-color: lighten($ct--dice-callout-color, 30%);
+    border: 2px solid $ct--dice-callout-color;
+  }
+}

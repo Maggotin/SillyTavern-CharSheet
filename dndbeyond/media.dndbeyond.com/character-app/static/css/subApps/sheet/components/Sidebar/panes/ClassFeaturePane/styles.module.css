@@ -1,0 +1,13 @@
+.choice + .choice {
+  margin-top: 0.3125rem;
+}
+
+.heading {
+  padding-top: 0.625rem;
+  margin-top: 0.625rem;
+  border-top: 0.0625rem solid var(--theme-transparent);
+}
+
+.choice :global(.detail-choice--child) {
+  margin-bottom: 0.3125rem;
+}

@@ -1,0 +1,52 @@
+.ct-error-boundary {
+  max-width: 940px;
+  margin: 0 auto;
+  background: center 40px transparent url("#{$imageURL-local}/errors/500.png")
+    no-repeat;
+  background-size: 280px;
+  padding-top: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &__heading {
+    font-size: 26px;
+    font-weight: bold;
+    color: $ct--negative-color;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &__content {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  &__reporting {
+    margin: 15px 0;
+  }
+
+  &__code {
+    font-family: monospace;
+    background: #f2f2f2;
+    padding: 3px 8px;
+    border: 1px solid #ccc;
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 330px;
+    background-position: -20px 45px;
+    background-size: 350px;
+    padding-left: 330px;
+    padding-top: 60px;
+    padding-right: 20px;
+
+    &__heading {
+      text-align: left;
+    }
+  }
+}

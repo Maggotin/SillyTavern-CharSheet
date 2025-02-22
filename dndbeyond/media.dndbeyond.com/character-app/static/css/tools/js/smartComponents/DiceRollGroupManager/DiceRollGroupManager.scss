@@ -1,0 +1,35 @@
+.ddbc-dice-roll-group-manager {
+  &__actions {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &__actions-label {
+    margin-left: 5px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__groups {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__group {
+    border-bottom: 1px solid #edeae8;
+    padding-bottom: 20px;
+
+    .ddbc-dice-roll {
+      width: percentage(calc(1 / 3));
+    }
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    &__group {
+      .ddbc-dice-roll {
+        width: percentage(calc(1 / 6));
+      }
+    }
+  }
+}

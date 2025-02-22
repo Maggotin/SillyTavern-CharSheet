@@ -1,0 +1,53 @@
+.modifier {
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-family: var(--font-family);
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 0.313rem;
+}
+
+.signedNumber {
+  vertical-align: middle;
+}
+
+.advantageIcon :global(.ddbc-svg) {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: text-bottom;
+  margin-right: 0.313rem;
+}
+
+.container {
+  margin: 0.625rem 0;
+  padding: 0.625rem 0;
+  border-top: 0.0625rem solid var(--theme-transparent);
+  border-bottom: 0.0625rem solid var(--theme-transparent);
+}
+
+.amount {
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.label {
+  color: var(--theme-contrast);
+}
+
+.labelSecondary {
+  color: var(--character-muted-color);
+}
+
+.isAdvantage:not(.score) .amount {
+  border-bottom: 0.125rem solid var(--theme-color);
+}
+
+.isAdvantage .labelSecondary {
+  color: var(--theme-contrast);
+  font-weight: bold;
+}
+
+.isAdvantage .label {
+  color: var(--character-muted-color);
+}

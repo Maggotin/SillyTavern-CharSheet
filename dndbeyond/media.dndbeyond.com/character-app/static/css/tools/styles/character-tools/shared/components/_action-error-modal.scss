@@ -1,0 +1,46 @@
+.action-error-modal {
+  &__intro {
+    font-size: 20px;
+  }
+
+  &__code {
+    font-family: monospace;
+    background: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+
+  &__info {
+    margin: 15px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-label {
+      font-weight: bold;
+      font-size: 18px;
+      padding: 10px 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__info {
+      display: flex;
+
+      &-label {
+        padding: 10px 20px 10px 0;
+        text-align: right;
+        line-height: 1.2;
+        width: auto; // TODO: remove after we don't have the older styles in waterdeep-web
+      }
+
+      &-data {
+        flex: 1;
+        min-width: 0;
+      }
+    }
+  }
+}

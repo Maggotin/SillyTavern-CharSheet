@@ -1,0 +1,66 @@
+.ct-combat-tablet {
+  max-width: 700px;
+  margin: 20px auto 5px;
+
+  &__extras {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__extra {
+    &--statuses {
+      width: 220px;
+      padding-right: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    &--proficiency {
+      padding-left: 17px;
+    }
+
+    &--ac {
+      margin-right: 18px;
+    }
+
+    &--initiative {
+      margin-right: 15px;
+    }
+
+    &--speed {
+      margin-right: 15px;
+    }
+  }
+
+  &__ctas {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__cta {
+    margin-bottom: 10px;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-button {
+      background-color: #fff;
+      border: 1px solid $ct--theme-color;
+      padding: 5px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: bold;
+      font-family: $condensed;
+      cursor: pointer;
+      &--dark-mode {
+        background-color: $ct--theme-dark-mode-bg;
+        color: white;
+      }
+    }
+  }
+}

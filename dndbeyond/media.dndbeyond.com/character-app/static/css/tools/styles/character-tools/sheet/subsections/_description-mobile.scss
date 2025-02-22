@@ -1,0 +1,22 @@
+.ct-description-mobile {
+  .ct-description {
+    @include mobileDividerContentBlock();
+  }
+
+  .ddbc-property-list {
+    margin-bottom: 20px;
+  }
+
+  .ct-background__default {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}
+
+.ct-character-sheet-mobile--dark-mode {
+  .ct-description-mobile {
+    .ct-description {
+      background-color: $ct--theme-dark-mode-bg-mobile;
+    }
+  }
+}

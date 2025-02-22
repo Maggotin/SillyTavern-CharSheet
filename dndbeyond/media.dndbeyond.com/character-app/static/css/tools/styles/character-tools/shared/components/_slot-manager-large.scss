@@ -1,0 +1,58 @@
+.ct-slot-manager-large {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  &__label {
+    margin-right: 5px;
+  }
+
+  &__values {
+    display: flex;
+    align-items: center;
+  }
+
+  &__value {
+    font-weight: bold;
+    position: relative;
+    margin: 0 3px;
+    line-height: 1;
+    min-width: 28px;
+    text-align: center;
+
+    &-control {
+      &-use {
+        margin-right: 10px;
+      }
+
+      &-gain {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__values--use &__value--cur {
+    color: $ct--negative-color;
+  }
+
+  &__values--gain &__value--cur {
+    color: $ct--positive-color;
+  }
+
+  &__diff {
+    position: relative;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+
+    &-actions {
+      margin-left: 10px;
+    }
+
+    &-action {
+      & + & {
+        margin-left: 5px;
+      }
+    }
+  }
+}

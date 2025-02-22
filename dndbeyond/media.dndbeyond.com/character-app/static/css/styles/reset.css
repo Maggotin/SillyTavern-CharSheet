@@ -1,0 +1,8 @@
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ttui_common-1000);
+}

@@ -1,0 +1,8 @@
+.builderModalOverride {
+  --theme-color: #c53131;
+  --theme-background: #fefefe;
+  --theme-background-solid: #fefefe;
+  --theme-contrast: var(--ttui_grey-900);
+  --theme-transparent: color-mix(in srgb, var(--theme-color), transparent 40%);
+  --character-muted-color: var(--ttui_grey-500);
+}

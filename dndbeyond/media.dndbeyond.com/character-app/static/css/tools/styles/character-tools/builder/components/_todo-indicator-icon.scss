@@ -1,0 +1,12 @@
+.todo-indicator-icon {
+  background: $ct--builder-color;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 3;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

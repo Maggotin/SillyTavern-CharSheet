@@ -1,0 +1,28 @@
+.maxCharactersDialog {
+  border: none;
+  border-radius: 0.75rem;
+  max-height: calc(100% - 4rem);
+  max-width: 36rem;
+  min-width: 20rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.maxCharactersDialog::backdrop {
+  background: var(--ttui_grey-900);
+  opacity: 0.5;
+}
+
+.dialogTitle {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.016rem;
+  line-height: 1.4rem;
+}
+
+.dialogFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}

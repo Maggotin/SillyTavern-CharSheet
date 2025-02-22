@@ -1,0 +1,73 @@
+.box {
+  width: 4.5rem;
+  height: 3.3125rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box.interactive {
+  cursor: pointer;
+}
+
+.box svg {
+  width: 100%;
+  height: 100%;
+}
+
+.status {
+  width: 2.1875rem;
+  height: 1.25rem;
+  position: relative;
+}
+
+.label {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  font-family: var(--font-condensed);
+  font-weight: bold;
+  padding-top: 0.75rem;
+  cursor: pointer;
+  text-shadow: var(--text-shadow-light);
+  width: 4.375rem;
+  line-height: 1;
+}
+
+.label.dark {
+  color: var(--ttui_common-0);
+  text-shadow: var(--text-shadow-dark);
+}
+
+.mobileWrapper {
+  margin-top: 0.1875rem;
+}
+.mobileButton {
+  border: 0.0625rem solid var(--theme-color);
+  border-radius: 0.125rem;
+  font-size: 0.5rem;
+  padding: 0.125rem 0.3125rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--ttui_common-0);
+}
+
+.mobileButton.active {
+  background-color: var(--theme-color);
+}
+
+.mobileButton.interactive {
+  cursor: pointer;
+}
+
+@media (max-width: 1199px) {
+  .box {
+    width: 4.375rem;
+    height: 2.75rem;
+  }
+
+  .label {
+    font-size: 0.75rem;
+    padding-top: 0.4375rem;
+  }
+}

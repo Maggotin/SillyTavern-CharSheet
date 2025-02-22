@@ -1,0 +1,19 @@
+.ct-item-slot-manager {
+  &--empty {
+    color: $ct--theme-de-emphasized-color;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ct-item-slot-manager {
+    &--empty {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+#character-tools-target {
+  position: relative !important;
+}
+
+@font-face {
+  font-family: "Scala Sans Offc";
+  src: url("https://www.dndbeyond.com/content/skins/waterdeep/fonts/ScalaSansOffc.ttf");
+}
+@font-face {
+  font-family: "Scala Sans Offc";
+  font-weight: bold;
+  src: url("https://www.dndbeyond.com/content/skins/waterdeep/fonts/ScalaSansOffc-Bold.ttf");
+}
+@font-face {
+  font-family: "Scala Sans Offc";
+  font-style: italic;
+  src: url("https://www.dndbeyond.com/content/skins/waterdeep/fonts/ScalaSansOffc-Ita.ttf");
+}
+@font-face {
+  font-family: "Scala Sans Offc";
+  font-style: italic;
+  font-weight: bold;
+  src: url("https://www.dndbeyond.com/content/skins/waterdeep/fonts/ScalaSansOffc-BoldIta.ttf");
+}
+@font-face {
+  font-family: "Scala Sans Sc Offc";
+  src: url("https://fonts.dndbeyond.com/ScalaSansSCOffc.woff2");
+}
+@font-face {
+  font-family: "Scala Sans Sc Offc";
+  font-weight: bold;
+  src: url("https://fonts.dndbeyond.com/ScalaSansSCOffcBold.woff2");
+}
+*::-moz-selection {
+  color: #fff;
+}
+*::selection {
+  color: #fff;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .site-bar {
+    height: 47px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}/*# sourceMappingURL=index.css.map */

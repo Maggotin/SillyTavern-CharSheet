@@ -1,0 +1,200 @@
+.ct-health-adjuster {
+  $color--healing: $ct--positive-color;
+  $color--damage: $ct--negative-color;
+
+  &__status {
+    &--positive {
+      color: $color--healing;
+    }
+    &--negative {
+      color: $color--damage;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__details {
+    width: 120px;
+  }
+
+  &__healing,
+  &__damage {
+    border-radius: 3px;
+    width: 90px;
+    margin: 0 auto;
+    padding: 2px 5px 5px;
+    text-align: center;
+    font-family: $condensed;
+    position: relative;
+
+    &-label {
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &-value {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    &-input[type="number"] {
+      background-color: #fff;
+      border: none;
+      text-align: center;
+      font-family: $condensed;
+      font-size: 28px;
+      padding: 0;
+      width: 100%;
+      box-shadow: none;
+      height: 26px;
+
+      &:hover,
+      &:focus {
+        background-color: #fff;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__healing {
+    border: 1px solid $color--healing;
+
+    &-label {
+      color: $color--healing;
+    }
+  }
+
+  &__damage {
+    border: 1px solid $color--damage;
+
+    &-label {
+      color: $color--damage;
+    }
+  }
+
+  &__updates {
+    margin: 18px auto;
+    display: flex;
+  }
+
+  &__new {
+    text-align: center;
+    font-family: $condensed;
+    margin: 0 auto;
+    width: 50%;
+    display: inline-block;
+
+    &-label {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    &-value {
+      font-size: 28px;
+    }
+  }
+
+  &__scrollwheel {
+    flex-grow: 1;
+
+    .ddbc-scrollwheel {
+      padding: 0 30px;
+      margin: 6px 0;
+    }
+
+    &-instructions {
+      max-width: 60px;
+      font-family: $condensed;
+      font-size: 9px;
+      text-align: center;
+      line-height: 9px;
+      color: $ct--theme-de-emphasized-color;
+      margin: 0 auto;
+    }
+  }
+
+  &__buttons {
+    padding: 0 10px;
+    position: relative;
+    width: 54px;
+
+    .action-increase,
+    .action-decrease {
+      padding-left: 8px;
+      padding-right: 8px;
+
+      &::before {
+        content: "";
+        display: block;
+        height: 16px;
+        width: 16px;
+        background-image: url("#{$imageURL-local}/sprites/plus_minus-white.svg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    .action-increase {
+      &::before {
+        background-position: 0 0;
+      }
+    }
+    .action-decrease {
+      &::before {
+        background-position: -17px 0;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+
+    &--increase {
+      top: 30px;
+    }
+
+    &--decrease {
+      bottom: 30px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+  }
+
+  &__action {
+    & + & {
+      margin-left: 5px;
+    }
+  }
+
+  @media (min-width: $bp-builder-mobile-transition) {
+    &__controls {
+      justify-content: center;
+    }
+
+    &__scrollwheel {
+      display: none;
+    }
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ct-health-adjuster {
+    &__healing,
+    &__damage {
+      &-input[type="number"],
+      &-input[type="number"]:hover {
+        @include darkModeInput();
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.details {
+  background: var(--ttui_common-0);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.details.text,
+.details.paper {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.details.theme {
+  background: color-mix(
+    in srgb,
+    var(--theme-background),
+    var(--theme-contrast) 7.5%
+  );
+  color: var(--theme-contrast);
+}
+
+.summary {
+  width: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  text-align: left;
+  font-size: 0.938rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 1rem;
+  list-style: none;
+}
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.paper .summary {
+  background-image: url(https://www.dndbeyond.com/Content/Skins/Waterdeep/images/listing-bars/1a-700-hover.png);
+  background-size: 100% 4rem;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  overflow: visible;
+  height: 4rem;
+}
+
+.small .summary {
+  font-size: 0.813rem;
+}
+
+.summary svg {
+  width: 1.5rem;
+}
+
+.small .summary svg {
+  width: 1.25rem;
+}
+
+.icon {
+  fill: var(--ttui_grey-400);
+  width: 1rem;
+  transition: transform 0.3s;
+  margin-left: auto;
+}
+
+.details[open] > summary > div > .icon {
+  transform: rotate(180deg);
+}
+
+.content {
+  padding: 1rem;
+  position: relative;
+  transition: height 0.3s;
+}
+
+.paper .content:before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem 0.125rem 0.125rem;
+  border-left: 0.063rem solid var(--ttui_grey-200);
+  border-right: 0.063rem solid var(--ttui_grey-200);
+  z-index: -1;
+}
+
+.paper .content:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1.75rem;
+  left: 0;
+  bottom: -0.25rem;
+  background-image: url(https://www.dndbeyond.com/Content/Skins/Waterdeep/images/character-sheet/expanded-listing-item-bottom-border-700.png);
+  background-repeat: no-repeat;
+  background-size: calc(100% - 0.125rem) 1.75rem;
+  background-position: 0.063rem 100%;
+  z-index: -1;
+}
+
+.metaItems {
+  color: var(--ttui_grey-500);
+  font-size: 0.75rem;
+  font-family: var(--font-family);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.metaItem + .metaItem:before {
+  content: "\2022";
+  padding: 0 0.3125rem;
+}

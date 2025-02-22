@@ -1,0 +1,89 @@
+.ct-main-mobile {
+  &--dark-mode {
+    .ct-mobile-divider ~ .ct-senses {
+      background-color: $ct--theme-dark-mode-bg-mobile;
+    }
+  }
+  &__campaign {
+    @include mobileContentSeparatorBottom();
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    .ddbc-campaign-summary,
+    .ct-character-header__group--game-log {
+      background-color: #fff;
+    }
+    &--dark-mode {
+      .ddbc-campaign-summary,
+      .ct-character-header__group--game-log {
+        background-color: $ct--theme-dark-mode-bg;
+      }
+    }
+  }
+
+  .game-log-notification {
+    width: 70px;
+  }
+
+  &__abilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__ability {
+    width: percentage(1/3);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  &__saving-throws {
+    @include mobileDividerContentBlock();
+
+    .ddbc-saving-throws-summary {
+      max-width: 245px;
+      margin: 0 auto;
+    }
+    &--dark-mode {
+      background: $ct--theme-dark-mode-bg-mobile;
+    }
+  }
+
+  &__extras {
+    display: flex;
+    margin: 20px 0;
+  }
+
+  &__extra {
+    width: percentage(1/3);
+    display: flex;
+    justify-content: center;
+  }
+
+  .ct-senses {
+    @include mobileDividerContentBlock();
+
+    &__summary {
+      justify-content: center;
+    }
+  }
+
+  .ddbc-campaign-summary {
+    flex-grow: 1;
+    justify-content: center;
+    border-radius: 3px 0 0 3px;
+
+    &__name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    &.ct-main-mobile__campaign-button--dark-mode {
+      background-color: $ct--theme-dark-mode-bg;
+      color: white;
+    }
+  }
+}

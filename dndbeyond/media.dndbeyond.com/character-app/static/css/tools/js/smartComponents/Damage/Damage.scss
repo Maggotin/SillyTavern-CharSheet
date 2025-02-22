@@ -1,0 +1,16 @@
+.ddbc-damage {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ddbc-damage {
+    &--dark-mode {
+      color: white;
+    }
+    &__value--dark-mode {
+      color: white;
+    }
+  }
+}

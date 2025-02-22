@@ -1,0 +1,103 @@
+.ct-sense-manage-pane {
+  &__sense {
+    display: flex;
+
+    & + & {
+      margin-top: 10px;
+    }
+
+    &-label {
+      margin-right: 5px;
+    }
+
+    &-value {
+      font-family: $condensed;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    &-source {
+      color: $ct--theme-de-emphasized-color;
+      margin-left: 10px;
+      flex: 1;
+    }
+  }
+
+  &__customize {
+    @include sidebarSeparator();
+
+    .ct-editor-box {
+      margin: 5px 0 10px;
+    }
+
+    &-header {
+      display: flex;
+      font-weight: bold;
+
+      &-label {
+        width: 80px;
+      }
+
+      &-input {
+        padding-left: 10px;
+        width: 95px;
+      }
+
+      &-source {
+        padding-left: 5px;
+      }
+    }
+
+    &-item {
+      display: flex;
+      margin: 5px 0;
+      align-items: center;
+
+      &-label {
+        width: 80px;
+      }
+
+      &-input {
+        padding: 0 5px;
+        width: 95px;
+
+        input {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      &-source {
+        flex: 1;
+
+        input {
+          width: 100%;
+        }
+      }
+
+      &--passive &-label {
+        width: auto;
+        flex: 1;
+      }
+    }
+  }
+
+  &__description {
+    @include sidebarSeparator();
+  }
+}
+
+.ct-character-sheet--dark-mode,
+.ct-sidebar--is-dark-mode {
+  .ct-sense-manage-pane {
+    &__customize-item {
+      &-input,
+      &-source {
+        input,
+        input:hover {
+          @include darkModeInput();
+        }
+      }
+    }
+  }
+}
