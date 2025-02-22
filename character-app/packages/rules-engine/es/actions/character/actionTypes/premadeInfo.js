@@ -1,6 +1,0 @@
-export const PREMADE_INFO_ADD = 'character.PREMADE_INFO_ADD';
-export const PREMADE_INFO_GET = 'character.PREMADE_INFO_GET';
-export const PREMADE_INFO_UPDATE = 'character.PREMADE_INFO_UPDATE';
-export const PREMADE_INFO_DELETE = 'character.PREMADE_INFO_DELETE';
-export const PREMADE_INFO_SET_COMMIT = 'character.PREMADE_INFO_SET_COMMIT';
-export const PREMADE_INFO_REMOVE_COMMIT = 'character.PREMADE_INFO_REMOVE_COMMIT';

@@ -1,9 +1,0 @@
-.ct-proficiency-groups-mobile {
-  @include mobileDividerContentBlock();
-}
-
-.ct-character-sheet-mobile--dark-mode {
-  .ct-proficiency-groups-mobile {
-    background-color: $ct--theme-dark-mode-bg-mobile;
-  }
-}

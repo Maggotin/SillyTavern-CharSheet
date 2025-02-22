@@ -1,7 +1,0 @@
-.numberColorOverride [class*="styles_"] {
-  color: var(--ttui_grey-500);
-}
-
-.numberColorOverride :not([class*="styles_"]) {
-  color: var(--ttui_common-0);
-}
