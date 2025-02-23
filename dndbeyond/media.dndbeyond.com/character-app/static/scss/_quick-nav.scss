@@ -1,0 +1,208 @@
+.ct-quick-nav {
+  $button-height: 55px;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 60002;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  &__content {
+    max-width: 460px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mask {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  &__menu {
+    position: relative;
+    z-index: 12;
+    padding: 5px 5px 0;
+    overflow-y: auto;
+    flex: 1;
+
+    &-items {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 450px;
+      margin-left: auto;
+      max-height: 100%;
+      overflow-y: auto;
+    }
+
+    &-item {
+      width: 50%;
+      padding: 5px;
+
+      &--cols-2 {
+        width: 100%;
+      }
+
+      &--rows-2 {
+        height: 140px;
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0 10px;
+    height: $button-height + 10px;
+    min-height: $button-height + 10px;
+
+    &-button {
+      flex: 1;
+      padding-right: 15px;
+    }
+
+    &-toggle {
+      min-height: $button-height;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    height: $button-height;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px solid $ct--theme-color;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $condensed;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    background-color: #242528;
+    transition: all 150ms;
+
+    &:hover {
+      border-color: darken($ct--theme-color, 10%);
+    }
+
+    &-label {
+      position: relative;
+    }
+
+    &--disabled {
+      color: #ccc;
+      filter: grayscale(1);
+      background-color: #666;
+      cursor: default;
+
+      .ddbc-svg {
+        opacity: 0.5;
+      }
+    }
+
+    &-icon {
+      padding-right: 5px;
+      display: flex;
+    }
+
+    .ddbc-svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__toggle {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    border-radius: 23px;
+    background: $ct--theme-color
+      url("#{$imageURL-local}/character-sheet/icons/grid-squares.svg") no-repeat
+      center center;
+    background-size: 20px 20px;
+
+    &--opened {
+      background-image: url("#{$imageURL-local}/icons/x.svg");
+    }
+  }
+
+  &__edge-toggle {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    background-color: $ct--theme-color;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    border-radius: 23px 0 0 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+
+    .ddbc-svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &--opened {
+      opacity: 0.25;
+    }
+
+    &--visible {
+      .ddbc-svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__menu-item--features &__button-label,
+  &__menu-item--proficiencies &__button-label {
+    flex-basis: 0;
+  }
+
+  &--opened {
+    top: 47px;
+    left: 0;
+  }
+
+  &--opened &__mask {
+    display: block;
+  }
+
+  @media (min-width: $bp-sheet-tablet-transition) {
+    &--opened {
+      top: 0;
+    }
+
+    &--opened &__mask {
+      opacity: 0;
+    }
+  }
+
+  @media (min-width: $bp-sheet-desktop-transition) {
+    z-index: 40002;
+  }
+
+  @media (min-width: $bp-sheet-desktop-large-transition) {
+    z-index: 12;
+  }
+}

@@ -1,0 +1,49 @@
+.label {
+  margin: 0;
+  font-weight: 700;
+}
+
+.value {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--ttui_grey-600);
+}
+.value svg {
+  vertical-align: bottom;
+}
+
+.center {
+  text-align: center;
+}
+
+.inline {
+  display: flex;
+}
+
+.inline .label {
+  margin-right: 5px;
+  font-size: 0.875rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.primary {
+  color: var(--ttui_color-primary--main);
+}
+.secondary {
+  color: var(--ttui_color-secondary--main);
+}
+.error {
+  color: var(--ttui_color-error--main);
+}
+.success {
+  color: var(--ttui_color-success--main);
+}
+.warning {
+  color: var(--ttui_color-warning--main);
+}
+.info {
+  color: var(--ttui_color-info--main);
+}

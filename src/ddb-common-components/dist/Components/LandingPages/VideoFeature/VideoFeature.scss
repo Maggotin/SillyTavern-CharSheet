@@ -1,0 +1,60 @@
+@import '../../../__stylesheet-helpers/design-system/typography';
+@import '../../../__stylesheet-helpers/design-system/colors';
+@import '../../../__stylesheet-helpers/design-system/spacing';
+@import '../../../__stylesheet-helpers/responsive/breakpoint-queries';
+
+$content-max-width: 900px;
+
+.video-feature {
+    background-color: $black;
+
+    &__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: $content-max-width;
+        padding: $spacing-large;
+    }
+
+    &__header {
+        color: $white!important; // Cobalt
+        font-family: $font-family-roboto;
+        font-size: 48px;
+        font-weight: $font-weight-bold;
+        margin: $spacing-small;
+        text-align: center;
+
+        @include breakpoint-below(get-breakpoint(small)) {
+            font-size: $font-size-3;
+        }
+    }
+
+    &__video-wrapper {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%;
+        }
+
+        @include breakpoint-below(get-breakpoint(small)) {
+            padding: $spacing-tiny;
+        }
+    }
+
+    &__video {
+        border: 0;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}

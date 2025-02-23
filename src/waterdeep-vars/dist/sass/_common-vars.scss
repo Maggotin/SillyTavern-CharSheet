@@ -1,0 +1,170 @@
+﻿$color-spells: #704cd9;
+$color-monsters: #bc0f0f;
+$color-items: #0f5cbc;
+$color-compendium: #47D18C;
+$color-forums: #979aa4;
+$color-description: #ffbb01;
+$color-characters: #ee8600;
+$color-marketplace: #1cd2c0;
+$color-vehicles: #4599E9;
+$color-default: #1b9af0;
+
+$color-strength: #bf2225;
+$color-dexterity: #41474d;
+$color-constitution: #79614c;
+$color-intelligence: #f96a3b;
+$color-wisdom: #879399;
+$color-charisma: #edb451;
+
+$color-common: #242528;
+$color-uncommon: #1FC219;
+$color-rare: #4990E2;
+$color-veryrare: #9810E0;
+$color-legendary: #FEA227;
+$color-artifact: #BE8972;
+
+$hb-blue: #45cef7;
+
+$black: #242527;
+$grey: #979AA4;
+$gray: $grey;
+
+$character-default-color: #96bf6b;
+$builder-default-color: #1C9AEF;
+
+$sources: (
+    (
+        key: br,
+        primaryColor: $color-characters,
+        hoverColor: lighten($color-characters, 10%),
+    ),
+    (
+        key: ee,
+        primaryColor: #557C6A,
+        hoverColor: lighten(#557C6A, 10%),
+    ),
+    (
+        key: mtof,
+        primaryColor: #26505E,
+        hoverColor: lighten(#26505E, 10%),
+    ),
+    (
+        key: vgtm,
+        primaryColor: #51637d,
+        hoverColor: lighten(#51637d, 10%),
+    ),
+    (
+        key: ttp,
+        primaryColor: #416429,
+        hoverColor: lighten(#416429, 10%),
+    ),
+    (
+        key: scag,
+        primaryColor: #622e5d,
+        hoverColor: lighten(#622e5d, 10%),
+    ),
+    (
+        key: wgte,
+        primaryColor: #79ab7d,
+        hoverColor: lighten(#79ab7d, 10%),
+    ),
+    (
+        key: ggtr,
+        primaryColor: #2095B8,
+        hoverColor: lighten(#2095B8, 10%),
+    ),
+    (
+        key: ua,
+        primaryColor: #5E0C0A,
+        hoverColor: lighten(#5E0C0A, 10%),
+    )
+);
+
+$spell-schools: abjuration, conjuration, divination, enchantment, evocation, illusion, necromancy, transmutation;
+$nav-items: my-content, builder, characters, items, spells, monsters, compendium, articles, forums, marketplace;
+$base-classes: bard, cleric, druid, paladin, ranger, sorcerer, warlock, wizard, barbarian, fighter, monk, rogue;
+$base-races: dwarf, elf, halfling, human, dragonborn, gnome, halfelf, halforc, tiefling;
+$damage-types: acid, bludgeoning, cold, fire, force, lightning, necrotic, piercing, poison, psychic, radiant, slashing, thunder;
+$aoe-shapes: cone, cube, cylinder, line, sphere, square;
+$ability-scores: strength, dexterity, constitution, charisma, wisdom, intelligence;
+$conditions: blinded, charmed, deafened, exhaustion, exhausted, frightened, grappled, incapacitated, invisible, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious;
+$monster-types: aberration, beast, celestial, construct, dragon, elemental, fey, fiend, giant, humanoid, monstrosity, ooze, plant, undead;
+$item-types: armor, artifact, potion, ring, rod, scroll, staff, wand, weapon, wondrousitem;
+$actions: attack, cast-a-spell, dash, disengage, dodge, help, hide, ready, search, use-an-object;
+
+
+// cobalt var overrides
+$printResetEnabled: false;
+$tertiaryColor: $black;
+
+$font-family: Roboto, Helvetica, sans-serif;
+$condensed: "Roboto Condensed", Roboto, Helvetica, sans-serif;
+$font--scala-sans-offc: "Scala Sans Offc", $font-family;
+$font--scala-sans-sc-offc: "Scala Sans Sc Offc", $font-family;
+$font--mrs-eaves-small-caps: MrsEavesSmallCaps, $font-family;
+$font-color: $black;
+
+$tm-quaternaryFontColor: #fff;
+
+$imageURL-local: "https://maggotin.github.io/hosted-assets/DnDimages.com" !default;
+$site-width: 1200px;
+$common-site-bg: #f9f9f9 url("#{$imageURL-local}/background_texture.png") repeat;
+
+$site-heading-mobile-h1-font-size: 30px;
+$site-heading-nonmobile-h1-font-size: 36px;
+
+$button-bg: #2e2c2c;
+$button-bgTop: #2e2c2c;
+$button-bgBottom: #2e2c2c;
+$button-borderRadius: 2px;
+$button-boxShadowActive: none;
+$button-fontColor: $black;
+
+$paginationBg: white;
+$paginationBorder: 1px solid #cbc6c3;
+$paginationBorder-radius: 0px;
+$paginationFont-color: $black;
+$paginationFont-color-hover: white;
+$paginationFont-color-active: white;
+$paginationFont-size: 14px;
+$paginationNext-font-color: $black;
+
+$forum-bg: #fff;
+$forumHeader-bg: transparent;
+$threadBorder: none;
+
+$forumCommentHeaderBg: white;
+$forumCommentBorderColor: #d9d4d2;
+
+$adminBtn-bgTop: #d9d4d2;
+$adminBtn-bgBottom: #d9d4d2;
+$adminBtn-boxShadow-hover: none;
+$commentBg: white;
+
+$box-bg: white;
+$forumCommentUserBoxBackground: white;
+
+$footer-height: 50px;
+$footerPremium-height: $footer-height;
+$footer-backgroundColor: #000;
+$footerCopyright-color: $grey;
+
+$site-interactions-mobile-height: 47px;
+$site-interactions-nonmobile-height: 64px;
+$site-interactions-spacing: 20px;
+$site-interactions-count-bg: #e82626;
+$site-interactions-count-color: #fff;
+$site-interactions-arrow-color: #fff;
+$site-interactions-group-border-color: #262629;
+$site-interactions-link-color: #fff;
+$site-callout-link-color: $color-compendium;
+
+$content-mobile-padding-x: 10px;
+$content-mobile-padding-y: 20px;
+$content-nonmobile-padding-x: 10px;
+$content-nonmobile-padding-y: 15px;
+
+$page-header-avoid-spacing: 10px;
+
+$html-entity--bull: "\2022";
+$html-entity--checkmark: "\2714";

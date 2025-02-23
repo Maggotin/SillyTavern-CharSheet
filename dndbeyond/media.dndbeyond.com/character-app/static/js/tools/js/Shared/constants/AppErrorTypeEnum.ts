@@ -1,0 +1,11 @@
+enum AppErrorTypeEnum {
+  GENERIC = "GENERIC",
+  AUTH_FAIL = "AUTH_FAIL",
+  AUTH_MISSING = "AUTH_MISSING",
+  ACCESS_DENIED = "ACCESS_DENIED",
+  API_FAIL = "API_FAIL",
+  API_DATA_FAIL = "API_DATA_FAIL",
+  NOT_FOUND = "NOT_FOUND",
+}
+
+export default AppErrorTypeEnum;

@@ -1,0 +1,61 @@
+@import '../../../__stylesheet-helpers/design-system/typography';
+@import '../../../__stylesheet-helpers/design-system/colors';
+@import '../../../__stylesheet-helpers/design-system/spacing';
+@import '../../../__stylesheet-helpers/responsive/breakpoint-queries';
+
+$content-max-width: 525px;
+
+.center-feature {
+    align-items: center;
+    background-color: $black;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: $spacing-megamega $spacing-small;
+
+    &__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: $content-max-width;
+    }
+
+    &__header-text {
+        color: $white!important; // Cobalt
+        font-family: $font-family-roboto;
+        font-size: 48px;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-normal;
+        margin: $spacing-small;
+        text-align: center;
+
+        @include breakpoint-below(get-breakpoint(tiny)) {
+            font-size: $font-size-3;
+        }
+    }
+
+    &__body-text {
+        color: $white;
+        font-family: $font-family-roboto;
+        font-size: $font-size-5;
+        font-weight: $font-weight-light;
+        line-height: $line-height-loose;
+        letter-spacing: $letter-spacing-big;
+        margin: $spacing-tiny;
+        text-align: center;
+    }
+
+    &__image {
+        margin: $spacing-small;
+        max-width: 100%;
+    }
+
+    &__button-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: $spacing-small;
+    }
+}

@@ -1,0 +1,38 @@
+.button {
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  font-family: var(--ttui_font-roboto);
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border: 0.063rem solid;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  line-height: 1.7333;
+  transition: background-color 0.25s;
+}
+
+.button:disabled {
+  cursor: default;
+}
+
+.button svg {
+  fill: var(--ttui_common-0);
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.button:has(svg:only-child) {
+  padding: 0.75rem;
+}
+
+.button svg:only-child {
+  height: 1.5rem;
+  width: 1.5rem;
+}

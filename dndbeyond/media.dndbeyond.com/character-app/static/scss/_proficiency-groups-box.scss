@@ -1,0 +1,12 @@
+.ct-proficiency-groups-box {
+  width: 278px;
+  height: 338px;
+  position: relative;
+  padding: 13px 20px;
+
+  .ct-proficiency-groups {
+    position: relative;
+    height: 300px;
+    overflow-y: auto;
+  }
+}

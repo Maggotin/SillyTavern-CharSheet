@@ -1,0 +1,20 @@
+.panel {
+  background: var(--ttui_color-megamenu--dark);
+  box-shadow: 0 10px 10px 0px rgba(23, 24, 25, 0.7);
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 1.25rem;
+  right: 1.25rem;
+  padding: 1rem;
+  z-index: 1001;
+}
+.showPanel {
+  display: block;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}

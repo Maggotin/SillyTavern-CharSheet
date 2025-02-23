@@ -1,0 +1,15 @@
+@import '../../../__stylesheet-helpers/waterdeep-utils/_waterdeep-overrides.scss';
+@import '../../../__stylesheet-helpers/responsive/breakpoint-queries';
+
+body.body-landingpages-explorersguidetowildemount {
+    @include remove-waterdeep-content-spacing;
+}
+
+/* Hacky Overrides */
+.egtw {
+    .hero {
+        @include breakpoint-below(get-breakpoint(medium)) {
+            padding-top: 60vh;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.ability-pool {
+  &-slots {
+    &-info {
+      font-family: $condensed;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .slot-manager {
+      margin: 10px 0 12px;
+      justify-content: center;
+    }
+  }
+
+  &-spells {
+    margin: 10px 0;
+  }
+
+  &-spell {
+    & + & {
+      margin-top: 15px;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+    }
+
+    &-trigger {
+      min-width: 16px;
+      height: 16px;
+      width: 16px;
+      background: transparent 0 0
+        url("#{$imageURL-local}/sprites/charsheet-atlas.svg") no-repeat;
+      background-size: cover;
+      margin-left: 9px;
+      cursor: pointer;
+
+      .ability-pool-spell-opened & {
+        background-position: -17px 0;
+      }
+
+      .ability-pool-spell-collapsed & {
+        background-position: 0 0;
+      }
+    }
+
+    &-slots {
+      .character-button-small {
+        min-width: 50px;
+      }
+    }
+
+    &-usage {
+      font-size: 12px;
+    }
+
+    &-name {
+      flex-grow: 1;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+    }
+
+    &-detail {
+      padding: 20px 0;
+    }
+  }
+}

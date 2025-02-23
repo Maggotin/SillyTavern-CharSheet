@@ -1,0 +1,47 @@
+@import '../../../__stylesheet-helpers/variables';
+@import '../../../__stylesheet-helpers/design-system/typography';
+@import '../../../__stylesheet-helpers/design-system/colors';
+@import '../../../__stylesheet-helpers/design-system/spacing';
+@import '../../../__stylesheet-helpers/utils';
+
+.callout {
+    align-items: center;
+    background-color: $gray-dark1;
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-large;
+
+    &__main-text {
+        color: $white;
+        font-family: $font-family-roboto;
+        font-size: $font-size-4;
+        letter-spacing: $letter-spacing-chungus;
+        margin: $spacing-small;
+        text-align: center;
+        text-transform: uppercase;
+
+        &--calm {
+            text-transform: none;
+        }
+    }
+
+    &__button-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: $spacing-small;
+    }
+
+    &__secondary-text {
+        color: $gray4;
+        font-family: $font-family-roboto;
+        font-size: $font-size-6;
+        letter-spacing: $letter-spacing-small;
+        margin: $spacing-small;
+        text-align: center;
+
+        a {
+            @include cta-link;
+        }
+    }
+}

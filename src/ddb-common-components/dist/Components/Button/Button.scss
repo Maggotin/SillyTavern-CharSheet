@@ -1,0 +1,114 @@
+@import '../../__stylesheet-helpers/variables';
+@import '../../__stylesheet-helpers/utils';
+@import '../../__stylesheet-helpers/design-system/colors';
+@import '../../__stylesheet-helpers/design-system/spacing';
+@import '../../__stylesheet-helpers/design-system/typography';
+
+.ddb-button {
+  @include removeAppearance;
+  @include label;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $button-background;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 0 $spacing-small;
+  color: $button-color !important; // Forgive me Father, for I have sinned. It was the Devil, Cobalt, that forced my hand.
+  height: $button-height;
+  font-family: $font-family-roboto !important;
+  font-size: $font-size-9; // 13px // $font-size-9: 12px;
+  cursor: pointer;
+  text-decoration: none;
+
+  svg {
+      width: 1em;
+      height: 1em;
+      fill: $button-color;
+  }
+
+  &:hover {
+      background: $button-hover-background;
+  }
+
+  &:focus {
+      @include focusOutline;
+  }
+
+  &--cta {
+      height: $button-cta-height;
+      font-size: $font-size-7; // 15px // $font-size-7: 16px;
+      color: $text-dark !important;
+      padding: $spacing-small #{$spacing-small * 2};
+  }
+
+  &--dark {
+      color: $text-light !important;
+      background: $cta-color !important;
+      border: none !important;
+
+      &:hover {
+          background: darken($cta-color, 5%) !important;
+      }
+  }
+
+  &--ghost {
+      color: $gray5 !important;
+      background: transparent !important;
+      border-color: $gray5 !important;
+
+      &:hover {
+          background: rgba(255, 255, 255, 0.05) !important;
+      }
+  }
+
+  &--minimal {
+      @include label;
+
+      color: $blue1 !important;
+      background: transparent !important;
+      border: none !important;
+      padding: $spacing-tiny;
+      height: auto;
+
+      &:hover {
+          background: rgba($gray3, 0.2) !important;
+      }
+  }
+
+  .dark-mode-enabled & {
+      color: $blue1 !important;
+      background: $gray-dark2 !important;
+      border: 1px solid $gray3 !important;
+
+      svg {
+          fill: $text-light;
+      }
+
+      &:hover {
+          background: $gray-dark3 !important;
+      }
+
+      &--dark {
+          color: $text-light !important;
+          background: $cta-color !important;
+          border: none !important;
+
+          &:hover {
+              background: darken($cta-color, 5%) !important;
+          }
+      }
+  }
+
+  &[disabled] {
+      background: $button-disabled-background !important;
+      color: $button-disabled-color !important;
+      opacity: 1 !important; // COBALT!!!!!!!!!!!!!!!!!!!!
+      cursor: initial !important;
+
+      svg {
+          fill: $button-disabled-color;
+      }
+  }
+}

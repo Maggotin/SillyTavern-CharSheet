@@ -1,0 +1,65 @@
+.button {
+  background: none;
+  border: none;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--ttui_common-0);
+  opacity: 0.5;
+}
+
+.icon {
+  fill: var(--ttui_common-0);
+  font-size: 1.25rem;
+}
+
+.form {
+  display: none;
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: var(--ttui_common-1000);
+  z-index: 1001;
+}
+.showSearch {
+  display: block;
+}
+
+.input {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  padding: 12px 8px 13px;
+  background: var(--ttui_common-0);
+  width: 100%;
+  border: none;
+  font-family: var(--ttui_font-roboto);
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--ttui_grey--600);
+}
+
+@media screen and (min-width: 600px) {
+  .button:before {
+    top: -9px;
+    bottom: -9px;
+  }
+}

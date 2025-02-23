@@ -1,0 +1,154 @@
+.ct-character-sheet-desktop {
+  .ct-subsections {
+    height: 770px;
+  }
+
+  .ct-subsection {
+    position: absolute;
+
+    &--saving-throws {
+      left: 0;
+      top: 0;
+    }
+    &--senses {
+      left: 0;
+      top: 214px;
+    }
+    &--proficiency-groups {
+      left: 0;
+      top: 427px;
+    }
+    &--skills {
+      left: 236px;
+      top: -1px;
+    }
+    &--combat {
+      right: 0;
+      top: 0;
+    }
+    &--primary-box {
+      top: 104px;
+      right: 0;
+    }
+  }
+
+  @media (min-width: $bp-sheet-desktop-transition) and (max-width: ($bp-sheet-desktop-large-transition - 1px)) {
+    .ct-quick-info {
+      z-index: 1;
+
+      &__abilities {
+        width: 463px;
+      }
+    }
+
+    .ddbc-ability-summary {
+      width: 66px;
+      height: 78px;
+
+      &__label {
+        display: none;
+      }
+
+      &__abbr {
+        display: block;
+        font-size: 12px;
+      }
+
+      &__primary {
+        font-size: 22px;
+      }
+
+      &__secondary {
+        bottom: 1px;
+      }
+    }
+
+    .ct-proficiency-bonus-box {
+      width: 77px;
+      height: 73px;
+
+      &__value {
+        font-size: 22px;
+      }
+
+      &__heading {
+        font-size: 11px;
+        padding-top: 7px;
+        padding-bottom: 0;
+        &--dark-mode {
+          color: $ct--theme-dark-mode-text;
+        }
+      }
+
+      &__label {
+        font-size: 12px;
+        &--dark-mode {
+          color: $ct--theme-dark-mode-text;
+        }
+      }
+    }
+
+    .ct-speed-box {
+      width: 77px;
+      height: 73px;
+
+      &__heading {
+        padding-top: 8px;
+        padding-bottom: 0;
+      }
+
+      &__label {
+        font-size: 12px;
+      }
+
+      .ddbc-distance-number--large {
+        font-size: 22px;
+      }
+    }
+
+    .ct-skills-box {
+      width: 230px;
+    }
+    .ct-senses-box {
+      width: 230px;
+    }
+    .ct-saving-throws-box {
+      width: 230px;
+    }
+    .ct-proficiency-groups-box {
+      width: 228px;
+    }
+
+    .ct-senses {
+      &__callout {
+        width: 190px;
+        height: 34px;
+      }
+    }
+
+    .ddbc-saving-throws-summary {
+      &__ability {
+        width: 88px;
+        height: 31px;
+
+        &-modifier {
+          width: 30px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: ($bp-sheet-desktop-large-transition - 1px)) {
+    max-width: 990px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $bp-sheet-desktop-large-transition) {
+    .ct-subsection {
+      &--skills {
+        left: 286px;
+        top: -1px;
+      }
+    }
+  }
+}

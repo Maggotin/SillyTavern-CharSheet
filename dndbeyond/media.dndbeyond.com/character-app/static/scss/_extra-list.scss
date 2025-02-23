@@ -1,0 +1,43 @@
+.ct-extra-list {
+  &--dark-mode {
+    color: #fff;
+  }
+
+  &__row {
+    &-header {
+      display: flex;
+    }
+  }
+
+  &__row-header &__col {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $condensed;
+    padding-bottom: 5px;
+  }
+
+  &__col {
+    &--action {
+      width: 40px;
+    }
+    &--preview {
+      width: 35px;
+    }
+    &--primary {
+      width: 130px;
+    }
+    &--ac {
+      width: 35px;
+    }
+    &--hp {
+      width: 85px;
+    }
+    &--speed {
+      width: 50px;
+    }
+    &--notes {
+      flex: 1;
+    }
+  }
+}

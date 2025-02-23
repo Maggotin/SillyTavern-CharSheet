@@ -1,0 +1,88 @@
+@import '../../../__stylesheet-helpers/variables';
+@import '../../../__stylesheet-helpers/design-system/typography';
+@import '../../../__stylesheet-helpers/design-system/colors';
+@import '../../../__stylesheet-helpers/design-system/spacing';
+@import '../../../__stylesheet-helpers/responsive/breakpoint-queries';
+
+$subtext-letter-spacing: 0.2em;
+$content-max-width: 1200px;
+$text-max-width: 570px;
+
+.hero {
+    &__content-wrapper {
+        margin: 0 auto;
+        max-width: $content-max-width;
+    }
+
+    &__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: $spacing-gigantic $spacing-mid;
+
+        @include breakpoint-above(get-breakpoint(medium)) {
+            padding: 165px $spacing-mid;
+            width: 50vw;
+        }
+    }
+
+    &__text-wrapper {
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: $text-max-width;
+        padding: $spacing-mid;
+    }
+
+    &__title {
+        color: $white!important; // Cobalt
+        font-family: $font-family-roboto;
+        font-size: 68px;
+        font-weight: $font-weight-thicc;
+        margin: $spacing-mid;
+        letter-spacing: 0.01em;
+        text-align: center;
+
+        @include breakpoint-below(get-breakpoint(small)) {
+            font-size: $font-size-2;
+        }
+    }
+
+    &__title-follow {
+        color: $white;
+        font-family: $font-family-roboto;
+        font-size: $font-size-8;
+        letter-spacing: $letter-spacing-small;
+        line-height: $line-height-loose;
+        padding: 0 $spacing-biggy;
+        text-align: center;
+    }
+
+    &__from-subtext {
+        color: #fff;
+        font-family: $font-family-roboto;
+        font-size: $font-size-4;
+        letter-spacing: $subtext-letter-spacing;
+        padding: 0 $spacing-biggy;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__button-wrapper {
+        margin: $spacing-small;
+        margin-top: $spacing-large;
+    }
+
+    &__button-follow {
+        color: $gray3;
+        font-family: $font-family-roboto;
+        font-size: $font-size-9;
+        letter-spacing: $letter-spacing-small;
+        line-height: $line-height-loose;
+        padding: 0 $spacing-biggy;
+        text-align: center;
+    }
+}

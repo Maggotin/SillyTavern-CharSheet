@@ -1,0 +1,23 @@
+@import '../../__stylesheet-helpers/variables';
+@import '../../__stylesheet-helpers/utils';
+
+$input-padding: $spacing-large;
+
+.rich-text-editor {
+  &__label {
+    @include label;
+
+    font-size: 20px;
+    margin-bottom: $spacing-large;
+  }
+
+  &__input {
+    // content-box so we can use line-height * ems to set height based on # of lines to display
+    box-sizing: content-box;
+    // Need to calculate the width to accommodate padding since we switched to content-box
+    width: calc(100% - #{$input-padding * 2});
+    padding: $input-padding;
+    min-height: 1.1em;
+    line-height: 1.1;
+  }
+}

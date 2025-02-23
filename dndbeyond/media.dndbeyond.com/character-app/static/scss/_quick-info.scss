@@ -1,0 +1,18 @@
+.ct-quick-info {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: -8px 0 10px;
+  width: 100%;
+
+  &__abilities {
+    display: flex;
+    width: 564px;
+    justify-content: space-between;
+  }
+
+  &__ability {
+    cursor: pointer;
+  }
+}

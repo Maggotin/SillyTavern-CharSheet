@@ -1,0 +1,73 @@
+@import 'design-system/variables';
+
+$spacing: 8px;
+$spacing-large: $spacing * 2;
+$spacing-small: $spacing / 2;
+$font-size: 13px;
+
+$page-content-outer-padding: 32px;
+
+$page-background: $gray-light4; // #ECF0F4; // $gray-light4: #EBF1F5;
+$content-background: $white;
+$content-background-hover: $gray-light4; // #EEEEEE; // $gray-light4: #EBF1F5;
+$content-background-selected: $gray-light3; // #E9F6FF; // $gray-light3: #E1E8ED;
+$content-box-shadow: 1px 3px 5px 0px #DDD;
+$content-box-shadow-dark-mode: 1px 3px 5px 0px #333;
+$content-background-dark-mode: $gray-dark1;
+$content-background-hover-dark-mode: $gray-dark3;
+$content-background-selected-dark-mode: $gray-dark4;
+$page-background-dark-mode: lighten($content-background-dark-mode, 5%);
+
+$border-radius: 3px;
+$border-color: $gray-light2; //#D7E1E8; // $gray-light2: #D8E1E8;
+$border-color-selected: $blue1;
+$border-color-dark-mode: $gray3;
+
+$ddb-theme-color: #E30613;
+$cta-color: #559aec;
+
+$font-family: Roboto, "Open Sans", Helvetica, sans-serif;
+$font-family-condensed: "Roboto Condensed", $font-family;
+
+$background-darker: #999;
+$background-dark: #AAA;
+$background-light: #EEE;
+$background-lightest: #FFF;
+
+$text-light: #FFF;
+$text-dark: #000;
+$text-dark-secondary: #6F7478;
+
+$button-height: 40px;
+$button-cta-height: 55px;
+$button-background: $content-background;
+$button-color: $cta-color;
+$button-hover-background: $content-background-hover;
+$button-disabled-background: #AAAAAA;
+$button-disabled-color: #333333;
+
+$input-stepper-button-size: 30px;
+$input-stepper-mini-button-size: $input-stepper-button-size * 0.75;
+
+// Keep in sync with DifficultyTypeColorMap.js
+$difficulty-color--trivial: #ccd3dc;
+$difficulty-color--easy: #71d6a8;
+$difficulty-color--medium: #e5a73a;
+$difficulty-color--hard: #e4591d;
+$difficulty-color--deadly: #db3f2b;
+
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+$drag-and-drop-transition-duration: 100ms;
+
+$encounter-monster-height: $input-stepper-mini-button-size * 3;
+$encounter-monster-spacing: $spacing-large;
+
+$abstract-player-width: 200px;
+
+$sidebar-width: 400px;
+
+$encounter-details-content-spacing: $spacing-large;
+$encounter-details-content-padding: $spacing * 3;
+
+$modal-close-button-size: 20px;

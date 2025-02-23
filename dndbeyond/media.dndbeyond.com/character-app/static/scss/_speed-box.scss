@@ -1,0 +1,44 @@
+.ct-speed-box {
+  width: 94px;
+  height: 89px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+
+  &__heading {
+    color: $ct--theme-de-emphasized-color;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: $condensed;
+    font-weight: bold;
+    padding-top: 11px;
+    padding-bottom: 1px;
+    position: relative;
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: $condensed;
+    font-weight: bold;
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__value {
+    color: #242528;
+    font-size: 26px;
+    font-weight: 500;
+    &--dark-mode {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+export const ACTIONS_SET = 'character.ACTIONS_SET' as const;
+export const ACTIONS_SET_COMMIT = 'character.ACTIONS_SET_COMMIT' as const;
+export const ACTION_USE_SET = 'character.ACTION_USE_SET' as const;
+export const ACTION_USE_SET_COMMIT = 'character.ACTION_USE_SET_COMMIT' as const;
+export const ACTION_CUSTOMIZATIONS_DELETE = 'character.ACTION_CUSTOMIZATIONS_DELETE' as const;
+export const CUSTOM_ACTION_CREATE = 'character.CUSTOM_ACTION_CREATE' as const;
+export const CUSTOM_ACTION_ADD = 'character.CUSTOM_ACTION_ADD' as const;
+export const CUSTOM_ACTION_ADD_COMMIT = 'character.CUSTOM_ACTION_ADD_COMMIT' as const;
+export const CUSTOM_ACTION_SET = 'character.CUSTOM_ACTION_SET' as const;
+export const CUSTOM_ACTION_SET_COMMIT = 'character.CUSTOM_ACTION_SET_COMMIT' as const;
+export const CUSTOM_ACTION_REMOVE = 'character.CUSTOM_ACTION_REMOVE' as const;
+export const CUSTOM_ACTION_REMOVE_COMMIT = 'character.CUSTOM_ACTION_REMOVE_COMMIT' as const;

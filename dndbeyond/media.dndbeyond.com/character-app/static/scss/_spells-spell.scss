@@ -1,0 +1,182 @@
+.ct-spells-spell {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  padding: 8px 0;
+
+  & + & {
+    border-top: 1px dotted #eaeaea;
+  }
+
+  &__at-will,
+  &__as-ritual {
+    text-align: center;
+    display: block;
+    font-size: 8px;
+    color: $ct--theme-de-emphasized-color;
+    border-radius: 3px;
+    margin-right: 2px;
+    margin-left: 2px;
+    text-transform: uppercase;
+  }
+
+  &__action {
+    width: 35px;
+    position: relative;
+    padding-right: 5px;
+
+    .ct-theme-button {
+      position: relative;
+    }
+  }
+
+  &__scaled {
+    position: absolute;
+    top: -8px;
+    left: 1px;
+    right: 0;
+    display: flex;
+
+    &-level {
+      background-color: $builder-default-color;
+      color: #fff;
+      border-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 1px 3px;
+      font-size: 8px;
+      line-height: 1;
+      display: flex;
+      align-items: flex-start;
+
+      &-number {
+      }
+
+      &-ordinal {
+        font-size: 6px;
+      }
+    }
+  }
+
+  &__name {
+    width: 135px;
+  }
+
+  &__activation {
+    width: 35px;
+
+    &-extra {
+      display: block;
+      font-size: 12px;
+      color: $ct--theme-de-emphasized-color;
+      font-family: $condensed;
+    }
+
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__attacking {
+    width: 45px;
+  }
+
+  &__tohit {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__save {
+    font-weight: bold;
+
+    &-value {
+      font-size: 14px;
+    }
+
+    &-label {
+      color: $ct--theme-de-emphasized-color;
+      font-size: 10px;
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+
+  &__range {
+    width: 55px;
+
+    &-origin {
+      font-size: 12px;
+    }
+
+    .ddbc-distance-number--miles {
+      .ddbc-distance-number__label {
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+
+  &__damage {
+    width: 85px;
+  }
+
+  &__notes {
+    font-size: 12px;
+    color: $ct--theme-de-emphasized-color;
+    font-family: $condensed;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-family: $condensed;
+
+    &--scaled {
+      color: $builder-default-color;
+    }
+  }
+
+  &__meta {
+    font-size: 10px;
+    color: $ct--theme-de-emphasized-color;
+    font-family: $condensed;
+
+    &-item {
+      & + &::before {
+        content: "\2022";
+        padding: 0 3px;
+      }
+    }
+
+    &--dark-mode {
+      color: $ct--theme-dark-mode-text;
+    }
+  }
+
+  &__range {
+    &-label {
+      font-size: 10px;
+      color: $ct--theme-de-emphasized-color;
+      font-family: $condensed;
+    }
+
+    &-value {
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      &-long {
+        color: $ct--theme-de-emphasized-color;
+        font-size: 10px;
+        margin-left: 3px;
+        font-family: $condensed;
+      }
+    }
+  }
+
+  &__empty-value {
+    color: $ct--theme-de-emphasized-color;
+  }
+}

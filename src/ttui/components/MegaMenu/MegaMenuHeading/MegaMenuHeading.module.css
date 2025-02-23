@@ -1,0 +1,42 @@
+.heading {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.title,
+.link {
+  line-height: 1;
+}
+
+.title {
+  color: var(--ttui_color-megamenu--contrast);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.link {
+  color: var(--ttui_color-info--main);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.25s;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.linkText {
+  color: var(--ttui_color-info--main);
+}
+
+.arrowRight {
+  fill: var(--ttui_color-info--main);
+  margin-left: 0.25rem;
+}
