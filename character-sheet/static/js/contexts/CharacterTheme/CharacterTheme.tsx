@@ -1,5 +1,4 @@
-import React, { createContext, useContext, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, { createContext, useContext } from 'react';
 import { Global } from '@emotion/react';
 
 const fontFaces = `
@@ -25,30 +24,28 @@ const fontFaces = `
   }
 `;
 
-
 interface CharacterThemeContextType {
-  isDefault: boolean;
   themeColor: string;
   backgroundColor: string;
-  isDarkMode: boolean;
+  fontFamily: string;
+  accentColor?: string;
 }
 
 const CharacterThemeContext = createContext<CharacterThemeContextType>({
-  isDefault: true,
   themeColor: '#C53131',
   backgroundColor: '#12181c',
-  isDarkMode: true,
+  fontFamily: 'Roboto, Helvetica, sans-serif',
+  accentColor: '#fe4736'
 });
 
 export const useCharacterTheme = () => useContext(CharacterThemeContext);
 
 export const CharacterThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // We'll connect this to Redux later
   const theme = {
-    isDefault: true,
     themeColor: '#C53131',
     backgroundColor: '#12181c',
-    isDarkMode: true,
+    fontFamily: 'Roboto, Helvetica, sans-serif',
+    accentColor: '#fe4736'
   };
 
   const solidBackground = theme.backgroundColor.length > 7 
@@ -61,25 +58,26 @@ export const CharacterThemeProvider: React.FC<{ children: React.ReactNode }> = (
         styles={`
           ${fontFaces}
           :root {
+            /* Theme Colors */
             --theme-color: ${theme.themeColor};
             --theme-background: ${theme.backgroundColor};
             --theme-background-solid: ${solidBackground};
-            --theme-contrast: ${theme.isDarkMode ? 'var(--ttui_grey-50)' : 'var(--ttui_grey-900)'};
             --theme-transparent: color-mix(in srgb, var(--theme-color), transparent 60%);
-            --character-muted-color: ${theme.isDarkMode ? 'var(--ttui_grey-400)' : 'var(--ttui_grey-500)'};
             
-      
-            --font-family: Roboto, Helvetica, sans-serif;
-            --font-condensed: "Roboto Condensed", Roboto, Helvetica, sans-serif;
+            /* Character Colors */
+            --character-default-color: #96bf6b;
+            --character-builder-blue: #1c9aef;
+            --character-muted-color: var(--ttui_grey-500);
+            --character-content-bg-dark: #202b33;
             
-           
-            --ttui_font-tiamat: "Tiamat", serif;
-            --ttui_font-tiamat-condensed: "Tiamat Condensed SC";
-            --ttui_font-roboto: Roboto, Helvetica, sans-serif;
-          
+            /* Fonts */
+            --font-family: ${theme.fontFamily};
+            --font-condensed: "Roboto Condensed", var(--font-family);
             --font-scala-sans-offc: "Scala Sans Offc", var(--font-family);
             --font-scala-sans-sc-offc: "Scala Sans Sc Offc", var(--font-scala-sans-offc);
             --font-mrs-eaves-small-caps: MrsEavesSmallCaps, var(--font-family);
+            --ttui_font-tiamat: "Tiamat", serif;
+            --ttui_font-tiamat-condensed: "Tiamat Condensed SC";
           }
         `}
       />
