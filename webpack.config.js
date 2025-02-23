@@ -89,9 +89,7 @@ module.exports = {
       '@containers': path.resolve(__dirname, 'src/containers/'),
       '@utils': path.resolve(__dirname, 'src/utils/'),
       '@styles': path.resolve(__dirname, 'src/styles/'),
-      // Remove D&D Beyond specific aliases
-      // '@dndbeyond/character-app': path.resolve(__dirname, 'src/'),
-      // '@dndbeyond/ttui': path.resolve(__dirname, 'node_modules/@dndbeyond/ttui')
+
     }
   },
   optimization: {

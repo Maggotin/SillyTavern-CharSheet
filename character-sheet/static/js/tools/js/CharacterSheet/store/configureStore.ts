@@ -1,7 +1,7 @@
 import { Store } from "redux";
 
 import builderSaga from "../../CharacterBuilder/sagas/builder";
-import { StateStoreUtils } from "../../Shared/stores";
+import { StateStoreUtils } from "./Shared/stores";
 import rootReducer from "../reducers/index";
 import sheetSaga from "../sagas/sheet";
 

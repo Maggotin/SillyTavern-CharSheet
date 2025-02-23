@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Provider } from 'react-redux';
-import { store } from './store';
-import theme from './theme';
+import { store } from './store/store';
+import theme from '../character-sheet/static/js/theme/theme';
 import App from './App';
 
 const queryClient = new QueryClient();

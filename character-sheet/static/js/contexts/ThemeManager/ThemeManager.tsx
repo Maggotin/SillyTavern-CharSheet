@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@mui/material/styles";
 import { createContext } from "react";
-import { theme } from '../../theme';
+import theme from '../../theme/theme';
 
 interface CharacterThemeManager {
   themeColor: string;

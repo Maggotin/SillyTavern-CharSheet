@@ -8,8 +8,8 @@ import {
   OverrideApiException,
 } from "@dndbeyond/character-rules-engine/es";
 
-import { rollResultSaga } from "../sagas";
-import { AppLoggerUtils } from "../utils";
+import { rollResultSaga } from "./sagas/rollResult.ts";
+import { AppLoggerUtils } from "./utils";
 
 let store: Store | null = null;
 

@@ -1,4 +1,5 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { Global } from '@emotion/react';
 
 const fontFaces = `
