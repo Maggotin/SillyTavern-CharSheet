@@ -1,0 +1,9 @@
+export const OPTIONAL_ORIGIN_CREATE = 'character.OPTIONAL_ORIGIN_CREATE' as const;
+export const OPTIONAL_ORIGIN_ADD = 'character.OPTIONAL_ORIGIN_ADD' as const;
+export const OPTIONAL_ORIGIN_ADD_COMMIT = 'character.OPTIONAL_ORIGIN_ADD_COMMIT' as const;
+export const OPTIONAL_ORIGIN_SET_REQUEST = 'character.OPTIONAL_ORIGIN_SET_REQUEST' as const;
+export const OPTIONAL_ORIGIN_SET = 'character.OPTIONAL_ORIGIN_SET' as const;
+export const OPTIONAL_ORIGIN_SET_COMMIT = 'character.OPTIONAL_ORIGIN_SET_COMMIT' as const;
+export const OPTIONAL_ORIGIN_DESTROY = 'character.OPTIONAL_ORIGIN_DESTROY' as const;
+export const OPTIONAL_ORIGIN_REMOVE = 'character.OPTIONAL_ORIGIN_REMOVE' as const;
+export const OPTIONAL_ORIGIN_REMOVE_COMMIT = 'character.OPTIONAL_ORIGIN_REMOVE_COMMIT' as const;

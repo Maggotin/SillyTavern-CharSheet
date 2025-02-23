@@ -1,0 +1,7 @@
+export const INFUSION_MAPPING_CREATE = 'serviceData.INFUSION_MAPPING_CREATE' as const;
+export const INFUSION_MAPPING_DESTROY = 'serviceData.INFUSION_MAPPING_DESTROY' as const;
+export const INFUSION_MAPPINGS_DESTROY = 'serviceData.INFUSION_MAPPINGS_DESTROY' as const;
+export const INFUSION_MAPPING_ADD = 'serviceData.INFUSION_MAPPING_ADD' as const;
+export const INFUSION_MAPPING_ADD_COMMIT = 'serviceData.INFUSION_MAPPING_ADD_COMMIT' as const;
+export const INFUSION_MAPPING_REMOVE = 'serviceData.INFUSION_MAPPING_REMOVE' as const;
+export const INFUSION_MAPPING_REMOVE_COMMIT = 'serviceData.INFUSION_MAPPING_REMOVE_COMMIT' as const;

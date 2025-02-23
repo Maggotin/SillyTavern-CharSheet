@@ -1,0 +1,8 @@
+export const BACKGROUND_CHOICE_SET_REQUEST = 'character.BACKGROUND_CHOICE_SET_REQUEST' as const;
+export const BACKGROUND_CHOOSE = 'character.BACKGROUND_CHOOSE' as const;
+export const BACKGROUND_CUSTOM_SET_REQUEST = 'character.BACKGROUND_CUSTOM_SET_REQUEST' as const;
+export const BACKGROUND_HAS_CUSTOM_SET_REQUEST = 'character.BACKGROUND_HAS_CUSTOM_SET_REQUEST' as const;
+export const BACKGROUND_HAS_CUSTOM_SET = 'character.BACKGROUND_HAS_CUSTOM_SET' as const;
+export const BACKGROUND_HAS_CUSTOM_SET_COMMIT = 'character.BACKGROUND_HAS_CUSTOM_SET_COMMIT' as const;
+export const BACKGROUND_SET = 'character.BACKGROUND_SET' as const;
+export const BACKGROUND_SET_COMMIT = 'character.BACKGROUND_SET_COMMIT' as const;

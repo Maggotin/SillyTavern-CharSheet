@@ -1,0 +1,13 @@
+export const INITIAL_CLASS_SET = 'character.INITIAL_CLASS_SET' as const;
+export const CLASS_ADD = 'character.CLASS_ADD' as const;
+export const CLASS_ADD_REQUEST = 'character.CLASS_ADD_REQUEST' as const;
+export const CLASS_ADD_POST_ACTION = 'character.CLASS_ADD_POST_ACTION' as const;
+export const CLASS_REMOVE_REQUEST = 'character.CLASS_REMOVE_REQUEST' as const;
+export const CLASS_REMOVE_POST_ACTION = 'character.CLASS_REMOVE_POST_ACTION' as const;
+export const CLASS_REMOVE_COMMIT = 'character.CLASS_REMOVE_COMMIT' as const;
+export const CLASS_SET = 'character.CLASS_SET' as const;
+export const CLASS_SET_COMMIT = 'character.CLASS_SET_COMMIT' as const;
+export const CLASS_LEVEL_SET_REQUEST = 'character.CLASS_LEVEL_SET_REQUEST' as const;
+export const CLASSES_SET = 'character.CLASSES_SET' as const;
+export const CLASSES_SET_COMMIT = 'character.CLASSES_SET_COMMIT' as const;
+export const CLASSES_UNSET = 'character.CLASSES_UNSET' as const;

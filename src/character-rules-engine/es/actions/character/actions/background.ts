@@ -1,4 +1,4 @@
-import * as actionTypes from '../actionTypes';
+import * as actionTypes from '../actionTypes/background';
 
 interface BackgroundChooseAction {
     type: typeof actionTypes.BACKGROUND_CHOOSE;

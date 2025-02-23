@@ -1,0 +1,12 @@
+export const CREATURE_CREATE = 'character.CREATURE_CREATE' as const;
+export const CREATURE_ADD = 'character.CREATURE_ADD' as const;
+export const CREATURE_ADD_COMMIT = 'character.CREATURE_ADD_COMMIT' as const;
+export const CREATURE_REMOVE = 'character.CREATURE_REMOVE' as const;
+export const CREATURE_REMOVE_COMMIT = 'character.CREATURE_REMOVE_COMMIT' as const;
+export const CREATURE_DATA_SET = 'character.CREATURE_DATA_SET' as const;
+export const CREATURE_DATA_SET_COMMIT = 'character.CREATURE_DATA_SET_COMMIT' as const;
+export const CREATURE_HIT_POINTS_SET = 'character.CREATURE_HIT_POINTS_SET' as const;
+export const CREATURE_HIT_POINTS_SET_COMMIT = 'character.CREATURE_HIT_POINTS_SET_COMMIT' as const;
+export const CREATURE_ACTIVE_SET = 'character.CREATURE_ACTIVE_SET' as const;
+export const CREATURE_ACTIVE_SET_COMMIT = 'character.CREATURE_ACTIVE_SET_COMMIT' as const;
+export const CREATURE_CUSTOMIZATIONS_DELETE = 'character.CREATURE_CUSTOMIZATIONS_DELETE' as const;

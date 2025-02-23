@@ -1,0 +1,9 @@
+export const BACKDROP_SET = 'character.BACKDROP_SET' as const;
+export const BACKDROP_SET_COMMIT = 'character.BACKDROP_SET_COMMIT' as const;
+export const FRAME_SET = 'character.FRAME_SET' as const;
+export const FRAME_SET_COMMIT = 'character.FRAME_SET_COMMIT' as const;
+export const THEME_SET = 'character.THEME_SET' as const;
+export const THEME_SET_COMMIT = 'character.THEME_SET_COMMIT' as const;
+export const PORTRAIT_SET = 'character.PORTRAIT_SET' as const;
+export const PORTRAIT_SET_COMMIT = 'character.PORTRAIT_SET_COMMIT' as const;
+export const PORTRAIT_UPLOAD = 'character.PORTRAIT_UPLOAD' as const;

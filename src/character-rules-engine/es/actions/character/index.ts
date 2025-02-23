@@ -1,5 +1,5 @@
-import * as actionTypes from './actionTypes';
-import * as actions from './actions';
+import * as actionTypes from './actionTypes/index';
+import * as actions from './actions/index';
 import * as typings from './typings';
 
 export const characterActionTypes: typeof actionTypes = actionTypes;

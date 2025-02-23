@@ -1,4 +1,4 @@
-import * as actionTypes from '../actionTypes';
+import * as actionTypes from '../actionTypes/character';
 
 interface CharacterLoadAction {
     type: typeof actionTypes.CHARACTER_LOAD;

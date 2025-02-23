@@ -1,0 +1,6 @@
+export const SHOW_HELP_TEXT_SET = 'character.SHOW_HELP_TEXT_SET' as const;
+export const SHOW_HELP_TEXT_SET_REQUEST = 'character.SHOW_HELP_TEXT_SET_REQUEST' as const;
+export const ABILITY_SCORE_TYPE_SET_REQUEST = 'character.ABILITY_SCORE_TYPE_SET_REQUEST' as const;
+export const ABILITY_SCORE_TYPE_SET_COMMIT = 'character.ABILITY_SCORE_TYPE_SET_COMMIT' as const;
+export const STARTING_EQUIPMENT_TYPE_SET = 'character.STARTING_EQUIPMENT_TYPE_SET' as const;
+export const STARTING_EQUIPMENT_TYPE_SET_COMMIT = 'character.STARTING_EQUIPMENT_TYPE_SET_COMMIT' as const;

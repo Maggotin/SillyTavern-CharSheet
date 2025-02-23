@@ -1,1 +1,1 @@
-export const DATA_SET = 'featureFlagInfo.DATA_SET';
+export const DATA_SET = 'featureFlagInfo.DATA_SET' as const;
