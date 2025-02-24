@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FC, HTMLAttributes, MouseEvent } from "react";
 
-import ChevronRight from "@dndbeyond/fontawesome-cache/svgs/solid/chevron-right.svg";
+import ChevronRight from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/chevron-right.svg";
 
 import { LegacyBadge } from "~/components/LegacyBadge";
 import { ListingItem } from "~/subApps/builder/types";

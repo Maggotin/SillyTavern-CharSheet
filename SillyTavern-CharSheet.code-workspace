@@ -2,6 +2,18 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../../../../../../../Downloads/ST-CharSheet-Backup/dndbeyond"
+		},
+		{
+			"path": "../../../../../../../../Downloads/ST-CharSheet-Backup/dndbeyond/character-service.dndbeyond.com"
+		},
+		{
+			"path": "../../../../../../../../Downloads/ST-CharSheet-Backup/dndbeyond/media.dndbeyond.com"
+		},
+		{
+			"path": "../../../../../../../../Downloads/ST-CharSheet-Backup/dndbeyond/webpack---dndbeyond"
 		}
 	],
 	"settings": {

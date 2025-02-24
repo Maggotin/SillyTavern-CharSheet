@@ -1,9 +1,0 @@
-.ct-features-mobile {
-  @include mobileDividerContentBlock();
-}
-
-.ct-character-sheet-mobile--dark-mode {
-  .ct-features-mobile {
-    background-color: $ct--theme-dark-mode-bg-mobile;
-  }
-}

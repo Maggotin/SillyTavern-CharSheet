@@ -534,7 +534,7 @@ var toIndexedObject$5 = function (it) {
   return IndexedObject(requireObjectCoercible$3(it));
 };
 
-var shared$4 = {exports: {}};
+var shared$4 = { exports: {} };
 
 var global$t = global$w;
 
@@ -983,8 +983,8 @@ var createMethod$1 = function (IS_INCLUDES) {
       value = O[index++];
       // eslint-disable-next-line no-self-compare -- NaN check
       if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
-    } else for (;length > index; index++) {
+      // Array#indexOf ignores holes, Array#includes - not
+    } else for (; length > index; index++) {
       if ((IS_INCLUDES || index in O) && O[index] === el) return IS_INCLUDES || index || 0;
     } return !IS_INCLUDES && -1;
   };
@@ -1339,7 +1339,7 @@ objectGetOwnPropertyDescriptor.f = DESCRIPTORS$2 ? $getOwnPropertyDescriptor : f
   if (hasOwn$5(O, P)) return createPropertyDescriptor$2(!call$5(propertyIsEnumerableModule.f, O, P), O[P]);
 };
 
-var makeBuiltIn$2 = {exports: {}};
+var makeBuiltIn$2 = { exports: {} };
 
 var DESCRIPTORS$1 = descriptors;
 var hasOwn$4 = hasOwnProperty_1;
@@ -1486,8 +1486,8 @@ var isForced$1 = function (feature, detection) {
   var value = data[normalize(feature)];
   return value == POLYFILL ? true
     : value == NATIVE ? false
-    : isCallable$7(detection) ? fails$8(detection)
-    : !!detection;
+      : isCallable$7(detection) ? fails$8(detection)
+        : !!detection;
 };
 
 var normalize = isForced$1.normalize = function (string) {
@@ -1826,8 +1826,8 @@ var es_array_iterator = defineIterator(Array, 'Array', function (iterated, kind)
     index: 0,                          // next index
     kind: kind                         // kind
   });
-// `%ArrayIteratorPrototype%.next` method
-// https://tc39.es/ecma262/#sec-%arrayiteratorprototype%.next
+  // `%ArrayIteratorPrototype%.next` method
+  // https://tc39.es/ecma262/#sec-%arrayiteratorprototype%.next
 }, function () {
   var state = getInternalState$1(this);
   var target = state.target;
@@ -1874,7 +1874,6 @@ var domIterables = {
   HTMLFormElement: 0,
   HTMLSelectElement: 0,
   MediaList: 0,
-  MimeTypeArray: 0,
   NamedNodeMap: 0,
   NodeList: 1,
   PaintRequestList: 0,
@@ -1974,10 +1973,10 @@ var classof$4 = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
   return it === undefined ? 'Undefined' : it === null ? 'Null'
     // @@toStringTag case
     : typeof (tag = tryGet(O = Object$1(it), TO_STRING_TAG)) == 'string' ? tag
-    // builtinTag case
-    : CORRECT_ARGUMENTS ? classofRaw(O)
-    // ES3 arguments fallback
-    : (result = classofRaw(O)) == 'Object' && isCallable$2(O.callee) ? 'Arguments' : result;
+      // builtinTag case
+      : CORRECT_ARGUMENTS ? classofRaw(O)
+        // ES3 arguments fallback
+        : (result = classofRaw(O)) == 'Object' && isCallable$2(O.callee) ? 'Arguments' : result;
 };
 
 var global$7 = global$w;
@@ -2383,12 +2382,12 @@ var createMethod = function (CONVERT_TO_STRING) {
     first = charCodeAt(S, position);
     return first < 0xD800 || first > 0xDBFF || position + 1 === size
       || (second = charCodeAt(S, position + 1)) < 0xDC00 || second > 0xDFFF
-        ? CONVERT_TO_STRING
-          ? charAt$1(S, position)
-          : first
-        : CONVERT_TO_STRING
-          ? stringSlice$1(S, position, position + 2)
-          : (first - 0xD800 << 10) + (second - 0xDC00) + 0x10000;
+      ? CONVERT_TO_STRING
+        ? charAt$1(S, position)
+        : first
+      : CONVERT_TO_STRING
+        ? stringSlice$1(S, position, position + 2)
+        : (first - 0xD800 << 10) + (second - 0xDC00) + 0x10000;
   };
 };
 
@@ -2521,9 +2520,9 @@ fixRegExpWellKnownSymbolLogic('split', function (SPLIT, nativeSplit, maybeCallNa
       }
       var output = [];
       var flags = (separator.ignoreCase ? 'i' : '') +
-                  (separator.multiline ? 'm' : '') +
-                  (separator.unicode ? 'u' : '') +
-                  (separator.sticky ? 'y' : '');
+        (separator.multiline ? 'm' : '') +
+        (separator.unicode ? 'u' : '') +
+        (separator.sticky ? 'y' : '');
       var lastLastIndex = 0;
       // Make `global` and avoid `lastIndex` issues by working with a copy
       var separatorCopy = new RegExp(separator.source, flags + 'g');
@@ -2544,7 +2543,7 @@ fixRegExpWellKnownSymbolLogic('split', function (SPLIT, nativeSplit, maybeCallNa
       } else push(output, stringSlice(string, lastLastIndex));
       return output.length > lim ? arraySlice(output, 0, lim) : output;
     };
-  // Chakra, V8
+    // Chakra, V8
   } else if ('0'.split(undefined, 0).length) {
     internalSplit = function (separator, limit) {
       return separator === undefined && limit === 0 ? [] : call(nativeSplit, this, separator, limit);
@@ -2577,9 +2576,9 @@ fixRegExpWellKnownSymbolLogic('split', function (SPLIT, nativeSplit, maybeCallNa
 
       var unicodeMatching = rx.unicode;
       var flags = (rx.ignoreCase ? 'i' : '') +
-                  (rx.multiline ? 'm' : '') +
-                  (rx.unicode ? 'u' : '') +
-                  (UNSUPPORTED_Y ? 'g' : 'y');
+        (rx.multiline ? 'm' : '') +
+        (rx.unicode ? 'u' : '') +
+        (UNSUPPORTED_Y ? 'g' : 'y');
 
       // ^(? + rx + ) is needed, in combination with some S slicing, to
       // simulate the 'y' flag.

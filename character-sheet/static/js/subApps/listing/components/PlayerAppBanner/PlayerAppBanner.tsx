@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 
-import XMark from "@dndbeyond/fontawesome-cache/svgs/regular/xmark.svg";
+import XMark from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/regular/xmark.svg";
 import { Button } from "@dndbeyond/ttui/components/Button";
 
 import {

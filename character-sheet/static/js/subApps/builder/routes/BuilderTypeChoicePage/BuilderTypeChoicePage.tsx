@@ -7,7 +7,7 @@ import {
   characterEnvSelectors,
   Constants,
 } from "@dndbeyond/character-rules-engine";
-import ChevronRight from "@dndbeyond/fontawesome-cache/svgs/solid/chevron-right.svg";
+import ChevronRight from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/chevron-right.svg";
 
 import { Button } from "~/components/Button";
 import { Checkbox } from "~/components/Checkbox";

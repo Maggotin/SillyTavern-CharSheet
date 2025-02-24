@@ -299,7 +299,7 @@ var ordinaryToPrimitive$1 = function (input, pref) {
   throw TypeError$8("Can't convert object to primitive value");
 };
 
-var shared$3 = {exports: {}};
+var shared$3 = { exports: {} };
 
 var global$m = global$v;
 
@@ -558,7 +558,7 @@ var createNonEnumerableProperty$5 = DESCRIPTORS$5 ? function (object, key, value
   return object;
 };
 
-var makeBuiltIn$2 = {exports: {}};
+var makeBuiltIn$2 = { exports: {} };
 
 var DESCRIPTORS$4 = descriptors;
 var hasOwn$7 = hasOwnProperty_1;
@@ -810,8 +810,8 @@ var createMethod$2 = function (IS_INCLUDES) {
       value = O[index++];
       // eslint-disable-next-line no-self-compare -- NaN check
       if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
-    } else for (;length > index; index++) {
+      // Array#indexOf ignores holes, Array#includes - not
+    } else for (; length > index; index++) {
       if ((IS_INCLUDES || index in O) && O[index] === el) return IS_INCLUDES || index || 0;
     } return !IS_INCLUDES && -1;
   };
@@ -916,8 +916,8 @@ var isForced$1 = function (feature, detection) {
   var value = data[normalize(feature)];
   return value == POLYFILL ? true
     : value == NATIVE ? false
-    : isCallable$6(detection) ? fails$6(detection)
-    : !!detection;
+      : isCallable$6(detection) ? fails$6(detection)
+        : !!detection;
 };
 
 var normalize = isForced$1.normalize = function (string) {
@@ -1096,10 +1096,10 @@ var classof$3 = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
   return it === undefined ? 'Undefined' : it === null ? 'Null'
     // @@toStringTag case
     : typeof (tag = tryGet(O = Object$2(it), TO_STRING_TAG$2)) == 'string' ? tag
-    // builtinTag case
-    : CORRECT_ARGUMENTS ? classofRaw(O)
-    // ES3 arguments fallback
-    : (result = classofRaw(O)) == 'Object' && isCallable$5(O.callee) ? 'Arguments' : result;
+      // builtinTag case
+      : CORRECT_ARGUMENTS ? classofRaw(O)
+        // ES3 arguments fallback
+        : (result = classofRaw(O)) == 'Object' && isCallable$5(O.callee) ? 'Arguments' : result;
 };
 
 var global$9 = global$v;
@@ -1185,56 +1185,56 @@ PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
 function __rest(s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
+  var t = {};
+  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+    t[p] = s[p];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+      if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+        t[p[i]] = s[p[i]];
+    }
+  return t;
 }
 
 function toVal(mix) {
-	var k, y, str='';
+  var k, y, str = '';
 
-	if (typeof mix === 'string' || typeof mix === 'number') {
-		str += mix;
-	} else if (typeof mix === 'object') {
-		if (Array.isArray(mix)) {
-			for (k=0; k < mix.length; k++) {
-				if (mix[k]) {
-					if (y = toVal(mix[k])) {
-						str && (str += ' ');
-						str += y;
-					}
-				}
-			}
-		} else {
-			for (k in mix) {
-				if (mix[k]) {
-					str && (str += ' ');
-					str += k;
-				}
-			}
-		}
-	}
+  if (typeof mix === 'string' || typeof mix === 'number') {
+    str += mix;
+  } else if (typeof mix === 'object') {
+    if (Array.isArray(mix)) {
+      for (k = 0; k < mix.length; k++) {
+        if (mix[k]) {
+          if (y = toVal(mix[k])) {
+            str && (str += ' ');
+            str += y;
+          }
+        }
+      }
+    } else {
+      for (k in mix) {
+        if (mix[k]) {
+          str && (str += ' ');
+          str += k;
+        }
+      }
+    }
+  }
 
-	return str;
+  return str;
 }
 
-function clsx () {
-	var i=0, tmp, x, str='';
-	while (i < arguments.length) {
-		if (tmp = arguments[i++]) {
-			if (x = toVal(tmp)) {
-				str && (str += ' ');
-				str += x;
-			}
-		}
-	}
-	return str;
+function clsx() {
+  var i = 0, tmp, x, str = '';
+  while (i < arguments.length) {
+    if (tmp = arguments[i++]) {
+      if (x = toVal(tmp)) {
+        str && (str += ' ');
+        str += x;
+      }
+    }
+  }
+  return str;
 }
 
 const defaultGenerator = componentName => componentName;
@@ -1417,7 +1417,7 @@ const FilterableListView = /*#__PURE__*/React.forwardRef(function FilterableList
     showImages = true,
     selected = 0
   } = props,
-        other = __rest(props, ["endRef", "className", "filterButtonAlign", "filters", "imageSize", "items", "onSearch", "onToggleFilters", "searchLabel", "showImages", "selected"]);
+    other = __rest(props, ["endRef", "className", "filterButtonAlign", "filters", "imageSize", "items", "onSearch", "onToggleFilters", "searchLabel", "showImages", "selected"]);
 
   const ownerState = Object.assign({
     imageSize
@@ -1914,7 +1914,7 @@ const FilterInput = /*#__PURE__*/React.forwardRef(function FilterInput(inProps, 
     onChipDelete,
     color
   } = props,
-        other = __rest(props, ["className", "children", "label", "value", "multiple", "onChipDelete", "color"]);
+    other = __rest(props, ["className", "children", "label", "value", "multiple", "onChipDelete", "color"]);
 
   const ownerState = Object.assign(Object.assign({}, props), {
     color,
@@ -2030,7 +2030,7 @@ const FilterInputItem = /*#__PURE__*/React.forwardRef(function FilterInputItem(i
     checked = false,
     hideCheckbox = false
   } = props,
-        other = __rest(props, ["className", "children", "label", "value", "checked", "hideCheckbox"]);
+    other = __rest(props, ["className", "children", "label", "value", "checked", "hideCheckbox"]);
 
   const ownerState = Object.assign(Object.assign({}, props), {
     label,
@@ -2389,7 +2389,7 @@ var createMethod = function (IS_RIGHT) {
         throw TypeError$2('Reduce of empty array with no initial value');
       }
     }
-    for (;IS_RIGHT ? index >= 0 : length > index; index += i) if (index in self) {
+    for (; IS_RIGHT ? index >= 0 : length > index; index += i) if (index in self) {
       memo = callbackfn(memo, self[index], index, O);
     }
     return memo;
@@ -2441,7 +2441,7 @@ $$1({ target: 'Array', proto: true, forced: !STRICT_METHOD || CHROME_BUG }, {
 });
 
 let _ = t => t,
-    _t;
+  _t;
 
 const FontProvider = ({
   fonts
@@ -2493,7 +2493,7 @@ const Header = function Header(inProps) {
     children,
     maxWidth = 'xl'
   } = props,
-        other = __rest(props, ["className", "children", "maxWidth"]);
+    other = __rest(props, ["className", "children", "maxWidth"]);
 
   const ownerState = Object.assign({}, props);
   const classes = useUtilityClasses$7();
@@ -2784,8 +2784,8 @@ var es_array_iterator = defineIterator(Array, 'Array', function (iterated, kind)
     index: 0,                          // next index
     kind: kind                         // kind
   });
-// `%ArrayIteratorPrototype%.next` method
-// https://tc39.es/ecma262/#sec-%arrayiteratorprototype%.next
+  // `%ArrayIteratorPrototype%.next` method
+  // https://tc39.es/ecma262/#sec-%arrayiteratorprototype%.next
 }, function () {
   var state = getInternalState(this);
   var target = state.target;
@@ -2832,7 +2832,6 @@ var domIterables = {
   HTMLFormElement: 0,
   HTMLSelectElement: 0,
   MediaList: 0,
-  MimeTypeArray: 0,
   NamedNodeMap: 0,
   NodeList: 1,
   PaintRequestList: 0,
@@ -2973,7 +2972,7 @@ const HeaderButtonBar = /*#__PURE__*/React.forwardRef(function HeaderButtonBar(i
     children,
     componentsProps = {}
   } = props,
-        other = __rest(props, ["className", "component", "children", "componentsProps"]);
+    other = __rest(props, ["className", "component", "children", "componentsProps"]);
 
   const ComponentProp = component;
   const ownerState = Object.assign(Object.assign({}, props), {
@@ -3130,7 +3129,7 @@ const HeaderTitle = /*#__PURE__*/React.forwardRef(function HeaderTitle(inProps, 
     label,
     children
   } = props,
-        other = __rest(props, ["className", "component", "componentsProps", "label", "children"]);
+    other = __rest(props, ["className", "component", "componentsProps", "label", "children"]);
 
   const ComponentProp = component;
   const ownerState = Object.assign(Object.assign({}, props), {
@@ -3284,7 +3283,7 @@ const InfoItem = /*#__PURE__*/React.forwardRef(function InfoItem(inProps, ref) {
     label,
     labelProps
   } = props,
-        other = __rest(props, ["children", "className", "color", "label", "labelProps"]);
+    other = __rest(props, ["children", "className", "color", "label", "labelProps"]);
 
   const ownerState = Object.assign(Object.assign({}, props), {
     color,
@@ -3362,7 +3361,7 @@ const LabelChip = _a => {
   var {
     tooltip
   } = _a,
-      props = __rest(_a, ["tooltip"]);
+    props = __rest(_a, ["tooltip"]);
 
   return tooltip ? jsx(Tooltip, Object.assign({
     title: tooltip,
@@ -3426,7 +3425,7 @@ const Scroll = /*#__PURE__*/React.forwardRef(function Scroll(inProps, ref) {
     color,
     component = 'div'
   } = props,
-        other = __rest(props, ["className", "color", "component"]);
+    other = __rest(props, ["className", "color", "component"]);
 
   const ownerState = Object.assign(Object.assign({}, props), {
     color,
@@ -3553,7 +3552,7 @@ const ScrollBlock = /*#__PURE__*/React.forwardRef(function ScrollBlock(inProps, 
     subtitle = '',
     title = ''
   } = props,
-        other = __rest(props, ["className", "color", "component", "detailUrl", "notes", "pronunciation", "source", "subtitle", "title"]);
+    other = __rest(props, ["className", "color", "component", "detailUrl", "notes", "pronunciation", "source", "subtitle", "title"]);
 
   const ownerState = Object.assign(Object.assign({}, props), {
     color,
@@ -3741,7 +3740,7 @@ const PaywallScrollBlock = /*#__PURE__*/React.forwardRef(function PaywallScrollB
     sourceDescription,
     sourceLink
   } = props,
-        other = __rest(props, ["className", "name", "description", "color", "sourceImage", "sourceTitle", "sourceDescription", "sourceLink"]);
+    other = __rest(props, ["className", "name", "description", "color", "sourceImage", "sourceTitle", "sourceDescription", "sourceLink"]);
 
   const ownerState = props;
   const classes = useUtilityClasses$1();
@@ -3853,7 +3852,7 @@ const SampleComponent = /*#__PURE__*/React.forwardRef(function SampleComponent(i
     fullWidth = false,
     componentsProps = {}
   } = props,
-        other = __rest(props, ["className", "component", "variant", "fullWidth", "componentsProps"]);
+    other = __rest(props, ["className", "component", "variant", "fullWidth", "componentsProps"]);
 
   const ComponentProp = component;
   const ownerState = Object.assign(Object.assign({}, props), {

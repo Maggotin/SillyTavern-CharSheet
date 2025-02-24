@@ -1,7 +1,7 @@
 import { toWords } from "number-to-words";
 import { FC, useEffect, useRef } from "react";
 
-import SpinnerThird from "@dndbeyond/fontawesome-cache/svgs/regular/spinner-third.svg";
+import SpinnerThird from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/regular/spinner-third.svg";
 
 import useApiCall from "~/hooks/useApiCall";
 

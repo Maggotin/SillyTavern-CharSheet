@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";
 import { createPortal } from "react-dom";
 
-import GridIcon from "@dndbeyond/fontawesome-cache/svgs/solid/grid.svg";
+import GridIcon from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/grid.svg";
 import { useIsVisible } from "@dndbeyond/ttui/hooks/useIsVisible";
 
 import { useSidebar } from "~/contexts/Sidebar";

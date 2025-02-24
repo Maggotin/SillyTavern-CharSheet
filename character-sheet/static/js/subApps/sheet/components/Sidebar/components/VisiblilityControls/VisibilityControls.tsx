@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";
 
-import Lock from "@dndbeyond/fontawesome-cache/svgs/solid/lock.svg";
-import Unlock from "@dndbeyond/fontawesome-cache/svgs/solid/unlock.svg";
+import Lock from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/lock.svg";
+import Unlock from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/unlock.svg";
 
 import {
   SidebarAlignmentEnum,

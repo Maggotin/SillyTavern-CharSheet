@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";
 
-import ChevronLeft from "@dndbeyond/fontawesome-cache/svgs/solid/chevron-left.svg";
-import ChevronRight from "@dndbeyond/fontawesome-cache/svgs/solid/chevron-right.svg";
+import ChevronLeft from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/chevron-left.svg";
+import ChevronRight from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/chevron-right.svg";
 
 import { Button } from "~/components/Button";
 import { useCharacterTheme } from "~/contexts/CharacterTheme";

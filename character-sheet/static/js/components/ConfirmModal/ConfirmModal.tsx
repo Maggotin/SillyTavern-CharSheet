@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FC } from "react";
 
-import CloseIcon from "@dndbeyond/fontawesome-cache/svgs/solid/x.svg";
+import CloseIcon from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/x.svg";
 
 import { Button } from "../Button";
 import { Dialog, DialogProps } from "../Dialog";

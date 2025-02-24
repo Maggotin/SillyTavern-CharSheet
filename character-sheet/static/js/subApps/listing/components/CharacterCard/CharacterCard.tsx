@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { FC } from "react";
 
-import Lock from "@dndbeyond/fontawesome-cache/svgs/regular/lock.svg";
-import Check from "@dndbeyond/fontawesome-cache/svgs/sharp-regular/check.svg";
+import Lock from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/regular/lock.svg";
+import Check from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/sharp-regular/check.svg";
 import { Button } from "@dndbeyond/ttui/components/Button";
 
 import useApiCall from "~/hooks/useApiCall";

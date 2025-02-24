@@ -1,7 +1,7 @@
 import React from "react";
 
-import CircleExclamation from "@dndbeyond/fontawesome-cache/svgs/solid/circle-exclamation.svg";
-import SpinnerThird from "@dndbeyond/fontawesome-cache/svgs/solid/spinner-third.svg";
+import CircleExclamation from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/circle-exclamation.svg";
+import SpinnerThird from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/spinner-third.svg";
 
 import styles from "./styles.module.css";
 

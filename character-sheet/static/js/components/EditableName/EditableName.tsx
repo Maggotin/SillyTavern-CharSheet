@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { HTMLAttributes } from "react";
 import { useSelector } from "react-redux";
 
-import Pen from "@dndbeyond/fontawesome-cache/svgs/light/pen.svg";
+import Pen from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/light/pen.svg";
 
 import { appEnvSelectors } from "../../tools/js/Shared/selectors";
 import styles from "./styles.module.css";

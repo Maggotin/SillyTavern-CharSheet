@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FC, HTMLAttributes, useEffect, useState } from "react";
 
-import CircleInfo from "@dndbeyond/fontawesome-cache/svgs/regular/circle-info.svg";
+import CircleInfo from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/regular/circle-info.svg";
 
 import { Accordion } from "~/components/Accordion";
 import { HtmlContent } from "~/components/HtmlContent";

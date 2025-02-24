@@ -8,7 +8,7 @@ import {
   CampaignUtils,
   CharacterTheme,
 } from "@dndbeyond/character-rules-engine/es";
-import D6 from "@dndbeyond/fontawesome-cache/svgs/regular/dice-d6.svg";
+import D6 from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/regular/dice-d6.svg";
 import { GameLogNotificationWrapper } from "@dndbeyond/game-log-components";
 
 import { Link } from "~/components/Link";

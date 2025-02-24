@@ -10,7 +10,7 @@ import {
 } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import ChevronDown from "@dndbeyond/fontawesome-cache/svgs/solid/chevron-down.svg";
+import ChevronDown from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/chevron-down.svg";
 
 import styles from "./styles.module.css";
 

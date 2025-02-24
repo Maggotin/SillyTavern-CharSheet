@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React, { FC } from "react";
 import { useDispatch } from "react-redux";
 
-import ArrowRightIcon from "@dndbeyond/fontawesome-cache/svgs/solid/arrow-right.svg";
+import ArrowRightIcon from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/arrow-right.svg";
 
 import { Button } from "~/components/Button";
 import { ConfirmModal } from "~/components/ConfirmModal";

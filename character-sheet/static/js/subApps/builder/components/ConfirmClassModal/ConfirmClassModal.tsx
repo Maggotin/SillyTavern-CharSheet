@@ -3,7 +3,7 @@ import { FC, Fragment, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 
-import ArrowRightIcon from "@dndbeyond/fontawesome-cache/svgs/solid/arrow-right.svg";
+import ArrowRightIcon from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/arrow-right.svg";
 
 import { Accordion } from "~/components/Accordion";
 import { Button } from "~/components/Button";

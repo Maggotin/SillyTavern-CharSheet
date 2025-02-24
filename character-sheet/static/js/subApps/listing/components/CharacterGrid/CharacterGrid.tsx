@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-import ArrowDown from "@dndbeyond/fontawesome-cache/svgs/regular/arrow-down-to-line.svg";
+import ArrowDown from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/regular/arrow-down-to-line.svg";
 import { Button } from "@dndbeyond/ttui/components/Button";
 
 import { MaxCharactersDialog } from "~/components/MaxCharactersDialog";

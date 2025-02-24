@@ -36,7 +36,7 @@ import {
   ValueUtils,
   WeaponSpellDamageGroup,
 } from "@dndbeyond/character-rules-engine/es";
-import StarIcon from "@dndbeyond/fontawesome-cache/svgs/solid/star.svg";
+import StarIcon from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/star.svg";
 
 import { HtmlContent } from "~/components/HtmlContent";
 import { InfoItem } from "~/components/InfoItem";

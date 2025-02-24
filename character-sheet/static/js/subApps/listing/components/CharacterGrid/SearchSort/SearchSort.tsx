@@ -7,9 +7,9 @@ import {
   useState,
 } from "react";
 
-import Gear from "@dndbeyond/fontawesome-cache/svgs/regular/gear.svg";
-import CircleXMark from "@dndbeyond/fontawesome-cache/svgs/solid/circle-xmark.svg";
-import MagnifyingGlass from "@dndbeyond/fontawesome-cache/svgs/solid/magnifying-glass.svg";
+import Gear from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/regular/gear.svg";
+import CircleXMark from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/circle-xmark.svg";
+import MagnifyingGlass from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/magnifying-glass.svg";
 import { Button } from "@dndbeyond/ttui/components/Button";
 import { Select } from "@dndbeyond/ttui/components/Select";
 

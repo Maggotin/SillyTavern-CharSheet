@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FC, HTMLAttributes, ReactNode, useState } from "react";
 
-import ChevronDown from "@dndbeyond/fontawesome-cache/svgs/solid/chevron-down.svg";
+import ChevronDown from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/chevron-down.svg";
 
 import { Popover } from "../Popover";
 import styles from "./styles.module.css";

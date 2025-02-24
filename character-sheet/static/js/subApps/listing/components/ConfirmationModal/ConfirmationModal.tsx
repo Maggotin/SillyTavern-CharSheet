@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 
-import TriangleExclamation from "@dndbeyond/fontawesome-cache/svgs/regular/triangle-exclamation.svg";
+import TriangleExclamation from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/regular/triangle-exclamation.svg";
 import { Button } from "@dndbeyond/ttui/components/Button";
 
 import styles from "./styles.module.css";

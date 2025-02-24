@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700,900");
-
-
 .drag-grabber {
     cursor: move;
     height: 20px;
@@ -2200,7 +2197,7 @@ body input[type=search]:hover {
 }
 
 .styles_paper__FhNqH .styles_summary__BI\+UG {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/listing-bars/1a-700-hover.png);
+    background-image: url('../assets/png/listing-bars/1a-700-hover.png');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100% 4rem;
@@ -2247,7 +2244,7 @@ body input[type=search]:hover {
 }
 
 .styles_paper__FhNqH .styles_content__pFYp6:after {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/character-sheet/expanded-listing-item-bottom-border-700.png);
+    background-image: url('../assets/png/character-sheet/expanded-listing-item-bottom-border-700.png');
     background-position: .063rem 100%;
     background-repeat: no-repeat;
     background-size: calc(100% - .125rem) 1.75rem;
@@ -2716,7 +2713,7 @@ body input[type=search]:hover {
 }
 
 .stcs-breadcrumbs__item:before {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/breadcrumb-chevron.svg);
+    background-image: url('../assets/svg/icons/breadcrumb-chevron.svg');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -2732,7 +2729,7 @@ body input[type=search]:hover {
 }
 
 .stcs-breadcrumbs__item:first-child .stcs-breadcrumbs__item-link:before {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/dnd-beyond-b-red.png);
+    background-image: url('../assets/png/dnd-beyond-b-red.png');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -3046,6 +3043,7 @@ body input[type=search]:hover {
 .input-stepper__value[type=number],
 .input-stepper__value[type=number]:focus,
 .input-stepper__value[type=number]:hover {
+    appearance: textfield;
     -moz-appearance: textfield;
     background: #fff;
     border: 1px solid #d8e1e8;
@@ -4893,7 +4891,7 @@ body.body-mycontent-characterindex #site footer#footer {
 }
 
 .my-characters-wrapper .b-breadcrumb-a .b-breadcrumb-item:first-child a:before {
-    background: url(https://www.dndbeyond.com/content/skins/waterdeep/images/dnd-beyond-b-red.png) no-repeat;
+    background: url('https://www.dndbeyond.com/content/skins/waterdeep/images/dnd-beyond-b-red.png') no-repeat;
     background-size: contain;
     content: "";
     display: inline-block;
@@ -4907,7 +4905,7 @@ body.body-mycontent-characterindex #site footer#footer {
 }
 
 .my-characters-wrapper .b-breadcrumb-a .b-breadcrumb-item+.b-breadcrumb-item:before {
-    background: url(https://www.dndbeyond.com/content/skins/waterdeep/images/icons/breadcrumb-chevron.svg) no-repeat;
+    background: url('https://www.dndbeyond.com/content/skins/waterdeep/images/icons/breadcrumb-chevron.svg') no-repeat;
     background-size: contain;
     content: "";
     display: inline-block;
@@ -5847,8 +5845,8 @@ html body.body-mycontent-characterindex .container .content {
 }
 
 .styles_search__A3o1k[type=search] {
-    background: .625rem #fff url(https://github.com/Maggotin/hosted-assets/svg/icons/search-grey.svg) no-repeat;
-    background-size: .938rem;
+    background: .625rem #fff url('../assets/svg/icons/search-grey.svg') no-repeat;
+        background-size: .938rem;
     box-sizing: border-box;
     padding: .625rem .625rem .625rem 2.188rem;
     position: relative;
@@ -7176,7 +7174,7 @@ button.styles_tab__8k1Cz:focus-visible {
 }
 
 /*!
- * animate.css -https://daneden.github.io/animate.css/
+ * animate.css -"https://daneden.github.io/animate.css/
  * Version - 3.7.2
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
@@ -9909,7 +9907,7 @@ a:visited {
 }
 
 .stcs-manage-icon__icon {
-    background: 50% transparent url(https://maggotin.github.io/hosted-assets/svg/gear-grey.svg);
+    background: 50% transparent url('https://maggotin.github.io/hosted-assets/svg/gear-grey.svg');
     background-size: 16px 16px;
     display: inline-flex;
     height: 16px;
@@ -9921,7 +9919,7 @@ a:visited {
 
 
 .stcs-manage-icon:hover .stcs-manage-icon__icon {
-    background-image: url(https://maggotin.github.io/hosted-assets/svg/gear-grey.svg)
+    background-image: url('https://maggotin.github.io/hosted-assets/svg/gear-grey.svg');
 }
 
 .stcs-manage-icon--edge-icon .stcs-manage-icon__icon {
@@ -10504,7 +10502,7 @@ a:visited {
 
 .button-action-decrease:before,
 .button-action-increase:before {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/plus_minus-white.svg);
+    background-image: url('../assets/svg/plus_minus-white.svg');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11700,7 +11698,7 @@ a:visited {
 }
 
 .modal-collapsible-trigger {
-    background: transparent 0 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas.svg) no-repeat;
+    background: transparent 0 0 url('../assets/svg/charsheet-atlas.svg') no-repeat;
     background-size: cover;
     height: 16px;
     margin-left: 9px;
@@ -11911,7 +11909,7 @@ a:visited {
 
 .stcs-sidebar .text--rules-sidebar:after,
 .stcs-sidebar .text--rules-sidebar:before {
-    background-image: url(https://media.dndbeyond.com/compendium-images/components/--right-rules.svg), url(https://media.dndbeyond.com/compendium-images/components/--left-rules.svg);
+    background-image: url('../assets/svg/--right-rules.svg'), url('../assets/svg/--left-rules.svg');
     background-position: 0, 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -15007,35 +15005,35 @@ a:visited {
 }
 
 .stcs-spell-pane__heading-preview--school-abjuration {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/abjuration.png)
+    background-image: url('../assets/png/spell-schools/35/abjuration.png');
 }
 
 .stcs-spell-pane__heading-preview--school-conjuration {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/conjuration.png)
+    background-image: url('../assets/png/spell-schools/35/conjuration.png');
 }
 
 .stcs-spell-pane__heading-preview--school-divination {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/divination.png)
+    background-image: url('../assets/png/spell-schools/35/divination.png');
 }
 
 .stcs-spell-pane__heading-preview--school-enchantment {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/enchantment.png)
+    background-image: url('../assets/png/spell-schools/35/enchantment.png');
 }
 
 .stcs-spell-pane__heading-preview--school-evocation {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/evocation.png)
+    background-image: url('../assets/png/spell-schools/35/evocation.png');
 }
 
 .stcs-spell-pane__heading-preview--school-illusion {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/illusion.png)
+    background-image: url('../assets/png/spell-schools/35/illusion.png');
 }
 
 .stcs-spell-pane__heading-preview--school-necromancy {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/necromancy.png)
+    background-image: url('../assets/png/spell-schools/35/necromancy.png');
 }
 
 .stcs-spell-pane__heading-preview--school-transmutation {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/transmutation.png)
+    background-image: url('../assets/png/spell-schools/35/transmutation.png');
 }
 
 .stcs-trait-pane .stcs-sidebar__heading {
@@ -15163,7 +15161,7 @@ a:visited {
 }
 
 .ability-pool-spell-trigger {
-    background: transparent 0 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas.svg) no-repeat;
+    background: transparent 0 0 url('../assets/svg/charsheet-atlassvg') no-repeat;
     background-size: cover;
     cursor: pointer;
     height: 16px;
@@ -15801,6 +15799,7 @@ a:visited {
 }
 
 .character-sheet input[type=number] {
+    appearance: textfield;
     -moz-appearance: textfield;
     -webkit-appearance: textfield
 }
@@ -16197,7 +16196,7 @@ a:visited {
 }
 
 .stcs-extras-filter__icon {
-    background: transparent 50% url(https://github.com/Maggotin/hosted-assets/svg/icons/search-grey.svg) no-repeat;
+    background: transparent 50% url('../assets/svg/icons/search-grey.svg') no-repeat;
     background-size: 14px 14px;
     height: 14px;
     margin-right: 10px;
@@ -16306,7 +16305,7 @@ a:visited {
 }
 
 .stcs-extras-filter__active-remove-icon {
-    background: -18px 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas-white.svg) no-repeat;
+    background: -18px 0 url('../assets/svg/charsheet-atlas-white.svg') no-repeat;
     background-size: auto 9px;
     height: 9px;
     width: 9px
@@ -16678,7 +16677,7 @@ a:visited {
 }
 
 .stcs-equipment-overview__manage-icon {
-    background: 50% transparent url(https://maggotin.github.io/hosted-assets/svg/gear-grey.svg);
+    background: 50% transparent url('https://maggotin.github.io/hosted-assets/svg/gear-greysvg');
     background-size: 16px 16px;
     cursor: pointer;
     display: inline-flex;
@@ -16688,7 +16687,7 @@ a:visited {
 }
 
 .stcs-equipment-overview__manage-icon:hover {
-    background-image: url(https://maggotin.github.io/hosted-assets/svg/gear.svg)
+    background-image: url('https://maggotin.github.io/hosted-assets/svg/gearsvg');
 }
 
 .stcs-character-sheet--dark-mode .stcs-equipment-overview__weight-speed--unencumbered,
@@ -16864,7 +16863,7 @@ a:visited {
 }
 
 .stcs-filter__query[type=search] {
-    background: 10px #fff url(https://github.com/Maggotin/hosted-assets/svg/icons/search-grey.svg) no-repeat;
+    background: 10px #fff url('../assets/svg/icons/search-grey.svg') no-repeat;
     background-size: 15px;
     box-sizing: border-box;
     padding: 10px 10px 10px 35px;
@@ -16876,7 +16875,7 @@ a:visited {
 }
 
 .filter-constraint-query[type=search] {
-    background: 10px #fff url(https://github.com/Maggotin/hosted-assets/svg/icons/search-grey.svg) no-repeat;
+    background: 10px #fff url('../assets/svg/icons/search-grey.svg') no-repeat;
     background-size: 15px;
     box-sizing: border-box;
     padding: 10px 10px 10px 35px;
@@ -17051,7 +17050,7 @@ a:visited {
 
 .stcs-health-adjuster__buttons .action-decrease:before,
 .stcs-health-adjuster__buttons .action-increase:before {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/plus_minus-white.svg);
+    background-image: url('../assets/svg/plus_minus-whitesvg');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17185,7 +17184,7 @@ a:visited {
 }
 
 .stcs-inventory-filter__icon {
-    background: transparent 50% url(https://github.com/Maggotin/hosted-assets/svg/icons/search-grey.svg) no-repeat;
+    background: transparent 50% url('../assets/svg/icons/search-grey.svg') no-repeat;
     background-size: 14px 14px;
     height: 14px;
     margin-right: 10px;
@@ -17294,7 +17293,7 @@ a:visited {
 }
 
 .stcs-inventory-filter__active-remove-icon {
-    background: -18px 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas-white.svg) no-repeat;
+    background: -18px 0 url('../assets/svg/charsheet-atlas-white.svg') no-repeat;
     background-size: auto 9px;
     height: 9px;
     width: 9px
@@ -17569,61 +17568,61 @@ a:visited {
 
 
 .i-menu-dawn {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/dawn.svg)
+    background-image: url('../assets/svg/icons/menu_items/dawn.svg');
 }
 
 .i-menu-downloadpdf {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/downloadpdf.svg)
+    background-image: url('../assets/svg/icons/menu_items/downloadpdfsvg');
 }
 
 .i-menu-editcharacter {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/editcharacter.svg)
+    background-image: url('../assets/svg/icons/menu_items/editcharactersvg');
 }
 
 .i-menu-levelup {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/levelup.svg)
+    background-image: url('../assets/svg/icons/menu_items/levelupsvg');
 }
 
 .i-menu-longrest {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/longrest.svg)
+    background-image: url('../assets/svg/icons/menu_items/longrestsvg');
 }
 
 .i-menu-managexp {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/managexp.svg)
+    background-image: url('../assets/svg/icons/menu_items/managexpsvg');
 }
 
 .i-menu-preferences {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/preferences.svg)
+    background-image: url('../assets/svg/icons/menu_items/preferencessvg');
 }
 
 .i-menu-shortrest {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/shortrest.svg)
+    background-image: url('../assets/svg/icons/menu_items/shortrestsvg');
 }
 
 
 
 .i-menu-managelevel {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/managelevel.svg)
+    background-image: url('../assets/svg/icons/menu_items/managelevelsvg');
 }
 
 .i-menu-backdrop {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/backdrop.svg)
+    background-image: url('../assets/svg/icons/menu_items/backdropsvg');
 }
 
 .i-menu-frame {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/frame.svg)
+    background-image: url('../assets/svg/icons/menu_items/framesvg');
 }
 
 .i-menu-theme {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/theme.svg)
+    background-image: url('../assets/svg/icons/menu_items/themesvg');
 }
 
 .i-menu-portrait {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/portrait.svg)
+    background-image: url('../assets/svg/icons/menu_items/portraitsvg');
 }
 
 .i-menu-share {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/share.svg)
+    background-image: url('../assets/svg/icons/menu_items/sharesvg');
 }
 
 .i-menu-longrest {
@@ -17739,7 +17738,7 @@ a:visited {
 }
 
 .fullscreen-modal-close-btn {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas-white.svg);
+    background-image: url('../assets/svg/charsheet-atlas-white.svg');
     background-position: -35px 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18132,7 +18131,7 @@ a:visited {
 }
 
 .stcs-quick-nav__toggle {
-    background: #c53131 url(https://github.com/Maggotin/hosted-assets/svg/character-sheet/icons/grid-squares.svg) no-repeat 50%;
+    background: #c53131 url('../assets/svg/character-sheet/icons/grid-squaressvg') no-repeat 50%;
     background-size: 20px 20px;
     border-radius: 23px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, .6);
@@ -18142,7 +18141,7 @@ a:visited {
 }
 
 .stcs-quick-nav__toggle--opened {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/x.svg)
+    background-image: url('../assets/svg/icons/xsvg');
 }
 
 .stcs-quick-nav__edge-toggle {
@@ -18700,7 +18699,7 @@ a:visited {
 }
 
 .stcs-spell-caster__casting-level .stcs-theme-button:before {
-    background: 0 0 transparent url(https://github.com/Maggotin/hosted-assets/svg/plus_minus-white.svg) no-repeat;
+    background: 0 0 transparent url('../assets/svg/plus_minus-whitesvg') no-repeat;
     background-size: auto 12px;
     content: "";
     display: block;
@@ -18710,7 +18709,7 @@ a:visited {
 }
 
 .stcs-spell-caster__casting-level .stcs-theme-button:disabled:before {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/plus_minus-disabled.svg)
+    background-image: url('../assets/svg/plus_minus-disabledsvg');
 }
 
 .stcs-spell-caster__casting-level .stcs-button--increase:before {
@@ -18869,7 +18868,7 @@ a:visited {
 }
 
 .stcs-spells-filter__icon {
-    background: transparent 50% url(https://github.com/Maggotin/hosted-assets/svg/icons/search-grey.svg) no-repeat;
+    background: transparent 50% url('../assets/svg/icons/search-grey.svg') no-repeat;
     background-size: 14px 14px;
     height: 14px;
     margin-right: 10px;
@@ -18978,7 +18977,7 @@ a:visited {
 }
 
 .stcs-spells-filter__active-remove-icon {
-    background: -18px 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas-white.svg) no-repeat;
+    background: -18px 0 url('../assets/svg/charsheet-atlas-white.svg') no-repeat;
     background-size: auto 9px;
     height: 9px;
     width: 9px
@@ -19324,7 +19323,7 @@ a:visited {
 }
 
 .stcs-status-summary-mobile__exhaustion-icon:before {
-    background: 0 0 transparent url(https://github.com/Maggotin/hosted-assets/svg/unconscious-white.svg) no-repeat;
+    background: 0 0 transparent url('../assets/svg/unconscious-whitesvg') no-repeat;
     content: "";
     display: block;
     height: 20px;
@@ -19341,7 +19340,7 @@ a:visited {
 }
 
 .stcs-status-summary-mobile__deathsaves-icon:before {
-    background: 0 0 transparent url(https://github.com/Maggotin/hosted-assets/svg/unconscious-white.svg) no-repeat;
+    background: 0 0 transparent url('../assets/svg/unconscious-whitesvg') no-repeat;
     content: "";
     display: block;
     height: 20px;
@@ -19391,7 +19390,7 @@ a:visited {
 }
 
 .stcs-subsection-group-inner:after {
-    background: center 0 transparent url(https://github.com/Maggotin/hosted-assets/png/stcs-borders-med.png) no-repeat;
+    background: center 0 transparent url('../assets/png/stcs-borders-med.png') no-repeat;
     background-size: 105% 12px;
     bottom: 0;
     content: "";
@@ -19403,7 +19402,7 @@ a:visited {
 }
 
 .stcs-subsection-group-header {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/character-sheet/section-group-header.png);
+    background-image: url('../assets/png/character-sheet/section-group-header.png');
     background-size: 100% 100%;
     text-align: center
 }
@@ -19770,7 +19769,7 @@ a:visited {
 }
 
 .equipment-manager-attuned-add:before {
-    background: url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas.svg) no-repeat 0 0;
+    background: url('../assets/svg/charsheet-atlassvg') no-repeat 0 0;
     background-size: cover;
     content: "";
     display: block;
@@ -19866,7 +19865,7 @@ a:visited {
 }
 
 .equipment-manager-item-remove:before {
-    background: -26px 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas-red.svg) no-repeat;
+    background: -26px 0 url('../assets/svg/charsheet-atlas-redsvg') no-repeat;
     background-size: 38px 12px;
     content: "";
     height: 12px;
@@ -19934,7 +19933,7 @@ a:visited {
 }
 
 .equipment-manager-inventory-trigger {
-    background: transparent 0 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas.svg) no-repeat;
+    background: transparent 0 0 url('../assets/svg/charsheet-atlassvg') no-repeat;
     background-size: cover;
     cursor: pointer;
     height: 16px;
@@ -20271,7 +20270,7 @@ a:visited {
 }
 
 .spell-manager-spell-remove-icon:before {
-    background: -26px 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas-red.svg) no-repeat;
+    background: -26px 0 url('../assets/svg/charsheet-atlas-redsvg') no-repeat;
     background-size: 38px 12px;
     content: "";
     height: 12px;
@@ -20412,7 +20411,7 @@ a:visited {
 }
 
 .class-spell-list-trigger {
-    background: transparent 0 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas.svg) no-repeat;
+    background: transparent 0 0 url('../assets/svg/charsheet-atlassvg') no-repeat;
     background-size: cover;
     cursor: pointer;
     height: 16px;
@@ -20479,7 +20478,7 @@ a:visited {
 
 .collapsible-header {
     align-items: center;
-    background: url(https://github.com/Maggotin/hosted-assets/png/character-sheet/collapsible-480.png) no-repeat;
+    background: url('../assets/png/character-sheet/collapsible-480.png') no-repeat;
     background-size: 100% 65px;
     cursor: pointer;
     display: flex;
@@ -20491,7 +20490,7 @@ a:visited {
 }
 
 .collapsible-opened>.collapsible-header {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/character-sheet/collapsible-480-hover.png);
+    background-image: url('../assets/png/character-sheet/collapsible-480-hover.png');
     transition: background-image .1s cubic-bezier(.17, .67, .83, .67)
 }
 
@@ -20504,28 +20503,28 @@ a:visited {
 }
 
 .collapsible-header-icon-spell-ranged {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/attack_types/ranged_spell.svg)
+    background-image: url('../assets/svg/icons/attack_types/ranged_spellsvg');
 }
 
 .collapsible-header-icon-spell-melee {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/attack_types/melee_spell.svg)
+    background-image: url('../assets/svg/icons/attack_types/melee_spellsvg');
 }
 
 .collapsible-header-icon-spell-generic {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/attack_types/general_spell.svg)
+    background-image: url('../assets/svg/icons/attack_types/general_spellsvg');
 }
 
 .collapsible-header-icon-weapon-ranged {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/attack_types/ranged_weapon.svg)
+    background-image: url('../assets/svg/icons/attack_types/ranged_weapon.svg');
 }
 
 .collapsible-header-icon-weapon-melee {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/attack_types/melee_weapon.svg)
+    background-image: url('../assets/svg/icons/attack_types/melee_weapon.svg');
 }
 
 .collapsible-header-icon-natural-attack-melee,
 .collapsible-header-icon-natural-attack-ranged {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/attack_types/unarmedstrike-dark.svg)
+    background-image: url('../assets/svg/icons/attack_types/unarmedstrike-darksvg');
 }
 
 .collapsible-header-content {
@@ -20541,7 +20540,7 @@ a:visited {
 }
 
 .collapsible-header-trigger {
-    background: transparent 0 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas.svg) no-repeat;
+    background: transparent 0 0 url('../assets/svg/charsheet-atlassvg') no-repeat;
     background-size: cover;
     height: 16px;
     width: 16px
@@ -20609,7 +20608,7 @@ a:visited {
 }
 
 .collapsible-body:after {
-    background: center 0 transparent url(https://github.com/Maggotin/hosted-assets/png/character-sheet/collapsible-480-bottom.png) no-repeat;
+    background: center 0 transparent url('../assets/png/character-sheet/collapsible-480-bottom.png') no-repeat;
     background-size: 105% 28px;
     bottom: -4px;
     content: "";
@@ -20657,25 +20656,25 @@ a:visited {
 }
 
 .collapsible-todo .collapsible-header {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/character-sheet/collapsible-480-highlight.png)
+    background-image: url('../assets/png/character-sheet/collapsible-480-highlight.png');
 }
 
 .collapsible-opened.collapsible-todo>.collapsible-header {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/character-sheet/collapsible-480-hover-highlight.png)
+    background-image: url('../assets/png/character-sheet/collapsible-480-hover-highlight.png');
 }
 
 @media(min-width:768px) {
     .collapsible-header {
-        background-image: url(https://github.com/Maggotin/hosted-assets/png/listing-bars/1a-700.png)
+        background-image: url('../assets/png/listing-bars/1a-700.png');
     }
 
     .collapsible-header:hover,
     .collapsible-opened>.collapsible-header {
-        background-image: url(https://github.com/Maggotin/hosted-assets/png/listing-bars/1a-700-hover.png)
+        background-image: url('../assets/png/listing-bars/1a-700-hover.png');
     }
 
     .collapsible-body:after {
-        background-image: url(https://github.com/Maggotin/hosted-assets/png/character-sheet/expanded-listing-item-bottom-border-700.png)
+        background-image: url('../assets/png/character-sheet/expanded-listing-item-bottom-border-700.png');
     }
 
     .collapsible-body .character-button-block {
@@ -20684,12 +20683,12 @@ a:visited {
     }
 
     .collapsible-todo .collapsible-header {
-        background-image: url(https://github.com/Maggotin/hosted-assets/png/character-sheet/collapsible-700-highlight.png)
+        background-image: url('../assets/png/character-sheet/collapsible-700-highlight.png');
     }
 
     .collapsible-opened.collapsible-todo>.collapsible-header,
     .collapsible-todo:hover>.collapsible-header {
-        background-image: url(https://github.com/Maggotin/hosted-assets/png/character-sheet/collapsible-700-hover-highlight.png)
+        background-image: url('../assets/png/character-sheet/collapsible-700-hover-highlight.png');
     }
 }
 
@@ -20981,7 +20980,7 @@ a:visited {
 }
 
 .equipment-list-item-remove-icon:before {
-    background: -26px 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas-red.svg) no-repeat;
+    background: -26px 0 url('../assets/svg/charsheet-atlas-redsvg') no-repeat;
     background-size: 38px 12px;
     content: "";
     height: 12px;
@@ -21059,7 +21058,7 @@ a:visited {
 
 .currency-list-item-row {
     align-items: center;
-    background: url(https://github.com/Maggotin/hosted-assets/png/listing-bars/1a.png) no-repeat;
+    background: url('../assets/png/listing-bars/1a.png') no-repeat;
     background-size: 100% 65px;
     display: flex;
     height: 65px;
@@ -21232,35 +21231,35 @@ a:visited {
 }
 
 .spell-header-icon-school-abjuration {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/abjuration.png)
+    background-image: url('../assets/png/spell-schools/35/abjuration.png');
 }
 
 .spell-header-icon-school-conjuration {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/conjuration.png)
+    background-image: url('../assets/png/spell-schools/35/conjuration.png');
 }
 
 .spell-header-icon-school-divination {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/divination.png)
+    background-image: url('../assets/png/spell-schools/35/divination.png');
 }
 
 .spell-header-icon-school-enchantment {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/enchantment.png)
+    background-image: url('../assets/png/spell-schools/35/enchantment.png');
 }
 
 .spell-header-icon-school-evocation {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/evocation.png)
+    background-image: url('../assets/png/spell-schools/35/evocation.png');
 }
 
 .spell-header-icon-school-illusion {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/illusion.png)
+    background-image: url('../assets/png/spell-schools/35/illusion.png');
 }
 
 .spell-header-icon-school-necromancy {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/necromancy.png)
+    background-image: url('../assets/png/spell-schools/35/necromancy.png');
 }
 
 .spell-header-icon-school-transmutation {
-    background-image: url(https://github.com/Maggotin/hosted-assets/png/spell-schools/35/transmutation.png)
+    background-image: url('../assets/png/spell-schools/35/transmutation.png');
 }
 
 .stcs-actions-mobile .stcs-combat-attack__name {
@@ -22555,7 +22554,7 @@ a:visited {
 }
 
 .class-manager-remove-icon:before {
-    background: -34px 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas-red.svg) no-repeat;
+    background: -34px 0 url('../assets/svg/charsheet-atlas-redsvg') no-repeat;
     background-size: 50px 16px;
     content: "";
     height: 16px;
@@ -22600,7 +22599,7 @@ a:visited {
 }
 
 .class-manager-features-trigger {
-    background: transparent 0 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas.svg) no-repeat;
+    background: transparent 0 0 url('../assets/svg/charsheet-atlassvg') no-repeat;
     background-size: cover;
     cursor: pointer;
     height: 16px;
@@ -22642,7 +22641,7 @@ a:visited {
 }
 
 .class-manager-features-group-trigger {
-    background: transparent 0 0 url(https://github.com/Maggotin/hosted-assets/svg/charsheet-atlas.svg) no-repeat;
+    background: transparent 0 0 url('../assets/svg/charsheet-atlassvg') no-repeat;
     background-size: cover;
     cursor: pointer;
     height: 16px;
@@ -22707,7 +22706,7 @@ a:visited {
 }
 
 .help-text-manager-icon {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/character-sheet/help-active.svg);
+    background-image: url('../assets/svg/character-sheet/help-activesvg');
     background-repeat: no-repeat;
     background-size: 30px;
     height: 30px;
@@ -22715,7 +22714,7 @@ a:visited {
 }
 
 .help-text-manager-disabled .help-text-manager-icon {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/character-sheet/help-inactive.svg)
+    background-image: url('../assets/svg/character-sheet/help-inactivesvg');
 }
 
 @media(min-width:768px) {
@@ -22839,7 +22838,7 @@ a:visited {
 }
 
 .progression-manager-heading-diff-negative .progression-manager-heading-diff-icon {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/leveldown.svg)
+    background-image: url('../assets/svg/icons/menu_items/leveldown.svg');
 }
 
 .progression-manager-heading-diff-positive {
@@ -22847,7 +22846,7 @@ a:visited {
 }
 
 .progression-manager-heading-diff-positive .progression-manager-heading-diff-icon {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/icons/menu_items/levelup.svg)
+    background-image: url('../assets/svg/icons/menu_items/levelupsvg');
 }
 
 .progression-manager-meta {
@@ -23532,7 +23531,7 @@ span.styles_mobile__6xVb4 {
 }
 
 .styles_creatureBlock__OEQz9 {
-    background: url(https://github.com/Maggotin/hosted-assets/png/mon-summary/stat-block-top-texture.png), url(https://github.com/Maggotin/hosted-assets/png/mon-summary/paper-texture.png);
+    background: url('../assets/png/mon-summary/stat-block-top-texture.png'), url('../assets/png/mon-summary/paper-texture.png');
     background-position: top;
     background-repeat: no-repeat, repeat;
     background-size: 100% auto;
@@ -23547,7 +23546,7 @@ span.styles_mobile__6xVb4 {
 
 .styles_creatureBlock__OEQz9:after,
 .styles_creatureBlock__OEQz9:before {
-    background: url(https://github.com/Maggotin/hosted-assets/png/mon-summary/stat-bar-book.png) 50%;
+    background: url('../assets/png/mon-summary/stat-bar-book.png') 50%;
     background-size: 100% 100%;
     content: "";
     display: block;
@@ -23811,7 +23810,7 @@ h2.styles_descriptionHeading__JI-rw {
 }
 
 .styles_icon__ncU6F:before {
-    background: 0 0 transparent url(https://github.com/Maggotin/hosted-assets/svg/unconscious-white.svg) no-repeat;
+    background: 0 0 transparent url('../assets/svg/unconscious-whitesvg') no-repeat;
     content: "";
     display: block;
     height: 1.25rem;
@@ -23864,7 +23863,7 @@ h2.styles_descriptionHeading__JI-rw {
     }
 
     .styles_icon__ncU6F:before {
-        background-image: url(https://github.com/Maggotin/hosted-assets/svg/unconscious.svg);
+        background-image: url('../assets/svg/unconscioussvg');
         height: 1.875rem;
         margin-right: .625rem;
         margin-top: 0;
@@ -23872,7 +23871,7 @@ h2.styles_descriptionHeading__JI-rw {
     }
 
     .styles_iconDarkMode__DgxJl:before {
-        background-image: url(https://github.com/Maggotin/hosted-assets/svg/unconscious-white.svg)
+        background-image: url('../assets/svg/unconscious-whitesvg');
     }
 }
 
@@ -24154,7 +24153,7 @@ h2.styles_descriptionHeading__JI-rw {
 
 .styles_decrease__ALj21:before,
 .styles_increase__8X2Yq:before {
-    background-image: url(https://github.com/Maggotin/hosted-assets/svg/plus_minus-white.svg);
+    background-image: url('../assets/svg/plus_minus-whitesvg');
     background-repeat: no-repeat;
     background-size: cover;
     content: "";
@@ -25042,7 +25041,6 @@ ul.styles_menu__phzoW {
 }
 
 .styles_readonlyBackground__tarm0 {
-    background-image: url(https://www.dndbeyond.com/attachments/5/106/sources1k.jpg);
     background-position: -.625rem bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26264,46 +26262,46 @@ button.styles_locked__acLz2 {
 
 @font-face {
   font-family: "Tiamat Condensed SC Regular";
-  src: url("https://github.com/Maggotin/hosted-assets/fonts/tiamatcondensedsc-regular-webfont.woff2") format("woff2");
+  src: url('../assets/fonts/tiamatcondensedsc-regular-webfont.woff2') format('woff2');
 }
 @font-face {
   font-family: "Roboto";
-  src: url("https://github.com/Maggotin/hosted-assets/fonts/roboto-regular-webfont.woff2") format("woff2");
+  src: url('../assets/fonts/roboto-regular-webfont.woff2') format('woff2');
 }
 
 @font-face {
     font-family: Scala Sans Offc;
-    src: url("https://github.com/Maggotin/hosted-assets/fonts/ScalaSansOffc.ttf")
+    src: url('../assets/fonts/ScalaSansOffc.ttf');
 }
 
 @font-face {
     font-family: Scala Sans Offc;
     font-weight: 700;
-    src: url("https://github.com/Maggotin/hosted-assets/fonts/ScalaSansOffc-Bold.ttf")
+    src: url('../assets/fonts/ScalaSansOffc-Bold.ttf');
 }
 
 @font-face {
     font-family: Scala Sans Offc;
     font-style: italic;
-    src: url("https://github.com/Maggotin/hosted-assets/fonts/ScalaSansOffc-Ita.ttf")
+    src: url('../assets/fonts/ScalaSansOffc-Ita.ttf');
 }
 
 @font-face {
     font-family: Scala Sans Offc;
     font-style: italic;
     font-weight: 700;
-    src: url("https://github.com/Maggotin/hosted-assets/fonts/ScalaSansOffc-BoldIta.ttf")
+    src: url('../assets/fonts/ScalaSansOffc-BoldIta.ttf');
 }
 
 @font-face {
     font-family: Scala Sans Sc Offc;
-    src: url("https://github.com/Maggotin/hosted-assets/fonts/ScalaSansSCOffc.woff2")
+    src: url('../assets/fonts/ScalaSansSCOffc.woff2');
 }
 
 @font-face {
     font-family: Scala Sans Sc Offc;
     font-weight: 700;
-    src: url("https://github.com/Maggotin/hosted-assets/fonts/ScalaSansSCOffcBold.woff2")
+    src: url('../assets/fonts/ScalaSansSCOffcBold.woff2');
 }
 
 ::selection {

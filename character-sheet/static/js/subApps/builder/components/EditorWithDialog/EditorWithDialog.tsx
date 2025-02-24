@@ -10,7 +10,7 @@ import React, {
 } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import CloseIcon from "@dndbeyond/fontawesome-cache/svgs/solid/x.svg";
+import CloseIcon from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/x.svg";
 
 import { Button } from "~/components/Button";
 import { Dialog } from "~/components/Dialog";

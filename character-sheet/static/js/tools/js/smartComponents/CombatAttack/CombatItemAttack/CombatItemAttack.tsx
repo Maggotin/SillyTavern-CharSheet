@@ -20,7 +20,7 @@ import {
   RollKind,
   IRollContext,
 } from "@dndbeyond/dice";
-import StarIcon from "@dndbeyond/fontawesome-cache/svgs/solid/star.svg";
+import StarIcon from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/star.svg";
 import { GameLogContext } from "@dndbeyond/game-log-components";
 
 import { ItemName } from "~/components/ItemName";

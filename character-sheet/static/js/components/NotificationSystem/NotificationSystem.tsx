@@ -8,7 +8,7 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 
-import XMark from "@dndbeyond/fontawesome-cache/svgs/regular/xmark.svg";
+import XMark from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/regular/xmark.svg";
 import { Toast } from "@dndbeyond/ttui/components/Toast";
 
 import { Notification } from "~/tools/js/Shared/stores/typings";

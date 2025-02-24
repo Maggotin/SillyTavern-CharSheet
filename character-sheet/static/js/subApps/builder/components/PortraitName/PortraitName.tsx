@@ -3,7 +3,7 @@ import { FC, HTMLAttributes, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { CharacterPortraitContract } from "@dndbeyond/character-rules-engine";
-import ShuffleIcon from "@dndbeyond/fontawesome-cache/svgs/solid/shuffle.svg";
+import ShuffleIcon from "../../../../../../public/scripts/extensions/third-party/SillyTavern-CharSheet/src/fontawesome-cache/svgs/solid/shuffle.svg";
 import { LabelChip } from "@dndbeyond/ttui/components/LabelChip";
 
 import { Button } from "~/components/Button";
