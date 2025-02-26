@@ -9,7 +9,7 @@ import {
   AuthException,
   AuthMissingException,
   Constants,
-} from "@dndbeyond/character-rules-engine/es";
+} from '@/src/character-rules-engine/es';
 
 import { appEnvActions } from "../../actions";
 import { appInfoActions } from "../../actions/appInfo";
@@ -19,6 +19,7 @@ import { appEnvSelectors } from "../../selectors";
 import { StateStoreUtils } from "../../stores";
 import { AppNotificationUtils, ErrorCustomTags, ErrorUtils } from "../../utils";
 import { COALESCED_ERROR_CODES } from "./constants";
+import { ApiException as ApiExceptionFromRulesEngine, ApiAdapterDataException as ApiAdapterDataExceptionFromRulesEngine, AuthException as AuthExceptionFromRulesEngine } from '@/src/character-rules-engine/es/apiAdapter/typings';
 
 let hasDispatchedAuthException: boolean = false;
 
@@ -223,5 +224,19 @@ export function handleAdhocApiError(error: Error): void {
   // ApiAdapterException errors are handled by the AppApiAdapter
   if (!(error instanceof ApiAdapterException)) {
     logError(error);
+  }
+}
+
+// Example of defining a custom exception class
+class ApiException extends Error {
+  errorCode: number | null;
+  url: string;
+  method: string;
+
+  constructor(message: string, errorCode: number | null, url: string, method: string) {
+    super(message);
+    this.errorCode = errorCode;
+    this.url = url;
+    this.method = method;
   }
 }

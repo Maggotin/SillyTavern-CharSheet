@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Global } from '@emotion/react';
+import ThemeStyles from '../../tools/js/smartComponents/ThemeStyles/ThemeStyles';
 
 const fontFaces = `
   @font-face {
@@ -49,12 +50,19 @@ export const CharacterThemeProvider: React.FC<{ children: React.ReactNode }> = (
     accentColor: '#fe4736'
   };
 
-  const solidBackground = theme.backgroundColor.length > 7 
-    ? theme.backgroundColor.slice(0, -2) 
+  const solidBackground = theme.backgroundColor.length > 7
+    ? theme.backgroundColor.slice(0, -2)
     : theme.backgroundColor;
 
   return (
     <CharacterThemeContext.Provider value={theme}>
+      <ThemeStyles 
+        decorationInfo={{
+          themeColor: theme.themeColor,
+          backgroundColor: theme.backgroundColor,
+          isDarkMode: true
+        }} 
+      />
       <Global
         styles={`
           ${fontFaces}

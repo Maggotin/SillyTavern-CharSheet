@@ -48,9 +48,7 @@ const addPassiveEventListener = (element, eventName, handler) => {
     element.addEventListener(eventName, handler, { passive: true });
 };
 
-const removePassiveEventListener = (element, eventName, handler) => {
-    element.removeEventListener(eventName, handler);
-};
+
 
 function renderExtensionSettings() {
     const context = SillyTavern.getContext();
@@ -166,13 +164,17 @@ function goToTab(tabId) {
                     return;
                 }
 
-                // Remove active class from all tabs and buttons
-                container.querySelectorAll('.tab-content').forEach(t => t?.classList?.remove('active'));
-                container.querySelectorAll('.tab-button').forEach(b => b?.classList?.remove('active'));
+                // Get all tab elements and verify they exist before operating on them
+                const allTabs = Array.from(container.querySelectorAll('.tab-content')).filter(Boolean);
+                const allButtons = Array.from(container.querySelectorAll('.tab-button')).filter(Boolean);
+
+                // Remove active class from existing elements
+                allTabs.forEach(t => t.classList?.remove('active'));
+                allButtons.forEach(b => b.classList?.remove('active'));
 
                 // Add active class to selected tab and button
-                tab.classList.add('active');
-                button.classList.add('active');
+                tab.classList?.add('active');
+                button.classList?.add('active');
 
                 resolve(true);
             } catch (error) {
@@ -221,12 +223,24 @@ function initializeTooltips() {
     });
 }
 
+// Add debugging to help identify if the extension is being loaded
+console.debug(`[${EXTENSION_NAME}]`, 'Script loaded');
+
 // Initialize extension
 (async function initExtension() {
     console.debug(`[${EXTENSION_NAME}]`, 'Initializing extension');
     const context = SillyTavern.getContext();
+    
+    // Verify context is available
+    if (!context) {
+        console.error(`[${EXTENSION_NAME}]`, 'Failed to get SillyTavern context');
+        return;
+    }
+    
+    console.debug(`[${EXTENSION_NAME}]`, 'Context loaded:', context);
 
     if (!context.extensionSettings[settingsKey]) {
+        console.debug(`[${EXTENSION_NAME}]`, 'Initializing settings');
         context.extensionSettings[settingsKey] = structuredClone(defaultSettings);
     }
 
@@ -239,8 +253,10 @@ function initializeTooltips() {
 
     // Initialize sheet manager with error handling
     try {
+        console.debug(`[${EXTENSION_NAME}]`, 'Creating sheet manager');
         sheetManager = new CharacterSheetManager();
         await sheetManager.init();
+        console.debug(`[${EXTENSION_NAME}]`, 'Sheet manager initialized successfully');
     } catch (error) {
         console.error('[CharSheet] Failed to initialize sheet manager:', error);
     }
@@ -272,18 +288,18 @@ export { goToTab };
 
 jQuery.event.special.touchstart = {
     setup: function(_, ns, handle) {
-        this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
-    }
+        this.addEventListener('touchstart', handle, { passive: !ns.includes('noPreventDefault') });
+    },
 };
 
 jQuery.event.special.touchmove = {
     setup: function(_, ns, handle) {
-        this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
-    }
+        this.addEventListener('touchmove', handle, { passive: !ns.includes('noPreventDefault') });
+    },
 };
 
 jQuery.event.special.touchend = {
     setup: function(_, ns, handle) {
-        this.addEventListener("touchend", handle, { passive: !ns.includes("noPreventDefault") });
-    }
+        this.addEventListener('touchend', handle, { passive: !ns.includes('noPreventDefault') });
+    },
 };

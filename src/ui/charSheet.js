@@ -1,5 +1,10 @@
-import { TabFilter } from './tabFilter.ts';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { TabFilter } from '../../character-sheet/static/js/components/TabFilter/TabFilter.tsx';
 import { charSheetTemplates } from './templates/charSheetTemplates.js';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../../character-sheet/static/js/theme/theme';
+
 
 export class CharacterSheetManager {
     constructor() {
@@ -10,6 +15,11 @@ export class CharacterSheetManager {
         this.actionManager = null;
         this.inventoryManager = null;
         this.featuresManager = null;
+        this.tabRoot = null;
+        this.tabState = {
+            currentTab: 'inventory',
+            tabs: new Map(),
+        };
         console.debug('[CharSheet] Constructor called');
     }
 
@@ -180,51 +190,63 @@ export class CharacterSheetManager {
     }
 
     initializeTabs() {
-        const tabContent = {
-            actions: () => this.loadTabContent('actions'),
-            inventory: () => this.loadTabContent('inventory'),
-            spells: () => this.loadTabContent('spells'),
-            features: () => this.loadTabContent('features'),
-            description: () => this.loadTabContent('description'),
-            notes: () => this.loadTabContent('notes'),
-        };
+        const contentContainer = this.dom.querySelector('.stcs-primary-box__content');
+        const tabContainer = this.dom.querySelector('.stcs-tabs-container');
 
-        // Create filter structure matching TabFilter component
+        if (!contentContainer || !tabContainer) {
+            console.warn('Required containers not found');
+            return;
+        }
+
         const filters = [
-            { label: 'Actions', content: tabContent.actions },
-            { label: 'Inventory', content: tabContent.inventory },
-            { label: 'Spells', content: tabContent.spells },
-            { label: 'Features & Traits', content: tabContent.features },
-            { label: 'Background', content: tabContent.description },
-            { label: 'Notes', content: tabContent.notes },
+            {
+                label: 'Actions',
+                content: this.renderTabContent('actions'),
+                badge: this.getActionCount(),
+            },
+            {
+                label: 'Inventory',
+                content: this.renderTabContent('inventory'),
+            },
+            {
+                label: 'Spells',
+                content: this.renderTabContent('spells'),
+            },
+            {
+                label: 'Features',
+                content: this.renderTabContent('features'),
+            },
         ];
 
-        const contentContainer = this.dom.querySelector('.stcs-primary-box__content');
-        if (!contentContainer) return;
+        // Create React root if it doesn't exist
+        if (!this.tabRoot) {
+            this.tabRoot = createRoot(tabContainer);
+        }
 
-        // Clear existing content
-        contentContainer.innerHTML = '';
-
-        // Create TabFilter instance
-        const tabFilter = new TabFilter({
-            filters,
-            showAllTab: false,
-            onChange: (activeIndex) => {
-                const filter = filters[activeIndex];
-                if (filter) {
-                    const content = filter.content();
-                    contentContainer.innerHTML = content;
-                    this.onTabChanged(this.tabState.currentTab, filter.label.toLowerCase());
-                    this.tabState.currentTab = filter.label.toLowerCase();
-                }
-            },
-        });
-
-        // Load initial tab
-        tabFilter.setActiveFilter(1); // Inventory tab
+        // Render TabFilter component with the correct class name
+        this.tabRoot.render(
+            React.createElement(ThemeProvider, { theme: theme },
+                React.createElement(TabFilter, {
+                    filters: filters,
+                    showAllTab: false,
+                    className: 'stcs-tabs',
+                }),
+            ),
+        );
     }
 
 
+    renderTabContent(tabId) {
+        // Return a React element or DOM element for the tab content
+        const content = document.createElement('div');
+        content.innerHTML = this.loadTabContent(tabId);
+        return content;
+    }
+
+    getActionCount() {
+        // Optional: Return a number for the actions badge
+        return this.actions?.length || 0;
+    }
 
     loadTabContent(tabId) {
         return charSheetTemplates[tabId] || '';
@@ -286,7 +308,7 @@ export class CharacterSheetManager {
         };
     }
     bindEventListeners() {
-    // Global event listeners
+        // Global event listeners
         this.dom.addEventListener('charsheet:update', (event) => {
             const { type } = event.detail;
             switch (type) {

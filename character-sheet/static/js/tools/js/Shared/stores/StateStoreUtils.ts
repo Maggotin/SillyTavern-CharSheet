@@ -6,10 +6,10 @@ import {
   defaultSaga,
   ApiAdapterException,
   OverrideApiException,
-} from "@dndbeyond/character-rules-engine/es";
+} from "@/src/character-rules-engine/es";
 
-import { rollResultSaga } from "./sagas/rollResult.ts";
-import { AppLoggerUtils } from "./utils";
+import { rollResultSaga } from "@/src/character-rules-engine/es/sagas/rollResult";
+import { AppLoggerUtils } from "@/src/character-rules-engine/es/utils";
 
 let store: Store | null = null;
 

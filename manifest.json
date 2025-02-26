@@ -1,5 +1,5 @@
 {
-    "name": "Character Sheet",
+    "name": "SillyTavern Character Sheet",
     "version": "1.0.0",
     "ignore": [
         ".history/**/*",
@@ -11,7 +11,7 @@
   "optional": [],
   "author": "Maggotin",
   "license": "AGPL-3.0",
-  "js": "index.js",
-  "css": "style.css",
+  "js": "dist/bundle.js",  
+  "css": "character-sheet/style.css",
   "homepage": "https://github.com/Maggotin/SillyTavern-CharSheet"
 }

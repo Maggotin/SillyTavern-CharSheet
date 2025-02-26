@@ -1,10 +1,9 @@
+import React from 'react';
 import clsx from "clsx";
 import { FC, Fragment, HTMLAttributes, ReactNode, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-
-import { useCharacterTheme } from "~/contexts/CharacterTheme";
-
-import styles from "./styles.module.css";
+import { useCharacterTheme } from "../../contexts/CharacterTheme/CharacterTheme";
+import { Actions } from './tools/js/CharacterSheet/containers/Actions/Actions';
 
 export interface TabFilterProps extends HTMLAttributes<HTMLDivElement> {
   filters:
@@ -26,7 +25,7 @@ export const TabFilter: FC<TabFilterProps> = ({
   ...props
 }) => {
   const [activeFilter, setActiveFilter] = useState(0);
-  const { isDarkMode } = useCharacterTheme();
+  const { themeColor } = useCharacterTheme();
   const activeIndex = showAllTab ? activeFilter - 1 : activeFilter;
   const nonEmptyFilters = filters.filter((f) => f.label !== "");
 
@@ -54,16 +53,12 @@ export const TabFilter: FC<TabFilterProps> = ({
   };
 
   return (
-    <div
-      className={clsx([styles.tabFilter, isDarkMode && styles.dark, className])}
-      {...props}
-    >
-      <div className={styles.buttons} data-testid="tab-filters">
+    <div className={clsx('stcs-tabs', className)} {...props}>
+      <div className="stcs-tabs__tabs">
         {showAllTab && (
           <button
-            className={clsx([activeFilter === 0 && styles.active])}
+            className={clsx('stcs-tabs__tab', activeFilter === 0 && 'stcs-tabs__tab--active')}
             onClick={() => setActiveFilter(0)}
-            data-testid="tab-filter-all"
           >
             All
           </button>
@@ -72,22 +67,19 @@ export const TabFilter: FC<TabFilterProps> = ({
           const index = showAllTab ? i + 1 : i;
           return (
             <button
-              className={clsx([activeFilter === index && styles.active])}
+              key={typeof filter.label === 'string' ? filter.label : i}
+              className={clsx('stcs-tabs__tab', activeFilter === index && 'stcs-tabs__tab--active')}
               onClick={() => setActiveFilter(index)}
-              data-testid={`tab-filter-${getDefaultLabel(filter.label)
-                .toLowerCase()
-                .replace(/\s/g, "-")}`}
-              key={`${index} + ${filter.label as string}`}
             >
               {filter.badge && (
-                <span className={styles.badge}>{filter.badge}</span>
+                <span className="stcs-tabs__badge">{filter.badge}</span>
               )}
               {filter.label}
             </button>
           );
         })}
       </div>
-      <div className={styles.content}>
+      <div className="stcs-tabs__content">
         {sharedChildren}
         {!showAllTab || activeFilter !== 0
           ? nonEmptyFilters[activeIndex]?.content
