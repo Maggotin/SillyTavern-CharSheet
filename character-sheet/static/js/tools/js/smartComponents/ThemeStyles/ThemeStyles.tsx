@@ -7,7 +7,7 @@ import {
   Constants,
   DecorationInfo,
   DecorationUtils,
-} from '../../../../../src/character-rules-engine';
+} from 'D:/ST/SillyTavernDev/SillyTavern/public/scripts/extensions/third-party/SillyTavern-CharSheet/src/character-rules-engine/es';
 
 import { SvgConstantDarkModeBackgroundColor } from './componentConstants';
 

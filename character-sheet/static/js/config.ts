@@ -1,4 +1,4 @@
-const { Constants } = require("@dndbeyond/character-rules-engine/es");
+const { Constants } = require("src/character-rules-engine/es/constants");
 enum EnvTypeEnum {
   PRODUCTION = "production",
   STAGING = "staging",

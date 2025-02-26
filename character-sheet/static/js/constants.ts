@@ -1,17 +1,17 @@
-import { Constants } from "D:/ST/SillyTavern/public/scripts/extensions/third-party/SillyTavern-CharSheet/src/character-rules-engine/es/constants.ts";
+import { Constants } from "src/character-rules-engine/es/constants";
 
 import config from "./config";
 
-export const DDB_MEDIA_URL = config.ddbMediaUrl;
+
 
 
 const CategoryPrefix = "Character Listing";
 
 export const EventCategories = {
-  DDB_Character: `${CategoryPrefix} Character Card`,
-  DDB_ListingFilter: `${CategoryPrefix} Filter`,
-  DDB_ListingSort: `${CategoryPrefix} Sort`,
-  DDB_Unlock: `${CategoryPrefix} Unlock`,
+  STCS_Character: `${CategoryPrefix} Character Card`,
+  STCS_ListingFilter: `${CategoryPrefix} Filter`,
+  STCS_ListingSort: `${CategoryPrefix} Sort`,
+  STCS_Unlock: `${CategoryPrefix} Unlock`,
 };
 
 

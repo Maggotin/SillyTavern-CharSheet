@@ -5,7 +5,7 @@ import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import HighlightOffOutlinedIcon from '@mui/icons-material/HighlightOffOutlined';
 import { useThemeProps as useThemeProps$1, css } from '@mui/system';
-import { createDarkTheme, getThemeValue } from '@dndbeyond/ddb-theme';
+import { createDarkTheme, getThemeValue } from 'src/ddb-theme';
 import CloseIcon from '@mui/icons-material/Close';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import MoreIcon from '@mui/icons-material/MoreVert';
@@ -1299,7 +1299,7 @@ function useThemeProps({
   return useThemeProps$1({
     props,
     name,
-    defaultTheme: Object.assign(Object.assign({}, createDarkTheme()), {
+    defaultTheme: Object.assign(Object.assign({}, createUITheme()), {
       components: {}
     })
   });

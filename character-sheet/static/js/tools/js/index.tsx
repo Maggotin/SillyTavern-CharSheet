@@ -12,7 +12,7 @@ import {
   ConfigUtils,
   Constants,
   generateApiAdapter,
-} from "@dndbeyond/character-rules-engine/es";
+} from "../../../../../../../src/character-rules-engine/es";
 
 import config from "~/config";
 import { CharacterThemeProvider } from "~/contexts/CharacterTheme";

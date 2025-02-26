@@ -2,7 +2,7 @@
  *
  * @param level
  */
-export function getSpellLevelPactMagicRequestsDataKey(level) {
+export function getSpellLevelPactMagicRequestsDataKey(level: number): string | null {
     switch (level) {
         case 1:
             return 'level1';
@@ -17,11 +17,12 @@ export function getSpellLevelPactMagicRequestsDataKey(level) {
     }
     return null;
 }
+
 /**
  *
  * @param level
  */
-export function getSpellLevelSpellSlotRequestsDataKey(level) {
+export function getSpellLevelSpellSlotRequestsDataKey(level: number): string | null {
     switch (level) {
         case 1:
             return 'level1';

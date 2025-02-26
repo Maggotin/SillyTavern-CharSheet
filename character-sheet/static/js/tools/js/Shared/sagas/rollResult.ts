@@ -9,7 +9,7 @@ import {
   HelperUtils,
 } from "@dndbeyond/character-rules-engine/es";
 
-import { rollResultActions, rollResultActionTypes } from "../actions";
+import { rollResultActions, rollResultActionTypes } from "../../../../../../../src/character-rules-engine/es/actions";
 import {
   RollResultAction,
   RollResultComponentGroupPersistAction,
